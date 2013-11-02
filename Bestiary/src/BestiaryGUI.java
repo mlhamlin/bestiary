@@ -25,18 +25,75 @@ public class BestiaryGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        ModeToggle = new javax.swing.ButtonGroup();
+        MonsterSurvey = new javax.swing.JDialog();
+        ControlBar = new javax.swing.JPanel();
+        MainLabel = new javax.swing.JLabel();
+        ModeButtons = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        MyBestiaryButton = new javax.swing.JToggleButton();
+        NewMonsterButton = new javax.swing.JToggleButton();
+        CodexButton = new javax.swing.JToggleButton();
+        ModeScreens = new javax.swing.JPanel();
+        BestiaryPage = new javax.swing.JPanel();
+        MonsterFocus = new javax.swing.JPanel();
+        CodexPage = new javax.swing.JPanel();
+        DirectEdit = new javax.swing.JPanel();
 
-        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+        setSize(new java.awt.Dimension(1024, 786));
+
+        ControlBar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        ControlBar.setMaximumSize(new java.awt.Dimension(1024, 125));
+        ControlBar.setPreferredSize(new java.awt.Dimension(1024, 125));
+        ControlBar.setLayout(new java.awt.GridLayout(1, 2));
+
+        MainLabel.setFont(new java.awt.Font("Lucida Blackletter", 1, 75)); // NOI18N
+        MainLabel.setText("  The Bestiary");
+        ControlBar.add(MainLabel);
+
+        ModeButtons.setLayout(new java.awt.GridLayout(1, 0));
+        ModeButtons.add(jPanel1);
+
+        ModeToggle.add(MyBestiaryButton);
+        MyBestiaryButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
+        MyBestiaryButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.05 copy.jpg"))); // NOI18N
+        MyBestiaryButton.setText("My Bestiary");
+        MyBestiaryButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        MyBestiaryButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ModeButtons.add(MyBestiaryButton);
+
+        ModeToggle.add(NewMonsterButton);
+        NewMonsterButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
+        NewMonsterButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.12.jpg"))); // NOI18N
+        NewMonsterButton.setText("New Monster");
+        NewMonsterButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        NewMonsterButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ModeButtons.add(NewMonsterButton);
+
+        ModeToggle.add(CodexButton);
+        CodexButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
+        CodexButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.12 copy.jpg"))); // NOI18N
+        CodexButton.setText("Codex");
+        CodexButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        CodexButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ModeButtons.add(CodexButton);
+
+        ControlBar.add(ModeButtons);
+
+        getContentPane().add(ControlBar, java.awt.BorderLayout.NORTH);
+
+        ModeScreens.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        ModeScreens.setMinimumSize(new java.awt.Dimension(16, 661));
+        ModeScreens.setPreferredSize(new java.awt.Dimension(1024, 661));
+        ModeScreens.setLayout(new java.awt.CardLayout());
+        ModeScreens.add(BestiaryPage, "card2");
+        ModeScreens.add(MonsterFocus, "card3");
+        ModeScreens.add(CodexPage, "card4");
+        ModeScreens.add(DirectEdit, "card5");
+
+        getContentPane().add(ModeScreens, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -76,5 +133,19 @@ public class BestiaryGUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BestiaryPage;
+    private javax.swing.JToggleButton CodexButton;
+    private javax.swing.JPanel CodexPage;
+    private javax.swing.JPanel ControlBar;
+    private javax.swing.JPanel DirectEdit;
+    private javax.swing.JLabel MainLabel;
+    private javax.swing.JPanel ModeButtons;
+    private javax.swing.JPanel ModeScreens;
+    private javax.swing.ButtonGroup ModeToggle;
+    private javax.swing.JPanel MonsterFocus;
+    private javax.swing.JDialog MonsterSurvey;
+    private javax.swing.JToggleButton MyBestiaryButton;
+    private javax.swing.JToggleButton NewMonsterButton;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
