@@ -1876,18 +1876,15 @@
                             <Property name="verticalGap" type="int" value="10"/>
                           </Layout>
                           <SubComponents>
-                            <Component class="MiniMonsterCard" name="miniMonsterCard1">
+                            <Component class="MiniMonsterCard" name="miniMonsterCard5">
                             </Component>
-                            <Component class="MiniMonsterCard" name="miniMonsterCard8">
-                              <Properties>
-                                <Property name="dMonsterName" type="java.lang.String" value="Bob"/>
-                              </Properties>
+                            <Component class="MiniMonsterCard" name="miniMonsterCard12">
                             </Component>
-                            <Component class="MiniMonsterCard" name="miniMonsterCard4">
+                            <Component class="MiniMonsterCard" name="miniMonsterCard11">
                             </Component>
-                            <Component class="MiniMonsterCard" name="miniMonsterCard3">
+                            <Component class="MiniMonsterCard" name="miniMonsterCard7">
                             </Component>
-                            <Component class="MiniMonsterCard" name="miniMonsterCard2">
+                            <Component class="MiniMonsterCard" name="miniMonsterCard6">
                             </Component>
                           </SubComponents>
                         </Container>
@@ -1968,15 +1965,15 @@
                             <Property name="verticalGap" type="int" value="10"/>
                           </Layout>
                           <SubComponents>
-                            <Component class="MiniMonsterCard" name="miniMonsterCard20">
+                            <Component class="MiniMonsterCard" name="miniMonsterCard17">
                             </Component>
-                            <Component class="MiniMonsterCard" name="miniMonsterCard19">
+                            <Component class="MiniMonsterCard" name="miniMonsterCard16">
                             </Component>
-                            <Component class="MiniMonsterCard" name="miniMonsterCard9">
+                            <Component class="MiniMonsterCard" name="miniMonsterCard15">
                             </Component>
-                            <Component class="MiniMonsterCard" name="miniMonsterCard18">
+                            <Component class="MiniMonsterCard" name="miniMonsterCard14">
                             </Component>
-                            <Component class="MiniMonsterCard" name="miniMonsterCard10">
+                            <Component class="MiniMonsterCard" name="miniMonsterCard13">
                             </Component>
                           </SubComponents>
                         </Container>

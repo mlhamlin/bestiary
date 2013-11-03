@@ -201,21 +201,21 @@ public class BestiaryGUI extends javax.swing.JFrame {
         filler16 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         filler17 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         jPanel33 = new javax.swing.JPanel();
-        miniMonsterCard1 = new MiniMonsterCard();
-        miniMonsterCard8 = new MiniMonsterCard();
-        miniMonsterCard4 = new MiniMonsterCard();
-        miniMonsterCard3 = new MiniMonsterCard();
-        miniMonsterCard2 = new MiniMonsterCard();
+        miniMonsterCard5 = new MiniMonsterCard();
+        miniMonsterCard12 = new MiniMonsterCard();
+        miniMonsterCard11 = new MiniMonsterCard();
+        miniMonsterCard7 = new MiniMonsterCard();
+        miniMonsterCard6 = new MiniMonsterCard();
         jLabel26 = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
         filler18 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         filler19 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         jPanel31 = new javax.swing.JPanel();
-        miniMonsterCard20 = new MiniMonsterCard();
-        miniMonsterCard19 = new MiniMonsterCard();
-        miniMonsterCard9 = new MiniMonsterCard();
-        miniMonsterCard18 = new MiniMonsterCard();
-        miniMonsterCard10 = new MiniMonsterCard();
+        miniMonsterCard17 = new MiniMonsterCard();
+        miniMonsterCard16 = new MiniMonsterCard();
+        miniMonsterCard15 = new MiniMonsterCard();
+        miniMonsterCard14 = new MiniMonsterCard();
+        miniMonsterCard13 = new MiniMonsterCard();
         jLabel27 = new javax.swing.JLabel();
 
         MonsterEdit.setAlwaysOnTop(true);
@@ -849,13 +849,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         jPanel32.add(filler17, java.awt.BorderLayout.WEST);
 
         jPanel33.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
-        jPanel33.add(miniMonsterCard1);
-
-        miniMonsterCard8.setdMonsterName("Bob");
-        jPanel33.add(miniMonsterCard8);
-        jPanel33.add(miniMonsterCard4);
-        jPanel33.add(miniMonsterCard3);
-        jPanel33.add(miniMonsterCard2);
+        jPanel33.add(miniMonsterCard5);
+        jPanel33.add(miniMonsterCard12);
+        jPanel33.add(miniMonsterCard11);
+        jPanel33.add(miniMonsterCard7);
+        jPanel33.add(miniMonsterCard6);
 
         jPanel32.add(jPanel33, java.awt.BorderLayout.CENTER);
 
@@ -871,11 +869,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         jPanel30.add(filler19, java.awt.BorderLayout.EAST);
 
         jPanel31.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
-        jPanel31.add(miniMonsterCard20);
-        jPanel31.add(miniMonsterCard19);
-        jPanel31.add(miniMonsterCard9);
-        jPanel31.add(miniMonsterCard18);
-        jPanel31.add(miniMonsterCard10);
+        jPanel31.add(miniMonsterCard17);
+        jPanel31.add(miniMonsterCard16);
+        jPanel31.add(miniMonsterCard15);
+        jPanel31.add(miniMonsterCard14);
+        jPanel31.add(miniMonsterCard13);
 
         jPanel30.add(jPanel31, java.awt.BorderLayout.CENTER);
 
@@ -1146,15 +1144,15 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
-    private MiniMonsterCard miniMonsterCard1;
-    private MiniMonsterCard miniMonsterCard10;
-    private MiniMonsterCard miniMonsterCard18;
-    private MiniMonsterCard miniMonsterCard19;
-    private MiniMonsterCard miniMonsterCard2;
-    private MiniMonsterCard miniMonsterCard20;
-    private MiniMonsterCard miniMonsterCard3;
-    private MiniMonsterCard miniMonsterCard4;
-    private MiniMonsterCard miniMonsterCard8;
-    private MiniMonsterCard miniMonsterCard9;
+    private MiniMonsterCard miniMonsterCard11;
+    private MiniMonsterCard miniMonsterCard12;
+    private MiniMonsterCard miniMonsterCard13;
+    private MiniMonsterCard miniMonsterCard14;
+    private MiniMonsterCard miniMonsterCard15;
+    private MiniMonsterCard miniMonsterCard16;
+    private MiniMonsterCard miniMonsterCard17;
+    private MiniMonsterCard miniMonsterCard5;
+    private MiniMonsterCard miniMonsterCard6;
+    private MiniMonsterCard miniMonsterCard7;
     // End of variables declaration//GEN-END:variables
 }
