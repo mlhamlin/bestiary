@@ -26,7 +26,106 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         ModeToggle = new javax.swing.ButtonGroup();
+        MonsterEdit = new javax.swing.JDialog();
+        HeaderInfo = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        NameField = new javax.swing.JTextField();
+        MonsterTags = new javax.swing.JButton();
+        jPanel7 = new javax.swing.JPanel();
+        HPValue = new javax.swing.JSpinner();
+        jLabel4 = new javax.swing.JLabel();
+        ArmorValue = new javax.swing.JSpinner();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        AttackNameField = new javax.swing.JTextField();
+        Rolls = new javax.swing.JComboBox();
+        Dice = new javax.swing.JComboBox();
+        AttackMod = new javax.swing.JSpinner();
+        AttackTags = new javax.swing.JButton();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        SpecialQualitiesField = new javax.swing.JTextField();
+        Description = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        MonsterDescription = new javax.swing.JTextArea();
+        Instinct = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        InstinctField = new javax.swing.JTextField();
+        Moves = new javax.swing.JPanel();
+        MovesControls = new javax.swing.JPanel();
+        NewMove = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        MovesLabel = new javax.swing.JLabel();
+        MovesListBox = new javax.swing.JPanel();
+        MovesScroll = new javax.swing.JScrollPane();
+        MovesList = new javax.swing.JList();
+        EndPane = new javax.swing.JPanel();
+        SaveMonsterEdit = new javax.swing.JButton();
+        CancelMonsterEdit = new javax.swing.JButton();
         MonsterSurvey = new javax.swing.JDialog();
+        MonsterTagsWindow = new javax.swing.JDialog();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jPanel13 = new javax.swing.JPanel();
+        jCheckBox6 = new javax.swing.JCheckBox();
+        jLabel13 = new javax.swing.JLabel();
+        jCheckBox7 = new javax.swing.JCheckBox();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jCheckBox8 = new javax.swing.JCheckBox();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jCheckBox9 = new javax.swing.JCheckBox();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jCheckBox10 = new javax.swing.JCheckBox();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        jCheckBox11 = new javax.swing.JCheckBox();
+        jRadioButton8 = new javax.swing.JRadioButton();
+        jCheckBox12 = new javax.swing.JCheckBox();
+        jPanel11 = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        AttackTagsWindow = new javax.swing.JDialog();
+        jLabel12 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        AmmoBox = new javax.swing.JPanel();
+        AmmoCheck = new javax.swing.JCheckBox();
+        AmmoSpin = new javax.swing.JSpinner();
+        jLabel10 = new javax.swing.JLabel();
+        StunCheck = new javax.swing.JCheckBox();
+        ForcefulCheck = new javax.swing.JCheckBox();
+        ThrownCheck = new javax.swing.JCheckBox();
+        IgnoresArmorCheck = new javax.swing.JCheckBox();
+        HandCheck = new javax.swing.JCheckBox();
+        MessyCheck = new javax.swing.JCheckBox();
+        CloseCheck = new javax.swing.JCheckBox();
+        jPanel9 = new javax.swing.JPanel();
+        PiercingCheck = new javax.swing.JCheckBox();
+        PiercingSpin = new javax.swing.JSpinner();
+        jLabel11 = new javax.swing.JLabel();
+        ReachChange = new javax.swing.JCheckBox();
+        PreciseCheck = new javax.swing.JCheckBox();
+        NearCheck = new javax.swing.JCheckBox();
+        ReloadCheck = new javax.swing.JCheckBox();
+        FarCheck = new javax.swing.JCheckBox();
+        jPanel4 = new javax.swing.JPanel();
+        AttackCancel = new javax.swing.JButton();
+        AttackSave = new javax.swing.JButton();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        OrganizationTagsGroup = new javax.swing.ButtonGroup();
+        SizeTagsGroup = new javax.swing.ButtonGroup();
+        filler14 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         ControlBar = new javax.swing.JPanel();
         MainLabel = new javax.swing.JLabel();
         ModeButtons = new javax.swing.JPanel();
@@ -37,8 +136,432 @@ public class BestiaryGUI extends javax.swing.JFrame {
         ModeScreens = new javax.swing.JPanel();
         BestiaryPage = new javax.swing.JPanel();
         MonsterFocus = new javax.swing.JPanel();
+        Sidebar = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        UploadButton = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 20), new java.awt.Dimension(0, 20), new java.awt.Dimension(32767, 20));
+        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 20), new java.awt.Dimension(0, 20), new java.awt.Dimension(32767, 20));
+        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        jPanel18 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        EditCollectionsButton = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        MonsterDelay = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        EditMonsterButton = new javax.swing.JButton();
+        jPanel21 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList();
+        filler11 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        filler9 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        filler10 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0));
+        Headerbox = new javax.swing.JPanel();
+        jPanel20 = new javax.swing.JPanel();
+        jPanel22 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jPanel26 = new javax.swing.JPanel();
+        jPanel27 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jPanel28 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jPanel24 = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jPanel25 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        filler12 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        filler13 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        filler15 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        GMNotePane = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        jPanel14 = new javax.swing.JPanel();
+        EditNoteButton = new javax.swing.JButton();
         CodexPage = new javax.swing.JPanel();
-        DirectEdit = new javax.swing.JPanel();
+
+        MonsterEdit.setAlwaysOnTop(true);
+        MonsterEdit.setPreferredSize(new java.awt.Dimension(700, 500));
+        MonsterEdit.setResizable(false);
+        MonsterEdit.setSize(new java.awt.Dimension(700, 500));
+
+        HeaderInfo.setLayout(new java.awt.GridLayout(4, 0));
+
+        jPanel5.setLayout(new java.awt.BorderLayout());
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel2.setText("Name:");
+        jPanel2.add(jLabel2);
+
+        NameField.setPreferredSize(new java.awt.Dimension(300, 28));
+        NameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NameFieldActionPerformed(evt);
+            }
+        });
+        jPanel2.add(NameField);
+
+        jPanel5.add(jPanel2, java.awt.BorderLayout.WEST);
+
+        MonsterTags.setText("Monster Tags");
+        jPanel5.add(MonsterTags, java.awt.BorderLayout.EAST);
+
+        HeaderInfo.add(jPanel5);
+
+        jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        HPValue.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jPanel7.add(HPValue);
+
+        jLabel4.setText("HP      ");
+        jPanel7.add(jLabel4);
+
+        ArmorValue.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jPanel7.add(ArmorValue);
+
+        jLabel5.setText("Armor");
+        jPanel7.add(jLabel5);
+
+        HeaderInfo.add(jPanel7);
+
+        jPanel6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel3.setText("Attack Name:");
+        jPanel6.add(jLabel3);
+
+        AttackNameField.setPreferredSize(new java.awt.Dimension(175, 28));
+        AttackNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AttackNameFieldActionPerformed(evt);
+            }
+        });
+        jPanel6.add(AttackNameField);
+
+        Rolls.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Normal", "Best of 2", "Worst of 2" }));
+        jPanel6.add(Rolls);
+
+        Dice.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "d4", "d6", "d8", "d10", "d12", "d20" }));
+        jPanel6.add(Dice);
+
+        AttackMod.setModel(new javax.swing.SpinnerNumberModel(0, -20, 20, 1));
+        AttackMod.setVerifyInputWhenFocusTarget(false);
+        jPanel6.add(AttackMod);
+
+        AttackTags.setText("Attack Tags");
+        jPanel6.add(AttackTags);
+
+        HeaderInfo.add(jPanel6);
+
+        jPanel8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel6.setText("Special Qualities:");
+        jPanel8.add(jLabel6);
+
+        SpecialQualitiesField.setPreferredSize(new java.awt.Dimension(400, 28));
+        jPanel8.add(SpecialQualitiesField);
+
+        HeaderInfo.add(jPanel8);
+
+        MonsterEdit.getContentPane().add(HeaderInfo, java.awt.BorderLayout.NORTH);
+
+        Description.setLayout(new java.awt.BorderLayout());
+
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel1.setText(" Description:");
+        Description.add(jLabel1, java.awt.BorderLayout.PAGE_START);
+
+        MonsterDescription.setColumns(20);
+        MonsterDescription.setLineWrap(true);
+        MonsterDescription.setRows(5);
+        jScrollPane1.setViewportView(MonsterDescription);
+
+        Description.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        Instinct.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel7.setText("Instinct:");
+        Instinct.add(jLabel7);
+
+        InstinctField.setPreferredSize(new java.awt.Dimension(300, 28));
+        InstinctField.setSize(new java.awt.Dimension(200, 28));
+        Instinct.add(InstinctField);
+
+        Description.add(Instinct, java.awt.BorderLayout.SOUTH);
+
+        MonsterEdit.getContentPane().add(Description, java.awt.BorderLayout.CENTER);
+
+        Moves.setLayout(new java.awt.BorderLayout());
+
+        MovesControls.setLayout(new java.awt.BorderLayout());
+
+        NewMove.setText("Move");
+        NewMove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NewMoveActionPerformed(evt);
+            }
+        });
+        MovesControls.add(NewMove, java.awt.BorderLayout.CENTER);
+
+        jButton1.setText("Remove");
+        MovesControls.add(jButton1, java.awt.BorderLayout.LINE_START);
+
+        jButton2.setText("Add Move");
+        MovesControls.add(jButton2, java.awt.BorderLayout.LINE_END);
+
+        MovesLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        MovesLabel.setText(" Moves");
+        MovesControls.add(MovesLabel, java.awt.BorderLayout.PAGE_START);
+
+        Moves.add(MovesControls, java.awt.BorderLayout.PAGE_START);
+
+        MovesListBox.setLayout(new java.awt.BorderLayout());
+
+        MovesScroll.setPreferredSize(new java.awt.Dimension(100, 75));
+
+        MovesList.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        MovesScroll.setViewportView(MovesList);
+
+        MovesListBox.add(MovesScroll, java.awt.BorderLayout.CENTER);
+
+        Moves.add(MovesListBox, java.awt.BorderLayout.CENTER);
+
+        EndPane.setLayout(new java.awt.BorderLayout());
+
+        SaveMonsterEdit.setText("Save");
+        EndPane.add(SaveMonsterEdit, java.awt.BorderLayout.EAST);
+
+        CancelMonsterEdit.setText("Cancel");
+        EndPane.add(CancelMonsterEdit, java.awt.BorderLayout.WEST);
+
+        Moves.add(EndPane, java.awt.BorderLayout.PAGE_END);
+
+        MonsterEdit.getContentPane().add(Moves, java.awt.BorderLayout.SOUTH);
+
+        MonsterTagsWindow.setPreferredSize(new java.awt.Dimension(300, 300));
+        MonsterTagsWindow.setResizable(false);
+        MonsterTagsWindow.setSize(new java.awt.Dimension(300, 300));
+
+        jPanel10.setLayout(new java.awt.GridLayout(12, 2));
+
+        jLabel8.setText("Monster Tags:");
+        jPanel10.add(jLabel8);
+
+        jLabel9.setText("Organization Tags:");
+        jPanel10.add(jLabel9);
+
+        jCheckBox1.setText("Magical");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        jPanel10.add(jCheckBox1);
+
+        OrganizationTagsGroup.add(jRadioButton1);
+        jRadioButton1.setText("Horde");
+        jPanel10.add(jRadioButton1);
+
+        jCheckBox2.setText("Devious");
+        jPanel10.add(jCheckBox2);
+
+        OrganizationTagsGroup.add(jRadioButton2);
+        jRadioButton2.setText("Group");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        jPanel10.add(jRadioButton2);
+
+        jCheckBox4.setText("Amorphous");
+        jPanel10.add(jCheckBox4);
+
+        OrganizationTagsGroup.add(jRadioButton3);
+        jRadioButton3.setText("Solitary");
+        jPanel10.add(jRadioButton3);
+
+        jCheckBox5.setText("Organized");
+        jPanel10.add(jCheckBox5);
+        jPanel10.add(jPanel13);
+
+        jCheckBox6.setText("Intelligent");
+        jPanel10.add(jCheckBox6);
+
+        jLabel13.setText("Size Tags:");
+        jPanel10.add(jLabel13);
+
+        jCheckBox7.setText("Hoarder");
+        jPanel10.add(jCheckBox7);
+
+        SizeTagsGroup.add(jRadioButton4);
+        jRadioButton4.setText("Tiny");
+        jPanel10.add(jRadioButton4);
+
+        jCheckBox8.setText("Stealthy");
+        jPanel10.add(jCheckBox8);
+
+        SizeTagsGroup.add(jRadioButton5);
+        jRadioButton5.setText("Small");
+        jPanel10.add(jRadioButton5);
+
+        jCheckBox9.setText("Terrifying");
+        jPanel10.add(jCheckBox9);
+
+        SizeTagsGroup.add(jRadioButton6);
+        jRadioButton6.setText("Normal");
+        jPanel10.add(jRadioButton6);
+
+        jCheckBox10.setText("Cautious");
+        jPanel10.add(jCheckBox10);
+
+        SizeTagsGroup.add(jRadioButton7);
+        jRadioButton7.setText("Large");
+        jPanel10.add(jRadioButton7);
+
+        jCheckBox11.setText("Construct");
+        jPanel10.add(jCheckBox11);
+
+        SizeTagsGroup.add(jRadioButton8);
+        jRadioButton8.setText("Huge");
+        jPanel10.add(jRadioButton8);
+
+        jCheckBox12.setText("Planar");
+        jPanel10.add(jCheckBox12);
+
+        MonsterTagsWindow.getContentPane().add(jPanel10, java.awt.BorderLayout.CENTER);
+
+        jPanel11.setLayout(new java.awt.BorderLayout());
+
+        jButton3.setText("Cancel");
+        jButton3.setToolTipText("null");
+        jPanel11.add(jButton3, java.awt.BorderLayout.WEST);
+
+        jButton4.setText("Save");
+        jPanel11.add(jButton4, java.awt.BorderLayout.EAST);
+
+        MonsterTagsWindow.getContentPane().add(jPanel11, java.awt.BorderLayout.SOUTH);
+
+        AttackTagsWindow.setPreferredSize(new java.awt.Dimension(300, 275));
+        AttackTagsWindow.setResizable(false);
+        AttackTagsWindow.setSize(new java.awt.Dimension(300, 275));
+
+        jLabel12.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel12.setText(" Attack Tags:");
+        AttackTagsWindow.getContentPane().add(jLabel12, java.awt.BorderLayout.NORTH);
+
+        jPanel3.setLayout(new java.awt.GridLayout(7, 2));
+
+        AmmoBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
+
+        AmmoBox.add(AmmoCheck);
+
+        AmmoSpin.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        AmmoBox.add(AmmoSpin);
+
+        jLabel10.setText(" Ammo");
+        AmmoBox.add(jLabel10);
+
+        jPanel3.add(AmmoBox);
+
+        StunCheck.setText("Stun");
+        jPanel3.add(StunCheck);
+
+        ForcefulCheck.setText("Forceful");
+        ForcefulCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ForcefulCheckActionPerformed(evt);
+            }
+        });
+        jPanel3.add(ForcefulCheck);
+
+        ThrownCheck.setText("Thrown");
+        ThrownCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ThrownCheckActionPerformed(evt);
+            }
+        });
+        jPanel3.add(ThrownCheck);
+
+        IgnoresArmorCheck.setText("Ignores Armor");
+        jPanel3.add(IgnoresArmorCheck);
+
+        HandCheck.setText("Hand");
+        jPanel3.add(HandCheck);
+
+        MessyCheck.setText("Messy");
+        jPanel3.add(MessyCheck);
+
+        CloseCheck.setText("Close");
+        jPanel3.add(CloseCheck);
+
+        jPanel9.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 2));
+
+        jPanel9.add(PiercingCheck);
+
+        PiercingSpin.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jPanel9.add(PiercingSpin);
+
+        jLabel11.setText(" Piercing");
+        jPanel9.add(jLabel11);
+
+        jPanel3.add(jPanel9);
+
+        ReachChange.setText("Reach");
+        jPanel3.add(ReachChange);
+
+        PreciseCheck.setText("Precise");
+        PreciseCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PreciseCheckActionPerformed(evt);
+            }
+        });
+        jPanel3.add(PreciseCheck);
+
+        NearCheck.setText("Near");
+        jPanel3.add(NearCheck);
+
+        ReloadCheck.setText("Reload");
+        jPanel3.add(ReloadCheck);
+
+        FarCheck.setText("Far");
+        jPanel3.add(FarCheck);
+
+        AttackTagsWindow.getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
+
+        jPanel4.setLayout(new java.awt.BorderLayout());
+
+        AttackCancel.setText("Cancel");
+        jPanel4.add(AttackCancel, java.awt.BorderLayout.WEST);
+
+        AttackSave.setText("Save");
+        jPanel4.add(AttackSave, java.awt.BorderLayout.EAST);
+
+        AttackTagsWindow.getContentPane().add(jPanel4, java.awt.BorderLayout.PAGE_END);
+
+        jCheckBox3.setText("jCheckBox3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -89,14 +612,251 @@ public class BestiaryGUI extends javax.swing.JFrame {
         ModeScreens.setPreferredSize(new java.awt.Dimension(1024, 661));
         ModeScreens.setLayout(new java.awt.CardLayout());
         ModeScreens.add(BestiaryPage, "card2");
+
+        MonsterFocus.setLayout(new java.awt.BorderLayout());
+
+        Sidebar.setLayout(new java.awt.BorderLayout());
+
+        jPanel15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel15.setLayout(new java.awt.BorderLayout());
+
+        UploadButton.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
+        UploadButton.setText("Upload To Codex");
+        UploadButton.setActionCommand("<html>Upload To <br> Codex</html>");
+        UploadButton.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jPanel15.add(UploadButton, java.awt.BorderLayout.CENTER);
+        jPanel15.add(filler1, java.awt.BorderLayout.PAGE_START);
+        jPanel15.add(filler2, java.awt.BorderLayout.PAGE_END);
+        jPanel15.add(filler3, java.awt.BorderLayout.LINE_END);
+        jPanel15.add(filler4, java.awt.BorderLayout.LINE_START);
+
+        Sidebar.add(jPanel15, java.awt.BorderLayout.NORTH);
+
+        jPanel18.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel18.setLayout(new java.awt.BorderLayout());
+
+        jLabel15.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel15.setText("Current Collections:");
+        jLabel15.setPreferredSize(new java.awt.Dimension(172, 30));
+        jPanel18.add(jLabel15, java.awt.BorderLayout.PAGE_START);
+
+        jPanel19.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        EditCollectionsButton.setText("Edit Collections");
+        jPanel19.add(EditCollectionsButton);
+
+        jPanel18.add(jPanel19, java.awt.BorderLayout.PAGE_END);
+
+        jList1.setBackground(new java.awt.Color(238, 238, 238));
+        jList1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Orc", "Plains" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList1);
+
+        jPanel18.add(jScrollPane3, java.awt.BorderLayout.CENTER);
+        jPanel18.add(filler6, java.awt.BorderLayout.LINE_END);
+        jPanel18.add(filler8, java.awt.BorderLayout.LINE_START);
+
+        Sidebar.add(jPanel18, java.awt.BorderLayout.CENTER);
+
+        MonsterFocus.add(Sidebar, java.awt.BorderLayout.LINE_END);
+
+        MonsterDelay.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        MonsterDelay.setLayout(new java.awt.BorderLayout());
+
+        jPanel12.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+        jPanel12.add(jPanel17);
+
+        EditMonsterButton.setText("Edit Monster");
+        jPanel12.add(EditMonsterButton);
+
+        MonsterDelay.add(jPanel12, java.awt.BorderLayout.PAGE_END);
+
+        jPanel21.setLayout(new java.awt.BorderLayout());
+
+        jTextArea2.setEditable(false);
+        jTextArea2.setBackground(new java.awt.Color(238, 238, 238));
+        jTextArea2.setColumns(20);
+        jTextArea2.setLineWrap(true);
+        jTextArea2.setRows(5);
+        jTextArea2.setText("In the name of He of Riven Sight and by the First Sacrifice of Elf-Flesh do we invoke the Old Powers. By the Second Sacrifice, I make my claim to what is mine—the dark magic of Night. In His image, I walk the path to Gor-sha-thak, the Iron Gallows! I call to the runes! I call to the clouded sky! Take this mortal organ, eat of the flesh of our enemy and give me what is mine! Instinct: To hate");
+        jTextArea2.setWrapStyleWord(true);
+        jScrollPane4.setViewportView(jTextArea2);
+
+        jPanel21.add(jScrollPane4, java.awt.BorderLayout.CENTER);
+
+        jScrollPane5.setPreferredSize(new java.awt.Dimension(100, 60));
+
+        jList2.setBackground(new java.awt.Color(238, 238, 238));
+        jList2.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Rend flesh with divine magic", "Take an eye", "Make a sacrifice and grow in power" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jList2.setPreferredSize(new java.awt.Dimension(39, 50));
+        jScrollPane5.setViewportView(jList2);
+
+        jPanel21.add(jScrollPane5, java.awt.BorderLayout.PAGE_END);
+        jPanel21.add(filler11, java.awt.BorderLayout.PAGE_START);
+
+        MonsterDelay.add(jPanel21, java.awt.BorderLayout.CENTER);
+        MonsterDelay.add(filler9, java.awt.BorderLayout.LINE_START);
+        MonsterDelay.add(filler10, java.awt.BorderLayout.LINE_END);
+
+        Headerbox.setLayout(new java.awt.BorderLayout());
+
+        jPanel20.setLayout(new java.awt.GridLayout(4, 0));
+
+        jPanel22.setLayout(new java.awt.BorderLayout());
+
+        jLabel16.setFont(new java.awt.Font("Lucida Grande", 1, 20)); // NOI18N
+        jLabel16.setText("Orc One-Eye");
+        jPanel22.add(jLabel16, java.awt.BorderLayout.WEST);
+
+        jLabel17.setFont(new java.awt.Font("Lucida Grande", 2, 14)); // NOI18N
+        jLabel17.setText("Group, Devine, Magical, Intelligent, Organized");
+        jPanel22.add(jLabel17, java.awt.BorderLayout.EAST);
+
+        jPanel20.add(jPanel22);
+
+        jPanel23.setLayout(new java.awt.BorderLayout());
+
+        jLabel18.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel18.setText("Inflict Wounds (d8+2 damage ignores armor)");
+        jPanel23.add(jLabel18, java.awt.BorderLayout.WEST);
+
+        jPanel26.setLayout(new java.awt.GridLayout(1, 2));
+
+        jLabel19.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel19.setText("6");
+        jPanel27.add(jLabel19);
+
+        jLabel20.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel20.setText("HP");
+        jPanel27.add(jLabel20);
+
+        jPanel26.add(jPanel27);
+
+        jLabel21.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel21.setText("0");
+        jPanel28.add(jLabel21);
+
+        jLabel22.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel22.setText("Armor");
+        jPanel28.add(jLabel22);
+
+        jPanel26.add(jPanel28);
+
+        jPanel23.add(jPanel26, java.awt.BorderLayout.EAST);
+
+        jPanel20.add(jPanel23);
+
+        jPanel24.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 5));
+
+        jLabel23.setFont(new java.awt.Font("Lucida Grande", 2, 14)); // NOI18N
+        jLabel23.setText("Close, Reach, Near, Far");
+        jPanel24.add(jLabel23);
+
+        jPanel20.add(jPanel24);
+
+        jPanel25.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 5));
+
+        jLabel24.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel24.setText("Special Qualities: ");
+        jPanel25.add(jLabel24);
+
+        jLabel25.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel25.setText("One eye");
+        jPanel25.add(jLabel25);
+
+        jPanel20.add(jPanel25);
+
+        Headerbox.add(jPanel20, java.awt.BorderLayout.CENTER);
+        Headerbox.add(filler12, java.awt.BorderLayout.WEST);
+        Headerbox.add(filler13, java.awt.BorderLayout.EAST);
+        Headerbox.add(filler15, java.awt.BorderLayout.PAGE_START);
+
+        MonsterDelay.add(Headerbox, java.awt.BorderLayout.NORTH);
+
+        MonsterFocus.add(MonsterDelay, java.awt.BorderLayout.CENTER);
+
+        GMNotePane.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        GMNotePane.setLayout(new java.awt.BorderLayout());
+
+        jPanel16.setLayout(new java.awt.BorderLayout());
+
+        jLabel14.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel14.setText("GM Notes:");
+        jLabel14.setPreferredSize(new java.awt.Dimension(91, 30));
+        jPanel16.add(jLabel14, java.awt.BorderLayout.PAGE_START);
+
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(100, 150));
+        jScrollPane2.setSize(new java.awt.Dimension(100, 150));
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(238, 238, 238));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        jPanel16.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+        jPanel16.add(filler5, java.awt.BorderLayout.LINE_END);
+        jPanel16.add(filler7, java.awt.BorderLayout.LINE_START);
+
+        GMNotePane.add(jPanel16, java.awt.BorderLayout.CENTER);
+
+        jPanel14.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        EditNoteButton.setText("Edit Note");
+        jPanel14.add(EditNoteButton);
+
+        GMNotePane.add(jPanel14, java.awt.BorderLayout.PAGE_END);
+
+        MonsterFocus.add(GMNotePane, java.awt.BorderLayout.SOUTH);
+
         ModeScreens.add(MonsterFocus, "card3");
         ModeScreens.add(CodexPage, "card4");
-        ModeScreens.add(DirectEdit, "card5");
 
         getContentPane().add(ModeScreens, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void NewMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewMoveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NewMoveActionPerformed
+
+    private void NameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NameFieldActionPerformed
+
+    private void AttackNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AttackNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AttackNameFieldActionPerformed
+
+    private void ThrownCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThrownCheckActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ThrownCheckActionPerformed
+
+    private void ForcefulCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ForcefulCheckActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ForcefulCheckActionPerformed
+
+    private void PreciseCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreciseCheckActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PreciseCheckActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,19 +893,175 @@ public class BestiaryGUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel AmmoBox;
+    private javax.swing.JCheckBox AmmoCheck;
+    private javax.swing.JSpinner AmmoSpin;
+    private javax.swing.JSpinner ArmorValue;
+    private javax.swing.JButton AttackCancel;
+    private javax.swing.JSpinner AttackMod;
+    private javax.swing.JTextField AttackNameField;
+    private javax.swing.JButton AttackSave;
+    private javax.swing.JButton AttackTags;
+    private javax.swing.JDialog AttackTagsWindow;
     private javax.swing.JPanel BestiaryPage;
+    private javax.swing.JButton CancelMonsterEdit;
+    private javax.swing.JCheckBox CloseCheck;
     private javax.swing.JToggleButton CodexButton;
     private javax.swing.JPanel CodexPage;
     private javax.swing.JPanel ControlBar;
-    private javax.swing.JPanel DirectEdit;
+    private javax.swing.JPanel Description;
+    private javax.swing.JComboBox Dice;
+    private javax.swing.JButton EditCollectionsButton;
+    private javax.swing.JButton EditMonsterButton;
+    private javax.swing.JButton EditNoteButton;
+    private javax.swing.JPanel EndPane;
+    private javax.swing.JCheckBox FarCheck;
+    private javax.swing.JCheckBox ForcefulCheck;
+    private javax.swing.JPanel GMNotePane;
+    private javax.swing.JSpinner HPValue;
+    private javax.swing.JCheckBox HandCheck;
+    private javax.swing.JPanel HeaderInfo;
+    private javax.swing.JPanel Headerbox;
+    private javax.swing.JCheckBox IgnoresArmorCheck;
+    private javax.swing.JPanel Instinct;
+    private javax.swing.JTextField InstinctField;
     private javax.swing.JLabel MainLabel;
+    private javax.swing.JCheckBox MessyCheck;
     private javax.swing.JPanel ModeButtons;
     private javax.swing.JPanel ModeScreens;
     private javax.swing.ButtonGroup ModeToggle;
+    private javax.swing.JPanel MonsterDelay;
+    private javax.swing.JTextArea MonsterDescription;
+    private javax.swing.JDialog MonsterEdit;
     private javax.swing.JPanel MonsterFocus;
     private javax.swing.JDialog MonsterSurvey;
+    private javax.swing.JButton MonsterTags;
+    private javax.swing.JDialog MonsterTagsWindow;
+    private javax.swing.JPanel Moves;
+    private javax.swing.JPanel MovesControls;
+    private javax.swing.JLabel MovesLabel;
+    private javax.swing.JList MovesList;
+    private javax.swing.JPanel MovesListBox;
+    private javax.swing.JScrollPane MovesScroll;
     private javax.swing.JToggleButton MyBestiaryButton;
+    private javax.swing.JTextField NameField;
+    private javax.swing.JCheckBox NearCheck;
     private javax.swing.JToggleButton NewMonsterButton;
+    private javax.swing.JTextField NewMove;
+    private javax.swing.ButtonGroup OrganizationTagsGroup;
+    private javax.swing.JCheckBox PiercingCheck;
+    private javax.swing.JSpinner PiercingSpin;
+    private javax.swing.JCheckBox PreciseCheck;
+    private javax.swing.JCheckBox ReachChange;
+    private javax.swing.JCheckBox ReloadCheck;
+    private javax.swing.JComboBox Rolls;
+    private javax.swing.JButton SaveMonsterEdit;
+    private javax.swing.JPanel Sidebar;
+    private javax.swing.ButtonGroup SizeTagsGroup;
+    private javax.swing.JTextField SpecialQualitiesField;
+    private javax.swing.JCheckBox StunCheck;
+    private javax.swing.JCheckBox ThrownCheck;
+    private javax.swing.JButton UploadButton;
+    private javax.swing.Box.Filler filler1;
+    private javax.swing.Box.Filler filler10;
+    private javax.swing.Box.Filler filler11;
+    private javax.swing.Box.Filler filler12;
+    private javax.swing.Box.Filler filler13;
+    private javax.swing.Box.Filler filler14;
+    private javax.swing.Box.Filler filler15;
+    private javax.swing.Box.Filler filler2;
+    private javax.swing.Box.Filler filler3;
+    private javax.swing.Box.Filler filler4;
+    private javax.swing.Box.Filler filler5;
+    private javax.swing.Box.Filler filler6;
+    private javax.swing.Box.Filler filler7;
+    private javax.swing.Box.Filler filler8;
+    private javax.swing.Box.Filler filler9;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox10;
+    private javax.swing.JCheckBox jCheckBox11;
+    private javax.swing.JCheckBox jCheckBox12;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox jCheckBox7;
+    private javax.swing.JCheckBox jCheckBox8;
+    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JList jList1;
+    private javax.swing.JList jList2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton jRadioButton7;
+    private javax.swing.JRadioButton jRadioButton8;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 }
