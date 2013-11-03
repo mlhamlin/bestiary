@@ -1879,6 +1879,9 @@
                             <Component class="MiniMonsterCard" name="miniMonsterCard1">
                             </Component>
                             <Component class="MiniMonsterCard" name="miniMonsterCard8">
+                              <Properties>
+                                <Property name="dMonsterName" type="java.lang.String" value="Bob"/>
+                              </Properties>
                             </Component>
                             <Component class="MiniMonsterCard" name="miniMonsterCard4">
                             </Component>

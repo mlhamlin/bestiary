@@ -7,14 +7,14 @@
  *
  * @author marthahamlin
  */
-public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Customizer {
+public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.Customizer {
     
     private Object bean;
 
     /**
-     * Creates new customizer MiniMonsterCard
+     * Creates new customizer LargeMonsterCard
      */
-    public MiniMonsterCard() {
+    public LargeMonsterCard() {
         initComponents();
     }
     
@@ -115,8 +115,7 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
         return cFocusButton.getText();
         
     }
-
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -168,13 +167,13 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
         MonsterCard.add(filler1, java.awt.BorderLayout.NORTH);
 
         jPanel12.setPreferredSize(new java.awt.Dimension(500, 350));
-        jPanel12.setLayout(new java.awt.GridLayout(3, 0));
+        jPanel12.setLayout(new java.awt.BorderLayout());
 
         jPanel1.setLayout(new java.awt.GridLayout(4, 0));
 
         jPanel4.setLayout(new java.awt.BorderLayout());
 
-        cMonsterName.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        cMonsterName.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         cMonsterName.setText("Name");
         jPanel4.add(cMonsterName, java.awt.BorderLayout.LINE_START);
 
@@ -230,18 +229,18 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
 
         jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 5));
 
-        jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel9.setText("Special Qualities: ");
         jPanel7.add(jLabel9);
 
-        cQualities.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        cQualities.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         cQualities.setText("Stuff and Things");
         cQualities.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jPanel7.add(cQualities);
 
         jPanel1.add(jPanel7);
 
-        jPanel12.add(jPanel1);
+        jPanel12.add(jPanel1, java.awt.BorderLayout.NORTH);
 
         jPanel2.setLayout(new java.awt.BorderLayout());
 
@@ -259,7 +258,7 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
 
         jPanel2.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        jPanel12.add(jPanel2);
+        jPanel12.add(jPanel2, java.awt.BorderLayout.CENTER);
 
         jPanel3.setLayout(new java.awt.BorderLayout());
 
@@ -273,23 +272,24 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
 
         jPanel11.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
-        cFocusButton.setText("Download");
+        cFocusButton.setText("See Monster Details");
         jPanel11.add(cFocusButton);
 
         jPanel3.add(jPanel11, java.awt.BorderLayout.SOUTH);
 
         jPanel13.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 2, 13)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 2, 14)); // NOI18N
         jLabel1.setText("Instinct:");
         jPanel13.add(jLabel1);
 
+        cInstinct.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         cInstinct.setText("to do things");
         jPanel13.add(cInstinct);
 
         jPanel3.add(jPanel13, java.awt.BorderLayout.NORTH);
 
-        jPanel12.add(jPanel3);
+        jPanel12.add(jPanel3, java.awt.BorderLayout.SOUTH);
 
         MonsterCard.add(jPanel12, java.awt.BorderLayout.CENTER);
         MonsterCard.add(filler3, java.awt.BorderLayout.EAST);

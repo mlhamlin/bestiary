@@ -850,6 +850,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         jPanel33.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
         jPanel33.add(miniMonsterCard1);
+
+        miniMonsterCard8.setdMonsterName("Bob");
         jPanel33.add(miniMonsterCard8);
         jPanel33.add(miniMonsterCard4);
         jPanel33.add(miniMonsterCard3);
