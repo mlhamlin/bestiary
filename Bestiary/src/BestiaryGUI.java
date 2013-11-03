@@ -195,6 +195,10 @@ public class BestiaryGUI extends javax.swing.JFrame {
         jPanel14 = new javax.swing.JPanel();
         EditNoteButton = new javax.swing.JButton();
         CodexPage = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jPanel29 = new javax.swing.JPanel();
+        jPanel30 = new javax.swing.JPanel();
+        jPanel31 = new javax.swing.JPanel();
 
         MonsterEdit.setAlwaysOnTop(true);
         MonsterEdit.setPreferredSize(new java.awt.Dimension(700, 500));
@@ -819,6 +823,21 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterFocus.add(GMNotePane, java.awt.BorderLayout.SOUTH);
 
         ModeScreens.add(MonsterFocus, "card3");
+
+        CodexPage.setLayout(new java.awt.BorderLayout());
+
+        jScrollPane6.setBackground(new java.awt.Color(238, 238, 238));
+        jScrollPane6.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane6.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+        jPanel29.setLayout(new java.awt.GridLayout(1, 2));
+        jPanel29.add(jPanel30);
+        jPanel29.add(jPanel31);
+
+        jScrollPane6.setViewportView(jPanel29);
+
+        CodexPage.add(jScrollPane6, java.awt.BorderLayout.CENTER);
+
         ModeScreens.add(CodexPage, "card4");
 
         getContentPane().add(ModeScreens, java.awt.BorderLayout.SOUTH);
@@ -1041,7 +1060,10 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel30;
+    private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -1061,6 +1083,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
