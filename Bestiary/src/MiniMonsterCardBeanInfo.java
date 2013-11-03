@@ -24,18 +24,19 @@ public class MiniMonsterCardBeanInfo extends SimpleBeanInfo {
     private static final int PROPERTY_dArmor = 1;
     private static final int PROPERTY_dAttack = 2;
     private static final int PROPERTY_dAttackTags = 3;
-    private static final int PROPERTY_dHP = 4;
-    private static final int PROPERTY_dInstinct = 5;
-    private static final int PROPERTY_dMonsterDescription = 6;
-    private static final int PROPERTY_dMonsterName = 7;
-    private static final int PROPERTY_dMonsterTags = 8;
-    private static final int PROPERTY_dMoveList = 9;
-    private static final int PROPERTY_dQualities = 10;
+    private static final int PROPERTY_dButtonText = 4;
+    private static final int PROPERTY_dHP = 5;
+    private static final int PROPERTY_dInstinct = 6;
+    private static final int PROPERTY_dMonsterDescription = 7;
+    private static final int PROPERTY_dMonsterName = 8;
+    private static final int PROPERTY_dMonsterTags = 9;
+    private static final int PROPERTY_dMoveList = 10;
+    private static final int PROPERTY_dQualities = 11;
 
     // Property array 
     /*lazy PropertyDescriptor*/
     private static PropertyDescriptor[] getPdescriptor(){
-        PropertyDescriptor[] properties = new PropertyDescriptor[11];
+        PropertyDescriptor[] properties = new PropertyDescriptor[12];
     
         try {
             properties[PROPERTY_border] = new PropertyDescriptor ( "border", MiniMonsterCard.class, "getBorder", "setBorder" ); // NOI18N
@@ -46,6 +47,8 @@ public class MiniMonsterCardBeanInfo extends SimpleBeanInfo {
             properties[PROPERTY_dAttack].setDisplayName ( "Attack" );
             properties[PROPERTY_dAttackTags] = new PropertyDescriptor ( "dAttackTags", MiniMonsterCard.class, "getdAttackTags", "setdAttackTags" ); // NOI18N
             properties[PROPERTY_dAttackTags].setDisplayName ( "Attack Tags" );
+            properties[PROPERTY_dButtonText] = new PropertyDescriptor ( "dButtonText", MiniMonsterCard.class, "getdButtonText", "setdButtonText" ); // NOI18N
+            properties[PROPERTY_dButtonText].setDisplayName ( "Button Text" );
             properties[PROPERTY_dHP] = new PropertyDescriptor ( "dHP", MiniMonsterCard.class, "getdHP", "setdHP" ); // NOI18N
             properties[PROPERTY_dHP].setDisplayName ( "HP" );
             properties[PROPERTY_dInstinct] = new PropertyDescriptor ( "dInstinct", MiniMonsterCard.class, "getdInstinct", "setdInstinct" ); // NOI18N

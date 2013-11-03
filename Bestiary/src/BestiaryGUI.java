@@ -126,31 +126,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
         OrganizationTagsGroup = new javax.swing.ButtonGroup();
         SizeTagsGroup = new javax.swing.ButtonGroup();
         filler14 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        ControlBar = new javax.swing.JPanel();
-        MainLabel = new javax.swing.JLabel();
-        ModeButtons = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        MyBestiaryButton = new javax.swing.JToggleButton();
-        NewMonsterButton = new javax.swing.JToggleButton();
-        CodexButton = new javax.swing.JToggleButton();
-        ModeScreens = new javax.swing.JPanel();
-        BestiaryPage = new javax.swing.JPanel();
-        MonsterFocus = new javax.swing.JPanel();
-        Sidebar = new javax.swing.JPanel();
-        jPanel15 = new javax.swing.JPanel();
-        UploadButton = new javax.swing.JButton();
-        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 20), new java.awt.Dimension(0, 20), new java.awt.Dimension(32767, 20));
-        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 20), new java.awt.Dimension(0, 20), new java.awt.Dimension(32767, 20));
-        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
-        filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
-        jPanel18 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jPanel19 = new javax.swing.JPanel();
-        EditCollectionsButton = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
-        filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
-        filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        jFrame1 = new javax.swing.JFrame();
         MonsterDelay = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
@@ -185,6 +161,31 @@ public class BestiaryGUI extends javax.swing.JFrame {
         filler12 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         filler13 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         filler15 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        ControlBar = new javax.swing.JPanel();
+        MainLabel = new javax.swing.JLabel();
+        ModeButtons = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        MyBestiaryButton = new javax.swing.JToggleButton();
+        NewMonsterButton = new javax.swing.JToggleButton();
+        CodexButton = new javax.swing.JToggleButton();
+        ModeScreens = new javax.swing.JPanel();
+        BestiaryPage = new javax.swing.JPanel();
+        MonsterFocus = new javax.swing.JPanel();
+        Sidebar = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        UploadButton = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 20), new java.awt.Dimension(0, 20), new java.awt.Dimension(32767, 20));
+        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 20), new java.awt.Dimension(0, 20), new java.awt.Dimension(32767, 20));
+        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        jPanel18 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        EditCollectionsButton = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
         GMNotePane = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
@@ -194,6 +195,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
         filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
         jPanel14 = new javax.swing.JPanel();
         EditNoteButton = new javax.swing.JButton();
+        largeMonsterCard2 = new LargeMonsterCard();
         CodexPage = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jPanel29 = new javax.swing.JPanel();
@@ -201,21 +203,21 @@ public class BestiaryGUI extends javax.swing.JFrame {
         filler16 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         filler17 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         jPanel33 = new javax.swing.JPanel();
-        miniMonsterCard5 = new MiniMonsterCard();
-        miniMonsterCard12 = new MiniMonsterCard();
-        miniMonsterCard11 = new MiniMonsterCard();
-        miniMonsterCard7 = new MiniMonsterCard();
-        miniMonsterCard6 = new MiniMonsterCard();
+        miniMonsterCard8 = new MiniMonsterCard();
+        miniMonsterCard1 = new MiniMonsterCard();
+        miniMonsterCard4 = new MiniMonsterCard();
+        miniMonsterCard3 = new MiniMonsterCard();
+        miniMonsterCard2 = new MiniMonsterCard();
         jLabel26 = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
         filler18 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         filler19 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         jPanel31 = new javax.swing.JPanel();
-        miniMonsterCard17 = new MiniMonsterCard();
-        miniMonsterCard16 = new MiniMonsterCard();
-        miniMonsterCard15 = new MiniMonsterCard();
-        miniMonsterCard14 = new MiniMonsterCard();
-        miniMonsterCard13 = new MiniMonsterCard();
+        miniMonsterCard20 = new MiniMonsterCard();
+        miniMonsterCard19 = new MiniMonsterCard();
+        miniMonsterCard18 = new MiniMonsterCard();
+        miniMonsterCard10 = new MiniMonsterCard();
+        miniMonsterCard9 = new MiniMonsterCard();
         jLabel27 = new javax.swing.JLabel();
 
         MonsterEdit.setAlwaysOnTop(true);
@@ -579,107 +581,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         jCheckBox3.setText("jCheckBox3");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
-        setSize(new java.awt.Dimension(1024, 786));
-
-        ControlBar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        ControlBar.setMaximumSize(new java.awt.Dimension(1024, 125));
-        ControlBar.setPreferredSize(new java.awt.Dimension(1024, 125));
-        ControlBar.setLayout(new java.awt.GridLayout(1, 2));
-
-        MainLabel.setFont(new java.awt.Font("Lucida Blackletter", 1, 75)); // NOI18N
-        MainLabel.setText("  The Bestiary");
-        ControlBar.add(MainLabel);
-
-        ModeButtons.setLayout(new java.awt.GridLayout(1, 0));
-        ModeButtons.add(jPanel1);
-
-        ModeToggle.add(MyBestiaryButton);
-        MyBestiaryButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
-        MyBestiaryButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.05 copy.jpg"))); // NOI18N
-        MyBestiaryButton.setText("My Bestiary");
-        MyBestiaryButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        MyBestiaryButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        ModeButtons.add(MyBestiaryButton);
-
-        ModeToggle.add(NewMonsterButton);
-        NewMonsterButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
-        NewMonsterButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.12.jpg"))); // NOI18N
-        NewMonsterButton.setText("New Monster");
-        NewMonsterButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        NewMonsterButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        ModeButtons.add(NewMonsterButton);
-
-        ModeToggle.add(CodexButton);
-        CodexButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
-        CodexButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.12 copy.jpg"))); // NOI18N
-        CodexButton.setText("Codex");
-        CodexButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        CodexButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        ModeButtons.add(CodexButton);
-
-        ControlBar.add(ModeButtons);
-
-        getContentPane().add(ControlBar, java.awt.BorderLayout.NORTH);
-
-        ModeScreens.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        ModeScreens.setMinimumSize(new java.awt.Dimension(16, 661));
-        ModeScreens.setPreferredSize(new java.awt.Dimension(1024, 661));
-        ModeScreens.setLayout(new java.awt.CardLayout());
-        ModeScreens.add(BestiaryPage, "card2");
-
-        MonsterFocus.setLayout(new java.awt.BorderLayout());
-
-        Sidebar.setLayout(new java.awt.BorderLayout());
-
-        jPanel15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jPanel15.setLayout(new java.awt.BorderLayout());
-
-        UploadButton.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
-        UploadButton.setText("Upload To Codex");
-        UploadButton.setActionCommand("<html>Upload To <br> Codex</html>");
-        UploadButton.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        jPanel15.add(UploadButton, java.awt.BorderLayout.CENTER);
-        jPanel15.add(filler1, java.awt.BorderLayout.PAGE_START);
-        jPanel15.add(filler2, java.awt.BorderLayout.PAGE_END);
-        jPanel15.add(filler3, java.awt.BorderLayout.LINE_END);
-        jPanel15.add(filler4, java.awt.BorderLayout.LINE_START);
-
-        Sidebar.add(jPanel15, java.awt.BorderLayout.NORTH);
-
-        jPanel18.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jPanel18.setLayout(new java.awt.BorderLayout());
-
-        jLabel15.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel15.setText("Current Collections:");
-        jLabel15.setPreferredSize(new java.awt.Dimension(172, 30));
-        jPanel18.add(jLabel15, java.awt.BorderLayout.PAGE_START);
-
-        jPanel19.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-
-        EditCollectionsButton.setText("Edit Collections");
-        jPanel19.add(EditCollectionsButton);
-
-        jPanel18.add(jPanel19, java.awt.BorderLayout.PAGE_END);
-
-        jList1.setBackground(new java.awt.Color(238, 238, 238));
-        jList1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Orc", "Plains" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane3.setViewportView(jList1);
-
-        jPanel18.add(jScrollPane3, java.awt.BorderLayout.CENTER);
-        jPanel18.add(filler6, java.awt.BorderLayout.LINE_END);
-        jPanel18.add(filler8, java.awt.BorderLayout.LINE_START);
-
-        Sidebar.add(jPanel18, java.awt.BorderLayout.CENTER);
-
-        MonsterFocus.add(Sidebar, java.awt.BorderLayout.LINE_END);
-
         MonsterDelay.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         MonsterDelay.setLayout(new java.awt.BorderLayout());
 
@@ -797,7 +698,108 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         MonsterDelay.add(Headerbox, java.awt.BorderLayout.NORTH);
 
-        MonsterFocus.add(MonsterDelay, java.awt.BorderLayout.CENTER);
+        jFrame1.getContentPane().add(MonsterDelay, java.awt.BorderLayout.CENTER);
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+        setSize(new java.awt.Dimension(1024, 786));
+
+        ControlBar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        ControlBar.setMaximumSize(new java.awt.Dimension(1024, 125));
+        ControlBar.setPreferredSize(new java.awt.Dimension(1024, 125));
+        ControlBar.setLayout(new java.awt.GridLayout(1, 2));
+
+        MainLabel.setFont(new java.awt.Font("Lucida Blackletter", 1, 75)); // NOI18N
+        MainLabel.setText("  The Bestiary");
+        ControlBar.add(MainLabel);
+
+        ModeButtons.setLayout(new java.awt.GridLayout(1, 0));
+        ModeButtons.add(jPanel1);
+
+        ModeToggle.add(MyBestiaryButton);
+        MyBestiaryButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
+        MyBestiaryButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.05 copy.jpg"))); // NOI18N
+        MyBestiaryButton.setText("My Bestiary");
+        MyBestiaryButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        MyBestiaryButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ModeButtons.add(MyBestiaryButton);
+
+        ModeToggle.add(NewMonsterButton);
+        NewMonsterButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
+        NewMonsterButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.12.jpg"))); // NOI18N
+        NewMonsterButton.setText("New Monster");
+        NewMonsterButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        NewMonsterButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ModeButtons.add(NewMonsterButton);
+
+        ModeToggle.add(CodexButton);
+        CodexButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
+        CodexButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.12 copy.jpg"))); // NOI18N
+        CodexButton.setText("Codex");
+        CodexButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        CodexButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ModeButtons.add(CodexButton);
+
+        ControlBar.add(ModeButtons);
+
+        getContentPane().add(ControlBar, java.awt.BorderLayout.NORTH);
+
+        ModeScreens.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        ModeScreens.setMinimumSize(new java.awt.Dimension(16, 661));
+        ModeScreens.setPreferredSize(new java.awt.Dimension(1024, 661));
+        ModeScreens.setLayout(new java.awt.CardLayout());
+        ModeScreens.add(BestiaryPage, "card2");
+
+        MonsterFocus.setLayout(new java.awt.BorderLayout());
+
+        Sidebar.setLayout(new java.awt.BorderLayout());
+
+        jPanel15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel15.setLayout(new java.awt.BorderLayout());
+
+        UploadButton.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
+        UploadButton.setText("Upload To Codex");
+        UploadButton.setActionCommand("<html>Upload To <br> Codex</html>");
+        UploadButton.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jPanel15.add(UploadButton, java.awt.BorderLayout.CENTER);
+        jPanel15.add(filler1, java.awt.BorderLayout.PAGE_START);
+        jPanel15.add(filler2, java.awt.BorderLayout.PAGE_END);
+        jPanel15.add(filler3, java.awt.BorderLayout.LINE_END);
+        jPanel15.add(filler4, java.awt.BorderLayout.LINE_START);
+
+        Sidebar.add(jPanel15, java.awt.BorderLayout.NORTH);
+
+        jPanel18.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel18.setLayout(new java.awt.BorderLayout());
+
+        jLabel15.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel15.setText("Current Collections:");
+        jLabel15.setPreferredSize(new java.awt.Dimension(172, 30));
+        jPanel18.add(jLabel15, java.awt.BorderLayout.PAGE_START);
+
+        jPanel19.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        EditCollectionsButton.setText("Edit Collections");
+        jPanel19.add(EditCollectionsButton);
+
+        jPanel18.add(jPanel19, java.awt.BorderLayout.PAGE_END);
+
+        jList1.setBackground(new java.awt.Color(238, 238, 238));
+        jList1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Orc", "Plains" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList1);
+
+        jPanel18.add(jScrollPane3, java.awt.BorderLayout.CENTER);
+        jPanel18.add(filler6, java.awt.BorderLayout.LINE_END);
+        jPanel18.add(filler8, java.awt.BorderLayout.LINE_START);
+
+        Sidebar.add(jPanel18, java.awt.BorderLayout.CENTER);
+
+        MonsterFocus.add(Sidebar, java.awt.BorderLayout.LINE_END);
 
         GMNotePane.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         GMNotePane.setLayout(new java.awt.BorderLayout());
@@ -834,6 +836,9 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         MonsterFocus.add(GMNotePane, java.awt.BorderLayout.SOUTH);
 
+        largeMonsterCard2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        MonsterFocus.add(largeMonsterCard2, java.awt.BorderLayout.CENTER);
+
         ModeScreens.add(MonsterFocus, "card3");
 
         CodexPage.setLayout(new java.awt.BorderLayout());
@@ -849,11 +854,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         jPanel32.add(filler17, java.awt.BorderLayout.WEST);
 
         jPanel33.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
-        jPanel33.add(miniMonsterCard5);
-        jPanel33.add(miniMonsterCard12);
-        jPanel33.add(miniMonsterCard11);
-        jPanel33.add(miniMonsterCard7);
-        jPanel33.add(miniMonsterCard6);
+        jPanel33.add(miniMonsterCard8);
+        jPanel33.add(miniMonsterCard1);
+        jPanel33.add(miniMonsterCard4);
+        jPanel33.add(miniMonsterCard3);
+        jPanel33.add(miniMonsterCard2);
 
         jPanel32.add(jPanel33, java.awt.BorderLayout.CENTER);
 
@@ -869,11 +874,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         jPanel30.add(filler19, java.awt.BorderLayout.EAST);
 
         jPanel31.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
-        jPanel31.add(miniMonsterCard17);
-        jPanel31.add(miniMonsterCard16);
-        jPanel31.add(miniMonsterCard15);
-        jPanel31.add(miniMonsterCard14);
-        jPanel31.add(miniMonsterCard13);
+        jPanel31.add(miniMonsterCard20);
+        jPanel31.add(miniMonsterCard19);
+        jPanel31.add(miniMonsterCard18);
+        jPanel31.add(miniMonsterCard10);
+        jPanel31.add(miniMonsterCard9);
 
         jPanel30.add(jPanel31, java.awt.BorderLayout.CENTER);
 
@@ -1066,6 +1071,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1144,15 +1150,16 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
-    private MiniMonsterCard miniMonsterCard11;
-    private MiniMonsterCard miniMonsterCard12;
-    private MiniMonsterCard miniMonsterCard13;
-    private MiniMonsterCard miniMonsterCard14;
-    private MiniMonsterCard miniMonsterCard15;
-    private MiniMonsterCard miniMonsterCard16;
-    private MiniMonsterCard miniMonsterCard17;
-    private MiniMonsterCard miniMonsterCard5;
-    private MiniMonsterCard miniMonsterCard6;
-    private MiniMonsterCard miniMonsterCard7;
+    private LargeMonsterCard largeMonsterCard2;
+    private MiniMonsterCard miniMonsterCard1;
+    private MiniMonsterCard miniMonsterCard10;
+    private MiniMonsterCard miniMonsterCard18;
+    private MiniMonsterCard miniMonsterCard19;
+    private MiniMonsterCard miniMonsterCard2;
+    private MiniMonsterCard miniMonsterCard20;
+    private MiniMonsterCard miniMonsterCard3;
+    private MiniMonsterCard miniMonsterCard4;
+    private MiniMonsterCard miniMonsterCard8;
+    private MiniMonsterCard miniMonsterCard9;
     // End of variables declaration//GEN-END:variables
 }

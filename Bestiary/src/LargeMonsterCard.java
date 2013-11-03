@@ -159,9 +159,9 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
         filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
 
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setLayout(new java.awt.BorderLayout());
 
-        MonsterCard.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         MonsterCard.setPreferredSize(new java.awt.Dimension(475, 350));
         MonsterCard.setLayout(new java.awt.BorderLayout());
         MonsterCard.add(filler1, java.awt.BorderLayout.NORTH);
