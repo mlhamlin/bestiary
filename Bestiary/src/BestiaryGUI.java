@@ -68,6 +68,14 @@ public class BestiaryGUI extends javax.swing.JFrame {
         SaveMonsterEdit = new javax.swing.JButton();
         CancelMonsterEdit = new javax.swing.JButton();
         MonsterSurvey = new javax.swing.JDialog();
+        jPanel34 = new javax.swing.JPanel();
+        jPanel36 = new javax.swing.JPanel();
+        jBtnSurveyBack = new javax.swing.JButton();
+        jBtnSurveyNext = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jPanel37 = new javax.swing.JPanel();
+        jBtnSurveyCancel = new javax.swing.JButton();
+        jPanel35 = new javax.swing.JPanel();
         MonsterTagsWindow = new javax.swing.JDialog();
         jPanel10 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -382,6 +390,37 @@ public class BestiaryGUI extends javax.swing.JFrame {
         Moves.add(EndPane, java.awt.BorderLayout.PAGE_END);
 
         MonsterEdit.getContentPane().add(Moves, java.awt.BorderLayout.SOUTH);
+
+        jPanel34.setLayout(new java.awt.BorderLayout());
+
+        jBtnSurveyBack.setText("Back");
+        jBtnSurveyBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSurveyBackActionPerformed(evt);
+            }
+        });
+        jPanel36.add(jBtnSurveyBack);
+
+        jBtnSurveyNext.setText("Next");
+        jBtnSurveyNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSurveyNextActionPerformed(evt);
+            }
+        });
+        jPanel36.add(jBtnSurveyNext);
+
+        jPanel34.add(jPanel36, java.awt.BorderLayout.EAST);
+        jPanel34.add(jSeparator1, java.awt.BorderLayout.PAGE_START);
+
+        jBtnSurveyCancel.setText("Cancel");
+        jPanel37.add(jBtnSurveyCancel);
+
+        jPanel34.add(jPanel37, java.awt.BorderLayout.LINE_START);
+
+        MonsterSurvey.getContentPane().add(jPanel34, java.awt.BorderLayout.PAGE_END);
+
+        jPanel35.setLayout(new java.awt.CardLayout());
+        MonsterSurvey.getContentPane().add(jPanel35, java.awt.BorderLayout.CENTER);
 
         MonsterTagsWindow.setResizable(false);
         MonsterTagsWindow.setSize(new java.awt.Dimension(300, 300));
@@ -932,6 +971,14 @@ public class BestiaryGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
+    private void jBtnSurveyBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSurveyBackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSurveyBackActionPerformed
+
+    private void jBtnSurveyNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSurveyNextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSurveyNextActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1055,6 +1102,9 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler7;
     private javax.swing.Box.Filler filler8;
     private javax.swing.Box.Filler filler9;
+    private javax.swing.JButton jBtnSurveyBack;
+    private javax.swing.JButton jBtnSurveyCancel;
+    private javax.swing.JButton jBtnSurveyNext;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -1128,6 +1178,10 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel34;
+    private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -1148,6 +1202,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private LargeMonsterCard largeMonsterCard2;
