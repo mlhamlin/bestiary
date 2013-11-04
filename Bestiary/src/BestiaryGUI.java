@@ -27,678 +27,675 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         ModeToggle = new javax.swing.ButtonGroup();
         MonsterEdit = new javax.swing.JDialog();
-        HeaderInfo = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        NameField = new javax.swing.JTextField();
-        MonsterTags = new javax.swing.JButton();
-        jPanel7 = new javax.swing.JPanel();
-        HPValue = new javax.swing.JSpinner();
-        jLabel4 = new javax.swing.JLabel();
-        ArmorValue = new javax.swing.JSpinner();
-        jLabel5 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        AttackNameField = new javax.swing.JTextField();
-        Rolls = new javax.swing.JComboBox();
-        Dice = new javax.swing.JComboBox();
-        AttackMod = new javax.swing.JSpinner();
-        AttackTags = new javax.swing.JButton();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        SpecialQualitiesField = new javax.swing.JTextField();
-        Description = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        MonsterDescription = new javax.swing.JTextArea();
-        Instinct = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        InstinctField = new javax.swing.JTextField();
-        Moves = new javax.swing.JPanel();
-        MovesControls = new javax.swing.JPanel();
-        NewMove = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        MovesLabel = new javax.swing.JLabel();
-        MovesListBox = new javax.swing.JPanel();
-        MovesScroll = new javax.swing.JScrollPane();
-        MovesList = new javax.swing.JList();
-        EndPane = new javax.swing.JPanel();
-        SaveMonsterEdit = new javax.swing.JButton();
-        CancelMonsterEdit = new javax.swing.JButton();
+        MonsterEdit_TopPane = new javax.swing.JPanel();
+        MonsterEdit_HeaderInfo = new javax.swing.JPanel();
+        MonsterEdit_Row1 = new javax.swing.JPanel();
+        MonsterEdit_NamePanel = new javax.swing.JPanel();
+        MonsterEdit_NameTitle = new javax.swing.JLabel();
+        MonsterEdit_NameField = new javax.swing.JTextField();
+        MonsterEdit_MonsterTagsButton = new javax.swing.JButton();
+        MonsterEdit_Row2 = new javax.swing.JPanel();
+        MonsterEdit_HPValue = new javax.swing.JSpinner();
+        MonsterEdit_HPLabel = new javax.swing.JLabel();
+        MonsterEdit_ArmorValue = new javax.swing.JSpinner();
+        MonsterEdit_ArmorLabel = new javax.swing.JLabel();
+        MonsterEdit_Row3 = new javax.swing.JPanel();
+        MonsterEdit_AttackNameLabel = new javax.swing.JLabel();
+        MonsterEdit_AttackNameField = new javax.swing.JTextField();
+        MonsterEdit_Rolls = new javax.swing.JComboBox();
+        MonsterEdit_Dice = new javax.swing.JComboBox();
+        MonsterEdit_AttackMod = new javax.swing.JSpinner();
+        MonsterEdit_AttackTags = new javax.swing.JButton();
+        MonsterEdit_Row4 = new javax.swing.JPanel();
+        MonsterEdit_SpecialQualitiesLabel = new javax.swing.JLabel();
+        MonsterEdit_SpecialQualitiesField = new javax.swing.JTextField();
+        MonsterEdit_Description = new javax.swing.JPanel();
+        MonsterEdit_DescriptionLabel = new javax.swing.JLabel();
+        MonsterEdit_DescriptionScrollPane = new javax.swing.JScrollPane();
+        MonsterEdit_DescriptionPane = new javax.swing.JTextArea();
+        MonsterEdit_InstinctBox = new javax.swing.JPanel();
+        MonsterEdit_InstinctLabel = new javax.swing.JLabel();
+        MonsterEdit_InstinctField = new javax.swing.JTextField();
+        MonsterEdit_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 32767));
+        MonsterEdit_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 32767));
+        MonsterEdit_Moves = new javax.swing.JPanel();
+        MonsterEdit_MovesControlsBox = new javax.swing.JPanel();
+        MonsterEdit_NewMoveField = new javax.swing.JTextField();
+        MonsterEdit_RemoveButton = new javax.swing.JButton();
+        MonsterEdit_AddMoveButton = new javax.swing.JButton();
+        MonsterEdit_MovesLabel = new javax.swing.JLabel();
+        MonsterEdit_MovesScrollPane = new javax.swing.JScrollPane();
+        MonsterEdit_MovesList = new javax.swing.JList();
+        MonsterEdit_EndPane = new javax.swing.JPanel();
+        MonsterEdit_SaveButton = new javax.swing.JButton();
+        MonsterEdit_CancelButton = new javax.swing.JButton();
+        MonsterEdit_filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 32767));
+        MonsterEdit_filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 32767));
+        MonsterEdit_filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        MonsterEdit_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        MonsterEdit_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        MonsterEdit_filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         MonsterSurvey = new javax.swing.JDialog();
+        jPanel42 = new javax.swing.JPanel();
+        jPanel43 = new javax.swing.JPanel();
+        jBtnSurveyBack = new javax.swing.JButton();
+        jBtnSurveyNext = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jPanel44 = new javax.swing.JPanel();
+        jBtnSurveyCancel = new javax.swing.JButton();
+        jPanel45 = new javax.swing.JPanel();
+        jPanel34 = new javax.swing.JPanel();
+        jPanel36 = new javax.swing.JPanel();
+        jBtnSurveyBack = new javax.swing.JButton();
+        jBtnSurveyNext = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jPanel37 = new javax.swing.JPanel();
+        jBtnSurveyCancel = new javax.swing.JButton();
+        jPanel35 = new javax.swing.JPanel();
         MonsterTagsWindow = new javax.swing.JDialog();
-        jPanel10 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jPanel13 = new javax.swing.JPanel();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jLabel13 = new javax.swing.JLabel();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jCheckBox9 = new javax.swing.JCheckBox();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jCheckBox10 = new javax.swing.JCheckBox();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jCheckBox11 = new javax.swing.JCheckBox();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jCheckBox12 = new javax.swing.JCheckBox();
-        jPanel11 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        mTagWindow_GridBox = new javax.swing.JPanel();
+        mTagWindow_MonsterTagsTitle = new javax.swing.JLabel();
+        mTagWindow_OrgTagsTitle = new javax.swing.JLabel();
+        mTagWindow_Magical = new javax.swing.JCheckBox();
+        mTagWindow_Horde = new javax.swing.JRadioButton();
+        mTagWindow_Devious = new javax.swing.JCheckBox();
+        mTagWindow_Group = new javax.swing.JRadioButton();
+        mTagWindow_Amorphous = new javax.swing.JCheckBox();
+        mTagWindow_Solitary = new javax.swing.JRadioButton();
+        mTagWindow_Organized = new javax.swing.JCheckBox();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 20), new java.awt.Dimension(20, 20), new java.awt.Dimension(20, 20));
+        mTagWindow_Intelligent = new javax.swing.JCheckBox();
+        mTagWindow_SizeTagsTitle = new javax.swing.JLabel();
+        mTagWindow_Hoarder = new javax.swing.JCheckBox();
+        mTagWindow_Tiny = new javax.swing.JRadioButton();
+        mTagWindow_Stealthy = new javax.swing.JCheckBox();
+        mTagWindow_Small = new javax.swing.JRadioButton();
+        mTagWindow_Terrifying = new javax.swing.JCheckBox();
+        mTagWindow_Normal = new javax.swing.JRadioButton();
+        mTagWindow_Cautious = new javax.swing.JCheckBox();
+        mTagWindow_Large = new javax.swing.JRadioButton();
+        mTagWindow_Construct = new javax.swing.JCheckBox();
+        mTagWindow_Huge = new javax.swing.JRadioButton();
+        mTagWindow_Planar = new javax.swing.JCheckBox();
+        mTagWindow_ButtonBox = new javax.swing.JPanel();
+        mTagWindow_cancelButton = new javax.swing.JButton();
+        mTagWindow_saveButton = new javax.swing.JButton();
         AttackTagsWindow = new javax.swing.JDialog();
-        jLabel12 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        AmmoBox = new javax.swing.JPanel();
-        AmmoCheck = new javax.swing.JCheckBox();
-        AmmoSpin = new javax.swing.JSpinner();
-        jLabel10 = new javax.swing.JLabel();
-        StunCheck = new javax.swing.JCheckBox();
-        ForcefulCheck = new javax.swing.JCheckBox();
-        ThrownCheck = new javax.swing.JCheckBox();
-        IgnoresArmorCheck = new javax.swing.JCheckBox();
-        HandCheck = new javax.swing.JCheckBox();
-        MessyCheck = new javax.swing.JCheckBox();
-        CloseCheck = new javax.swing.JCheckBox();
-        jPanel9 = new javax.swing.JPanel();
-        PiercingCheck = new javax.swing.JCheckBox();
-        PiercingSpin = new javax.swing.JSpinner();
-        jLabel11 = new javax.swing.JLabel();
-        ReachChange = new javax.swing.JCheckBox();
-        PreciseCheck = new javax.swing.JCheckBox();
-        NearCheck = new javax.swing.JCheckBox();
-        ReloadCheck = new javax.swing.JCheckBox();
-        FarCheck = new javax.swing.JCheckBox();
-        jPanel4 = new javax.swing.JPanel();
-        AttackCancel = new javax.swing.JButton();
-        AttackSave = new javax.swing.JButton();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        aTagsWindow_Title = new javax.swing.JLabel();
+        aTagsWindow_GridBox = new javax.swing.JPanel();
+        aTagsWindow_AmmoBox = new javax.swing.JPanel();
+        aTagsWindow_AmmoCheck = new javax.swing.JCheckBox();
+        aTagsWindow_AmmoSpin = new javax.swing.JSpinner();
+        aTagsWindow_AmmoLabel = new javax.swing.JLabel();
+        aTagsWindow_StunCheck = new javax.swing.JCheckBox();
+        aTagsWindow_ForcefulCheck = new javax.swing.JCheckBox();
+        aTagsWindow_ThrownCheck = new javax.swing.JCheckBox();
+        aTagsWindow_IgnoresArmorCheck = new javax.swing.JCheckBox();
+        aTagsWindow_HandCheck = new javax.swing.JCheckBox();
+        aTagsWindow_MessyCheck = new javax.swing.JCheckBox();
+        aTagsWindow_CloseCheck = new javax.swing.JCheckBox();
+        aTagsWindow_PiercingBox = new javax.swing.JPanel();
+        aTagsWindow_PiercingCheck = new javax.swing.JCheckBox();
+        aTagsWindow_PiercingSpin = new javax.swing.JSpinner();
+        aTagsWindow_PiercingLabel = new javax.swing.JLabel();
+        aTagsWindow_ReachCheck = new javax.swing.JCheckBox();
+        aTagsWindow_PreciseCheck = new javax.swing.JCheckBox();
+        aTagsWindow_NearCheck = new javax.swing.JCheckBox();
+        aTagsWindow_ReloadCheck = new javax.swing.JCheckBox();
+        aTagsWindow_FarCheck = new javax.swing.JCheckBox();
+        aTagsWindow_ButtonBox = new javax.swing.JPanel();
+        aTagsWindow_CancelButton = new javax.swing.JButton();
+        aTagsWindow_SaveButton = new javax.swing.JButton();
         OrganizationTagsGroup = new javax.swing.ButtonGroup();
         SizeTagsGroup = new javax.swing.ButtonGroup();
-        filler14 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        jFrame1 = new javax.swing.JFrame();
-        MonsterDelay = new javax.swing.JPanel();
-        jPanel12 = new javax.swing.JPanel();
-        jPanel17 = new javax.swing.JPanel();
-        EditMonsterButton = new javax.swing.JButton();
-        jPanel21 = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList();
-        filler11 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
-        filler9 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
-        filler10 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0));
-        Headerbox = new javax.swing.JPanel();
-        jPanel20 = new javax.swing.JPanel();
-        jPanel22 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jPanel23 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jPanel26 = new javax.swing.JPanel();
-        jPanel27 = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jPanel28 = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jPanel24 = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        jPanel25 = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        filler12 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        filler13 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        filler15 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        myBestiaryOrgTags = new javax.swing.ButtonGroup();
+        myBestiarySizeTags = new javax.swing.ButtonGroup();
         ControlBar = new javax.swing.JPanel();
-        MainLabel = new javax.swing.JLabel();
+        controlbar_MainLabel = new javax.swing.JLabel();
         ModeButtons = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        MyBestiaryButton = new javax.swing.JToggleButton();
-        NewMonsterButton = new javax.swing.JToggleButton();
-        CodexButton = new javax.swing.JToggleButton();
+        headerFiller = new javax.swing.Box.Filler(new java.awt.Dimension(20, 20), new java.awt.Dimension(20, 20), new java.awt.Dimension(20, 20));
+        controlbar_MyBestiaryButton = new javax.swing.JToggleButton();
+        controlbar_NewMonsterButton = new javax.swing.JToggleButton();
+        controlbar_CodexButton = new javax.swing.JToggleButton();
         ModeScreens = new javax.swing.JPanel();
         BestiaryPage = new javax.swing.JPanel();
+        bestiarypage_left = new javax.swing.JPanel();
+        bestiarypage_mainscroll = new javax.swing.JScrollPane();
+        bestiarypage_mainScrollPane = new javax.swing.JPanel();
+        bestiarypage_card1 = new LargeMonsterCard();
+        bestiarypage_card2 = new LargeMonsterCard();
+        bestiarypage_card3 = new LargeMonsterCard();
+        bestiarypage_card4 = new LargeMonsterCard();
+        bestiarypage_card5 = new LargeMonsterCard();
+        bestiarypage_right = new javax.swing.JPanel();
+        bestiarypage_tagBoxes = new javax.swing.JPanel();
+        bestiarypage_collectionTagsPane = new javax.swing.JPanel();
+        bestiarypage_CollectionsLabel = new javax.swing.JLabel();
+        bestiarypage_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0));
+        bestiarypage_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        bestiarypage_collectionsScrollPane = new javax.swing.JScrollPane();
+        bestiarypage_CollectionsPane = new javax.swing.JPanel();
+        bestiarypage_collectionsGridBox = new javax.swing.JPanel();
+        bestiarypage_dummyCheck = new javax.swing.JCheckBox();
+        bestiarypage_dummyCheck2 = new javax.swing.JCheckBox();
+        bestiarypage_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        bestiarypage_collectionsButtonBox = new javax.swing.JPanel();
+        bestiarypage_collectionsClearSelectionButton = new javax.swing.JButton();
+        bestiarypage_monsterTagsPane = new javax.swing.JPanel();
+        bestiarypage_monsterTagsTitle = new javax.swing.JLabel();
+        bestiarypage_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        bestiarypage_filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        bestiarypage_monsterTagsScrollPane = new javax.swing.JScrollPane();
+        bestiarypage_monsterTagPaneMid = new javax.swing.JPanel();
+        bestiarypage_filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        bestiarypage_monsterTagsGridBox = new javax.swing.JPanel();
+        bestiarypage_monsterTagsMonsterLabel = new javax.swing.JLabel();
+        bestiarypage_tag_Magical = new javax.swing.JCheckBox();
+        bestiarypage_tag__Devious = new javax.swing.JCheckBox();
+        bestiarypage_tag_Amorphous = new javax.swing.JCheckBox();
+        bestiarypage_tag_Organized = new javax.swing.JCheckBox();
+        bestiarypage_tag_Intelligent = new javax.swing.JCheckBox();
+        bestiarypage_tag_Hoarder = new javax.swing.JCheckBox();
+        bestiarypage_tag_Stealthy = new javax.swing.JCheckBox();
+        bestiarypage_tag_Terrifying = new javax.swing.JCheckBox();
+        bestiarypage_tag_Cautious = new javax.swing.JCheckBox();
+        bestiarypage_tag_Construct = new javax.swing.JCheckBox();
+        bestiarypage_tag_Planar = new javax.swing.JCheckBox();
+        bestiarypage_monsterTagsOrgLabel = new javax.swing.JLabel();
+        bestiarypage_tag_Horde = new javax.swing.JCheckBox();
+        bestiarypage_tag_Group = new javax.swing.JCheckBox();
+        bestiarypage_tag_Solitary = new javax.swing.JCheckBox();
+        bestiarypage_monsterTagsSizeLabel = new javax.swing.JLabel();
+        bestiarypage_tag_Tiny = new javax.swing.JCheckBox();
+        bestiarypage_tag_Small = new javax.swing.JCheckBox();
+        bestiarypage_tag_Normal = new javax.swing.JCheckBox();
+        bestiarypage_tag_Large = new javax.swing.JCheckBox();
+        bestiarypage_tag_Huge = new javax.swing.JCheckBox();
+        bestiarypage_monsterTagButtonBox = new javax.swing.JPanel();
+        bestiarypage_monsterTagClearSelectionsButton = new javax.swing.JButton();
+        bestiarypage_filterPane = new javax.swing.JPanel();
+        bestiarypage_filterButton = new javax.swing.JButton();
         MonsterFocus = new javax.swing.JPanel();
-        Sidebar = new javax.swing.JPanel();
-        jPanel15 = new javax.swing.JPanel();
-        UploadButton = new javax.swing.JButton();
-        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 20), new java.awt.Dimension(0, 20), new java.awt.Dimension(32767, 20));
-        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 20), new java.awt.Dimension(0, 20), new java.awt.Dimension(32767, 20));
-        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
-        filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
-        jPanel18 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jPanel19 = new javax.swing.JPanel();
-        EditCollectionsButton = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
-        filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
-        filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
-        GMNotePane = new javax.swing.JPanel();
-        jPanel16 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
-        filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
-        jPanel14 = new javax.swing.JPanel();
-        EditNoteButton = new javax.swing.JButton();
-        largeMonsterCard2 = new LargeMonsterCard();
+        monsterFocus_Sidebar = new javax.swing.JPanel();
+        monsterFocus_UploadBox = new javax.swing.JPanel();
+        monsterFocus_UploadButton = new javax.swing.JButton();
+        monsterFocus_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 20), new java.awt.Dimension(0, 20), new java.awt.Dimension(32767, 20));
+        monsterFocus_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 20), new java.awt.Dimension(0, 20), new java.awt.Dimension(32767, 20));
+        monsterFocus_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        monsterFocus_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        monsterFocus_currentCollectionsPane = new javax.swing.JPanel();
+        monsterFocus_currentCollectionsTitle = new javax.swing.JLabel();
+        monsterFocus_currentCollectionsEditPane = new javax.swing.JPanel();
+        monsterFocus_currentCollectionsEditButton = new javax.swing.JButton();
+        monsterFocus_currentCollectionsScrollPane = new javax.swing.JScrollPane();
+        monsterFocus_currentCollectionsList = new javax.swing.JList();
+        monsterFocus_filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        monsterFocus_filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        monsterFocus_GMNotePane = new javax.swing.JPanel();
+        monsterFocus_GMNotesTitle = new javax.swing.JLabel();
+        monsterFocus_GMNotesScrollPane = new javax.swing.JScrollPane();
+        monsterFocus_GMNotesTextArea = new javax.swing.JTextArea();
+        monsterFocus_filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        monsterFocus_filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
+        monsterFocus_GMNotesButtonBox = new javax.swing.JPanel();
+        monsterFocus_GMNotesEditButton = new javax.swing.JButton();
+        monsterFocus_MonsterCard = new LargeMonsterCard();
+        monsterFocus_BackButtonBox = new javax.swing.JPanel();
+        monsterFocus_backButton = new javax.swing.JButton();
         CodexPage = new javax.swing.JPanel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jPanel29 = new javax.swing.JPanel();
-        jPanel32 = new javax.swing.JPanel();
-        filler16 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        filler17 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        jPanel33 = new javax.swing.JPanel();
-        miniMonsterCard8 = new MiniMonsterCard();
-        miniMonsterCard1 = new MiniMonsterCard();
-        miniMonsterCard4 = new MiniMonsterCard();
-        miniMonsterCard3 = new MiniMonsterCard();
-        miniMonsterCard2 = new MiniMonsterCard();
-        jLabel26 = new javax.swing.JLabel();
-        jPanel30 = new javax.swing.JPanel();
-        filler18 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        filler19 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        jPanel31 = new javax.swing.JPanel();
-        miniMonsterCard20 = new MiniMonsterCard();
-        miniMonsterCard19 = new MiniMonsterCard();
-        miniMonsterCard18 = new MiniMonsterCard();
-        miniMonsterCard10 = new MiniMonsterCard();
-        miniMonsterCard9 = new MiniMonsterCard();
-        jLabel27 = new javax.swing.JLabel();
+        CodexPage_MainScrollPanel = new javax.swing.JScrollPane();
+        CodexPage_MainPanel = new javax.swing.JPanel();
+        CodexPage_PopularMonstersTopPanel = new javax.swing.JPanel();
+        CodexPage_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        CodexPage_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        CodexPage_PopularMonstersCards = new javax.swing.JPanel();
+        CodexPage_PopularCard1 = new MiniMonsterCard();
+        CodexPage_PopularCard2 = new MiniMonsterCard();
+        CodexPage_PopularCard3 = new MiniMonsterCard();
+        CodexPage_PopularCard4 = new MiniMonsterCard();
+        CodexPage_PopularCard5 = new MiniMonsterCard();
+        CodexPage_PopularMonsterTitle = new javax.swing.JLabel();
+        CodexPage_RecentMonstersTopPane = new javax.swing.JPanel();
+        CodexPage_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        CodexPage_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        CodexPage_RecentMonstersCards = new javax.swing.JPanel();
+        CodexPage_RecentCard1 = new MiniMonsterCard();
+        CodexPage_RecentCard2 = new MiniMonsterCard();
+        CodexPage_RecentCard3 = new MiniMonsterCard();
+        CodexPage_RecentCard4 = new MiniMonsterCard();
+        CodexPage_RecentCard5 = new MiniMonsterCard();
+        CodexPage_RecentMonstersTitle = new javax.swing.JLabel();
 
         MonsterEdit.setAlwaysOnTop(true);
         MonsterEdit.setResizable(false);
         MonsterEdit.setSize(new java.awt.Dimension(700, 500));
 
-        HeaderInfo.setLayout(new java.awt.GridLayout(4, 0));
+        MonsterEdit_TopPane.setLayout(new java.awt.BorderLayout());
 
-        jPanel5.setLayout(new java.awt.BorderLayout());
+        MonsterEdit_HeaderInfo.setLayout(new java.awt.GridLayout(4, 0));
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel2.setText("Name:");
-        jPanel2.add(jLabel2);
+        MonsterEdit_Row1.setLayout(new java.awt.BorderLayout());
 
-        NameField.setPreferredSize(new java.awt.Dimension(300, 28));
-        NameField.addActionListener(new java.awt.event.ActionListener() {
+        MonsterEdit_NameTitle.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        MonsterEdit_NameTitle.setText("Name:");
+        MonsterEdit_NamePanel.add(MonsterEdit_NameTitle);
+
+        MonsterEdit_NameField.setPreferredSize(new java.awt.Dimension(300, 28));
+        MonsterEdit_NameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NameFieldActionPerformed(evt);
+                MonsterEdit_NameFieldActionPerformed(evt);
             }
         });
-        jPanel2.add(NameField);
+        MonsterEdit_NamePanel.add(MonsterEdit_NameField);
 
-        jPanel5.add(jPanel2, java.awt.BorderLayout.WEST);
+        MonsterEdit_Row1.add(MonsterEdit_NamePanel, java.awt.BorderLayout.WEST);
 
-        MonsterTags.setText("Monster Tags");
-        jPanel5.add(MonsterTags, java.awt.BorderLayout.EAST);
+        MonsterEdit_MonsterTagsButton.setText("Monster Tags");
+        MonsterEdit_Row1.add(MonsterEdit_MonsterTagsButton, java.awt.BorderLayout.EAST);
 
-        HeaderInfo.add(jPanel5);
+        MonsterEdit_HeaderInfo.add(MonsterEdit_Row1);
 
-        jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+        MonsterEdit_Row2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
-        HPValue.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
-        jPanel7.add(HPValue);
+        MonsterEdit_HPValue.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        MonsterEdit_Row2.add(MonsterEdit_HPValue);
 
-        jLabel4.setText("HP      ");
-        jPanel7.add(jLabel4);
+        MonsterEdit_HPLabel.setText("HP      ");
+        MonsterEdit_Row2.add(MonsterEdit_HPLabel);
 
-        ArmorValue.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
-        jPanel7.add(ArmorValue);
+        MonsterEdit_ArmorValue.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        MonsterEdit_Row2.add(MonsterEdit_ArmorValue);
 
-        jLabel5.setText("Armor");
-        jPanel7.add(jLabel5);
+        MonsterEdit_ArmorLabel.setText("Armor");
+        MonsterEdit_Row2.add(MonsterEdit_ArmorLabel);
 
-        HeaderInfo.add(jPanel7);
+        MonsterEdit_HeaderInfo.add(MonsterEdit_Row2);
 
-        jPanel6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        MonsterEdit_Row3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel3.setText("Attack Name:");
-        jPanel6.add(jLabel3);
+        MonsterEdit_AttackNameLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        MonsterEdit_AttackNameLabel.setText("Attack Name:");
+        MonsterEdit_Row3.add(MonsterEdit_AttackNameLabel);
 
-        AttackNameField.setPreferredSize(new java.awt.Dimension(175, 28));
-        AttackNameField.addActionListener(new java.awt.event.ActionListener() {
+        MonsterEdit_AttackNameField.setPreferredSize(new java.awt.Dimension(175, 28));
+        MonsterEdit_AttackNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AttackNameFieldActionPerformed(evt);
+                MonsterEdit_AttackNameFieldActionPerformed(evt);
             }
         });
-        jPanel6.add(AttackNameField);
+        MonsterEdit_Row3.add(MonsterEdit_AttackNameField);
 
-        Rolls.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Normal", "Best of 2", "Worst of 2" }));
-        jPanel6.add(Rolls);
+        MonsterEdit_Rolls.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Normal", "Best of 2", "Worst of 2" }));
+        MonsterEdit_Row3.add(MonsterEdit_Rolls);
 
-        Dice.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "d4", "d6", "d8", "d10", "d12", "d20" }));
-        jPanel6.add(Dice);
+        MonsterEdit_Dice.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "d4", "d6", "d8", "d10", "d12", "d20" }));
+        MonsterEdit_Row3.add(MonsterEdit_Dice);
 
-        AttackMod.setModel(new javax.swing.SpinnerNumberModel(0, -20, 20, 1));
-        AttackMod.setVerifyInputWhenFocusTarget(false);
-        jPanel6.add(AttackMod);
+        MonsterEdit_AttackMod.setModel(new javax.swing.SpinnerNumberModel(0, -20, 20, 1));
+        MonsterEdit_AttackMod.setVerifyInputWhenFocusTarget(false);
+        MonsterEdit_Row3.add(MonsterEdit_AttackMod);
 
-        AttackTags.setText("Attack Tags");
-        jPanel6.add(AttackTags);
+        MonsterEdit_AttackTags.setText("Attack Tags");
+        MonsterEdit_Row3.add(MonsterEdit_AttackTags);
 
-        HeaderInfo.add(jPanel6);
+        MonsterEdit_HeaderInfo.add(MonsterEdit_Row3);
 
-        jPanel8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        MonsterEdit_Row4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel6.setText("Special Qualities:");
-        jPanel8.add(jLabel6);
+        MonsterEdit_SpecialQualitiesLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        MonsterEdit_SpecialQualitiesLabel.setText("Special Qualities:");
+        MonsterEdit_Row4.add(MonsterEdit_SpecialQualitiesLabel);
 
-        SpecialQualitiesField.setPreferredSize(new java.awt.Dimension(400, 28));
-        jPanel8.add(SpecialQualitiesField);
+        MonsterEdit_SpecialQualitiesField.setPreferredSize(new java.awt.Dimension(400, 28));
+        MonsterEdit_Row4.add(MonsterEdit_SpecialQualitiesField);
 
-        HeaderInfo.add(jPanel8);
+        MonsterEdit_HeaderInfo.add(MonsterEdit_Row4);
 
-        MonsterEdit.getContentPane().add(HeaderInfo, java.awt.BorderLayout.NORTH);
+        MonsterEdit_TopPane.add(MonsterEdit_HeaderInfo, java.awt.BorderLayout.NORTH);
 
-        Description.setLayout(new java.awt.BorderLayout());
+        MonsterEdit_Description.setLayout(new java.awt.BorderLayout());
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel1.setText(" Description:");
-        Description.add(jLabel1, java.awt.BorderLayout.PAGE_START);
+        MonsterEdit_DescriptionLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        MonsterEdit_DescriptionLabel.setText(" Description:");
+        MonsterEdit_DescriptionLabel.setMaximumSize(new java.awt.Dimension(86, 20));
+        MonsterEdit_DescriptionLabel.setPreferredSize(new java.awt.Dimension(86, 22));
+        MonsterEdit_Description.add(MonsterEdit_DescriptionLabel, java.awt.BorderLayout.PAGE_START);
 
-        MonsterDescription.setColumns(20);
-        MonsterDescription.setLineWrap(true);
-        MonsterDescription.setRows(5);
-        jScrollPane1.setViewportView(MonsterDescription);
+        MonsterEdit_DescriptionPane.setColumns(20);
+        MonsterEdit_DescriptionPane.setLineWrap(true);
+        MonsterEdit_DescriptionPane.setRows(5);
+        MonsterEdit_DescriptionScrollPane.setViewportView(MonsterEdit_DescriptionPane);
 
-        Description.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+        MonsterEdit_Description.add(MonsterEdit_DescriptionScrollPane, java.awt.BorderLayout.CENTER);
 
-        Instinct.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        MonsterEdit_InstinctBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel7.setText("Instinct:");
-        Instinct.add(jLabel7);
+        MonsterEdit_InstinctLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        MonsterEdit_InstinctLabel.setText("Instinct:");
+        MonsterEdit_InstinctBox.add(MonsterEdit_InstinctLabel);
 
-        InstinctField.setPreferredSize(new java.awt.Dimension(300, 28));
-        InstinctField.setSize(new java.awt.Dimension(200, 28));
-        Instinct.add(InstinctField);
+        MonsterEdit_InstinctField.setPreferredSize(new java.awt.Dimension(300, 28));
+        MonsterEdit_InstinctField.setSize(new java.awt.Dimension(200, 28));
+        MonsterEdit_InstinctBox.add(MonsterEdit_InstinctField);
 
-        Description.add(Instinct, java.awt.BorderLayout.SOUTH);
+        MonsterEdit_Description.add(MonsterEdit_InstinctBox, java.awt.BorderLayout.SOUTH);
+        MonsterEdit_Description.add(MonsterEdit_filler1, java.awt.BorderLayout.WEST);
+        MonsterEdit_Description.add(MonsterEdit_filler2, java.awt.BorderLayout.EAST);
 
-        MonsterEdit.getContentPane().add(Description, java.awt.BorderLayout.CENTER);
+        MonsterEdit_TopPane.add(MonsterEdit_Description, java.awt.BorderLayout.CENTER);
 
-        Moves.setLayout(new java.awt.BorderLayout());
+        MonsterEdit_Moves.setLayout(new java.awt.BorderLayout());
 
-        MovesControls.setLayout(new java.awt.BorderLayout());
+        MonsterEdit_MovesControlsBox.setLayout(new java.awt.BorderLayout());
 
-        NewMove.setText("Move");
-        NewMove.addActionListener(new java.awt.event.ActionListener() {
+        MonsterEdit_NewMoveField.setText("Move");
+        MonsterEdit_NewMoveField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NewMoveActionPerformed(evt);
+                MonsterEdit_NewMoveFieldActionPerformed(evt);
             }
         });
-        MovesControls.add(NewMove, java.awt.BorderLayout.CENTER);
+        MonsterEdit_MovesControlsBox.add(MonsterEdit_NewMoveField, java.awt.BorderLayout.CENTER);
 
-        jButton1.setText("Remove");
-        MovesControls.add(jButton1, java.awt.BorderLayout.LINE_START);
+        MonsterEdit_RemoveButton.setText("Remove");
+        MonsterEdit_MovesControlsBox.add(MonsterEdit_RemoveButton, java.awt.BorderLayout.LINE_START);
 
-        jButton2.setText("Add Move");
-        MovesControls.add(jButton2, java.awt.BorderLayout.LINE_END);
+        MonsterEdit_AddMoveButton.setText("Add Move");
+        MonsterEdit_MovesControlsBox.add(MonsterEdit_AddMoveButton, java.awt.BorderLayout.LINE_END);
 
-        MovesLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        MovesLabel.setText(" Moves");
-        MovesControls.add(MovesLabel, java.awt.BorderLayout.PAGE_START);
+        MonsterEdit_MovesLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        MonsterEdit_MovesLabel.setText(" Moves");
+        MonsterEdit_MovesControlsBox.add(MonsterEdit_MovesLabel, java.awt.BorderLayout.PAGE_START);
 
-        Moves.add(MovesControls, java.awt.BorderLayout.PAGE_START);
+        MonsterEdit_Moves.add(MonsterEdit_MovesControlsBox, java.awt.BorderLayout.NORTH);
 
-        MovesListBox.setLayout(new java.awt.BorderLayout());
+        MonsterEdit_MovesScrollPane.setPreferredSize(new java.awt.Dimension(100, 75));
 
-        MovesScroll.setPreferredSize(new java.awt.Dimension(100, 75));
-
-        MovesList.setModel(new javax.swing.AbstractListModel() {
+        MonsterEdit_MovesList.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        MovesScroll.setViewportView(MovesList);
+        MonsterEdit_MovesScrollPane.setViewportView(MonsterEdit_MovesList);
 
-        MovesListBox.add(MovesScroll, java.awt.BorderLayout.CENTER);
+        MonsterEdit_Moves.add(MonsterEdit_MovesScrollPane, java.awt.BorderLayout.CENTER);
 
-        Moves.add(MovesListBox, java.awt.BorderLayout.CENTER);
+        MonsterEdit_EndPane.setLayout(new java.awt.BorderLayout());
 
-        EndPane.setLayout(new java.awt.BorderLayout());
+        MonsterEdit_SaveButton.setText("Save");
+        MonsterEdit_EndPane.add(MonsterEdit_SaveButton, java.awt.BorderLayout.EAST);
 
-        SaveMonsterEdit.setText("Save");
-        EndPane.add(SaveMonsterEdit, java.awt.BorderLayout.EAST);
+        MonsterEdit_CancelButton.setText("Cancel");
+        MonsterEdit_EndPane.add(MonsterEdit_CancelButton, java.awt.BorderLayout.WEST);
 
-        CancelMonsterEdit.setText("Cancel");
-        EndPane.add(CancelMonsterEdit, java.awt.BorderLayout.WEST);
+        MonsterEdit_Moves.add(MonsterEdit_EndPane, java.awt.BorderLayout.SOUTH);
+        MonsterEdit_Moves.add(MonsterEdit_filler6, java.awt.BorderLayout.WEST);
+        MonsterEdit_Moves.add(MonsterEdit_filler7, java.awt.BorderLayout.EAST);
 
-        Moves.add(EndPane, java.awt.BorderLayout.PAGE_END);
+        MonsterEdit_TopPane.add(MonsterEdit_Moves, java.awt.BorderLayout.SOUTH);
 
-        MonsterEdit.getContentPane().add(Moves, java.awt.BorderLayout.SOUTH);
+        MonsterEdit.getContentPane().add(MonsterEdit_TopPane, java.awt.BorderLayout.CENTER);
+        MonsterEdit.getContentPane().add(MonsterEdit_filler8, java.awt.BorderLayout.WEST);
+        MonsterEdit.getContentPane().add(MonsterEdit_filler3, java.awt.BorderLayout.EAST);
+        MonsterEdit.getContentPane().add(MonsterEdit_filler4, java.awt.BorderLayout.NORTH);
+        MonsterEdit.getContentPane().add(MonsterEdit_filler5, java.awt.BorderLayout.SOUTH);
+
+        jPanel42.setLayout(new java.awt.BorderLayout());
+
+        jBtnSurveyBack.setText("Back");
+        jBtnSurveyBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSurveyBackActionPerformed(evt);
+            }
+        });
+        jPanel43.add(jBtnSurveyBack);
+
+        jBtnSurveyNext.setText("Next");
+        jBtnSurveyNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSurveyNextActionPerformed(evt);
+            }
+        });
+        jPanel43.add(jBtnSurveyNext);
+
+        jPanel42.add(jPanel43, java.awt.BorderLayout.EAST);
+        jPanel42.add(jSeparator1, java.awt.BorderLayout.PAGE_START);
+
+        jBtnSurveyCancel.setText("Cancel");
+        jPanel44.add(jBtnSurveyCancel);
+
+        jPanel42.add(jPanel44, java.awt.BorderLayout.LINE_START);
+
+        MonsterSurvey.getContentPane().add(jPanel42, java.awt.BorderLayout.PAGE_END);
+
+        jPanel45.setLayout(new java.awt.CardLayout());
+        MonsterSurvey.getContentPane().add(jPanel45, java.awt.BorderLayout.CENTER);
+
+        jPanel34.setLayout(new java.awt.BorderLayout());
+
+        jBtnSurveyBack.setText("Back");
+        jBtnSurveyBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSurveyBackActionPerformed(evt);
+            }
+        });
+        jPanel36.add(jBtnSurveyBack);
+
+        jBtnSurveyNext.setText("Next");
+        jBtnSurveyNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSurveyNextActionPerformed(evt);
+            }
+        });
+        jPanel36.add(jBtnSurveyNext);
+
+        jPanel34.add(jPanel36, java.awt.BorderLayout.EAST);
+        jPanel34.add(jSeparator1, java.awt.BorderLayout.PAGE_START);
+
+        jBtnSurveyCancel.setText("Cancel");
+        jPanel37.add(jBtnSurveyCancel);
+
+        jPanel34.add(jPanel37, java.awt.BorderLayout.LINE_START);
+
+        MonsterSurvey.getContentPane().add(jPanel34, java.awt.BorderLayout.PAGE_END);
+
+        jPanel35.setLayout(new java.awt.CardLayout());
+        MonsterSurvey.getContentPane().add(jPanel35, java.awt.BorderLayout.CENTER);
 
         MonsterTagsWindow.setResizable(false);
         MonsterTagsWindow.setSize(new java.awt.Dimension(300, 300));
 
-        jPanel10.setLayout(new java.awt.GridLayout(12, 2));
+        mTagWindow_GridBox.setLayout(new java.awt.GridLayout(12, 2));
 
-        jLabel8.setText("Monster Tags:");
-        jPanel10.add(jLabel8);
+        mTagWindow_MonsterTagsTitle.setText("Monster Tags:");
+        mTagWindow_GridBox.add(mTagWindow_MonsterTagsTitle);
 
-        jLabel9.setText("Organization Tags:");
-        jPanel10.add(jLabel9);
+        mTagWindow_OrgTagsTitle.setText("Organization Tags:");
+        mTagWindow_GridBox.add(mTagWindow_OrgTagsTitle);
 
-        jCheckBox1.setText("Magical");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        mTagWindow_Magical.setText("Magical");
+        mTagWindow_Magical.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                mTagWindow_MagicalActionPerformed(evt);
             }
         });
-        jPanel10.add(jCheckBox1);
+        mTagWindow_GridBox.add(mTagWindow_Magical);
 
-        OrganizationTagsGroup.add(jRadioButton1);
-        jRadioButton1.setText("Horde");
-        jPanel10.add(jRadioButton1);
+        OrganizationTagsGroup.add(mTagWindow_Horde);
+        mTagWindow_Horde.setText("Horde");
+        mTagWindow_GridBox.add(mTagWindow_Horde);
 
-        jCheckBox2.setText("Devious");
-        jPanel10.add(jCheckBox2);
+        mTagWindow_Devious.setText("Devious");
+        mTagWindow_GridBox.add(mTagWindow_Devious);
 
-        OrganizationTagsGroup.add(jRadioButton2);
-        jRadioButton2.setText("Group");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        OrganizationTagsGroup.add(mTagWindow_Group);
+        mTagWindow_Group.setText("Group");
+        mTagWindow_Group.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                mTagWindow_GroupActionPerformed(evt);
             }
         });
-        jPanel10.add(jRadioButton2);
+        mTagWindow_GridBox.add(mTagWindow_Group);
 
-        jCheckBox4.setText("Amorphous");
-        jPanel10.add(jCheckBox4);
+        mTagWindow_Amorphous.setText("Amorphous");
+        mTagWindow_GridBox.add(mTagWindow_Amorphous);
 
-        OrganizationTagsGroup.add(jRadioButton3);
-        jRadioButton3.setText("Solitary");
-        jPanel10.add(jRadioButton3);
+        OrganizationTagsGroup.add(mTagWindow_Solitary);
+        mTagWindow_Solitary.setText("Solitary");
+        mTagWindow_GridBox.add(mTagWindow_Solitary);
 
-        jCheckBox5.setText("Organized");
-        jPanel10.add(jCheckBox5);
-        jPanel10.add(jPanel13);
+        mTagWindow_Organized.setText("Organized");
+        mTagWindow_GridBox.add(mTagWindow_Organized);
+        mTagWindow_GridBox.add(filler1);
 
-        jCheckBox6.setText("Intelligent");
-        jPanel10.add(jCheckBox6);
+        mTagWindow_Intelligent.setText("Intelligent");
+        mTagWindow_GridBox.add(mTagWindow_Intelligent);
 
-        jLabel13.setText("Size Tags:");
-        jPanel10.add(jLabel13);
+        mTagWindow_SizeTagsTitle.setText("Size Tags:");
+        mTagWindow_GridBox.add(mTagWindow_SizeTagsTitle);
 
-        jCheckBox7.setText("Hoarder");
-        jPanel10.add(jCheckBox7);
+        mTagWindow_Hoarder.setText("Hoarder");
+        mTagWindow_GridBox.add(mTagWindow_Hoarder);
 
-        SizeTagsGroup.add(jRadioButton4);
-        jRadioButton4.setText("Tiny");
-        jPanel10.add(jRadioButton4);
+        SizeTagsGroup.add(mTagWindow_Tiny);
+        mTagWindow_Tiny.setText("Tiny");
+        mTagWindow_GridBox.add(mTagWindow_Tiny);
 
-        jCheckBox8.setText("Stealthy");
-        jPanel10.add(jCheckBox8);
+        mTagWindow_Stealthy.setText("Stealthy");
+        mTagWindow_GridBox.add(mTagWindow_Stealthy);
 
-        SizeTagsGroup.add(jRadioButton5);
-        jRadioButton5.setText("Small");
-        jPanel10.add(jRadioButton5);
+        SizeTagsGroup.add(mTagWindow_Small);
+        mTagWindow_Small.setText("Small");
+        mTagWindow_GridBox.add(mTagWindow_Small);
 
-        jCheckBox9.setText("Terrifying");
-        jPanel10.add(jCheckBox9);
+        mTagWindow_Terrifying.setText("Terrifying");
+        mTagWindow_GridBox.add(mTagWindow_Terrifying);
 
-        SizeTagsGroup.add(jRadioButton6);
-        jRadioButton6.setText("Normal");
-        jPanel10.add(jRadioButton6);
+        SizeTagsGroup.add(mTagWindow_Normal);
+        mTagWindow_Normal.setText("Normal");
+        mTagWindow_GridBox.add(mTagWindow_Normal);
 
-        jCheckBox10.setText("Cautious");
-        jPanel10.add(jCheckBox10);
+        mTagWindow_Cautious.setText("Cautious");
+        mTagWindow_GridBox.add(mTagWindow_Cautious);
 
-        SizeTagsGroup.add(jRadioButton7);
-        jRadioButton7.setText("Large");
-        jPanel10.add(jRadioButton7);
+        SizeTagsGroup.add(mTagWindow_Large);
+        mTagWindow_Large.setText("Large");
+        mTagWindow_GridBox.add(mTagWindow_Large);
 
-        jCheckBox11.setText("Construct");
-        jPanel10.add(jCheckBox11);
+        mTagWindow_Construct.setText("Construct");
+        mTagWindow_GridBox.add(mTagWindow_Construct);
 
-        SizeTagsGroup.add(jRadioButton8);
-        jRadioButton8.setText("Huge");
-        jPanel10.add(jRadioButton8);
+        SizeTagsGroup.add(mTagWindow_Huge);
+        mTagWindow_Huge.setText("Huge");
+        mTagWindow_GridBox.add(mTagWindow_Huge);
 
-        jCheckBox12.setText("Planar");
-        jPanel10.add(jCheckBox12);
+        mTagWindow_Planar.setText("Planar");
+        mTagWindow_GridBox.add(mTagWindow_Planar);
 
-        MonsterTagsWindow.getContentPane().add(jPanel10, java.awt.BorderLayout.CENTER);
+        MonsterTagsWindow.getContentPane().add(mTagWindow_GridBox, java.awt.BorderLayout.CENTER);
 
-        jPanel11.setLayout(new java.awt.BorderLayout());
+        mTagWindow_ButtonBox.setLayout(new java.awt.BorderLayout());
 
-        jButton3.setText("Cancel");
-        jPanel11.add(jButton3, java.awt.BorderLayout.WEST);
+        mTagWindow_cancelButton.setText("Cancel");
+        mTagWindow_ButtonBox.add(mTagWindow_cancelButton, java.awt.BorderLayout.WEST);
 
-        jButton4.setText("Save");
-        jPanel11.add(jButton4, java.awt.BorderLayout.EAST);
+        mTagWindow_saveButton.setText("Save");
+        mTagWindow_ButtonBox.add(mTagWindow_saveButton, java.awt.BorderLayout.EAST);
 
-        MonsterTagsWindow.getContentPane().add(jPanel11, java.awt.BorderLayout.SOUTH);
+        MonsterTagsWindow.getContentPane().add(mTagWindow_ButtonBox, java.awt.BorderLayout.SOUTH);
 
         AttackTagsWindow.setResizable(false);
         AttackTagsWindow.setSize(new java.awt.Dimension(300, 275));
 
-        jLabel12.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel12.setText(" Attack Tags:");
-        AttackTagsWindow.getContentPane().add(jLabel12, java.awt.BorderLayout.NORTH);
+        aTagsWindow_Title.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        aTagsWindow_Title.setText(" Attack Tags:");
+        AttackTagsWindow.getContentPane().add(aTagsWindow_Title, java.awt.BorderLayout.NORTH);
 
-        jPanel3.setLayout(new java.awt.GridLayout(7, 2));
+        aTagsWindow_GridBox.setLayout(new java.awt.GridLayout(7, 2));
 
-        AmmoBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
-        AmmoBox.add(AmmoCheck);
+        aTagsWindow_AmmoBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
+        aTagsWindow_AmmoBox.add(aTagsWindow_AmmoCheck);
 
-        AmmoSpin.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
-        AmmoBox.add(AmmoSpin);
+        aTagsWindow_AmmoSpin.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        aTagsWindow_AmmoBox.add(aTagsWindow_AmmoSpin);
 
-        jLabel10.setText(" Ammo");
-        AmmoBox.add(jLabel10);
+        aTagsWindow_AmmoLabel.setText(" Ammo");
+        aTagsWindow_AmmoBox.add(aTagsWindow_AmmoLabel);
 
-        jPanel3.add(AmmoBox);
+        aTagsWindow_GridBox.add(aTagsWindow_AmmoBox);
 
-        StunCheck.setText("Stun");
-        jPanel3.add(StunCheck);
+        aTagsWindow_StunCheck.setText("Stun");
+        aTagsWindow_GridBox.add(aTagsWindow_StunCheck);
 
-        ForcefulCheck.setText("Forceful");
-        ForcefulCheck.addActionListener(new java.awt.event.ActionListener() {
+        aTagsWindow_ForcefulCheck.setText("Forceful");
+        aTagsWindow_ForcefulCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ForcefulCheckActionPerformed(evt);
+                aTagsWindow_ForcefulCheckActionPerformed(evt);
             }
         });
-        jPanel3.add(ForcefulCheck);
+        aTagsWindow_GridBox.add(aTagsWindow_ForcefulCheck);
 
-        ThrownCheck.setText("Thrown");
-        ThrownCheck.addActionListener(new java.awt.event.ActionListener() {
+        aTagsWindow_ThrownCheck.setText("Thrown");
+        aTagsWindow_ThrownCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ThrownCheckActionPerformed(evt);
+                aTagsWindow_ThrownCheckActionPerformed(evt);
             }
         });
-        jPanel3.add(ThrownCheck);
+        aTagsWindow_GridBox.add(aTagsWindow_ThrownCheck);
 
-        IgnoresArmorCheck.setText("Ignores Armor");
-        jPanel3.add(IgnoresArmorCheck);
+        aTagsWindow_IgnoresArmorCheck.setText("Ignores Armor");
+        aTagsWindow_GridBox.add(aTagsWindow_IgnoresArmorCheck);
 
-        HandCheck.setText("Hand");
-        jPanel3.add(HandCheck);
+        aTagsWindow_HandCheck.setText("Hand");
+        aTagsWindow_GridBox.add(aTagsWindow_HandCheck);
 
-        MessyCheck.setText("Messy");
-        jPanel3.add(MessyCheck);
+        aTagsWindow_MessyCheck.setText("Messy");
+        aTagsWindow_GridBox.add(aTagsWindow_MessyCheck);
 
-        CloseCheck.setText("Close");
-        jPanel3.add(CloseCheck);
+        aTagsWindow_CloseCheck.setText("Close");
+        aTagsWindow_GridBox.add(aTagsWindow_CloseCheck);
 
-        jPanel9.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 2));
-        jPanel9.add(PiercingCheck);
+        aTagsWindow_PiercingBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 2));
+        aTagsWindow_PiercingBox.add(aTagsWindow_PiercingCheck);
 
-        PiercingSpin.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
-        jPanel9.add(PiercingSpin);
+        aTagsWindow_PiercingSpin.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        aTagsWindow_PiercingBox.add(aTagsWindow_PiercingSpin);
 
-        jLabel11.setText(" Piercing");
-        jPanel9.add(jLabel11);
+        aTagsWindow_PiercingLabel.setText(" Piercing");
+        aTagsWindow_PiercingBox.add(aTagsWindow_PiercingLabel);
 
-        jPanel3.add(jPanel9);
+        aTagsWindow_GridBox.add(aTagsWindow_PiercingBox);
 
-        ReachChange.setText("Reach");
-        jPanel3.add(ReachChange);
+        aTagsWindow_ReachCheck.setText("Reach");
+        aTagsWindow_GridBox.add(aTagsWindow_ReachCheck);
 
-        PreciseCheck.setText("Precise");
-        PreciseCheck.addActionListener(new java.awt.event.ActionListener() {
+        aTagsWindow_PreciseCheck.setText("Precise");
+        aTagsWindow_PreciseCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PreciseCheckActionPerformed(evt);
+                aTagsWindow_PreciseCheckActionPerformed(evt);
             }
         });
-        jPanel3.add(PreciseCheck);
+        aTagsWindow_GridBox.add(aTagsWindow_PreciseCheck);
 
-        NearCheck.setText("Near");
-        jPanel3.add(NearCheck);
+        aTagsWindow_NearCheck.setText("Near");
+        aTagsWindow_GridBox.add(aTagsWindow_NearCheck);
 
-        ReloadCheck.setText("Reload");
-        jPanel3.add(ReloadCheck);
+        aTagsWindow_ReloadCheck.setText("Reload");
+        aTagsWindow_GridBox.add(aTagsWindow_ReloadCheck);
 
-        FarCheck.setText("Far");
-        jPanel3.add(FarCheck);
+        aTagsWindow_FarCheck.setText("Far");
+        aTagsWindow_GridBox.add(aTagsWindow_FarCheck);
 
-        AttackTagsWindow.getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
+        AttackTagsWindow.getContentPane().add(aTagsWindow_GridBox, java.awt.BorderLayout.CENTER);
 
-        jPanel4.setLayout(new java.awt.BorderLayout());
+        aTagsWindow_ButtonBox.setLayout(new java.awt.BorderLayout());
 
-        AttackCancel.setText("Cancel");
-        jPanel4.add(AttackCancel, java.awt.BorderLayout.WEST);
+        aTagsWindow_CancelButton.setText("Cancel");
+        aTagsWindow_ButtonBox.add(aTagsWindow_CancelButton, java.awt.BorderLayout.WEST);
 
-        AttackSave.setText("Save");
-        jPanel4.add(AttackSave, java.awt.BorderLayout.EAST);
+        aTagsWindow_SaveButton.setText("Save");
+        aTagsWindow_ButtonBox.add(aTagsWindow_SaveButton, java.awt.BorderLayout.EAST);
 
-        AttackTagsWindow.getContentPane().add(jPanel4, java.awt.BorderLayout.PAGE_END);
-
-        jCheckBox3.setText("jCheckBox3");
-
-        MonsterDelay.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        MonsterDelay.setLayout(new java.awt.BorderLayout());
-
-        jPanel12.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-        jPanel12.add(jPanel17);
-
-        EditMonsterButton.setText("Edit Monster");
-        jPanel12.add(EditMonsterButton);
-
-        MonsterDelay.add(jPanel12, java.awt.BorderLayout.PAGE_END);
-
-        jPanel21.setLayout(new java.awt.BorderLayout());
-
-        jTextArea2.setEditable(false);
-        jTextArea2.setBackground(new java.awt.Color(238, 238, 238));
-        jTextArea2.setColumns(20);
-        jTextArea2.setLineWrap(true);
-        jTextArea2.setRows(5);
-        jTextArea2.setText("In the name of He of Riven Sight and by the First Sacrifice of Elf-Flesh do we invoke the Old Powers. By the Second Sacrifice, I make my claim to what is mine—the dark magic of Night. In His image, I walk the path to Gor-sha-thak, the Iron Gallows! I call to the runes! I call to the clouded sky! Take this mortal organ, eat of the flesh of our enemy and give me what is mine! Instinct: To hate");
-        jTextArea2.setWrapStyleWord(true);
-        jScrollPane4.setViewportView(jTextArea2);
-
-        jPanel21.add(jScrollPane4, java.awt.BorderLayout.CENTER);
-
-        jScrollPane5.setPreferredSize(new java.awt.Dimension(100, 60));
-
-        jList2.setBackground(new java.awt.Color(238, 238, 238));
-        jList2.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Rend flesh with divine magic", "Take an eye", "Make a sacrifice and grow in power" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jList2.setPreferredSize(new java.awt.Dimension(39, 50));
-        jScrollPane5.setViewportView(jList2);
-
-        jPanel21.add(jScrollPane5, java.awt.BorderLayout.PAGE_END);
-        jPanel21.add(filler11, java.awt.BorderLayout.PAGE_START);
-
-        MonsterDelay.add(jPanel21, java.awt.BorderLayout.CENTER);
-        MonsterDelay.add(filler9, java.awt.BorderLayout.LINE_START);
-        MonsterDelay.add(filler10, java.awt.BorderLayout.LINE_END);
-
-        Headerbox.setLayout(new java.awt.BorderLayout());
-
-        jPanel20.setLayout(new java.awt.GridLayout(4, 0));
-
-        jPanel22.setLayout(new java.awt.BorderLayout());
-
-        jLabel16.setFont(new java.awt.Font("Lucida Grande", 1, 20)); // NOI18N
-        jLabel16.setText("Orc One-Eye");
-        jPanel22.add(jLabel16, java.awt.BorderLayout.WEST);
-
-        jLabel17.setFont(new java.awt.Font("Lucida Grande", 2, 14)); // NOI18N
-        jLabel17.setText("Group, Devine, Magical, Intelligent, Organized");
-        jPanel22.add(jLabel17, java.awt.BorderLayout.EAST);
-
-        jPanel20.add(jPanel22);
-
-        jPanel23.setLayout(new java.awt.BorderLayout());
-
-        jLabel18.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel18.setText("Inflict Wounds (d8+2 damage ignores armor)");
-        jPanel23.add(jLabel18, java.awt.BorderLayout.WEST);
-
-        jPanel26.setLayout(new java.awt.GridLayout(1, 2));
-
-        jLabel19.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel19.setText("6");
-        jPanel27.add(jLabel19);
-
-        jLabel20.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel20.setText("HP");
-        jPanel27.add(jLabel20);
-
-        jPanel26.add(jPanel27);
-
-        jLabel21.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel21.setText("0");
-        jPanel28.add(jLabel21);
-
-        jLabel22.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel22.setText("Armor");
-        jPanel28.add(jLabel22);
-
-        jPanel26.add(jPanel28);
-
-        jPanel23.add(jPanel26, java.awt.BorderLayout.EAST);
-
-        jPanel20.add(jPanel23);
-
-        jPanel24.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 5));
-
-        jLabel23.setFont(new java.awt.Font("Lucida Grande", 2, 14)); // NOI18N
-        jLabel23.setText("Close, Reach, Near, Far");
-        jPanel24.add(jLabel23);
-
-        jPanel20.add(jPanel24);
-
-        jPanel25.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 5));
-
-        jLabel24.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel24.setText("Special Qualities: ");
-        jPanel25.add(jLabel24);
-
-        jLabel25.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel25.setText("One eye");
-        jPanel25.add(jLabel25);
-
-        jPanel20.add(jPanel25);
-
-        Headerbox.add(jPanel20, java.awt.BorderLayout.CENTER);
-        Headerbox.add(filler12, java.awt.BorderLayout.WEST);
-        Headerbox.add(filler13, java.awt.BorderLayout.EAST);
-        Headerbox.add(filler15, java.awt.BorderLayout.PAGE_START);
-
-        MonsterDelay.add(Headerbox, java.awt.BorderLayout.NORTH);
-
-        jFrame1.getContentPane().add(MonsterDelay, java.awt.BorderLayout.CENTER);
+        AttackTagsWindow.getContentPane().add(aTagsWindow_ButtonBox, java.awt.BorderLayout.PAGE_END);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -709,36 +706,36 @@ public class BestiaryGUI extends javax.swing.JFrame {
         ControlBar.setPreferredSize(new java.awt.Dimension(1024, 125));
         ControlBar.setLayout(new java.awt.GridLayout(1, 2));
 
-        MainLabel.setFont(new java.awt.Font("Lucida Blackletter", 1, 75)); // NOI18N
-        MainLabel.setText("  The Bestiary");
-        ControlBar.add(MainLabel);
+        controlbar_MainLabel.setFont(new java.awt.Font("Lucida Blackletter", 1, 75)); // NOI18N
+        controlbar_MainLabel.setText("  The Bestiary");
+        ControlBar.add(controlbar_MainLabel);
 
         ModeButtons.setLayout(new java.awt.GridLayout(1, 0));
-        ModeButtons.add(jPanel1);
+        ModeButtons.add(headerFiller);
 
-        ModeToggle.add(MyBestiaryButton);
-        MyBestiaryButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
-        MyBestiaryButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.05 copy.jpg"))); // NOI18N
-        MyBestiaryButton.setText("My Bestiary");
-        MyBestiaryButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        MyBestiaryButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        ModeButtons.add(MyBestiaryButton);
+        ModeToggle.add(controlbar_MyBestiaryButton);
+        controlbar_MyBestiaryButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
+        controlbar_MyBestiaryButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.05 copy.jpg"))); // NOI18N
+        controlbar_MyBestiaryButton.setText("My Bestiary");
+        controlbar_MyBestiaryButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        controlbar_MyBestiaryButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ModeButtons.add(controlbar_MyBestiaryButton);
 
-        ModeToggle.add(NewMonsterButton);
-        NewMonsterButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
-        NewMonsterButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.12.jpg"))); // NOI18N
-        NewMonsterButton.setText("New Monster");
-        NewMonsterButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        NewMonsterButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        ModeButtons.add(NewMonsterButton);
+        ModeToggle.add(controlbar_NewMonsterButton);
+        controlbar_NewMonsterButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
+        controlbar_NewMonsterButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.12.jpg"))); // NOI18N
+        controlbar_NewMonsterButton.setText("New Monster");
+        controlbar_NewMonsterButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        controlbar_NewMonsterButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ModeButtons.add(controlbar_NewMonsterButton);
 
-        ModeToggle.add(CodexButton);
-        CodexButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
-        CodexButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.12 copy.jpg"))); // NOI18N
-        CodexButton.setText("Codex");
-        CodexButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        CodexButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        ModeButtons.add(CodexButton);
+        ModeToggle.add(controlbar_CodexButton);
+        controlbar_CodexButton.setFont(new java.awt.Font("Lucida Blackletter", 0, 18)); // NOI18N
+        controlbar_CodexButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/2013-11-02 15.26.12 copy.jpg"))); // NOI18N
+        controlbar_CodexButton.setText("Codex");
+        controlbar_CodexButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        controlbar_CodexButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ModeButtons.add(controlbar_CodexButton);
 
         ControlBar.add(ModeButtons);
 
@@ -748,150 +745,351 @@ public class BestiaryGUI extends javax.swing.JFrame {
         ModeScreens.setMinimumSize(new java.awt.Dimension(16, 661));
         ModeScreens.setPreferredSize(new java.awt.Dimension(1024, 661));
         ModeScreens.setLayout(new java.awt.CardLayout());
+
+        BestiaryPage.setLayout(new java.awt.BorderLayout());
+
+        bestiarypage_left.setMinimumSize(new java.awt.Dimension(780, 23));
+        bestiarypage_left.setPreferredSize(new java.awt.Dimension(700, 100));
+        bestiarypage_left.setSize(new java.awt.Dimension(760, 100));
+        bestiarypage_left.setLayout(new java.awt.BorderLayout());
+
+        bestiarypage_mainscroll.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        bestiarypage_mainscroll.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        bestiarypage_mainscroll.setMinimumSize(new java.awt.Dimension(760, 23));
+        bestiarypage_mainscroll.setPreferredSize(new java.awt.Dimension(700, 100));
+
+        bestiarypage_mainScrollPane.setSize(new java.awt.Dimension(760, 0));
+        bestiarypage_mainScrollPane.setLayout(new java.awt.GridLayout(5, 0, 0, 20));
+        bestiarypage_mainScrollPane.add(bestiarypage_card1);
+        bestiarypage_mainScrollPane.add(bestiarypage_card2);
+        bestiarypage_mainScrollPane.add(bestiarypage_card3);
+        bestiarypage_mainScrollPane.add(bestiarypage_card4);
+        bestiarypage_mainScrollPane.add(bestiarypage_card5);
+
+        bestiarypage_mainscroll.setViewportView(bestiarypage_mainScrollPane);
+
+        bestiarypage_left.add(bestiarypage_mainscroll, java.awt.BorderLayout.WEST);
+
+        BestiaryPage.add(bestiarypage_left, java.awt.BorderLayout.WEST);
+
+        bestiarypage_right.setLayout(new java.awt.BorderLayout());
+
+        bestiarypage_tagBoxes.setLayout(new java.awt.GridLayout(2, 0));
+
+        bestiarypage_collectionTagsPane.setLayout(new java.awt.BorderLayout());
+
+        bestiarypage_CollectionsLabel.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        bestiarypage_CollectionsLabel.setText(" Collections:");
+        bestiarypage_CollectionsLabel.setPreferredSize(new java.awt.Dimension(101, 30));
+        bestiarypage_collectionTagsPane.add(bestiarypage_CollectionsLabel, java.awt.BorderLayout.PAGE_START);
+        bestiarypage_collectionTagsPane.add(bestiarypage_filler1, java.awt.BorderLayout.LINE_START);
+        bestiarypage_collectionTagsPane.add(bestiarypage_filler2, java.awt.BorderLayout.LINE_END);
+
+        bestiarypage_collectionsScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+        bestiarypage_CollectionsPane.setLayout(new java.awt.BorderLayout());
+
+        bestiarypage_collectionsGridBox.setLayout(new java.awt.GridLayout(10, 0));
+
+        bestiarypage_dummyCheck.setText("Starred");
+        bestiarypage_dummyCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bestiarypage_dummyCheckActionPerformed(evt);
+            }
+        });
+        bestiarypage_collectionsGridBox.add(bestiarypage_dummyCheck);
+
+        bestiarypage_dummyCheck2.setText("Cats");
+        bestiarypage_collectionsGridBox.add(bestiarypage_dummyCheck2);
+
+        bestiarypage_CollectionsPane.add(bestiarypage_collectionsGridBox, java.awt.BorderLayout.CENTER);
+        bestiarypage_CollectionsPane.add(bestiarypage_filler3, java.awt.BorderLayout.WEST);
+
+        bestiarypage_collectionsScrollPane.setViewportView(bestiarypage_CollectionsPane);
+
+        bestiarypage_collectionTagsPane.add(bestiarypage_collectionsScrollPane, java.awt.BorderLayout.CENTER);
+
+        bestiarypage_collectionsButtonBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        bestiarypage_collectionsClearSelectionButton.setText("Clear Selections");
+        bestiarypage_collectionsButtonBox.add(bestiarypage_collectionsClearSelectionButton);
+
+        bestiarypage_collectionTagsPane.add(bestiarypage_collectionsButtonBox, java.awt.BorderLayout.SOUTH);
+
+        bestiarypage_tagBoxes.add(bestiarypage_collectionTagsPane);
+
+        bestiarypage_monsterTagsPane.setLayout(new java.awt.BorderLayout());
+
+        bestiarypage_monsterTagsTitle.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        bestiarypage_monsterTagsTitle.setText(" Monster Types:");
+        bestiarypage_monsterTagsTitle.setPreferredSize(new java.awt.Dimension(73, 30));
+        bestiarypage_monsterTagsPane.add(bestiarypage_monsterTagsTitle, java.awt.BorderLayout.PAGE_START);
+        bestiarypage_monsterTagsPane.add(bestiarypage_filler4, java.awt.BorderLayout.LINE_END);
+        bestiarypage_monsterTagsPane.add(bestiarypage_filler5, java.awt.BorderLayout.LINE_START);
+
+        bestiarypage_monsterTagsScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+        bestiarypage_monsterTagPaneMid.setLayout(new java.awt.BorderLayout());
+        bestiarypage_monsterTagPaneMid.add(bestiarypage_filler6, java.awt.BorderLayout.WEST);
+
+        bestiarypage_monsterTagsGridBox.setLayout(new java.awt.GridLayout(22, 0));
+
+        bestiarypage_monsterTagsMonsterLabel.setText("Monster");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_monsterTagsMonsterLabel);
+
+        bestiarypage_tag_Magical.setText("Magical");
+        bestiarypage_tag_Magical.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bestiarypage_tag_MagicalActionPerformed(evt);
+            }
+        });
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Magical);
+
+        bestiarypage_tag__Devious.setText("Devious");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag__Devious);
+
+        bestiarypage_tag_Amorphous.setText("Amorphous");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Amorphous);
+
+        bestiarypage_tag_Organized.setText("Organized");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Organized);
+
+        bestiarypage_tag_Intelligent.setText("Intelligent");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Intelligent);
+
+        bestiarypage_tag_Hoarder.setText("Hoarder");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Hoarder);
+
+        bestiarypage_tag_Stealthy.setText("Stealthy");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Stealthy);
+
+        bestiarypage_tag_Terrifying.setText("Terrifying");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Terrifying);
+
+        bestiarypage_tag_Cautious.setText("Cautious");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Cautious);
+
+        bestiarypage_tag_Construct.setText("Construct");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Construct);
+
+        bestiarypage_tag_Planar.setText("Planar");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Planar);
+
+        bestiarypage_monsterTagsOrgLabel.setText("Organization");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_monsterTagsOrgLabel);
+
+        myBestiaryOrgTags.add(bestiarypage_tag_Horde);
+        bestiarypage_tag_Horde.setText("Horde");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Horde);
+
+        myBestiaryOrgTags.add(bestiarypage_tag_Group);
+        bestiarypage_tag_Group.setText("Group");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Group);
+
+        myBestiaryOrgTags.add(bestiarypage_tag_Solitary);
+        bestiarypage_tag_Solitary.setText("Solitary");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Solitary);
+
+        bestiarypage_monsterTagsSizeLabel.setText("Size");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_monsterTagsSizeLabel);
+
+        myBestiarySizeTags.add(bestiarypage_tag_Tiny);
+        bestiarypage_tag_Tiny.setText("Tiny");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Tiny);
+
+        myBestiarySizeTags.add(bestiarypage_tag_Small);
+        bestiarypage_tag_Small.setText("Small");
+        bestiarypage_tag_Small.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bestiarypage_tag_SmallActionPerformed(evt);
+            }
+        });
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Small);
+
+        myBestiarySizeTags.add(bestiarypage_tag_Normal);
+        bestiarypage_tag_Normal.setText("Normal");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Normal);
+
+        myBestiarySizeTags.add(bestiarypage_tag_Large);
+        bestiarypage_tag_Large.setText("Large");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Large);
+
+        myBestiarySizeTags.add(bestiarypage_tag_Huge);
+        bestiarypage_tag_Huge.setText("Huge");
+        bestiarypage_monsterTagsGridBox.add(bestiarypage_tag_Huge);
+
+        bestiarypage_monsterTagPaneMid.add(bestiarypage_monsterTagsGridBox, java.awt.BorderLayout.CENTER);
+
+        bestiarypage_monsterTagsScrollPane.setViewportView(bestiarypage_monsterTagPaneMid);
+
+        bestiarypage_monsterTagsPane.add(bestiarypage_monsterTagsScrollPane, java.awt.BorderLayout.CENTER);
+
+        bestiarypage_monsterTagButtonBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        bestiarypage_monsterTagClearSelectionsButton.setText("Clear Selections");
+        bestiarypage_monsterTagButtonBox.add(bestiarypage_monsterTagClearSelectionsButton);
+
+        bestiarypage_monsterTagsPane.add(bestiarypage_monsterTagButtonBox, java.awt.BorderLayout.SOUTH);
+
+        bestiarypage_tagBoxes.add(bestiarypage_monsterTagsPane);
+
+        bestiarypage_right.add(bestiarypage_tagBoxes, java.awt.BorderLayout.CENTER);
+
+        bestiarypage_filterButton.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        bestiarypage_filterButton.setText("Filter");
+        bestiarypage_filterPane.add(bestiarypage_filterButton);
+
+        bestiarypage_right.add(bestiarypage_filterPane, java.awt.BorderLayout.NORTH);
+
+        BestiaryPage.add(bestiarypage_right, java.awt.BorderLayout.CENTER);
+
         ModeScreens.add(BestiaryPage, "card2");
 
         MonsterFocus.setLayout(new java.awt.BorderLayout());
 
-        Sidebar.setLayout(new java.awt.BorderLayout());
+        monsterFocus_Sidebar.setLayout(new java.awt.BorderLayout());
 
-        jPanel15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jPanel15.setLayout(new java.awt.BorderLayout());
+        monsterFocus_UploadBox.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        monsterFocus_UploadBox.setLayout(new java.awt.BorderLayout());
 
-        UploadButton.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
-        UploadButton.setText("Upload To Codex");
-        UploadButton.setActionCommand("<html>Upload To <br> Codex</html>");
-        UploadButton.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        jPanel15.add(UploadButton, java.awt.BorderLayout.CENTER);
-        jPanel15.add(filler1, java.awt.BorderLayout.PAGE_START);
-        jPanel15.add(filler2, java.awt.BorderLayout.PAGE_END);
-        jPanel15.add(filler3, java.awt.BorderLayout.LINE_END);
-        jPanel15.add(filler4, java.awt.BorderLayout.LINE_START);
+        monsterFocus_UploadButton.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
+        monsterFocus_UploadButton.setText("Upload To Codex");
+        monsterFocus_UploadButton.setActionCommand("<html>Upload To <br> Codex</html>");
+        monsterFocus_UploadButton.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        monsterFocus_UploadBox.add(monsterFocus_UploadButton, java.awt.BorderLayout.CENTER);
+        monsterFocus_UploadBox.add(monsterFocus_filler1, java.awt.BorderLayout.PAGE_START);
+        monsterFocus_UploadBox.add(monsterFocus_filler2, java.awt.BorderLayout.PAGE_END);
+        monsterFocus_UploadBox.add(monsterFocus_filler3, java.awt.BorderLayout.LINE_END);
+        monsterFocus_UploadBox.add(monsterFocus_filler4, java.awt.BorderLayout.LINE_START);
 
-        Sidebar.add(jPanel15, java.awt.BorderLayout.NORTH);
+        monsterFocus_Sidebar.add(monsterFocus_UploadBox, java.awt.BorderLayout.NORTH);
 
-        jPanel18.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jPanel18.setLayout(new java.awt.BorderLayout());
+        monsterFocus_currentCollectionsPane.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        monsterFocus_currentCollectionsPane.setLayout(new java.awt.BorderLayout());
 
-        jLabel15.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel15.setText("Current Collections:");
-        jLabel15.setPreferredSize(new java.awt.Dimension(172, 30));
-        jPanel18.add(jLabel15, java.awt.BorderLayout.PAGE_START);
+        monsterFocus_currentCollectionsTitle.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        monsterFocus_currentCollectionsTitle.setText("Current Collections:");
+        monsterFocus_currentCollectionsTitle.setPreferredSize(new java.awt.Dimension(172, 30));
+        monsterFocus_currentCollectionsPane.add(monsterFocus_currentCollectionsTitle, java.awt.BorderLayout.PAGE_START);
 
-        jPanel19.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+        monsterFocus_currentCollectionsEditPane.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
-        EditCollectionsButton.setText("Edit Collections");
-        jPanel19.add(EditCollectionsButton);
+        monsterFocus_currentCollectionsEditButton.setText("Edit Collections");
+        monsterFocus_currentCollectionsEditPane.add(monsterFocus_currentCollectionsEditButton);
 
-        jPanel18.add(jPanel19, java.awt.BorderLayout.PAGE_END);
+        monsterFocus_currentCollectionsPane.add(monsterFocus_currentCollectionsEditPane, java.awt.BorderLayout.PAGE_END);
 
-        jList1.setBackground(new java.awt.Color(238, 238, 238));
-        jList1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jList1.setModel(new javax.swing.AbstractListModel() {
+        monsterFocus_currentCollectionsList.setBackground(new java.awt.Color(238, 238, 238));
+        monsterFocus_currentCollectionsList.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        monsterFocus_currentCollectionsList.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Orc", "Plains" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane3.setViewportView(jList1);
+        monsterFocus_currentCollectionsScrollPane.setViewportView(monsterFocus_currentCollectionsList);
 
-        jPanel18.add(jScrollPane3, java.awt.BorderLayout.CENTER);
-        jPanel18.add(filler6, java.awt.BorderLayout.LINE_END);
-        jPanel18.add(filler8, java.awt.BorderLayout.LINE_START);
+        monsterFocus_currentCollectionsPane.add(monsterFocus_currentCollectionsScrollPane, java.awt.BorderLayout.CENTER);
+        monsterFocus_currentCollectionsPane.add(monsterFocus_filler6, java.awt.BorderLayout.LINE_END);
+        monsterFocus_currentCollectionsPane.add(monsterFocus_filler8, java.awt.BorderLayout.LINE_START);
 
-        Sidebar.add(jPanel18, java.awt.BorderLayout.CENTER);
+        monsterFocus_Sidebar.add(monsterFocus_currentCollectionsPane, java.awt.BorderLayout.CENTER);
 
-        MonsterFocus.add(Sidebar, java.awt.BorderLayout.LINE_END);
+        MonsterFocus.add(monsterFocus_Sidebar, java.awt.BorderLayout.LINE_END);
 
-        GMNotePane.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        GMNotePane.setLayout(new java.awt.BorderLayout());
+        monsterFocus_GMNotePane.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        monsterFocus_GMNotePane.setLayout(new java.awt.BorderLayout());
 
-        jPanel16.setLayout(new java.awt.BorderLayout());
+        monsterFocus_GMNotesTitle.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        monsterFocus_GMNotesTitle.setText("GM Notes:");
+        monsterFocus_GMNotesTitle.setPreferredSize(new java.awt.Dimension(91, 30));
+        monsterFocus_GMNotePane.add(monsterFocus_GMNotesTitle, java.awt.BorderLayout.NORTH);
 
-        jLabel14.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel14.setText("GM Notes:");
-        jLabel14.setPreferredSize(new java.awt.Dimension(91, 30));
-        jPanel16.add(jLabel14, java.awt.BorderLayout.PAGE_START);
+        monsterFocus_GMNotesScrollPane.setPreferredSize(new java.awt.Dimension(100, 150));
 
-        jScrollPane2.setPreferredSize(new java.awt.Dimension(100, 150));
-        jScrollPane2.setSize(new java.awt.Dimension(100, 150));
+        monsterFocus_GMNotesTextArea.setEditable(false);
+        monsterFocus_GMNotesTextArea.setBackground(new java.awt.Color(238, 238, 238));
+        monsterFocus_GMNotesTextArea.setColumns(20);
+        monsterFocus_GMNotesTextArea.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        monsterFocus_GMNotesTextArea.setRows(5);
+        monsterFocus_GMNotesScrollPane.setViewportView(monsterFocus_GMNotesTextArea);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(238, 238, 238));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        monsterFocus_GMNotePane.add(monsterFocus_GMNotesScrollPane, java.awt.BorderLayout.CENTER);
+        monsterFocus_GMNotePane.add(monsterFocus_filler5, java.awt.BorderLayout.WEST);
+        monsterFocus_GMNotePane.add(monsterFocus_filler7, java.awt.BorderLayout.EAST);
 
-        jPanel16.add(jScrollPane2, java.awt.BorderLayout.CENTER);
-        jPanel16.add(filler5, java.awt.BorderLayout.LINE_END);
-        jPanel16.add(filler7, java.awt.BorderLayout.LINE_START);
+        monsterFocus_GMNotesButtonBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
-        GMNotePane.add(jPanel16, java.awt.BorderLayout.CENTER);
+        monsterFocus_GMNotesEditButton.setText("Edit Note");
+        monsterFocus_GMNotesButtonBox.add(monsterFocus_GMNotesEditButton);
 
-        jPanel14.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+        monsterFocus_GMNotePane.add(monsterFocus_GMNotesButtonBox, java.awt.BorderLayout.SOUTH);
 
-        EditNoteButton.setText("Edit Note");
-        jPanel14.add(EditNoteButton);
+        MonsterFocus.add(monsterFocus_GMNotePane, java.awt.BorderLayout.SOUTH);
 
-        GMNotePane.add(jPanel14, java.awt.BorderLayout.PAGE_END);
+        monsterFocus_MonsterCard.setdAttackTags("Attack, Tags, Blah");
+        monsterFocus_MonsterCard.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        MonsterFocus.add(monsterFocus_MonsterCard, java.awt.BorderLayout.CENTER);
 
-        MonsterFocus.add(GMNotePane, java.awt.BorderLayout.SOUTH);
+        monsterFocus_BackButtonBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        largeMonsterCard2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        MonsterFocus.add(largeMonsterCard2, java.awt.BorderLayout.CENTER);
+        monsterFocus_backButton.setText("Back to Bestiary");
+        monsterFocus_BackButtonBox.add(monsterFocus_backButton);
+
+        MonsterFocus.add(monsterFocus_BackButtonBox, java.awt.BorderLayout.PAGE_START);
 
         ModeScreens.add(MonsterFocus, "card3");
 
         CodexPage.setLayout(new java.awt.BorderLayout());
 
-        jScrollPane6.setBackground(new java.awt.Color(238, 238, 238));
-        jScrollPane6.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane6.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        CodexPage_MainScrollPanel.setBackground(new java.awt.Color(238, 238, 238));
+        CodexPage_MainScrollPanel.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        CodexPage_MainScrollPanel.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        jPanel29.setLayout(new java.awt.GridLayout(1, 2));
+        CodexPage_MainPanel.setLayout(new java.awt.GridLayout(1, 2));
 
-        jPanel32.setLayout(new java.awt.BorderLayout());
-        jPanel32.add(filler16, java.awt.BorderLayout.EAST);
-        jPanel32.add(filler17, java.awt.BorderLayout.WEST);
+        CodexPage_PopularMonstersTopPanel.setLayout(new java.awt.BorderLayout());
+        CodexPage_PopularMonstersTopPanel.add(CodexPage_filler1, java.awt.BorderLayout.EAST);
+        CodexPage_PopularMonstersTopPanel.add(CodexPage_filler2, java.awt.BorderLayout.WEST);
 
-        jPanel33.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
-        jPanel33.add(miniMonsterCard8);
-        jPanel33.add(miniMonsterCard1);
-        jPanel33.add(miniMonsterCard4);
-        jPanel33.add(miniMonsterCard3);
-        jPanel33.add(miniMonsterCard2);
+        CodexPage_PopularMonstersCards.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
+        CodexPage_PopularMonstersCards.add(CodexPage_PopularCard1);
+        CodexPage_PopularMonstersCards.add(CodexPage_PopularCard2);
+        CodexPage_PopularMonstersCards.add(CodexPage_PopularCard3);
+        CodexPage_PopularMonstersCards.add(CodexPage_PopularCard4);
+        CodexPage_PopularMonstersCards.add(CodexPage_PopularCard5);
 
-        jPanel32.add(jPanel33, java.awt.BorderLayout.CENTER);
+        CodexPage_PopularMonstersTopPanel.add(CodexPage_PopularMonstersCards, java.awt.BorderLayout.CENTER);
 
-        jLabel26.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel26.setText("  Popular Monsters");
-        jLabel26.setPreferredSize(new java.awt.Dimension(151, 30));
-        jPanel32.add(jLabel26, java.awt.BorderLayout.NORTH);
+        CodexPage_PopularMonsterTitle.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        CodexPage_PopularMonsterTitle.setText("  Popular Monsters");
+        CodexPage_PopularMonsterTitle.setPreferredSize(new java.awt.Dimension(151, 30));
+        CodexPage_PopularMonstersTopPanel.add(CodexPage_PopularMonsterTitle, java.awt.BorderLayout.NORTH);
 
-        jPanel29.add(jPanel32);
+        CodexPage_MainPanel.add(CodexPage_PopularMonstersTopPanel);
 
-        jPanel30.setLayout(new java.awt.BorderLayout());
-        jPanel30.add(filler18, java.awt.BorderLayout.WEST);
-        jPanel30.add(filler19, java.awt.BorderLayout.EAST);
+        CodexPage_RecentMonstersTopPane.setLayout(new java.awt.BorderLayout());
+        CodexPage_RecentMonstersTopPane.add(CodexPage_filler3, java.awt.BorderLayout.WEST);
+        CodexPage_RecentMonstersTopPane.add(CodexPage_filler4, java.awt.BorderLayout.EAST);
 
-        jPanel31.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
-        jPanel31.add(miniMonsterCard20);
-        jPanel31.add(miniMonsterCard19);
-        jPanel31.add(miniMonsterCard18);
-        jPanel31.add(miniMonsterCard10);
-        jPanel31.add(miniMonsterCard9);
+        CodexPage_RecentMonstersCards.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
+        CodexPage_RecentMonstersCards.add(CodexPage_RecentCard1);
+        CodexPage_RecentMonstersCards.add(CodexPage_RecentCard2);
+        CodexPage_RecentMonstersCards.add(CodexPage_RecentCard3);
+        CodexPage_RecentMonstersCards.add(CodexPage_RecentCard4);
+        CodexPage_RecentMonstersCards.add(CodexPage_RecentCard5);
 
-        jPanel30.add(jPanel31, java.awt.BorderLayout.CENTER);
+        CodexPage_RecentMonstersTopPane.add(CodexPage_RecentMonstersCards, java.awt.BorderLayout.CENTER);
 
-        jLabel27.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel27.setText("Recent Monsters");
-        jLabel27.setPreferredSize(new java.awt.Dimension(144, 30));
-        jPanel30.add(jLabel27, java.awt.BorderLayout.PAGE_START);
+        CodexPage_RecentMonstersTitle.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        CodexPage_RecentMonstersTitle.setText("Recent Monsters");
+        CodexPage_RecentMonstersTitle.setPreferredSize(new java.awt.Dimension(144, 30));
+        CodexPage_RecentMonstersTopPane.add(CodexPage_RecentMonstersTitle, java.awt.BorderLayout.PAGE_START);
 
-        jPanel29.add(jPanel30);
+        CodexPage_MainPanel.add(CodexPage_RecentMonstersTopPane);
 
-        jScrollPane6.setViewportView(jPanel29);
+        CodexPage_MainScrollPanel.setViewportView(CodexPage_MainPanel);
 
-        CodexPage.add(jScrollPane6, java.awt.BorderLayout.CENTER);
+        CodexPage.add(CodexPage_MainScrollPanel, java.awt.BorderLayout.CENTER);
 
         ModeScreens.add(CodexPage, "card4");
 
@@ -900,37 +1098,65 @@ public class BestiaryGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NewMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewMoveActionPerformed
+    private void MonsterEdit_NewMoveFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_NewMoveFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NewMoveActionPerformed
+    }//GEN-LAST:event_MonsterEdit_NewMoveFieldActionPerformed
 
-    private void NameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameFieldActionPerformed
+    private void MonsterEdit_NameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_NameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NameFieldActionPerformed
+    }//GEN-LAST:event_MonsterEdit_NameFieldActionPerformed
 
-    private void AttackNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AttackNameFieldActionPerformed
+    private void MonsterEdit_AttackNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_AttackNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_AttackNameFieldActionPerformed
+    }//GEN-LAST:event_MonsterEdit_AttackNameFieldActionPerformed
 
-    private void ThrownCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThrownCheckActionPerformed
+    private void aTagsWindow_ThrownCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aTagsWindow_ThrownCheckActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ThrownCheckActionPerformed
+    }//GEN-LAST:event_aTagsWindow_ThrownCheckActionPerformed
 
-    private void ForcefulCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ForcefulCheckActionPerformed
+    private void aTagsWindow_ForcefulCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aTagsWindow_ForcefulCheckActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ForcefulCheckActionPerformed
+    }//GEN-LAST:event_aTagsWindow_ForcefulCheckActionPerformed
 
-    private void PreciseCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreciseCheckActionPerformed
+    private void aTagsWindow_PreciseCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aTagsWindow_PreciseCheckActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_PreciseCheckActionPerformed
+    }//GEN-LAST:event_aTagsWindow_PreciseCheckActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void mTagWindow_MagicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mTagWindow_MagicalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_mTagWindow_MagicalActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void mTagWindow_GroupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mTagWindow_GroupActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_mTagWindow_GroupActionPerformed
+
+    private void bestiarypage_tag_MagicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bestiarypage_tag_MagicalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bestiarypage_tag_MagicalActionPerformed
+
+    private void bestiarypage_tag_SmallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bestiarypage_tag_SmallActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bestiarypage_tag_SmallActionPerformed
+
+    private void bestiarypage_dummyCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bestiarypage_dummyCheckActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bestiarypage_dummyCheckActionPerformed
+    
+    private void jBtnSurveyBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSurveyBackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSurveyBackActionPerformed
+
+    private void jBtnSurveyNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSurveyNextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSurveyNextActionPerformed
+
+    private void jBtnSurveyBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSurveyBackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSurveyBackActionPerformed
+
+    private void jBtnSurveyNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSurveyNextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSurveyNextActionPerformed
 
     /**
      * @param args the command line arguments
@@ -967,199 +1193,237 @@ public class BestiaryGUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel AmmoBox;
-    private javax.swing.JCheckBox AmmoCheck;
-    private javax.swing.JSpinner AmmoSpin;
-    private javax.swing.JSpinner ArmorValue;
-    private javax.swing.JButton AttackCancel;
-    private javax.swing.JSpinner AttackMod;
-    private javax.swing.JTextField AttackNameField;
-    private javax.swing.JButton AttackSave;
-    private javax.swing.JButton AttackTags;
     private javax.swing.JDialog AttackTagsWindow;
     private javax.swing.JPanel BestiaryPage;
-    private javax.swing.JButton CancelMonsterEdit;
-    private javax.swing.JCheckBox CloseCheck;
-    private javax.swing.JToggleButton CodexButton;
     private javax.swing.JPanel CodexPage;
+    private javax.swing.JPanel CodexPage_MainPanel;
+    private javax.swing.JScrollPane CodexPage_MainScrollPanel;
+    private MiniMonsterCard CodexPage_PopularCard1;
+    private MiniMonsterCard CodexPage_PopularCard2;
+    private MiniMonsterCard CodexPage_PopularCard3;
+    private MiniMonsterCard CodexPage_PopularCard4;
+    private MiniMonsterCard CodexPage_PopularCard5;
+    private javax.swing.JLabel CodexPage_PopularMonsterTitle;
+    private javax.swing.JPanel CodexPage_PopularMonstersCards;
+    private javax.swing.JPanel CodexPage_PopularMonstersTopPanel;
+    private MiniMonsterCard CodexPage_RecentCard1;
+    private MiniMonsterCard CodexPage_RecentCard2;
+    private MiniMonsterCard CodexPage_RecentCard3;
+    private MiniMonsterCard CodexPage_RecentCard4;
+    private MiniMonsterCard CodexPage_RecentCard5;
+    private javax.swing.JPanel CodexPage_RecentMonstersCards;
+    private javax.swing.JLabel CodexPage_RecentMonstersTitle;
+    private javax.swing.JPanel CodexPage_RecentMonstersTopPane;
+    private javax.swing.Box.Filler CodexPage_filler1;
+    private javax.swing.Box.Filler CodexPage_filler2;
+    private javax.swing.Box.Filler CodexPage_filler3;
+    private javax.swing.Box.Filler CodexPage_filler4;
     private javax.swing.JPanel ControlBar;
-    private javax.swing.JPanel Description;
-    private javax.swing.JComboBox Dice;
-    private javax.swing.JButton EditCollectionsButton;
-    private javax.swing.JButton EditMonsterButton;
-    private javax.swing.JButton EditNoteButton;
-    private javax.swing.JPanel EndPane;
-    private javax.swing.JCheckBox FarCheck;
-    private javax.swing.JCheckBox ForcefulCheck;
-    private javax.swing.JPanel GMNotePane;
-    private javax.swing.JSpinner HPValue;
-    private javax.swing.JCheckBox HandCheck;
-    private javax.swing.JPanel HeaderInfo;
-    private javax.swing.JPanel Headerbox;
-    private javax.swing.JCheckBox IgnoresArmorCheck;
-    private javax.swing.JPanel Instinct;
-    private javax.swing.JTextField InstinctField;
-    private javax.swing.JLabel MainLabel;
-    private javax.swing.JCheckBox MessyCheck;
     private javax.swing.JPanel ModeButtons;
     private javax.swing.JPanel ModeScreens;
     private javax.swing.ButtonGroup ModeToggle;
-    private javax.swing.JPanel MonsterDelay;
-    private javax.swing.JTextArea MonsterDescription;
     private javax.swing.JDialog MonsterEdit;
+    private javax.swing.JButton MonsterEdit_AddMoveButton;
+    private javax.swing.JLabel MonsterEdit_ArmorLabel;
+    private javax.swing.JSpinner MonsterEdit_ArmorValue;
+    private javax.swing.JSpinner MonsterEdit_AttackMod;
+    private javax.swing.JTextField MonsterEdit_AttackNameField;
+    private javax.swing.JLabel MonsterEdit_AttackNameLabel;
+    private javax.swing.JButton MonsterEdit_AttackTags;
+    private javax.swing.JButton MonsterEdit_CancelButton;
+    private javax.swing.JPanel MonsterEdit_Description;
+    private javax.swing.JLabel MonsterEdit_DescriptionLabel;
+    private javax.swing.JTextArea MonsterEdit_DescriptionPane;
+    private javax.swing.JScrollPane MonsterEdit_DescriptionScrollPane;
+    private javax.swing.JComboBox MonsterEdit_Dice;
+    private javax.swing.JPanel MonsterEdit_EndPane;
+    private javax.swing.JLabel MonsterEdit_HPLabel;
+    private javax.swing.JSpinner MonsterEdit_HPValue;
+    private javax.swing.JPanel MonsterEdit_HeaderInfo;
+    private javax.swing.JPanel MonsterEdit_InstinctBox;
+    private javax.swing.JTextField MonsterEdit_InstinctField;
+    private javax.swing.JLabel MonsterEdit_InstinctLabel;
+    private javax.swing.JButton MonsterEdit_MonsterTagsButton;
+    private javax.swing.JPanel MonsterEdit_Moves;
+    private javax.swing.JPanel MonsterEdit_MovesControlsBox;
+    private javax.swing.JLabel MonsterEdit_MovesLabel;
+    private javax.swing.JList MonsterEdit_MovesList;
+    private javax.swing.JScrollPane MonsterEdit_MovesScrollPane;
+    private javax.swing.JTextField MonsterEdit_NameField;
+    private javax.swing.JPanel MonsterEdit_NamePanel;
+    private javax.swing.JLabel MonsterEdit_NameTitle;
+    private javax.swing.JTextField MonsterEdit_NewMoveField;
+    private javax.swing.JButton MonsterEdit_RemoveButton;
+    private javax.swing.JComboBox MonsterEdit_Rolls;
+    private javax.swing.JPanel MonsterEdit_Row1;
+    private javax.swing.JPanel MonsterEdit_Row2;
+    private javax.swing.JPanel MonsterEdit_Row3;
+    private javax.swing.JPanel MonsterEdit_Row4;
+    private javax.swing.JButton MonsterEdit_SaveButton;
+    private javax.swing.JTextField MonsterEdit_SpecialQualitiesField;
+    private javax.swing.JLabel MonsterEdit_SpecialQualitiesLabel;
+    private javax.swing.JPanel MonsterEdit_TopPane;
+    private javax.swing.Box.Filler MonsterEdit_filler1;
+    private javax.swing.Box.Filler MonsterEdit_filler2;
+    private javax.swing.Box.Filler MonsterEdit_filler3;
+    private javax.swing.Box.Filler MonsterEdit_filler4;
+    private javax.swing.Box.Filler MonsterEdit_filler5;
+    private javax.swing.Box.Filler MonsterEdit_filler6;
+    private javax.swing.Box.Filler MonsterEdit_filler7;
+    private javax.swing.Box.Filler MonsterEdit_filler8;
     private javax.swing.JPanel MonsterFocus;
     private javax.swing.JDialog MonsterSurvey;
-    private javax.swing.JButton MonsterTags;
     private javax.swing.JDialog MonsterTagsWindow;
-    private javax.swing.JPanel Moves;
-    private javax.swing.JPanel MovesControls;
-    private javax.swing.JLabel MovesLabel;
-    private javax.swing.JList MovesList;
-    private javax.swing.JPanel MovesListBox;
-    private javax.swing.JScrollPane MovesScroll;
-    private javax.swing.JToggleButton MyBestiaryButton;
-    private javax.swing.JTextField NameField;
-    private javax.swing.JCheckBox NearCheck;
-    private javax.swing.JToggleButton NewMonsterButton;
-    private javax.swing.JTextField NewMove;
     private javax.swing.ButtonGroup OrganizationTagsGroup;
-    private javax.swing.JCheckBox PiercingCheck;
-    private javax.swing.JSpinner PiercingSpin;
-    private javax.swing.JCheckBox PreciseCheck;
-    private javax.swing.JCheckBox ReachChange;
-    private javax.swing.JCheckBox ReloadCheck;
-    private javax.swing.JComboBox Rolls;
-    private javax.swing.JButton SaveMonsterEdit;
-    private javax.swing.JPanel Sidebar;
     private javax.swing.ButtonGroup SizeTagsGroup;
-    private javax.swing.JTextField SpecialQualitiesField;
-    private javax.swing.JCheckBox StunCheck;
-    private javax.swing.JCheckBox ThrownCheck;
-    private javax.swing.JButton UploadButton;
+    private javax.swing.JPanel aTagsWindow_AmmoBox;
+    private javax.swing.JCheckBox aTagsWindow_AmmoCheck;
+    private javax.swing.JLabel aTagsWindow_AmmoLabel;
+    private javax.swing.JSpinner aTagsWindow_AmmoSpin;
+    private javax.swing.JPanel aTagsWindow_ButtonBox;
+    private javax.swing.JButton aTagsWindow_CancelButton;
+    private javax.swing.JCheckBox aTagsWindow_CloseCheck;
+    private javax.swing.JCheckBox aTagsWindow_FarCheck;
+    private javax.swing.JCheckBox aTagsWindow_ForcefulCheck;
+    private javax.swing.JPanel aTagsWindow_GridBox;
+    private javax.swing.JCheckBox aTagsWindow_HandCheck;
+    private javax.swing.JCheckBox aTagsWindow_IgnoresArmorCheck;
+    private javax.swing.JCheckBox aTagsWindow_MessyCheck;
+    private javax.swing.JCheckBox aTagsWindow_NearCheck;
+    private javax.swing.JPanel aTagsWindow_PiercingBox;
+    private javax.swing.JCheckBox aTagsWindow_PiercingCheck;
+    private javax.swing.JLabel aTagsWindow_PiercingLabel;
+    private javax.swing.JSpinner aTagsWindow_PiercingSpin;
+    private javax.swing.JCheckBox aTagsWindow_PreciseCheck;
+    private javax.swing.JCheckBox aTagsWindow_ReachCheck;
+    private javax.swing.JCheckBox aTagsWindow_ReloadCheck;
+    private javax.swing.JButton aTagsWindow_SaveButton;
+    private javax.swing.JCheckBox aTagsWindow_StunCheck;
+    private javax.swing.JCheckBox aTagsWindow_ThrownCheck;
+    private javax.swing.JLabel aTagsWindow_Title;
+    private javax.swing.JLabel bestiarypage_CollectionsLabel;
+    private javax.swing.JPanel bestiarypage_CollectionsPane;
+    private LargeMonsterCard bestiarypage_card1;
+    private LargeMonsterCard bestiarypage_card2;
+    private LargeMonsterCard bestiarypage_card3;
+    private LargeMonsterCard bestiarypage_card4;
+    private LargeMonsterCard bestiarypage_card5;
+    private javax.swing.JPanel bestiarypage_collectionTagsPane;
+    private javax.swing.JPanel bestiarypage_collectionsButtonBox;
+    private javax.swing.JButton bestiarypage_collectionsClearSelectionButton;
+    private javax.swing.JPanel bestiarypage_collectionsGridBox;
+    private javax.swing.JScrollPane bestiarypage_collectionsScrollPane;
+    private javax.swing.JCheckBox bestiarypage_dummyCheck;
+    private javax.swing.JCheckBox bestiarypage_dummyCheck2;
+    private javax.swing.Box.Filler bestiarypage_filler1;
+    private javax.swing.Box.Filler bestiarypage_filler2;
+    private javax.swing.Box.Filler bestiarypage_filler3;
+    private javax.swing.Box.Filler bestiarypage_filler4;
+    private javax.swing.Box.Filler bestiarypage_filler5;
+    private javax.swing.Box.Filler bestiarypage_filler6;
+    private javax.swing.JButton bestiarypage_filterButton;
+    private javax.swing.JPanel bestiarypage_filterPane;
+    private javax.swing.JPanel bestiarypage_left;
+    private javax.swing.JPanel bestiarypage_mainScrollPane;
+    private javax.swing.JScrollPane bestiarypage_mainscroll;
+    private javax.swing.JPanel bestiarypage_monsterTagButtonBox;
+    private javax.swing.JButton bestiarypage_monsterTagClearSelectionsButton;
+    private javax.swing.JPanel bestiarypage_monsterTagPaneMid;
+    private javax.swing.JPanel bestiarypage_monsterTagsGridBox;
+    private javax.swing.JLabel bestiarypage_monsterTagsMonsterLabel;
+    private javax.swing.JLabel bestiarypage_monsterTagsOrgLabel;
+    private javax.swing.JPanel bestiarypage_monsterTagsPane;
+    private javax.swing.JScrollPane bestiarypage_monsterTagsScrollPane;
+    private javax.swing.JLabel bestiarypage_monsterTagsSizeLabel;
+    private javax.swing.JLabel bestiarypage_monsterTagsTitle;
+    private javax.swing.JPanel bestiarypage_right;
+    private javax.swing.JPanel bestiarypage_tagBoxes;
+    private javax.swing.JCheckBox bestiarypage_tag_Amorphous;
+    private javax.swing.JCheckBox bestiarypage_tag_Cautious;
+    private javax.swing.JCheckBox bestiarypage_tag_Construct;
+    private javax.swing.JCheckBox bestiarypage_tag_Group;
+    private javax.swing.JCheckBox bestiarypage_tag_Hoarder;
+    private javax.swing.JCheckBox bestiarypage_tag_Horde;
+    private javax.swing.JCheckBox bestiarypage_tag_Huge;
+    private javax.swing.JCheckBox bestiarypage_tag_Intelligent;
+    private javax.swing.JCheckBox bestiarypage_tag_Large;
+    private javax.swing.JCheckBox bestiarypage_tag_Magical;
+    private javax.swing.JCheckBox bestiarypage_tag_Normal;
+    private javax.swing.JCheckBox bestiarypage_tag_Organized;
+    private javax.swing.JCheckBox bestiarypage_tag_Planar;
+    private javax.swing.JCheckBox bestiarypage_tag_Small;
+    private javax.swing.JCheckBox bestiarypage_tag_Solitary;
+    private javax.swing.JCheckBox bestiarypage_tag_Stealthy;
+    private javax.swing.JCheckBox bestiarypage_tag_Terrifying;
+    private javax.swing.JCheckBox bestiarypage_tag_Tiny;
+    private javax.swing.JCheckBox bestiarypage_tag__Devious;
+    private javax.swing.JToggleButton controlbar_CodexButton;
+    private javax.swing.JLabel controlbar_MainLabel;
+    private javax.swing.JToggleButton controlbar_MyBestiaryButton;
+    private javax.swing.JToggleButton controlbar_NewMonsterButton;
     private javax.swing.Box.Filler filler1;
-    private javax.swing.Box.Filler filler10;
-    private javax.swing.Box.Filler filler11;
-    private javax.swing.Box.Filler filler12;
-    private javax.swing.Box.Filler filler13;
-    private javax.swing.Box.Filler filler14;
-    private javax.swing.Box.Filler filler15;
-    private javax.swing.Box.Filler filler16;
-    private javax.swing.Box.Filler filler17;
-    private javax.swing.Box.Filler filler18;
-    private javax.swing.Box.Filler filler19;
-    private javax.swing.Box.Filler filler2;
-    private javax.swing.Box.Filler filler3;
-    private javax.swing.Box.Filler filler4;
-    private javax.swing.Box.Filler filler5;
-    private javax.swing.Box.Filler filler6;
-    private javax.swing.Box.Filler filler7;
-    private javax.swing.Box.Filler filler8;
-    private javax.swing.Box.Filler filler9;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox10;
-    private javax.swing.JCheckBox jCheckBox11;
-    private javax.swing.JCheckBox jCheckBox12;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JCheckBox jCheckBox9;
-    private javax.swing.JFrame jFrame1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JList jList1;
-    private javax.swing.JList jList2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
-    private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel30;
-    private javax.swing.JPanel jPanel31;
-    private javax.swing.JPanel jPanel32;
-    private javax.swing.JPanel jPanel33;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private LargeMonsterCard largeMonsterCard2;
-    private MiniMonsterCard miniMonsterCard1;
-    private MiniMonsterCard miniMonsterCard10;
-    private MiniMonsterCard miniMonsterCard18;
-    private MiniMonsterCard miniMonsterCard19;
-    private MiniMonsterCard miniMonsterCard2;
-    private MiniMonsterCard miniMonsterCard20;
-    private MiniMonsterCard miniMonsterCard3;
-    private MiniMonsterCard miniMonsterCard4;
-    private MiniMonsterCard miniMonsterCard8;
-    private MiniMonsterCard miniMonsterCard9;
+    private javax.swing.Box.Filler headerFiller;
+    private javax.swing.JButton jBtnSurveyBack;
+    private javax.swing.JButton jBtnSurveyCancel;
+    private javax.swing.JButton jBtnSurveyNext;
+    private javax.swing.JPanel jPanel42;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel44;
+    private javax.swing.JPanel jPanel45;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JCheckBox mTagWindow_Amorphous;
+    private javax.swing.JPanel mTagWindow_ButtonBox;
+    private javax.swing.JCheckBox mTagWindow_Cautious;
+    private javax.swing.JCheckBox mTagWindow_Construct;
+    private javax.swing.JCheckBox mTagWindow_Devious;
+    private javax.swing.JPanel mTagWindow_GridBox;
+    private javax.swing.JRadioButton mTagWindow_Group;
+    private javax.swing.JCheckBox mTagWindow_Hoarder;
+    private javax.swing.JRadioButton mTagWindow_Horde;
+    private javax.swing.JRadioButton mTagWindow_Huge;
+    private javax.swing.JCheckBox mTagWindow_Intelligent;
+    private javax.swing.JRadioButton mTagWindow_Large;
+    private javax.swing.JCheckBox mTagWindow_Magical;
+    private javax.swing.JLabel mTagWindow_MonsterTagsTitle;
+    private javax.swing.JRadioButton mTagWindow_Normal;
+    private javax.swing.JLabel mTagWindow_OrgTagsTitle;
+    private javax.swing.JCheckBox mTagWindow_Organized;
+    private javax.swing.JCheckBox mTagWindow_Planar;
+    private javax.swing.JLabel mTagWindow_SizeTagsTitle;
+    private javax.swing.JRadioButton mTagWindow_Small;
+    private javax.swing.JRadioButton mTagWindow_Solitary;
+    private javax.swing.JCheckBox mTagWindow_Stealthy;
+    private javax.swing.JCheckBox mTagWindow_Terrifying;
+    private javax.swing.JRadioButton mTagWindow_Tiny;
+    private javax.swing.JButton mTagWindow_cancelButton;
+    private javax.swing.JButton mTagWindow_saveButton;
+    private javax.swing.JPanel monsterFocus_BackButtonBox;
+    private javax.swing.JPanel monsterFocus_GMNotePane;
+    private javax.swing.JPanel monsterFocus_GMNotesButtonBox;
+    private javax.swing.JButton monsterFocus_GMNotesEditButton;
+    private javax.swing.JScrollPane monsterFocus_GMNotesScrollPane;
+    private javax.swing.JTextArea monsterFocus_GMNotesTextArea;
+    private javax.swing.JLabel monsterFocus_GMNotesTitle;
+    private LargeMonsterCard monsterFocus_MonsterCard;
+    private javax.swing.JPanel monsterFocus_Sidebar;
+    private javax.swing.JPanel monsterFocus_UploadBox;
+    private javax.swing.JButton monsterFocus_UploadButton;
+    private javax.swing.JButton monsterFocus_backButton;
+    private javax.swing.JButton monsterFocus_currentCollectionsEditButton;
+    private javax.swing.JPanel monsterFocus_currentCollectionsEditPane;
+    private javax.swing.JList monsterFocus_currentCollectionsList;
+    private javax.swing.JPanel monsterFocus_currentCollectionsPane;
+    private javax.swing.JScrollPane monsterFocus_currentCollectionsScrollPane;
+    private javax.swing.JLabel monsterFocus_currentCollectionsTitle;
+    private javax.swing.Box.Filler monsterFocus_filler1;
+    private javax.swing.Box.Filler monsterFocus_filler2;
+    private javax.swing.Box.Filler monsterFocus_filler3;
+    private javax.swing.Box.Filler monsterFocus_filler4;
+    private javax.swing.Box.Filler monsterFocus_filler5;
+    private javax.swing.Box.Filler monsterFocus_filler6;
+    private javax.swing.Box.Filler monsterFocus_filler7;
+    private javax.swing.Box.Filler monsterFocus_filler8;
+    private javax.swing.ButtonGroup myBestiaryOrgTags;
+    private javax.swing.ButtonGroup myBestiarySizeTags;
     // End of variables declaration//GEN-END:variables
 }
