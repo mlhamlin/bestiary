@@ -501,6 +501,37 @@ public class BestiaryGUI extends javax.swing.JFrame {
         jPanel35.setLayout(new java.awt.CardLayout());
         MonsterSurvey.getContentPane().add(jPanel35, java.awt.BorderLayout.CENTER);
 
+        jPanel34.setLayout(new java.awt.BorderLayout());
+
+        jBtnSurveyBack.setText("Back");
+        jBtnSurveyBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSurveyBackActionPerformed(evt);
+            }
+        });
+        jPanel36.add(jBtnSurveyBack);
+
+        jBtnSurveyNext.setText("Next");
+        jBtnSurveyNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSurveyNextActionPerformed(evt);
+            }
+        });
+        jPanel36.add(jBtnSurveyNext);
+
+        jPanel34.add(jPanel36, java.awt.BorderLayout.EAST);
+        jPanel34.add(jSeparator1, java.awt.BorderLayout.PAGE_START);
+
+        jBtnSurveyCancel.setText("Cancel");
+        jPanel37.add(jBtnSurveyCancel);
+
+        jPanel34.add(jPanel37, java.awt.BorderLayout.LINE_START);
+
+        MonsterSurvey.getContentPane().add(jPanel34, java.awt.BorderLayout.PAGE_END);
+
+        jPanel35.setLayout(new java.awt.CardLayout());
+        MonsterSurvey.getContentPane().add(jPanel35, java.awt.BorderLayout.CENTER);
+
         MonsterTagsWindow.setResizable(false);
         MonsterTagsWindow.setSize(new java.awt.Dimension(300, 300));
 
@@ -1142,6 +1173,14 @@ public class BestiaryGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bestiarypage_dummyCheckActionPerformed
     
+    private void jBtnSurveyBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSurveyBackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSurveyBackActionPerformed
+
+    private void jBtnSurveyNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSurveyNextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSurveyNextActionPerformed
+
     private void jBtnSurveyBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSurveyBackActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnSurveyBackActionPerformed
