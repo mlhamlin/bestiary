@@ -7,6 +7,8 @@
  *
  * @author marthahamlin
  */
+
+
 public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.Customizer {
     
     private Object bean;
@@ -105,16 +107,6 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
         
     }
     
-     public void setdButtonText(String txt){
-        
-        cFocusButton.setText(txt);
-    }
-    
-    public String getdButtonText(){
-        
-        return cFocusButton.getText();
-        
-    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -151,8 +143,6 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         cMoves = new javax.swing.JTextPane();
-        jPanel11 = new javax.swing.JPanel();
-        cFocusButton = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         cInstinct = new javax.swing.JLabel();
@@ -270,13 +260,6 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
 
         jPanel3.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
-        jPanel11.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-
-        cFocusButton.setText("See Monster Details");
-        jPanel11.add(cFocusButton);
-
-        jPanel3.add(jPanel11, java.awt.BorderLayout.SOUTH);
-
         jPanel13.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 2, 14)); // NOI18N
@@ -297,12 +280,12 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
 
         add(MonsterCard, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel MonsterCard;
     private javax.swing.JLabel cArmor;
     private javax.swing.JLabel cAttack;
     private javax.swing.JLabel cAttackTags;
-    private javax.swing.JButton cFocusButton;
     private javax.swing.JLabel cHP;
     private javax.swing.JLabel cInstinct;
     private javax.swing.JTextArea cMonsterDescription;
@@ -319,7 +302,6 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;

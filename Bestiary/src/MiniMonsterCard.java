@@ -104,17 +104,8 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
         return cMoves.getText();
         
     }
-    
-     public void setdButtonText(String txt){
-        
-        cFocusButton.setText(txt);
-    }
-    
-    public String getdButtonText(){
-        
-        return cFocusButton.getText();
-        
-    }
+
+   
 
 
     /**
@@ -153,7 +144,6 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
         jScrollPane2 = new javax.swing.JScrollPane();
         cMoves = new javax.swing.JTextPane();
         jPanel11 = new javax.swing.JPanel();
-        cFocusButton = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         cInstinct = new javax.swing.JLabel();
@@ -272,10 +262,6 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
         jPanel3.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
         jPanel11.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-
-        cFocusButton.setText("Download");
-        jPanel11.add(cFocusButton);
-
         jPanel3.add(jPanel11, java.awt.BorderLayout.SOUTH);
 
         jPanel13.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
@@ -302,7 +288,6 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
     private javax.swing.JLabel cArmor;
     private javax.swing.JLabel cAttack;
     private javax.swing.JLabel cAttackTags;
-    private javax.swing.JButton cFocusButton;
     private javax.swing.JLabel cHP;
     private javax.swing.JLabel cInstinct;
     private javax.swing.JTextArea cMonsterDescription;

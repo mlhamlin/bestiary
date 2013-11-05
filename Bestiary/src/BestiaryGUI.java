@@ -165,11 +165,26 @@ public class BestiaryGUI extends javax.swing.JFrame {
         BestiaryPage_LeftSide = new javax.swing.JPanel();
         BestiaryPage_MonsterScrollPane = new javax.swing.JScrollPane();
         BestiaryPage_CardPane = new javax.swing.JPanel();
-        BestiaryPage_Card1 = new LargeMonsterCard();
-        BestiaryPage_Card2 = new LargeMonsterCard();
-        BestiaryPage_Card3 = new LargeMonsterCard();
-        BestiaryPage_Card4 = new LargeMonsterCard();
-        BestiaryPage_Card5 = new LargeMonsterCard();
+        BestiaryPage_MonsterPane1 = new javax.swing.JPanel();
+        BestiaryPage_MonsterCard1 = new LargeMonsterCard();
+        BestiaryPage_MonsterButtonBox1 = new javax.swing.JPanel();
+        BestiaryPage_MonsterViewButton1 = new javax.swing.JButton();
+        BestiaryPage_MonsterPane2 = new javax.swing.JPanel();
+        BestiaryPage_MonsterCard2 = new LargeMonsterCard();
+        BestiaryPage_MonsterButtonBox2 = new javax.swing.JPanel();
+        BestiaryPage_MonsterViewButton2 = new javax.swing.JButton();
+        BestiaryPage_MonsterPane3 = new javax.swing.JPanel();
+        BestiaryPage_MonsterCard3 = new LargeMonsterCard();
+        BestiaryPage_MonsterButtonBox3 = new javax.swing.JPanel();
+        BestiaryPage_MonsterViewButton3 = new javax.swing.JButton();
+        BestiaryPage_MonsterPane4 = new javax.swing.JPanel();
+        BestiaryPage_MonsterCard4 = new LargeMonsterCard();
+        BestiaryPage_MonsterButtonBox4 = new javax.swing.JPanel();
+        BestiaryPage_MonsterViewButton4 = new javax.swing.JButton();
+        BestiaryPage_MonsterPane5 = new javax.swing.JPanel();
+        BestiaryPage_MonsterCard5 = new LargeMonsterCard();
+        BestiaryPage_MonsterButtonBox5 = new javax.swing.JPanel();
+        BestiaryPage_MonsterViewButton5 = new javax.swing.JButton();
         BestiaryPage_RightSide = new javax.swing.JPanel();
         BestiaryPage_FilterButtonBox = new javax.swing.JPanel();
         BestiaryPage_FilterButton = new javax.swing.JButton();
@@ -271,7 +286,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
         CodexPage_RecentMonstersTitle = new javax.swing.JLabel();
 
         MonsterEdit.setAlwaysOnTop(true);
-        MonsterEdit.setPreferredSize(new java.awt.Dimension(700, 500));
         MonsterEdit.setResizable(false);
         MonsterEdit.setSize(new java.awt.Dimension(700, 500));
 
@@ -474,9 +488,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterSurvey.getContentPane().add(jPanel45, java.awt.BorderLayout.CENTER);
 
         MonsterTagsWindow.setMinimumSize(new java.awt.Dimension(300, 300));
-        MonsterTagsWindow.setPreferredSize(new java.awt.Dimension(300, 300));
         MonsterTagsWindow.setResizable(false);
-        MonsterTagsWindow.setSize(new java.awt.Dimension(300, 300));
 
         MonTagWin_MainPane.setLayout(new java.awt.BorderLayout());
 
@@ -586,7 +598,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterTagsWindow.getContentPane().add(MonTagWin_filler3, java.awt.BorderLayout.NORTH);
         MonsterTagsWindow.getContentPane().add(MonTagWin_filler4, java.awt.BorderLayout.SOUTH);
 
-        AttackTagsWindow.setPreferredSize(new java.awt.Dimension(300, 300));
         AttackTagsWindow.setResizable(false);
         AttackTagsWindow.setSize(new java.awt.Dimension(300, 300));
 
@@ -754,11 +765,81 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         BestiaryPage_CardPane.setSize(new java.awt.Dimension(760, 0));
         BestiaryPage_CardPane.setLayout(new java.awt.GridLayout(5, 0, 0, 20));
-        BestiaryPage_CardPane.add(BestiaryPage_Card1);
-        BestiaryPage_CardPane.add(BestiaryPage_Card2);
-        BestiaryPage_CardPane.add(BestiaryPage_Card3);
-        BestiaryPage_CardPane.add(BestiaryPage_Card4);
-        BestiaryPage_CardPane.add(BestiaryPage_Card5);
+
+        BestiaryPage_MonsterPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        BestiaryPage_MonsterPane1.setLayout(new java.awt.BorderLayout());
+
+        BestiaryPage_MonsterCard1.setBorder(null);
+        BestiaryPage_MonsterPane1.add(BestiaryPage_MonsterCard1, java.awt.BorderLayout.CENTER);
+
+        BestiaryPage_MonsterButtonBox1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        BestiaryPage_MonsterViewButton1.setText("View Monster Details");
+        BestiaryPage_MonsterButtonBox1.add(BestiaryPage_MonsterViewButton1);
+
+        BestiaryPage_MonsterPane1.add(BestiaryPage_MonsterButtonBox1, java.awt.BorderLayout.SOUTH);
+
+        BestiaryPage_CardPane.add(BestiaryPage_MonsterPane1);
+
+        BestiaryPage_MonsterPane2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        BestiaryPage_MonsterPane2.setLayout(new java.awt.BorderLayout());
+
+        BestiaryPage_MonsterCard2.setBorder(null);
+        BestiaryPage_MonsterPane2.add(BestiaryPage_MonsterCard2, java.awt.BorderLayout.CENTER);
+
+        BestiaryPage_MonsterButtonBox2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        BestiaryPage_MonsterViewButton2.setText("View Monster Details");
+        BestiaryPage_MonsterButtonBox2.add(BestiaryPage_MonsterViewButton2);
+
+        BestiaryPage_MonsterPane2.add(BestiaryPage_MonsterButtonBox2, java.awt.BorderLayout.SOUTH);
+
+        BestiaryPage_CardPane.add(BestiaryPage_MonsterPane2);
+
+        BestiaryPage_MonsterPane3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        BestiaryPage_MonsterPane3.setLayout(new java.awt.BorderLayout());
+
+        BestiaryPage_MonsterCard3.setBorder(null);
+        BestiaryPage_MonsterPane3.add(BestiaryPage_MonsterCard3, java.awt.BorderLayout.CENTER);
+
+        BestiaryPage_MonsterButtonBox3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        BestiaryPage_MonsterViewButton3.setText("View Monster Details");
+        BestiaryPage_MonsterButtonBox3.add(BestiaryPage_MonsterViewButton3);
+
+        BestiaryPage_MonsterPane3.add(BestiaryPage_MonsterButtonBox3, java.awt.BorderLayout.SOUTH);
+
+        BestiaryPage_CardPane.add(BestiaryPage_MonsterPane3);
+
+        BestiaryPage_MonsterPane4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        BestiaryPage_MonsterPane4.setLayout(new java.awt.BorderLayout());
+
+        BestiaryPage_MonsterCard4.setBorder(null);
+        BestiaryPage_MonsterPane4.add(BestiaryPage_MonsterCard4, java.awt.BorderLayout.CENTER);
+
+        BestiaryPage_MonsterButtonBox4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        BestiaryPage_MonsterViewButton4.setText("View Monster Details");
+        BestiaryPage_MonsterButtonBox4.add(BestiaryPage_MonsterViewButton4);
+
+        BestiaryPage_MonsterPane4.add(BestiaryPage_MonsterButtonBox4, java.awt.BorderLayout.SOUTH);
+
+        BestiaryPage_CardPane.add(BestiaryPage_MonsterPane4);
+
+        BestiaryPage_MonsterPane5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        BestiaryPage_MonsterPane5.setLayout(new java.awt.BorderLayout());
+
+        BestiaryPage_MonsterCard5.setBorder(null);
+        BestiaryPage_MonsterPane5.add(BestiaryPage_MonsterCard5, java.awt.BorderLayout.CENTER);
+
+        BestiaryPage_MonsterButtonBox5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        BestiaryPage_MonsterViewButton5.setText("View Monster Details");
+        BestiaryPage_MonsterButtonBox5.add(BestiaryPage_MonsterViewButton5);
+
+        BestiaryPage_MonsterPane5.add(BestiaryPage_MonsterButtonBox5, java.awt.BorderLayout.SOUTH);
+
+        BestiaryPage_CardPane.add(BestiaryPage_MonsterPane5);
 
         BestiaryPage_MonsterScrollPane.setViewportView(BestiaryPage_CardPane);
 
@@ -812,6 +893,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         BestiaryPage_CollectionsClearSelButtonBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         BestiaryPage_CollectionsClearSelectionsButton.setText("Clear Selections");
+        BestiaryPage_CollectionsClearSelectionsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BestiaryPage_CollectionsClearSelectionsButtonActionPerformed(evt);
+            }
+        });
         BestiaryPage_CollectionsClearSelButtonBox.add(BestiaryPage_CollectionsClearSelectionsButton);
 
         BestiaryPage_CollectionsTagPane.add(BestiaryPage_CollectionsClearSelButtonBox, java.awt.BorderLayout.SOUTH);
@@ -927,6 +1013,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         BestiaryPage_MonsterTagsButtonBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         BestiaryPage_MonsterTypesClearSelectionsButton.setText("Clear Selections");
+        BestiaryPage_MonsterTypesClearSelectionsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BestiaryPage_MonsterTypesClearSelectionsButtonActionPerformed(evt);
+            }
+        });
         BestiaryPage_MonsterTagsButtonBox.add(BestiaryPage_MonsterTypesClearSelectionsButton);
 
         BestiaryPage_MonsterTypesPane.add(BestiaryPage_MonsterTagsButtonBox, java.awt.BorderLayout.SOUTH);
@@ -1149,6 +1240,32 @@ public class BestiaryGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnSurveyNextActionPerformed
 
+    private void BestiaryPage_CollectionsClearSelectionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_CollectionsClearSelectionsButtonActionPerformed
+        //Clear every Bestiary Page Collection check
+    }//GEN-LAST:event_BestiaryPage_CollectionsClearSelectionsButtonActionPerformed
+
+    private void BestiaryPage_MonsterTypesClearSelectionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterTypesClearSelectionsButtonActionPerformed
+        this.BestiaryPage_Tag_Amorphous.setSelected(false);
+        this.BestiaryPage_Tag_Cautious.setSelected(false);
+        this.BestiaryPage_Tag_Construct.setSelected(false);
+        this.BestiaryPage_Tag_Devious.setSelected(false);
+        this.BestiaryPage_Tag_Group.setSelected(false);
+        this.BestiaryPage_Tag_Hoarder.setSelected(false);
+        this.BestiaryPage_Tag_Horde.setSelected(false);
+        this.BestiaryPage_Tag_Huge.setSelected(false);
+        this.BestiaryPage_Tag_Intelligent.setSelected(false);
+        this.BestiaryPage_Tag_Large.setSelected(false);
+        this.BestiaryPage_Tag_Magical.setSelected(false);
+        this.BestiaryPage_Tag_Normal.setSelected(false);
+        this.BestiaryPage_Tag_Organized.setSelected(false);
+        this.BestiaryPage_Tag_Planar.setSelected(false);
+        this.BestiaryPage_Tag_Small.setSelected(false);
+        this.BestiaryPage_Tag_Solitary.setSelected(false);
+        this.BestiaryPage_Tag_Stealthy.setSelected(false);
+        this.BestiaryPage_Tag_Terrifying.setSelected(false);
+        this.BestiaryPage_Tag_Tiny.setSelected(false);
+    }//GEN-LAST:event_BestiaryPage_MonsterTypesClearSelectionsButtonActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -1217,11 +1334,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.Box.Filler AttTagWin_filler4;
     private javax.swing.JDialog AttackTagsWindow;
     private javax.swing.JPanel BestiaryPage;
-    private LargeMonsterCard BestiaryPage_Card1;
-    private LargeMonsterCard BestiaryPage_Card2;
-    private LargeMonsterCard BestiaryPage_Card3;
-    private LargeMonsterCard BestiaryPage_Card4;
-    private LargeMonsterCard BestiaryPage_Card5;
     private javax.swing.JPanel BestiaryPage_CardPane;
     private javax.swing.JPanel BestiaryPage_CollectionsClearSelButtonBox;
     private javax.swing.JButton BestiaryPage_CollectionsClearSelectionsButton;
@@ -1238,12 +1350,32 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JPanel BestiaryPage_MonTypeGridBox;
     private javax.swing.JScrollPane BestiaryPage_MonTypeScrollPane;
     private javax.swing.JPanel BestiaryPage_MonTypeTopPane;
+    private javax.swing.JPanel BestiaryPage_MonsterButtonBox1;
+    private javax.swing.JPanel BestiaryPage_MonsterButtonBox2;
+    private javax.swing.JPanel BestiaryPage_MonsterButtonBox3;
+    private javax.swing.JPanel BestiaryPage_MonsterButtonBox4;
+    private javax.swing.JPanel BestiaryPage_MonsterButtonBox5;
+    private LargeMonsterCard BestiaryPage_MonsterCard1;
+    private LargeMonsterCard BestiaryPage_MonsterCard2;
+    private LargeMonsterCard BestiaryPage_MonsterCard3;
+    private LargeMonsterCard BestiaryPage_MonsterCard4;
+    private LargeMonsterCard BestiaryPage_MonsterCard5;
+    private javax.swing.JPanel BestiaryPage_MonsterPane1;
+    private javax.swing.JPanel BestiaryPage_MonsterPane2;
+    private javax.swing.JPanel BestiaryPage_MonsterPane3;
+    private javax.swing.JPanel BestiaryPage_MonsterPane4;
+    private javax.swing.JPanel BestiaryPage_MonsterPane5;
     private javax.swing.JScrollPane BestiaryPage_MonsterScrollPane;
     private javax.swing.JLabel BestiaryPage_MonsterTagTitle;
     private javax.swing.JPanel BestiaryPage_MonsterTagsButtonBox;
     private javax.swing.JLabel BestiaryPage_MonsterTagsTitle;
     private javax.swing.JButton BestiaryPage_MonsterTypesClearSelectionsButton;
     private javax.swing.JPanel BestiaryPage_MonsterTypesPane;
+    private javax.swing.JButton BestiaryPage_MonsterViewButton1;
+    private javax.swing.JButton BestiaryPage_MonsterViewButton2;
+    private javax.swing.JButton BestiaryPage_MonsterViewButton3;
+    private javax.swing.JButton BestiaryPage_MonsterViewButton4;
+    private javax.swing.JButton BestiaryPage_MonsterViewButton5;
     private javax.swing.ButtonGroup BestiaryPage_OrgTags;
     private javax.swing.JLabel BestiaryPage_OrganizationLabel;
     private javax.swing.JPanel BestiaryPage_RightSide;
