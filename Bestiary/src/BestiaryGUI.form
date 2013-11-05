@@ -7,6 +7,9 @@
     <Container class="javax.swing.JDialog" name="MonsterEdit">
       <Properties>
         <Property name="alwaysOnTop" type="boolean" value="true"/>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[700, 500]"/>
+        </Property>
         <Property name="resizable" type="boolean" value="false"/>
         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[700, 500]"/>
@@ -15,7 +18,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="MonsterEdit_TopPane">
+        <Container class="javax.swing.JPanel" name="MonsterEdit_MainPane">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
               <BorderConstraints direction="Center"/>
@@ -24,7 +27,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="MonsterEdit_HeaderInfo">
+            <Container class="javax.swing.JPanel" name="MonsterEdit_TopPane">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                   <BorderConstraints direction="North"/>
@@ -40,7 +43,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
                   <SubComponents>
-                    <Container class="javax.swing.JPanel" name="MonsterEdit_NamePanel">
+                    <Container class="javax.swing.JPanel" name="MonsterEdit_NamePane">
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                           <BorderConstraints direction="West"/>
@@ -49,7 +52,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="MonsterEdit_NameTitle">
+                        <Component class="javax.swing.JLabel" name="MonsterEdit_NameLabel">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Lucida Grande" size="14" style="0"/>
@@ -202,7 +205,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="MonsterEdit_Description">
+            <Container class="javax.swing.JPanel" name="MonsterEdit_MiddlePane">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                   <BorderConstraints direction="Center"/>
@@ -217,12 +220,6 @@
                       <Font name="Lucida Grande" size="14" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value=" Description:"/>
-                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[86, 20]"/>
-                    </Property>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[86, 22]"/>
-                    </Property>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
@@ -239,7 +236,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="MonsterEdit_DescriptionPane">
+                    <Component class="javax.swing.JTextArea" name="MonsterEdit_DescriptionField">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="lineWrap" type="boolean" value="true"/>
@@ -248,7 +245,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="MonsterEdit_InstinctBox">
+                <Container class="javax.swing.JPanel" name="MonsterEdit_InstinctPane">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                       <BorderConstraints direction="South"/>
@@ -323,7 +320,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="MonsterEdit_Moves">
+            <Container class="javax.swing.JPanel" name="MonsterEdit_BottomPane">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                   <BorderConstraints direction="South"/>
@@ -332,7 +329,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="MonsterEdit_MovesControlsBox">
+                <Container class="javax.swing.JPanel" name="MonsterEdit_MovesControlsPane">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                       <BorderConstraints direction="North"/>
@@ -341,12 +338,12 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextField" name="MonsterEdit_NewMoveField">
+                    <Component class="javax.swing.JTextField" name="NewMove">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Move"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MonsterEdit_NewMoveFieldActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NewMoveActionPerformed"/>
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
@@ -354,7 +351,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JButton" name="MonsterEdit_RemoveButton">
+                    <Component class="javax.swing.JButton" name="jButton1">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Remove"/>
                       </Properties>
@@ -364,7 +361,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JButton" name="MonsterEdit_AddMoveButton">
+                    <Component class="javax.swing.JButton" name="jButton2">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Add Move"/>
                       </Properties>
@@ -374,7 +371,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="MonsterEdit_MovesLabel">
+                    <Component class="javax.swing.JLabel" name="MovesLabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Lucida Grande" size="14" style="0"/>
@@ -389,7 +386,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JScrollPane" name="MonsterEdit_MovesScrollPane">
+                <Container class="javax.swing.JScrollPane" name="MonsterEdit_MovesScroll">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[100, 75]"/>
@@ -449,7 +446,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler6">
+                <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler3">
                   <Properties>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[5, 32767]"/>
@@ -470,7 +467,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler7">
+                <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler4">
                   <Properties>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[5, 32767]"/>
@@ -495,7 +492,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler8">
+        <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler5">
           <Properties>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[10, 32767]"/>
@@ -516,7 +513,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler3">
+        <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler6">
           <Properties>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[10, 32767]"/>
@@ -537,7 +534,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler4">
+        <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler7">
           <Properties>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[32767, 10]"/>
@@ -558,7 +555,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler5">
+        <Component class="javax.swing.Box$Filler" name="MonsterEdit_filler8">
           <Properties>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[32767, 10]"/>
@@ -652,150 +649,19 @@
               <BorderConstraints direction="Center"/>
             </Constraint>
           </Constraints>
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
-      <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel34">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-              <BorderConstraints direction="Last"/>
-            </Constraint>
-          </Constraints>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel36">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="East"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JButton" name="jBtnSurveyBack">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Back"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnSurveyBackActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JButton" name="jBtnSurveyNext">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Next"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnSurveyNextActionPerformed"/>
-                  </Events>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="javax.swing.JSeparator" name="jSeparator1">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="First"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Container class="javax.swing.JPanel" name="jPanel37">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="Before"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JButton" name="jBtnSurveyCancel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Cancel"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel35">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-              <BorderConstraints direction="Center"/>
-            </Constraint>
-          </Constraints>
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
-      <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel34">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-              <BorderConstraints direction="Last"/>
-            </Constraint>
-          </Constraints>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel36">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="East"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JButton" name="jBtnSurveyBack">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Back"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnSurveyBackActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JButton" name="jBtnSurveyNext">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Next"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnSurveyNextActionPerformed"/>
-                  </Events>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="javax.swing.JSeparator" name="jSeparator1">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="First"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Container class="javax.swing.JPanel" name="jPanel37">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="Before"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JButton" name="jBtnSurveyCancel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Cancel"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel35">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-              <BorderConstraints direction="Center"/>
-            </Constraint>
-          </Constraints>
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
         </Container>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="MonsterTagsWindow">
       <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[300, 300]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[300, 300]"/>
+        </Property>
         <Property name="resizable" type="boolean" value="false"/>
         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[300, 300]"/>
@@ -804,403 +670,617 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="mTagWindow_GridBox">
+        <Container class="javax.swing.JPanel" name="MonTagWin_MainPane">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
               <BorderConstraints direction="Center"/>
             </Constraint>
           </Constraints>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
-            <Property name="columns" type="int" value="2"/>
-            <Property name="rows" type="int" value="12"/>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="mTagWindow_MonsterTagsTitle">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Monster Tags:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="mTagWindow_OrgTagsTitle">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Organization Tags:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="mTagWindow_Magical">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Magical"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mTagWindow_MagicalActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="mTagWindow_Horde">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="OrganizationTagsGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Horde"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="mTagWindow_Devious">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Devious"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="mTagWindow_Group">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="OrganizationTagsGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Group"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mTagWindow_GroupActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="mTagWindow_Amorphous">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Amorphous"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="mTagWindow_Solitary">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="OrganizationTagsGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Solitary"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="mTagWindow_Organized">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Organized"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.Box$Filler" name="filler1">
-              <Properties>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[20, 20]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[20, 20]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[20, 20]"/>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.RigidArea"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="mTagWindow_Intelligent">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Intelligent"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="mTagWindow_SizeTagsTitle">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Size Tags:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="mTagWindow_Hoarder">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Hoarder"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="mTagWindow_Tiny">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="SizeTagsGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Tiny"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="mTagWindow_Stealthy">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Stealthy"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="mTagWindow_Small">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="SizeTagsGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Small"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="mTagWindow_Terrifying">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Terrifying"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="mTagWindow_Normal">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="SizeTagsGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Normal"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="mTagWindow_Cautious">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cautious"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="mTagWindow_Large">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="SizeTagsGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Large"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="mTagWindow_Construct">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Construct"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="mTagWindow_Huge">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="SizeTagsGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Huge"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="mTagWindow_Planar">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Planar"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="mTagWindow_ButtonBox">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-              <BorderConstraints direction="South"/>
-            </Constraint>
-          </Constraints>
-
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="mTagWindow_cancelButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cancel"/>
-              </Properties>
+            <Container class="javax.swing.JPanel" name="MonTagWin_GridPane">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="West"/>
+                  <BorderConstraints direction="Center"/>
                 </Constraint>
               </Constraints>
-            </Component>
-            <Component class="javax.swing.JButton" name="mTagWindow_saveButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Save"/>
-              </Properties>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                <Property name="columns" type="int" value="2"/>
+                <Property name="rows" type="int" value="12"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="MonTagWin_MonsterTagsLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Monster Tags:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="MonTagWin_OrgTagsLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Organization Tags:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="MonTagWin_Magical">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Magical"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MonTagWin_MagicalActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="MonTagWin_Horde">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="MonTagsWin_OrgTagsGroup"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Horde"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="MonTagWin_Devious">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Devious"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="MonTagWin_Group">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="MonTagsWin_OrgTagsGroup"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Group"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MonTagWin_GroupActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="MonTagWin_Amorphous">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Amorphous"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="MonTagWin_Solitary">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="MonTagsWin_OrgTagsGroup"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Solitary"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="MonTagWin_Organized">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Organized"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.Box$Filler" name="MonTagWin_filler6">
+                  <Properties>
+                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[32767, 32767]"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.Glue"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="MonTagWin_Intelligent">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Intelligent"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="MonTagWin_SizeTagsLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Size Tags:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="MonTagWin_Hoarder">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Hoarder"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="MonTagWin_Tiny">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="MonTagsWin_SizeTagsGroup"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Tiny"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="MonTagWin_Stealthy">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Stealthy"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="MonTagWin_Small">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="MonTagsWin_SizeTagsGroup"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Small"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="MonTagWin_Terrifying">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Terrifying"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="MonTagWin_Normal">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="MonTagsWin_SizeTagsGroup"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Normal"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="MonTagWin_Cautious">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cautious"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="MonTagWin_Large">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="MonTagsWin_SizeTagsGroup"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Large"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="MonTagWin_Construct">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Construct"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="MonTagWin_Huge">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="MonTagsWin_SizeTagsGroup"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Huge"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="MonTagWin_Planar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Planar"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="MonTagWin_ButtonPane">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="East"/>
+                  <BorderConstraints direction="South"/>
                 </Constraint>
               </Constraints>
-            </Component>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="MonTagWin_CancelButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cancel"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="West"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="MonTagWin_SaveButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Save"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="East"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.Box$Filler" name="MonTagWin_filler5">
+                  <Properties>
+                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[32767, 10]"/>
+                    </Property>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[0, 10]"/>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[0, 10]"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.VerticalStrut"/>
+                  </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="North"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JDialog" name="AttackTagsWindow">
-      <Properties>
-        <Property name="resizable" type="boolean" value="false"/>
-        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[300, 275]"/>
-        </Property>
-      </Properties>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="aTagsWindow_Title">
+        <Component class="javax.swing.Box$Filler" name="MonTagWin_filler1">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Lucida Grande" size="14" style="0"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 32767]"/>
             </Property>
-            <Property name="text" type="java.lang.String" value=" Attack Tags:"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 0]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 0]"/>
+            </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.HorizontalStrut"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="West"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.Box$Filler" name="MonTagWin_filler2">
+          <Properties>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 32767]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 0]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 0]"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.HorizontalStrut"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="East"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.Box$Filler" name="MonTagWin_filler3">
+          <Properties>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[32767, 10]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[0, 10]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[0, 10]"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.VerticalStrut"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
               <BorderConstraints direction="North"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Container class="javax.swing.JPanel" name="aTagsWindow_GridBox">
+        <Component class="javax.swing.Box$Filler" name="MonTagWin_filler4">
+          <Properties>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[32767, 10]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[0, 10]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[0, 10]"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.VerticalStrut"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="South"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="AttackTagsWindow">
+      <Properties>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[300, 300]"/>
+        </Property>
+        <Property name="resizable" type="boolean" value="false"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[300, 300]"/>
+        </Property>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="AttTagWin_MainPane">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
               <BorderConstraints direction="Center"/>
             </Constraint>
           </Constraints>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
-            <Property name="columns" type="int" value="2"/>
-            <Property name="rows" type="int" value="7"/>
-          </Layout>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="aTagsWindow_AmmoBox">
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
-                <Property name="alignment" type="int" value="0"/>
-                <Property name="horizontalGap" type="int" value="0"/>
-                <Property name="verticalGap" type="int" value="0"/>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JCheckBox" name="aTagsWindow_AmmoCheck">
-                </Component>
-                <Component class="javax.swing.JSpinner" name="aTagsWindow_AmmoSpin">
-                  <Properties>
-                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-                      <SpinnerModel initial="0" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="aTagsWindow_AmmoLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value=" Ammo"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_StunCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Stun"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_ForcefulCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Forceful"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aTagsWindow_ForcefulCheckActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_ThrownCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Thrown"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aTagsWindow_ThrownCheckActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_IgnoresArmorCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ignores Armor"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_HandCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Hand"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_MessyCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Messy"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_CloseCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Close"/>
-              </Properties>
-            </Component>
-            <Container class="javax.swing.JPanel" name="aTagsWindow_PiercingBox">
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
-                <Property name="alignment" type="int" value="0"/>
-                <Property name="horizontalGap" type="int" value="0"/>
-                <Property name="verticalGap" type="int" value="2"/>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JCheckBox" name="aTagsWindow_PiercingCheck">
-                </Component>
-                <Component class="javax.swing.JSpinner" name="aTagsWindow_PiercingSpin">
-                  <Properties>
-                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-                      <SpinnerModel initial="0" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="aTagsWindow_PiercingLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value=" Piercing"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_ReachCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Reach"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_PreciseCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Precise"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aTagsWindow_PreciseCheckActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_NearCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Near"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_ReloadCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Reload"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="aTagsWindow_FarCheck">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Far"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="aTagsWindow_ButtonBox">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-              <BorderConstraints direction="Last"/>
-            </Constraint>
-          </Constraints>
-
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="aTagsWindow_CancelButton">
+            <Component class="javax.swing.JLabel" name="AttTagWin_MainLabel">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Cancel"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Grande" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value=" Attack Tags:"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[88, 25]"/>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="West"/>
+                  <BorderConstraints direction="North"/>
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="aTagsWindow_SaveButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Save"/>
-              </Properties>
+            <Container class="javax.swing.JPanel" name="AttTagWin_GridPane">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="East"/>
+                  <BorderConstraints direction="Center"/>
                 </Constraint>
               </Constraints>
-            </Component>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                <Property name="columns" type="int" value="2"/>
+                <Property name="rows" type="int" value="7"/>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="AttTagWin_AmmoBox">
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
+                    <Property name="alignment" type="int" value="0"/>
+                    <Property name="horizontalGap" type="int" value="0"/>
+                    <Property name="verticalGap" type="int" value="0"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JCheckBox" name="AttTagWin_AmmoCheck">
+                    </Component>
+                    <Component class="javax.swing.JSpinner" name="AttTagWin_AmmoSpin">
+                      <Properties>
+                        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                          <SpinnerModel initial="0" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                        </Property>
+                        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[55, 28]"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="AttTagWin_AmmoLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value=" Ammo"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_StunCheck">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Stun"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_ForcefulCheck">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Forceful"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AttTagWin_ForcefulCheckActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_ThrownCheck">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Thrown"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AttTagWin_ThrownCheckActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_IgnoresArmorCheck">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ignores Armor"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_HandCheck">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Hand"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_MessyCheck">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Messy"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_CloseCheck">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Close"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JPanel" name="AttTagWin_PiercingBox">
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
+                    <Property name="alignment" type="int" value="0"/>
+                    <Property name="horizontalGap" type="int" value="0"/>
+                    <Property name="verticalGap" type="int" value="2"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JCheckBox" name="AttTagWin_PiercingCheck">
+                    </Component>
+                    <Component class="javax.swing.JSpinner" name="AttTagWin_PiercingSpin">
+                      <Properties>
+                        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                          <SpinnerModel initial="0" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="AttTagWin_PiercingLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value=" Piercing"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_ReachChange">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Reach"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_PreciseCheck">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Precise"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AttTagWin_PreciseCheckActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_NearCheck">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Near"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_ReloadCheck">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Reload"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="AttTagWin_FarCheck">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Far"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="AttTagWin_ButtonBox">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                  <BorderConstraints direction="Last"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="AttTagWin_CancelButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cancel"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="West"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="AttTagWin_AttackButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Save"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="East"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.Box$Filler" name="AttTagWin_filler1">
+          <Properties>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[32767, 10]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[0, 10]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[0, 10]"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.VerticalStrut"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="North"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.Box$Filler" name="AttTagWin_filler2">
+          <Properties>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[32767, 10]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[0, 10]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[0, 10]"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.VerticalStrut"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="South"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.Box$Filler" name="AttTagWin_filler3">
+          <Properties>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 32767]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 0]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 0]"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.HorizontalStrut"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="West"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.Box$Filler" name="AttTagWin_filler4">
+          <Properties>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 32767]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 0]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 0]"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.HorizontalStrut"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="East"/>
+            </Constraint>
+          </Constraints>
+        </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.ButtonGroup" name="OrganizationTagsGroup">
+    <Component class="javax.swing.ButtonGroup" name="MonTagsWin_OrgTagsGroup">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="SizeTagsGroup">
+    <Component class="javax.swing.ButtonGroup" name="MonTagsWin_SizeTagsGroup">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="myBestiaryOrgTags">
+    <Component class="javax.swing.ButtonGroup" name="BestiaryPage_OrgTags">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="myBestiarySizeTags">
+    <Component class="javax.swing.ButtonGroup" name="BestiaryPage_SizeTags">
     </Component>
   </NonVisualComponents>
   <Properties>
@@ -1254,7 +1334,7 @@
         <Property name="rows" type="int" value="1"/>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="controlbar_MainLabel">
+        <Component class="javax.swing.JLabel" name="ControlBar_MainTitle">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Lucida Blackletter" size="75" style="1"/>
@@ -1262,14 +1342,14 @@
             <Property name="text" type="java.lang.String" value="  The Bestiary"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="ModeButtons">
+        <Container class="javax.swing.JPanel" name="ControlBar_ModeButtonBox">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
             <Property name="columns" type="int" value="0"/>
             <Property name="rows" type="int" value="1"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.Box$Filler" name="headerFiller">
+            <Component class="javax.swing.Box$Filler" name="ControlBar_filler1">
               <Properties>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[20, 20]"/>
@@ -1285,7 +1365,7 @@
                 <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.RigidArea"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JToggleButton" name="controlbar_MyBestiaryButton">
+            <Component class="javax.swing.JToggleButton" name="ControlBar_MyBestiaryButton">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="ModeToggle"/>
@@ -1301,7 +1381,7 @@
                 <Property name="verticalTextPosition" type="int" value="3"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JToggleButton" name="controlbar_NewMonsterButton">
+            <Component class="javax.swing.JToggleButton" name="ControlBar_NewMonsterButton">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="ModeToggle"/>
@@ -1317,7 +1397,7 @@
                 <Property name="verticalTextPosition" type="int" value="3"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JToggleButton" name="controlbar_CodexButton">
+            <Component class="javax.swing.JToggleButton" name="ControlBar_CodexButton">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="ModeToggle"/>
@@ -1368,7 +1448,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="bestiarypage_left">
+            <Container class="javax.swing.JPanel" name="BestiaryPage_LeftSide">
               <Properties>
                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[780, 23]"/>
@@ -1388,7 +1468,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="bestiarypage_mainscroll">
+                <Container class="javax.swing.JScrollPane" name="BestiaryPage_MonsterScrollPane">
                   <Properties>
                     <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
                     <Property name="verticalScrollBarPolicy" type="int" value="22"/>
@@ -1407,7 +1487,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Container class="javax.swing.JPanel" name="bestiarypage_mainScrollPane">
+                    <Container class="javax.swing.JPanel" name="BestiaryPage_CardPane">
                       <Properties>
                         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[760, 0]"/>
@@ -1420,15 +1500,15 @@
                         <Property name="verticalGap" type="int" value="20"/>
                       </Layout>
                       <SubComponents>
-                        <Component class="LargeMonsterCard" name="bestiarypage_card1">
+                        <Component class="LargeMonsterCard" name="BestiaryPage_Card1">
                         </Component>
-                        <Component class="LargeMonsterCard" name="bestiarypage_card2">
+                        <Component class="LargeMonsterCard" name="BestiaryPage_Card2">
                         </Component>
-                        <Component class="LargeMonsterCard" name="bestiarypage_card3">
+                        <Component class="LargeMonsterCard" name="BestiaryPage_Card3">
                         </Component>
-                        <Component class="LargeMonsterCard" name="bestiarypage_card4">
+                        <Component class="LargeMonsterCard" name="BestiaryPage_Card4">
                         </Component>
-                        <Component class="LargeMonsterCard" name="bestiarypage_card5">
+                        <Component class="LargeMonsterCard" name="BestiaryPage_Card5">
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1436,7 +1516,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="bestiarypage_right">
+            <Container class="javax.swing.JPanel" name="BestiaryPage_RightSide">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                   <BorderConstraints direction="Center"/>
@@ -1445,7 +1525,26 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="bestiarypage_tagBoxes">
+                <Container class="javax.swing.JPanel" name="BestiaryPage_FilterButtonBox">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="North"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="BestiaryPage_FilterButton">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Lucida Grande" size="24" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Filter"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="BestiaryPage_TagsBox">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                       <BorderConstraints direction="Center"/>
@@ -1457,11 +1556,11 @@
                     <Property name="rows" type="int" value="2"/>
                   </Layout>
                   <SubComponents>
-                    <Container class="javax.swing.JPanel" name="bestiarypage_collectionTagsPane">
+                    <Container class="javax.swing.JPanel" name="BestiaryPage_CollectionsTagPane">
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="bestiarypage_CollectionsLabel">
+                        <Component class="javax.swing.JLabel" name="BestiaryPage_CollectionsTitle">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Lucida Grande" size="18" style="0"/>
@@ -1477,7 +1576,7 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Component class="javax.swing.Box$Filler" name="bestiarypage_filler1">
+                        <Component class="javax.swing.Box$Filler" name="BestiaryPage_filler1">
                           <Properties>
                             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                               <Dimension value="[20, 0]"/>
@@ -1495,7 +1594,7 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Component class="javax.swing.Box$Filler" name="bestiarypage_filler2">
+                        <Component class="javax.swing.Box$Filler" name="BestiaryPage_filler2">
                           <Properties>
                             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                               <Dimension value="[20, 32767]"/>
@@ -1516,7 +1615,7 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Container class="javax.swing.JScrollPane" name="bestiarypage_collectionsScrollPane">
+                        <Container class="javax.swing.JScrollPane" name="BestiaryPage_CollectionsScrollPane">
                           <Properties>
                             <Property name="verticalScrollBarPolicy" type="int" value="22"/>
                           </Properties>
@@ -1528,11 +1627,11 @@
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                           <SubComponents>
-                            <Container class="javax.swing.JPanel" name="bestiarypage_CollectionsPane">
+                            <Container class="javax.swing.JPanel" name="BestiaryPage_CollectionsTopPane">
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
                               <SubComponents>
-                                <Container class="javax.swing.JPanel" name="bestiarypage_collectionsGridBox">
+                                <Container class="javax.swing.JPanel" name="BestiaryPage_CollectionsGridPane">
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                                       <BorderConstraints direction="Center"/>
@@ -1544,22 +1643,22 @@
                                     <Property name="rows" type="int" value="10"/>
                                   </Layout>
                                   <SubComponents>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_dummyCheck">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_DummyCheck">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Starred"/>
                                       </Properties>
                                       <Events>
-                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bestiarypage_dummyCheckActionPerformed"/>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BestiaryPage_DummyCheckActionPerformed"/>
                                       </Events>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_dummyCheck2">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_DummyCheck2">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Cats"/>
                                       </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Component class="javax.swing.Box$Filler" name="bestiarypage_filler3">
+                                <Component class="javax.swing.Box$Filler" name="BestiaryPage_filler3">
                                   <Properties>
                                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                       <Dimension value="[10, 32767]"/>
@@ -1584,7 +1683,7 @@
                             </Container>
                           </SubComponents>
                         </Container>
-                        <Container class="javax.swing.JPanel" name="bestiarypage_collectionsButtonBox">
+                        <Container class="javax.swing.JPanel" name="BestiaryPage_CollectionsClearSelButtonBox">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                               <BorderConstraints direction="South"/>
@@ -1595,7 +1694,7 @@
                             <Property name="alignment" type="int" value="2"/>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JButton" name="bestiarypage_collectionsClearSelectionButton">
+                            <Component class="javax.swing.JButton" name="BestiaryPage_CollectionsClearSelectionsButton">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Clear Selections"/>
                               </Properties>
@@ -1604,11 +1703,11 @@
                         </Container>
                       </SubComponents>
                     </Container>
-                    <Container class="javax.swing.JPanel" name="bestiarypage_monsterTagsPane">
+                    <Container class="javax.swing.JPanel" name="BestiaryPage_MonsterTypesPane">
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="bestiarypage_monsterTagsTitle">
+                        <Component class="javax.swing.JLabel" name="BestiaryPage_MonsterTagsTitle">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Lucida Grande" size="18" style="0"/>
@@ -1624,28 +1723,7 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Component class="javax.swing.Box$Filler" name="bestiarypage_filler4">
-                          <Properties>
-                            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                              <Dimension value="[20, 32767]"/>
-                            </Property>
-                            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                              <Dimension value="[20, 0]"/>
-                            </Property>
-                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                              <Dimension value="[20, 0]"/>
-                            </Property>
-                          </Properties>
-                          <AuxValues>
-                            <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.HorizontalStrut"/>
-                          </AuxValues>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                              <BorderConstraints direction="After"/>
-                            </Constraint>
-                          </Constraints>
-                        </Component>
-                        <Component class="javax.swing.Box$Filler" name="bestiarypage_filler5">
+                        <Component class="javax.swing.Box$Filler" name="BestiaryPage_filler4">
                           <Properties>
                             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                               <Dimension value="[20, 32767]"/>
@@ -1666,7 +1744,28 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Container class="javax.swing.JScrollPane" name="bestiarypage_monsterTagsScrollPane">
+                        <Component class="javax.swing.Box$Filler" name="BestiaryPage_filler5">
+                          <Properties>
+                            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[20, 32767]"/>
+                            </Property>
+                            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[20, 0]"/>
+                            </Property>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[20, 0]"/>
+                            </Property>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.HorizontalStrut"/>
+                          </AuxValues>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                              <BorderConstraints direction="After"/>
+                            </Constraint>
+                          </Constraints>
+                        </Component>
+                        <Container class="javax.swing.JScrollPane" name="BestiaryPage_MonTypeScrollPane">
                           <Properties>
                             <Property name="verticalScrollBarPolicy" type="int" value="22"/>
                           </Properties>
@@ -1678,11 +1777,11 @@
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                           <SubComponents>
-                            <Container class="javax.swing.JPanel" name="bestiarypage_monsterTagPaneMid">
+                            <Container class="javax.swing.JPanel" name="BestiaryPage_MonTypeTopPane">
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
                               <SubComponents>
-                                <Component class="javax.swing.Box$Filler" name="bestiarypage_filler6">
+                                <Component class="javax.swing.Box$Filler" name="BestiaryPage_filler6">
                                   <Properties>
                                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                       <Dimension value="[10, 32767]"/>
@@ -1703,7 +1802,7 @@
                                     </Constraint>
                                   </Constraints>
                                 </Component>
-                                <Container class="javax.swing.JPanel" name="bestiarypage_monsterTagsGridBox">
+                                <Container class="javax.swing.JPanel" name="BestiaryPage_MonTypeGridBox">
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                                       <BorderConstraints direction="Center"/>
@@ -1715,142 +1814,142 @@
                                     <Property name="rows" type="int" value="22"/>
                                   </Layout>
                                   <SubComponents>
-                                    <Component class="javax.swing.JLabel" name="bestiarypage_monsterTagsMonsterLabel">
+                                    <Component class="javax.swing.JLabel" name="BestiaryPage_MonsterTagTitle">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Monster"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Magical">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Magical">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Magical"/>
                                       </Properties>
                                       <Events>
-                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bestiarypage_tag_MagicalActionPerformed"/>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BestiaryPage_Tag_MagicalActionPerformed"/>
                                       </Events>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag__Devious">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Devious">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Devious"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Amorphous">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Amorphous">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Amorphous"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Organized">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Organized">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Organized"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Intelligent">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Intelligent">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Intelligent"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Hoarder">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Hoarder">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Hoarder"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Stealthy">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Stealthy">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Stealthy"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Terrifying">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Terrifying">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Terrifying"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Cautious">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Cautious">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Cautious"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Construct">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Construct">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Construct"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Planar">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Planar">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Planar"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JLabel" name="bestiarypage_monsterTagsOrgLabel">
+                                    <Component class="javax.swing.JLabel" name="BestiaryPage_OrganizationLabel">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Organization"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Horde">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Horde">
                                       <Properties>
                                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                          <ComponentRef name="myBestiaryOrgTags"/>
+                                          <ComponentRef name="BestiaryPage_OrgTags"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Horde"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Group">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Group">
                                       <Properties>
                                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                          <ComponentRef name="myBestiaryOrgTags"/>
+                                          <ComponentRef name="BestiaryPage_OrgTags"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Group"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Solitary">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Solitary">
                                       <Properties>
                                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                          <ComponentRef name="myBestiaryOrgTags"/>
+                                          <ComponentRef name="BestiaryPage_OrgTags"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Solitary"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JLabel" name="bestiarypage_monsterTagsSizeLabel">
+                                    <Component class="javax.swing.JLabel" name="BestiaryPage_SizeLabel">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Size"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Tiny">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Tiny">
                                       <Properties>
                                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                          <ComponentRef name="myBestiarySizeTags"/>
+                                          <ComponentRef name="BestiaryPage_SizeTags"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Tiny"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Small">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Small">
                                       <Properties>
                                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                          <ComponentRef name="myBestiarySizeTags"/>
+                                          <ComponentRef name="BestiaryPage_SizeTags"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Small"/>
                                       </Properties>
                                       <Events>
-                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bestiarypage_tag_SmallActionPerformed"/>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BestiaryPage_Tag_SmallActionPerformed"/>
                                       </Events>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Normal">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Normal">
                                       <Properties>
                                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                          <ComponentRef name="myBestiarySizeTags"/>
+                                          <ComponentRef name="BestiaryPage_SizeTags"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Normal"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Large">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Large">
                                       <Properties>
                                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                          <ComponentRef name="myBestiarySizeTags"/>
+                                          <ComponentRef name="BestiaryPage_SizeTags"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Large"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="bestiarypage_tag_Huge">
+                                    <Component class="javax.swing.JCheckBox" name="BestiaryPage_Tag_Huge">
                                       <Properties>
                                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                          <ComponentRef name="myBestiarySizeTags"/>
+                                          <ComponentRef name="BestiaryPage_SizeTags"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Huge"/>
                                       </Properties>
@@ -1861,7 +1960,7 @@
                             </Container>
                           </SubComponents>
                         </Container>
-                        <Container class="javax.swing.JPanel" name="bestiarypage_monsterTagButtonBox">
+                        <Container class="javax.swing.JPanel" name="BestiaryPage_MonsterTagsButtonBox">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                               <BorderConstraints direction="South"/>
@@ -1872,7 +1971,7 @@
                             <Property name="alignment" type="int" value="2"/>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JButton" name="bestiarypage_monsterTagClearSelectionsButton">
+                            <Component class="javax.swing.JButton" name="BestiaryPage_MonsterTypesClearSelectionsButton">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Clear Selections"/>
                               </Properties>
@@ -1881,25 +1980,6 @@
                         </Container>
                       </SubComponents>
                     </Container>
-                  </SubComponents>
-                </Container>
-                <Container class="javax.swing.JPanel" name="bestiarypage_filterPane">
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                      <BorderConstraints direction="North"/>
-                    </Constraint>
-                  </Constraints>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
-                  <SubComponents>
-                    <Component class="javax.swing.JButton" name="bestiarypage_filterButton">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Lucida Grande" size="24" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="Filter"/>
-                      </Properties>
-                    </Component>
                   </SubComponents>
                 </Container>
               </SubComponents>
@@ -1915,7 +1995,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="monsterFocus_Sidebar">
+            <Container class="javax.swing.JPanel" name="MonsterFocus_Sidebar">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                   <BorderConstraints direction="After"/>
@@ -1924,7 +2004,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="monsterFocus_UploadBox">
+                <Container class="javax.swing.JPanel" name="MonsterFocus_UploadButtonBox">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
@@ -1940,7 +2020,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JButton" name="monsterFocus_UploadButton">
+                    <Component class="javax.swing.JButton" name="MonsterFocus_UploadButton">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Lucida Grande" size="20" style="0"/>
@@ -1955,7 +2035,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.Box$Filler" name="monsterFocus_filler1">
+                    <Component class="javax.swing.Box$Filler" name="MonsterFocus_filler1">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[32767, 20]"/>
@@ -1976,7 +2056,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.Box$Filler" name="monsterFocus_filler2">
+                    <Component class="javax.swing.Box$Filler" name="MonsterFocus_filler2">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[32767, 20]"/>
@@ -1997,7 +2077,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.Box$Filler" name="monsterFocus_filler3">
+                    <Component class="javax.swing.Box$Filler" name="MonsterFocus_filler3">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[20, 32767]"/>
@@ -2018,7 +2098,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.Box$Filler" name="monsterFocus_filler4">
+                    <Component class="javax.swing.Box$Filler" name="MonsterFocus_filler4">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[20, 32767]"/>
@@ -2041,7 +2121,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="monsterFocus_currentCollectionsPane">
+                <Container class="javax.swing.JPanel" name="MonsterFocus_CurrentCollectionsPane">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
@@ -2057,7 +2137,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="monsterFocus_currentCollectionsTitle">
+                    <Component class="javax.swing.JLabel" name="MonsterFocus_CurrentCollectionsLabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Lucida Grande" size="18" style="0"/>
@@ -2073,7 +2153,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Container class="javax.swing.JPanel" name="monsterFocus_currentCollectionsEditPane">
+                    <Container class="javax.swing.JPanel" name="MonsterFocus_EditCollectionsButtonBox">
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                           <BorderConstraints direction="Last"/>
@@ -2084,14 +2164,14 @@
                         <Property name="alignment" type="int" value="2"/>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JButton" name="monsterFocus_currentCollectionsEditButton">
+                        <Component class="javax.swing.JButton" name="MonsterFocus_EditCollectionsButton">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Edit Collections"/>
                           </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Container class="javax.swing.JScrollPane" name="monsterFocus_currentCollectionsScrollPane">
+                    <Container class="javax.swing.JScrollPane" name="MonsterFocus_CurrentCollectionsScrollPane">
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                           <BorderConstraints direction="Center"/>
@@ -2100,7 +2180,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JList" name="monsterFocus_currentCollectionsList">
+                        <Component class="javax.swing.JList" name="MonsterFocus_CurrentCollectionsList">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ee" green="ee" red="ee" type="rgb"/>
@@ -2118,7 +2198,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.Box$Filler" name="monsterFocus_filler6">
+                    <Component class="javax.swing.Box$Filler" name="MonsterFocus_filler5">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[20, 32767]"/>
@@ -2139,7 +2219,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.Box$Filler" name="monsterFocus_filler8">
+                    <Component class="javax.swing.Box$Filler" name="MonsterFocus_filler6">
                       <Properties>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[20, 32767]"/>
@@ -2164,7 +2244,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="monsterFocus_GMNotePane">
+            <Container class="javax.swing.JPanel" name="MonsterFocus_GMNotePane">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
@@ -2180,97 +2260,111 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="monsterFocus_GMNotesTitle">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Lucida Grande" size="18" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="GM Notes:"/>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[91, 30]"/>
-                    </Property>
-                  </Properties>
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                      <BorderConstraints direction="North"/>
-                    </Constraint>
-                  </Constraints>
-                </Component>
-                <Container class="javax.swing.JScrollPane" name="monsterFocus_GMNotesScrollPane">
-                  <Properties>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[100, 150]"/>
-                    </Property>
-                  </Properties>
+                <Container class="javax.swing.JPanel" name="MonsterFocus_GMNotesTopPane">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                       <BorderConstraints direction="Center"/>
                     </Constraint>
                   </Constraints>
 
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="monsterFocus_GMNotesTextArea">
+                    <Component class="javax.swing.JLabel" name="MonsterFocus_GMNotesTitle">
                       <Properties>
-                        <Property name="editable" type="boolean" value="false"/>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="ee" green="ee" red="ee" type="rgb"/>
-                        </Property>
-                        <Property name="columns" type="int" value="20"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Lucida Grande" size="14" style="0"/>
+                          <Font name="Lucida Grande" size="18" style="0"/>
                         </Property>
-                        <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="GM Notes:"/>
+                        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[91, 30]"/>
+                        </Property>
                       </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                          <BorderConstraints direction="First"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Container class="javax.swing.JScrollPane" name="MonsterFocus_GMNotesScrollPane">
+                      <Properties>
+                        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[100, 150]"/>
+                        </Property>
+                        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[100, 150]"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                          <BorderConstraints direction="Center"/>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextArea" name="MonsterFocus_GMNotesText">
+                          <Properties>
+                            <Property name="editable" type="boolean" value="false"/>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ee" green="ee" red="ee" type="rgb"/>
+                            </Property>
+                            <Property name="columns" type="int" value="20"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Lucida Grande" size="14" style="0"/>
+                            </Property>
+                            <Property name="rows" type="int" value="5"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Component class="javax.swing.Box$Filler" name="MonsterFocus_filler7">
+                      <Properties>
+                        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[20, 32767]"/>
+                        </Property>
+                        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[20, 0]"/>
+                        </Property>
+                        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[20, 0]"/>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.HorizontalStrut"/>
+                      </AuxValues>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                          <BorderConstraints direction="After"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.Box$Filler" name="MonsterFocus_filler8">
+                      <Properties>
+                        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[20, 32767]"/>
+                        </Property>
+                        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[20, 0]"/>
+                        </Property>
+                        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[20, 0]"/>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.HorizontalStrut"/>
+                      </AuxValues>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                          <BorderConstraints direction="Before"/>
+                        </Constraint>
+                      </Constraints>
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.Box$Filler" name="monsterFocus_filler5">
-                  <Properties>
-                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[20, 32767]"/>
-                    </Property>
-                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[20, 0]"/>
-                    </Property>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[20, 0]"/>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.HorizontalStrut"/>
-                  </AuxValues>
+                <Container class="javax.swing.JPanel" name="MonsterFocus_EditNoteButtonBox">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                      <BorderConstraints direction="West"/>
-                    </Constraint>
-                  </Constraints>
-                </Component>
-                <Component class="javax.swing.Box$Filler" name="monsterFocus_filler7">
-                  <Properties>
-                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[20, 32767]"/>
-                    </Property>
-                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[20, 0]"/>
-                    </Property>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[20, 0]"/>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.HorizontalStrut"/>
-                  </AuxValues>
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                      <BorderConstraints direction="East"/>
-                    </Constraint>
-                  </Constraints>
-                </Component>
-                <Container class="javax.swing.JPanel" name="monsterFocus_GMNotesButtonBox">
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                      <BorderConstraints direction="South"/>
+                      <BorderConstraints direction="Last"/>
                     </Constraint>
                   </Constraints>
 
@@ -2278,7 +2372,7 @@
                     <Property name="alignment" type="int" value="2"/>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JButton" name="monsterFocus_GMNotesEditButton">
+                    <Component class="javax.swing.JButton" name="MonsterFocus_EditNoteButton">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Edit Note"/>
                       </Properties>
@@ -2287,7 +2381,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Component class="LargeMonsterCard" name="monsterFocus_MonsterCard">
+            <Component class="LargeMonsterCard" name="MonsterFocus_MainMonster">
               <Properties>
                 <Property name="dAttackTags" type="java.lang.String" value="Attack, Tags, Blah"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2302,7 +2396,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Container class="javax.swing.JPanel" name="monsterFocus_BackButtonBox">
+            <Container class="javax.swing.JPanel" name="MonsterFocus_BackButtonBox">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                   <BorderConstraints direction="First"/>
@@ -2313,7 +2407,7 @@
                 <Property name="alignment" type="int" value="0"/>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="monsterFocus_backButton">
+                <Component class="javax.swing.JButton" name="MonsterFocus_BackToBestiaryButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Back to Bestiary"/>
                   </Properties>
@@ -2331,7 +2425,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JScrollPane" name="CodexPage_MainScrollPanel">
+            <Container class="javax.swing.JScrollPane" name="CodexPage_MainScrollPane">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ee" green="ee" red="ee" type="rgb"/>
@@ -2347,14 +2441,14 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="CodexPage_MainPanel">
+                <Container class="javax.swing.JPanel" name="CodexPage_MainPane">
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
                     <Property name="columns" type="int" value="2"/>
                     <Property name="rows" type="int" value="1"/>
                   </Layout>
                   <SubComponents>
-                    <Container class="javax.swing.JPanel" name="CodexPage_PopularMonstersTopPanel">
+                    <Container class="javax.swing.JPanel" name="CodexPage_PopularMonstersPane">
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
                       <SubComponents>
@@ -2400,7 +2494,7 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Container class="javax.swing.JPanel" name="CodexPage_PopularMonstersCards">
+                        <Container class="javax.swing.JPanel" name="CodexPage_PopularMonstersInternalPane">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                               <BorderConstraints direction="Center"/>
@@ -2413,19 +2507,19 @@
                             <Property name="verticalGap" type="int" value="10"/>
                           </Layout>
                           <SubComponents>
-                            <Component class="MiniMonsterCard" name="CodexPage_PopularCard1">
+                            <Component class="MiniMonsterCard" name="CodexPage_PopMon1">
                             </Component>
-                            <Component class="MiniMonsterCard" name="CodexPage_PopularCard2">
+                            <Component class="MiniMonsterCard" name="CodexPage_PopMon2">
                             </Component>
-                            <Component class="MiniMonsterCard" name="CodexPage_PopularCard3">
+                            <Component class="MiniMonsterCard" name="CodexPage_PopMon3">
                             </Component>
-                            <Component class="MiniMonsterCard" name="CodexPage_PopularCard4">
+                            <Component class="MiniMonsterCard" name="CodexPage_PopMon4">
                             </Component>
-                            <Component class="MiniMonsterCard" name="CodexPage_PopularCard5">
+                            <Component class="MiniMonsterCard" name="CodexPage_PopMon5">
                             </Component>
                           </SubComponents>
                         </Container>
-                        <Component class="javax.swing.JLabel" name="CodexPage_PopularMonsterTitle">
+                        <Component class="javax.swing.JLabel" name="CodexPage_PopularMonstersTitle">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Lucida Grande" size="18" style="0"/>
@@ -2443,7 +2537,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Container class="javax.swing.JPanel" name="CodexPage_RecentMonstersTopPane">
+                    <Container class="javax.swing.JPanel" name="CodexPage_RecentMonstersPane">
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
                       <SubComponents>
@@ -2489,7 +2583,7 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Container class="javax.swing.JPanel" name="CodexPage_RecentMonstersCards">
+                        <Container class="javax.swing.JPanel" name="CodexPage_RecentMonstersInternalPane">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                               <BorderConstraints direction="Center"/>
@@ -2502,15 +2596,15 @@
                             <Property name="verticalGap" type="int" value="10"/>
                           </Layout>
                           <SubComponents>
-                            <Component class="MiniMonsterCard" name="CodexPage_RecentCard1">
+                            <Component class="MiniMonsterCard" name="CodexPage_RecentMon1">
                             </Component>
-                            <Component class="MiniMonsterCard" name="CodexPage_RecentCard2">
+                            <Component class="MiniMonsterCard" name="CodexPage_RecentMon2">
                             </Component>
-                            <Component class="MiniMonsterCard" name="CodexPage_RecentCard3">
+                            <Component class="MiniMonsterCard" name="CodexPage_RecentMon3">
                             </Component>
-                            <Component class="MiniMonsterCard" name="CodexPage_RecentCard4">
+                            <Component class="MiniMonsterCard" name="CodexPage_RecentMon4">
                             </Component>
-                            <Component class="MiniMonsterCard" name="CodexPage_RecentCard5">
+                            <Component class="MiniMonsterCard" name="CodexPage_RecentMon5">
                             </Component>
                           </SubComponents>
                         </Container>
