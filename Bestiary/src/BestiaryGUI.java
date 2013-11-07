@@ -977,6 +977,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
         NameCollectionWindow.getContentPane().add(NameColWin_filler3, java.awt.BorderLayout.WEST);
         NameCollectionWindow.getContentPane().add(NameColWin_filler4, java.awt.BorderLayout.EAST);
 
+        AddGMNotesWindow.setAlwaysOnTop(true);
+        AddGMNotesWindow.setModal(true);
         AddGMNotesWindow.setResizable(false);
         AddGMNotesWindow.setSize(new java.awt.Dimension(250, 100));
 
@@ -998,7 +1000,10 @@ public class BestiaryGUI extends javax.swing.JFrame {
         AddGMNotesWindow.getContentPane().add(AddGMNotesWin_filler3, java.awt.BorderLayout.LINE_END);
         AddGMNotesWindow.getContentPane().add(AddGMNotesWin_filler4, java.awt.BorderLayout.LINE_START);
 
+        EditGMNoteWindow.setAlwaysOnTop(true);
+        EditGMNoteWindow.setModal(true);
         EditGMNoteWindow.setPreferredSize(new java.awt.Dimension(400, 300));
+        EditGMNoteWindow.setSize(new java.awt.Dimension(400, 300));
 
         EditGMNoteWin_MainPanel.setLayout(new java.awt.BorderLayout());
 
@@ -1020,9 +1025,19 @@ public class BestiaryGUI extends javax.swing.JFrame {
         EditGMNoteWin_ButtonPanel.setLayout(new java.awt.BorderLayout());
 
         EditGMNoteWin_CancelButton.setText("Cancel");
+        EditGMNoteWin_CancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditGMNoteWin_CancelButtonActionPerformed(evt);
+            }
+        });
         EditGMNoteWin_ButtonPanel.add(EditGMNoteWin_CancelButton, java.awt.BorderLayout.WEST);
 
         EditGMNoteWin_SaveButton.setText("Save");
+        EditGMNoteWin_SaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditGMNoteWin_SaveButtonActionPerformed(evt);
+            }
+        });
         EditGMNoteWin_ButtonPanel.add(EditGMNoteWin_SaveButton, java.awt.BorderLayout.EAST);
 
         EditGMNoteWin_MainPanel.add(EditGMNoteWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
@@ -1481,6 +1496,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterFocus_EditNoteButtonBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         MonsterFocus_EditNoteButton.setText("Edit Note");
+        MonsterFocus_EditNoteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonsterFocus_EditNoteButtonActionPerformed(evt);
+            }
+        });
         MonsterFocus_EditNoteButtonBox.add(MonsterFocus_EditNoteButton);
 
         MonsterFocus_GMNotePane.add(MonsterFocus_EditNoteButtonBox, java.awt.BorderLayout.PAGE_END);
@@ -1941,6 +1961,22 @@ public class BestiaryGUI extends javax.swing.JFrame {
         this.AddToCollectionsWindow.setVisible(false);
         this.EditCollectionsWindow.setVisible(true);
     }//GEN-LAST:event_AddToColWin_YesButtonActionPerformed
+
+    private void MonsterFocus_EditNoteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterFocus_EditNoteButtonActionPerformed
+        this.EditGMNoteWin_NoteText.setText(this.MonsterFocus_GMNotesText.getText());
+        this.EditGMNoteWindow.setVisible(true);
+    }//GEN-LAST:event_MonsterFocus_EditNoteButtonActionPerformed
+
+    private void EditGMNoteWin_SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditGMNoteWin_SaveButtonActionPerformed
+        this.MonsterFocus_GMNotesText.setText(this.EditGMNoteWin_NoteText.getText());
+        this.EditGMNoteWin_NoteText.setText("");
+        this.EditGMNoteWindow.setVisible(false);
+    }//GEN-LAST:event_EditGMNoteWin_SaveButtonActionPerformed
+
+    private void EditGMNoteWin_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditGMNoteWin_CancelButtonActionPerformed
+        this.EditGMNoteWin_NoteText.setText("");
+        this.EditGMNoteWindow.setVisible(false);
+    }//GEN-LAST:event_EditGMNoteWin_CancelButtonActionPerformed
 
 
     /**
