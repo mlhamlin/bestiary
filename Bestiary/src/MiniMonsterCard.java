@@ -143,7 +143,6 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         cMoves = new javax.swing.JTextPane();
-        jPanel11 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         cInstinct = new javax.swing.JLabel();
@@ -152,7 +151,6 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
 
         setLayout(new java.awt.BorderLayout());
 
-        MonsterCard.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         MonsterCard.setPreferredSize(new java.awt.Dimension(475, 350));
         MonsterCard.setLayout(new java.awt.BorderLayout());
         MonsterCard.add(filler1, java.awt.BorderLayout.NORTH);
@@ -261,9 +259,6 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
 
         jPanel3.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
-        jPanel11.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-        jPanel3.add(jPanel11, java.awt.BorderLayout.SOUTH);
-
         jPanel13.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 2, 13)); // NOI18N
@@ -304,7 +299,6 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
