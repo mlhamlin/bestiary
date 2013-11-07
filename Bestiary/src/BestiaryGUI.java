@@ -217,11 +217,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         EditGMNoteWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         EditGMNoteWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         DownloadConfirmationWindow = new javax.swing.JDialog();
-        DownConWin_MainPanel1 = new javax.swing.JPanel();
-        DownConWin_ButtonPanel1 = new javax.swing.JPanel();
-        DownConWin_YesButton1 = new javax.swing.JButton();
-        DownConWin_NoButton1 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        DownConWin_MainPanel = new javax.swing.JPanel();
+        DownConWin_ButtonPanel = new javax.swing.JPanel();
+        DownConWin_YesButton = new javax.swing.JButton();
+        DownConWin_NoButton = new javax.swing.JButton();
+        DownConWin_TextPane = new javax.swing.JPanel();
         DownConWin_Label1 = new javax.swing.JLabel();
         DownConWin_MonsterName = new javax.swing.JLabel();
         DownConWin_Label2 = new javax.swing.JLabel();
@@ -232,10 +232,47 @@ public class BestiaryGUI extends javax.swing.JFrame {
         DownCompWin_MainPanel = new javax.swing.JPanel();
         DownCompWin_ButtonPanel = new javax.swing.JPanel();
         DownCompWin_OkayButton = new javax.swing.JButton();
-        DownCompWin__Label = new javax.swing.JLabel();
+        DownCompWin_Label = new javax.swing.JLabel();
         DownCompWin_filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         DownCompWin_filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         DownCompWin_filler9 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        UploadConfirmationWindow = new javax.swing.JDialog();
+        UploadConWin_MainPanel = new javax.swing.JPanel();
+        UploadConWin_ButtonPanel = new javax.swing.JPanel();
+        UploadConWin_YesButton = new javax.swing.JButton();
+        UploadConWin_NoButton = new javax.swing.JButton();
+        UploadConWin_TextPanel = new javax.swing.JPanel();
+        UploadConWin_Label1 = new javax.swing.JLabel();
+        UploadConWin_MonsterName = new javax.swing.JLabel();
+        UploadConWin_Label2 = new javax.swing.JLabel();
+        UploadConWin_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        UploadConWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        UploadConWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        LoginWindow = new javax.swing.JDialog();
+        LoginWin_MainPanel = new javax.swing.JPanel();
+        LoginWin_Label = new javax.swing.JLabel();
+        LoginWin_FieldPane = new javax.swing.JPanel();
+        LoginWin_UsernamePanel = new javax.swing.JPanel();
+        LoginWin_UsernameLabel = new javax.swing.JLabel();
+        LoginWin_UsernameField = new javax.swing.JTextField();
+        LoginWin_PasswordPane = new javax.swing.JPanel();
+        LoginWin_PasswordLabel = new javax.swing.JLabel();
+        LoginWin_PasswordField = new javax.swing.JPasswordField();
+        LoginWin_ButtonPanel = new javax.swing.JPanel();
+        LoginWin_OkayButton = new javax.swing.JButton();
+        LoginWin_CancelButton = new javax.swing.JButton();
+        LoginWin_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        LoginWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        LoginWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        LoginWin_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 5), new java.awt.Dimension(0, 5), new java.awt.Dimension(32767, 5));
+        UploadCompleteWindow = new javax.swing.JDialog();
+        UploadCompWin_MainPanel = new javax.swing.JPanel();
+        UploadCompWin_ButtonPanel = new javax.swing.JPanel();
+        UploadCompWin_OkayButton = new javax.swing.JButton();
+        UploadCompWin_Label = new javax.swing.JLabel();
+        UploadCompWin_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        UploadCompWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        UploadCompWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         ControlBar = new javax.swing.JPanel();
         ControlBar_MainTitle = new javax.swing.JLabel();
         ControlBar_ModeButtonBox = new javax.swing.JPanel();
@@ -1067,46 +1104,188 @@ public class BestiaryGUI extends javax.swing.JFrame {
         EditGMNoteWindow.getContentPane().add(EditGMNoteWin_filler2, java.awt.BorderLayout.EAST);
         EditGMNoteWindow.getContentPane().add(EditGMNoteWin_filler3, java.awt.BorderLayout.PAGE_START);
 
-        DownConWin_MainPanel1.setLayout(new java.awt.BorderLayout());
+        DownloadConfirmationWindow.setAlwaysOnTop(true);
+        DownloadConfirmationWindow.setModal(true);
+        DownloadConfirmationWindow.setResizable(false);
+        DownloadConfirmationWindow.setSize(new java.awt.Dimension(300, 125));
 
-        DownConWin_YesButton1.setText("Yes");
-        DownConWin_ButtonPanel1.add(DownConWin_YesButton1);
+        DownConWin_MainPanel.setLayout(new java.awt.BorderLayout());
 
-        DownConWin_NoButton1.setText("No");
-        DownConWin_ButtonPanel1.add(DownConWin_NoButton1);
+        DownConWin_YesButton.setText("Yes");
+        DownConWin_YesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DownConWin_YesButtonActionPerformed(evt);
+            }
+        });
+        DownConWin_ButtonPanel.add(DownConWin_YesButton);
 
-        DownConWin_MainPanel1.add(DownConWin_ButtonPanel1, java.awt.BorderLayout.SOUTH);
+        DownConWin_NoButton.setText("No");
+        DownConWin_ButtonPanel.add(DownConWin_NoButton);
+
+        DownConWin_MainPanel.add(DownConWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
 
         DownConWin_Label1.setText("Are you sure you want to download");
-        jPanel1.add(DownConWin_Label1);
+        DownConWin_TextPane.add(DownConWin_Label1);
 
         DownConWin_MonsterName.setText("jLabel2");
-        jPanel1.add(DownConWin_MonsterName);
+        DownConWin_TextPane.add(DownConWin_MonsterName);
 
         DownConWin_Label2.setText("?");
-        jPanel1.add(DownConWin_Label2);
+        DownConWin_TextPane.add(DownConWin_Label2);
 
-        DownConWin_MainPanel1.add(jPanel1, java.awt.BorderLayout.CENTER);
+        DownConWin_MainPanel.add(DownConWin_TextPane, java.awt.BorderLayout.CENTER);
 
-        DownloadConfirmationWindow.getContentPane().add(DownConWin_MainPanel1, java.awt.BorderLayout.CENTER);
+        DownloadConfirmationWindow.getContentPane().add(DownConWin_MainPanel, java.awt.BorderLayout.CENTER);
         DownloadConfirmationWindow.getContentPane().add(DownConWin_filler2, java.awt.BorderLayout.PAGE_START);
         DownloadConfirmationWindow.getContentPane().add(DownConWin_filler5, java.awt.BorderLayout.LINE_END);
         DownloadConfirmationWindow.getContentPane().add(DownConWin_filler6, java.awt.BorderLayout.LINE_START);
 
+        DownloadCompleteWindow.setAlwaysOnTop(true);
+        DownloadCompleteWindow.setModal(true);
+        DownloadCompleteWindow.setResizable(false);
+        DownloadCompleteWindow.setSize(new java.awt.Dimension(150, 100));
+
         DownCompWin_MainPanel.setLayout(new java.awt.BorderLayout());
 
         DownCompWin_OkayButton.setText("Okay");
+        DownCompWin_OkayButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DownCompWin_OkayButtonActionPerformed(evt);
+            }
+        });
         DownCompWin_ButtonPanel.add(DownCompWin_OkayButton);
 
         DownCompWin_MainPanel.add(DownCompWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
 
-        DownCompWin__Label.setText("Download Complete");
-        DownCompWin_MainPanel.add(DownCompWin__Label, java.awt.BorderLayout.NORTH);
+        DownCompWin_Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DownCompWin_Label.setText("Download Complete!");
+        DownCompWin_MainPanel.add(DownCompWin_Label, java.awt.BorderLayout.NORTH);
 
         DownloadCompleteWindow.getContentPane().add(DownCompWin_MainPanel, java.awt.BorderLayout.CENTER);
         DownloadCompleteWindow.getContentPane().add(DownCompWin_filler7, java.awt.BorderLayout.PAGE_START);
         DownloadCompleteWindow.getContentPane().add(DownCompWin_filler8, java.awt.BorderLayout.LINE_END);
         DownloadCompleteWindow.getContentPane().add(DownCompWin_filler9, java.awt.BorderLayout.LINE_START);
+
+        UploadConfirmationWindow.setAlwaysOnTop(true);
+        UploadConfirmationWindow.setModal(true);
+        UploadConfirmationWindow.setResizable(false);
+        UploadConfirmationWindow.setSize(new java.awt.Dimension(300, 125));
+
+        UploadConWin_MainPanel.setLayout(new java.awt.BorderLayout());
+
+        UploadConWin_YesButton.setText("Yes");
+        UploadConWin_YesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UploadConWin_YesButtonActionPerformed(evt);
+            }
+        });
+        UploadConWin_ButtonPanel.add(UploadConWin_YesButton);
+
+        UploadConWin_NoButton.setText("No");
+        UploadConWin_ButtonPanel.add(UploadConWin_NoButton);
+
+        UploadConWin_MainPanel.add(UploadConWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
+
+        UploadConWin_Label1.setText("Are you sure you want to upload");
+        UploadConWin_TextPanel.add(UploadConWin_Label1);
+
+        UploadConWin_MonsterName.setText("jLabel2");
+        UploadConWin_TextPanel.add(UploadConWin_MonsterName);
+
+        UploadConWin_Label2.setText("?");
+        UploadConWin_TextPanel.add(UploadConWin_Label2);
+
+        UploadConWin_MainPanel.add(UploadConWin_TextPanel, java.awt.BorderLayout.CENTER);
+
+        UploadConfirmationWindow.getContentPane().add(UploadConWin_MainPanel, java.awt.BorderLayout.CENTER);
+        UploadConfirmationWindow.getContentPane().add(UploadConWin_filler1, java.awt.BorderLayout.PAGE_START);
+        UploadConfirmationWindow.getContentPane().add(UploadConWin_filler2, java.awt.BorderLayout.LINE_END);
+        UploadConfirmationWindow.getContentPane().add(UploadConWin_filler3, java.awt.BorderLayout.LINE_START);
+
+        LoginWindow.setAlwaysOnTop(true);
+        LoginWindow.setModal(true);
+
+        LoginWin_MainPanel.setSize(new java.awt.Dimension(377, 156));
+        LoginWin_MainPanel.setLayout(new java.awt.BorderLayout());
+
+        LoginWin_Label.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        LoginWin_Label.setText("Please log in:");
+        LoginWin_MainPanel.add(LoginWin_Label, java.awt.BorderLayout.NORTH);
+
+        LoginWin_FieldPane.setLayout(new java.awt.GridLayout(2, 0));
+
+        LoginWin_UsernamePanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        LoginWin_UsernameLabel.setText("Username");
+        LoginWin_UsernamePanel.add(LoginWin_UsernameLabel);
+
+        LoginWin_UsernameField.setPreferredSize(new java.awt.Dimension(300, 24));
+        LoginWin_UsernameField.setSize(new java.awt.Dimension(300, 24));
+        LoginWin_UsernameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginWin_UsernameFieldActionPerformed(evt);
+            }
+        });
+        LoginWin_UsernamePanel.add(LoginWin_UsernameField);
+
+        LoginWin_FieldPane.add(LoginWin_UsernamePanel);
+
+        LoginWin_PasswordPane.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        LoginWin_PasswordLabel.setText("Password");
+        LoginWin_PasswordPane.add(LoginWin_PasswordLabel);
+
+        LoginWin_PasswordField.setPreferredSize(new java.awt.Dimension(300, 28));
+        LoginWin_PasswordPane.add(LoginWin_PasswordField);
+
+        LoginWin_FieldPane.add(LoginWin_PasswordPane);
+
+        LoginWin_MainPanel.add(LoginWin_FieldPane, java.awt.BorderLayout.CENTER);
+
+        LoginWin_ButtonPanel.setLayout(new java.awt.BorderLayout());
+
+        LoginWin_OkayButton.setText("Okay");
+        LoginWin_OkayButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginWin_OkayButtonActionPerformed(evt);
+            }
+        });
+        LoginWin_ButtonPanel.add(LoginWin_OkayButton, java.awt.BorderLayout.EAST);
+
+        LoginWin_CancelButton.setText("Cancel");
+        LoginWin_ButtonPanel.add(LoginWin_CancelButton, java.awt.BorderLayout.WEST);
+
+        LoginWin_MainPanel.add(LoginWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
+
+        LoginWindow.getContentPane().add(LoginWin_MainPanel, java.awt.BorderLayout.CENTER);
+        LoginWindow.getContentPane().add(LoginWin_filler1, java.awt.BorderLayout.WEST);
+        LoginWindow.getContentPane().add(LoginWin_filler2, java.awt.BorderLayout.EAST);
+        LoginWindow.getContentPane().add(LoginWin_filler3, java.awt.BorderLayout.NORTH);
+        LoginWindow.getContentPane().add(LoginWin_filler4, java.awt.BorderLayout.SOUTH);
+
+        UploadCompleteWindow.setResizable(false);
+        UploadCompleteWindow.setSize(new java.awt.Dimension(150, 100));
+
+        UploadCompWin_MainPanel.setLayout(new java.awt.BorderLayout());
+
+        UploadCompWin_OkayButton.setText("Okay");
+        UploadCompWin_OkayButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UploadCompWin_OkayButtonActionPerformed(evt);
+            }
+        });
+        UploadCompWin_ButtonPanel.add(UploadCompWin_OkayButton);
+
+        UploadCompWin_MainPanel.add(UploadCompWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
+
+        UploadCompWin_Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        UploadCompWin_Label.setText("Upload Complete!");
+        UploadCompWin_MainPanel.add(UploadCompWin_Label, java.awt.BorderLayout.NORTH);
+
+        UploadCompleteWindow.getContentPane().add(UploadCompWin_MainPanel, java.awt.BorderLayout.CENTER);
+        UploadCompleteWindow.getContentPane().add(UploadCompWin_filler1, java.awt.BorderLayout.PAGE_START);
+        UploadCompleteWindow.getContentPane().add(UploadCompWin_filler2, java.awt.BorderLayout.LINE_END);
+        UploadCompleteWindow.getContentPane().add(UploadCompWin_filler3, java.awt.BorderLayout.LINE_START);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -1620,11 +1799,27 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         CodexPage_MonsterPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         CodexPage_MonsterPane1.setLayout(new java.awt.BorderLayout());
+
+        CodexPage_MonsterCard1.setdArmor("1");
+        CodexPage_MonsterCard1.setdAttack("Rusty sword (d10 damage)");
+        CodexPage_MonsterCard1.setdAttackTags("Close, Near");
+        CodexPage_MonsterCard1.setdHP("4");
+        CodexPage_MonsterCard1.setdInstinct("To suprise the living");
+        CodexPage_MonsterCard1.setdMonsterDescription("Poor Skeletons. The ultimate patsy of the undead, clattering along and knocked to pieces with the simplest blow. However, they are probably the smartest of the undead footsoldiers avaliable - they have a strange and canny knack for ambush and tend to enjoy laying traps for people. Having said that, they're still not very bright. The most common form of ambush is to hide in a barrel and wait for years until an adventurer passes by. Poor Skeletons.");
+        CodexPage_MonsterCard1.setdMonsterName("Skeleton in a Barrel");
+        CodexPage_MonsterCard1.setdMonsterTags("Solitary, Stealthy, Cautious");
+        CodexPage_MonsterCard1.setdMoveList("<html>\n  <body>\n    <ul>\n      <li>\n        Ambush unsuspecting adventurers\n      </li>\n      <li>\n        Hide in the surroundings\n      </li>\n    </ul>\n  </body>\n</html>\n");
+        CodexPage_MonsterCard1.setdQualities("");
         CodexPage_MonsterPane1.add(CodexPage_MonsterCard1, java.awt.BorderLayout.CENTER);
 
         CodexPage_DownloadButtonPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         CodexPage_DownloadButton1.setText("Download");
+        CodexPage_DownloadButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CodexPage_DownloadButton1ActionPerformed(evt);
+            }
+        });
         CodexPage_DownloadButtonPane1.add(CodexPage_DownloadButton1);
 
         CodexPage_MonsterPane1.add(CodexPage_DownloadButtonPane1, java.awt.BorderLayout.SOUTH);
@@ -2039,6 +2234,38 @@ public class BestiaryGUI extends javax.swing.JFrame {
         this.EditGMNoteWindow.setVisible(false);
     }//GEN-LAST:event_EditGMNoteWin_CancelButtonActionPerformed
 
+    private void CodexPage_DownloadButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodexPage_DownloadButton1ActionPerformed
+        this.DownConWin_MonsterName.setText("Skeleton in a Barrel");
+        this.DownloadConfirmationWindow.setVisible(true);
+    }//GEN-LAST:event_CodexPage_DownloadButton1ActionPerformed
+
+    private void DownConWin_YesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownConWin_YesButtonActionPerformed
+        this.DownloadConfirmationWindow.setVisible(false);
+        this.DownloadCompleteWindow.setVisible(true);
+    }//GEN-LAST:event_DownConWin_YesButtonActionPerformed
+
+    private void DownCompWin_OkayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownCompWin_OkayButtonActionPerformed
+        java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
+        cl.show(this.ModeScreens, "MonsterFocus");
+        this.DownloadCompleteWindow.setVisible(false);
+    }//GEN-LAST:event_DownCompWin_OkayButtonActionPerformed
+
+    private void UploadConWin_YesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UploadConWin_YesButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UploadConWin_YesButtonActionPerformed
+
+    private void LoginWin_UsernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginWin_UsernameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginWin_UsernameFieldActionPerformed
+
+    private void LoginWin_OkayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginWin_OkayButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginWin_OkayButtonActionPerformed
+
+    private void UploadCompWin_OkayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UploadCompWin_OkayButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UploadCompWin_OkayButtonActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -2287,19 +2514,20 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JButton ControlBar_NewMonsterButton;
     private javax.swing.Box.Filler ControlBar_filler1;
     private javax.swing.JPanel DownCompWin_ButtonPanel;
+    private javax.swing.JLabel DownCompWin_Label;
     private javax.swing.JPanel DownCompWin_MainPanel;
     private javax.swing.JButton DownCompWin_OkayButton;
-    private javax.swing.JLabel DownCompWin__Label;
     private javax.swing.Box.Filler DownCompWin_filler7;
     private javax.swing.Box.Filler DownCompWin_filler8;
     private javax.swing.Box.Filler DownCompWin_filler9;
-    private javax.swing.JPanel DownConWin_ButtonPanel1;
+    private javax.swing.JPanel DownConWin_ButtonPanel;
     private javax.swing.JLabel DownConWin_Label1;
     private javax.swing.JLabel DownConWin_Label2;
-    private javax.swing.JPanel DownConWin_MainPanel1;
+    private javax.swing.JPanel DownConWin_MainPanel;
     private javax.swing.JLabel DownConWin_MonsterName;
-    private javax.swing.JButton DownConWin_NoButton1;
-    private javax.swing.JButton DownConWin_YesButton1;
+    private javax.swing.JButton DownConWin_NoButton;
+    private javax.swing.JPanel DownConWin_TextPane;
+    private javax.swing.JButton DownConWin_YesButton;
     private javax.swing.Box.Filler DownConWin_filler2;
     private javax.swing.Box.Filler DownConWin_filler5;
     private javax.swing.Box.Filler DownConWin_filler6;
@@ -2317,6 +2545,23 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.Box.Filler EditGMNoteWin_filler2;
     private javax.swing.Box.Filler EditGMNoteWin_filler3;
     private javax.swing.JDialog EditGMNoteWindow;
+    private javax.swing.JPanel LoginWin_ButtonPanel;
+    private javax.swing.JButton LoginWin_CancelButton;
+    private javax.swing.JPanel LoginWin_FieldPane;
+    private javax.swing.JLabel LoginWin_Label;
+    private javax.swing.JPanel LoginWin_MainPanel;
+    private javax.swing.JButton LoginWin_OkayButton;
+    private javax.swing.JPasswordField LoginWin_PasswordField;
+    private javax.swing.JLabel LoginWin_PasswordLabel;
+    private javax.swing.JPanel LoginWin_PasswordPane;
+    private javax.swing.JTextField LoginWin_UsernameField;
+    private javax.swing.JLabel LoginWin_UsernameLabel;
+    private javax.swing.JPanel LoginWin_UsernamePanel;
+    private javax.swing.Box.Filler LoginWin_filler1;
+    private javax.swing.Box.Filler LoginWin_filler2;
+    private javax.swing.Box.Filler LoginWin_filler3;
+    private javax.swing.Box.Filler LoginWin_filler4;
+    private javax.swing.JDialog LoginWindow;
     private javax.swing.JPanel ModeScreens;
     private javax.swing.ButtonGroup ModeToggle;
     private javax.swing.JCheckBox MonTagWin_Amorphous;
@@ -2470,6 +2715,25 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.Box.Filler SetColWin_filler5;
     private javax.swing.Box.Filler SetColWin_filler6;
     private javax.swing.Box.Filler SetColWin_filler7;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel UploadCompWin_ButtonPanel;
+    private javax.swing.JLabel UploadCompWin_Label;
+    private javax.swing.JPanel UploadCompWin_MainPanel;
+    private javax.swing.JButton UploadCompWin_OkayButton;
+    private javax.swing.Box.Filler UploadCompWin_filler1;
+    private javax.swing.Box.Filler UploadCompWin_filler2;
+    private javax.swing.Box.Filler UploadCompWin_filler3;
+    private javax.swing.JDialog UploadCompleteWindow;
+    private javax.swing.JPanel UploadConWin_ButtonPanel;
+    private javax.swing.JLabel UploadConWin_Label1;
+    private javax.swing.JLabel UploadConWin_Label2;
+    private javax.swing.JPanel UploadConWin_MainPanel;
+    private javax.swing.JLabel UploadConWin_MonsterName;
+    private javax.swing.JButton UploadConWin_NoButton;
+    private javax.swing.JPanel UploadConWin_TextPanel;
+    private javax.swing.JButton UploadConWin_YesButton;
+    private javax.swing.Box.Filler UploadConWin_filler1;
+    private javax.swing.Box.Filler UploadConWin_filler2;
+    private javax.swing.Box.Filler UploadConWin_filler3;
+    private javax.swing.JDialog UploadConfirmationWindow;
     // End of variables declaration//GEN-END:variables
 }
