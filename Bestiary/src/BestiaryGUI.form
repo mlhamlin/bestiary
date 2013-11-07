@@ -1293,6 +1293,538 @@
           </Constraints>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="mSurveyStep1">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card2"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="mSurveyStep1Panel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="First"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                    <Property name="axis" type="int" value="1"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="mSurveyNameLabel">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="2"/>
+                        <Property name="text" type="java.lang.String" value="What is your monster&apos;s name?"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="mSurveyName">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="jTextField2"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="mSurveyStep2">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card3"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="mSurveyStep2Panel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="North"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                    <Property name="axis" type="int" value="1"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="mSurveyQuestLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="What is it known to do?"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="mSurveyQuest">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="jTextField3"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="mSurveyStep3">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card4"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="mSurveyStep3Panel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="First"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                    <Property name="axis" type="int" value="1"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="mSurveyFavouriteColourLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="What does it want that causes problems for others?"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="mSurveyFavouriteColour">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="jTextField4"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="mSurveyStep4">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card5"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="mSurveyStep4Panel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="First"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                    <Property name="axis" type="int" value="1"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="mSurveyHuntSizeLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="How does it usually hunt or fight?"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveyHuntSizeLarge">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveyGroupHuntSize"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="In large groups"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyHuntSizeLargeActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveyHuntSizeSmall">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveyGroupHuntSize"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="In small groups"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveyHuntSizeLonesome">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveyGroupHuntSize"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="All by its lonesome"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="mSurveyStep5">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card6"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="mSurveyStep5Panel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="North"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                    <Property name="axis" type="int" value="1"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="mSurveySizeLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="How big is it?"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveySizeMini">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveySize"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Smaller than a house cat"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveySizeMiniActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveySizeSmall">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveySize"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Hafling-esque"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveySizeTall">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveySize"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="About human size"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveySizeGrande">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveySize"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="As big as a cart"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveySizeVenti">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveySize"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Much larger than a cart"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="mSurveyStep6">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card7"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="mSurveyStep6Panel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="First"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                    <Property name="axis" type="int" value="1"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="mSurveyDefenseLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="What is its most important defense?"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveyDefenseNone">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveyDefense"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Cloth or flesh"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveyDefenseBuffaloBill">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveyDefense"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Leathers or thick hide"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveyDefenseTisButAScratch">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveyDefense"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Mail or scales"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveyDefenceCubone">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveyDefense"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Plate or bone"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="mSurveyDefenceForceField">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="mSurveyDefense"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Permanent magical protection"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="mSurveyStep7">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card8"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="mSurveyStep7Panel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="First"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                    <Property name="axis" type="int" value="1"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="mSurveyInfamousLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="What is it known for? (choose all that apply)"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyInfamousStrength">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Unrelenting strength"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyInfamousOffense">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Skill in offense"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyInfamousOffenseActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyInfamousDefense">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Skill in defense"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyInfamousDeft">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Deft strikes"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyInfamouseEndurance">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Uncanny endurance"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyInfamousJoker">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Deceit and trickery"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyInfamousAdapt">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="A useful adaptation"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyInfamousGodsLoveMe">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="The favour of the gods"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyInfamousMagicMissile">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Spells and magic"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="mSurveyStep8">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card9"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="mSurveyStep8Panel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="First"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                    <Property name="axis" type="int" value="1"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="mSurveyAttackLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="What is its most common form of attack?"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="mSurveyAttackName">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="jTextField1"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyAttackVicious">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Its armaments are vicious and obvious"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyAttackBay">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It lets the monster keep others at bay"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyAttackWeak">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Its armaments are small and weak"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyAttackMetal">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Its armaments can slice or pierce metal"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyAttackWhereIsYourGodNow">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Armor doesn&apos;t help with the damage it deals"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyAttackRanged">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It usually attacks at range"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="mSurveyStep9">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card10"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="mSurveyStep9Panel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="First"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                    <Property name="axis" type="int" value="1"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="mSurveyDescLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="What of these describes it?"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDescTricksyDamage">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It isn&apos;t dangerious because of the wounds it inflicts, but for other reasons"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDescOrganised">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It organises into larger groups that it can call for support"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDescSmartass">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It&apos;s as smart as a human (or thereabouts)"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDescSheild">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It actively defends itself with a sheild or similar"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDescTrinkets">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It collects trinkets that humans would consider valuable"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDescBeyond">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It is from beyond this world"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDescProppedUp">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It&apos;s kept alive by something more than simple biology"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDescMade">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It was made by someone"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDescLooksWickedAwful">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It&apos;s apperance is disturbing, terrible, or horrifying"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDescProbablySlime">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It doesn&apos;t have organs or discernable anatomy"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDescGetOffMyLawn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It, or its species, is ancient &#x2014; older than man, dwarves, elves, etc."/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="mSurveyDeskTreeHugger">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="It abhors violence"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
         </Container>
       </SubComponents>
     </Container>
@@ -1417,9 +1949,6 @@
       <Properties>
         <Property name="alwaysOnTop" type="boolean" value="true"/>
         <Property name="modal" type="boolean" value="true"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[400, 300]"/>
-        </Property>
         <Property name="resizable" type="boolean" value="false"/>
         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[400, 300]"/>
@@ -1666,9 +2195,6 @@
       <Properties>
         <Property name="alwaysOnTop" type="boolean" value="true"/>
         <Property name="modal" type="boolean" value="true"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[375, 150]"/>
-        </Property>
         <Property name="resizable" type="boolean" value="false"/>
         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[375, 150]"/>
@@ -1942,9 +2468,6 @@
       <Properties>
         <Property name="alwaysOnTop" type="boolean" value="true"/>
         <Property name="modal" type="boolean" value="true"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[400, 300]"/>
-        </Property>
         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[400, 300]"/>
         </Property>
@@ -2840,6 +3363,12 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.ButtonGroup" name="mSurveyGroupHuntSize">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="mSurveySize">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="mSurveyDefense">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>

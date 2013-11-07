@@ -161,6 +161,77 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterSurvey_CancelPane = new javax.swing.JPanel();
         MonsterSurvey_Cancel = new javax.swing.JButton();
         MonsterSurvey_MainPane = new javax.swing.JPanel();
+        mSurveyStep1 = new javax.swing.JPanel();
+        mSurveyStep1Panel = new javax.swing.JPanel();
+        mSurveyNameLabel = new javax.swing.JLabel();
+        mSurveyName = new javax.swing.JTextField();
+        mSurveyStep2 = new javax.swing.JPanel();
+        mSurveyStep2Panel = new javax.swing.JPanel();
+        mSurveyQuestLabel = new javax.swing.JLabel();
+        mSurveyQuest = new javax.swing.JTextField();
+        mSurveyStep3 = new javax.swing.JPanel();
+        mSurveyStep3Panel = new javax.swing.JPanel();
+        mSurveyFavouriteColourLabel = new javax.swing.JLabel();
+        mSurveyFavouriteColour = new javax.swing.JTextField();
+        mSurveyStep4 = new javax.swing.JPanel();
+        mSurveyStep4Panel = new javax.swing.JPanel();
+        mSurveyHuntSizeLabel = new javax.swing.JLabel();
+        mSurveyHuntSizeLarge = new javax.swing.JRadioButton();
+        mSurveyHuntSizeSmall = new javax.swing.JRadioButton();
+        mSurveyHuntSizeLonesome = new javax.swing.JRadioButton();
+        mSurveyStep5 = new javax.swing.JPanel();
+        mSurveyStep5Panel = new javax.swing.JPanel();
+        mSurveySizeLabel = new javax.swing.JLabel();
+        mSurveySizeMini = new javax.swing.JRadioButton();
+        mSurveySizeSmall = new javax.swing.JRadioButton();
+        mSurveySizeTall = new javax.swing.JRadioButton();
+        mSurveySizeGrande = new javax.swing.JRadioButton();
+        mSurveySizeVenti = new javax.swing.JRadioButton();
+        mSurveyStep6 = new javax.swing.JPanel();
+        mSurveyStep6Panel = new javax.swing.JPanel();
+        mSurveyDefenseLabel = new javax.swing.JLabel();
+        mSurveyDefenseNone = new javax.swing.JRadioButton();
+        mSurveyDefenseBuffaloBill = new javax.swing.JRadioButton();
+        mSurveyDefenseTisButAScratch = new javax.swing.JRadioButton();
+        mSurveyDefenceCubone = new javax.swing.JRadioButton();
+        mSurveyDefenceForceField = new javax.swing.JRadioButton();
+        mSurveyStep7 = new javax.swing.JPanel();
+        mSurveyStep7Panel = new javax.swing.JPanel();
+        mSurveyInfamousLabel = new javax.swing.JLabel();
+        mSurveyInfamousStrength = new javax.swing.JCheckBox();
+        mSurveyInfamousOffense = new javax.swing.JCheckBox();
+        mSurveyInfamousDefense = new javax.swing.JCheckBox();
+        mSurveyInfamousDeft = new javax.swing.JCheckBox();
+        mSurveyInfamouseEndurance = new javax.swing.JCheckBox();
+        mSurveyInfamousJoker = new javax.swing.JCheckBox();
+        mSurveyInfamousAdapt = new javax.swing.JCheckBox();
+        mSurveyInfamousGodsLoveMe = new javax.swing.JCheckBox();
+        mSurveyInfamousMagicMissile = new javax.swing.JCheckBox();
+        mSurveyStep8 = new javax.swing.JPanel();
+        mSurveyStep8Panel = new javax.swing.JPanel();
+        mSurveyAttackLabel = new javax.swing.JLabel();
+        mSurveyAttackName = new javax.swing.JTextField();
+        mSurveyAttackVicious = new javax.swing.JCheckBox();
+        mSurveyAttackBay = new javax.swing.JCheckBox();
+        mSurveyAttackWeak = new javax.swing.JCheckBox();
+        mSurveyAttackMetal = new javax.swing.JCheckBox();
+        mSurveyAttackWhereIsYourGodNow = new javax.swing.JCheckBox();
+        mSurveyAttackRanged = new javax.swing.JCheckBox();
+        mSurveyStep9 = new javax.swing.JPanel();
+        mSurveyStep9Panel = new javax.swing.JPanel();
+        mSurveyDescLabel = new javax.swing.JLabel();
+        mSurveyDescTricksyDamage = new javax.swing.JCheckBox();
+        mSurveyDescOrganised = new javax.swing.JCheckBox();
+        mSurveyDescSmartass = new javax.swing.JCheckBox();
+        mSurveyDescSheild = new javax.swing.JCheckBox();
+        mSurveyDescTrinkets = new javax.swing.JCheckBox();
+        mSurveyDescBeyond = new javax.swing.JCheckBox();
+        mSurveyDescProppedUp = new javax.swing.JCheckBox();
+        mSurveyDescMade = new javax.swing.JCheckBox();
+        mSurveyDescLooksWickedAwful = new javax.swing.JCheckBox();
+        mSurveyDescProbablySlime = new javax.swing.JCheckBox();
+        mSurveyDescGetOffMyLawn = new javax.swing.JCheckBox();
+        mSurveyDeskTreeHugger = new javax.swing.JCheckBox();
         AddToCollectionsWindow = new javax.swing.JDialog();
         AddToColWin_ButtonPanel = new javax.swing.JPanel();
         AddToColWin_YesButton = new javax.swing.JButton();
@@ -273,6 +344,9 @@ public class BestiaryGUI extends javax.swing.JFrame {
         UploadCompWin_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         UploadCompWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         UploadCompWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        mSurveyGroupHuntSize = new javax.swing.ButtonGroup();
+        mSurveySize = new javax.swing.ButtonGroup();
+        mSurveyDefense = new javax.swing.ButtonGroup();
         ControlBar = new javax.swing.JPanel();
         ControlBar_MainTitle = new javax.swing.JLabel();
         ControlBar_ModeButtonBox = new javax.swing.JPanel();
@@ -903,6 +977,267 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterSurvey.getContentPane().add(MonsterSurvey_Controls, java.awt.BorderLayout.PAGE_END);
 
         MonsterSurvey_MainPane.setLayout(new java.awt.CardLayout());
+
+        mSurveyStep1.setLayout(new java.awt.BorderLayout());
+
+        mSurveyStep1Panel.setLayout(new javax.swing.BoxLayout(mSurveyStep1Panel, javax.swing.BoxLayout.Y_AXIS));
+
+        mSurveyNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        mSurveyNameLabel.setText("What is your monster's name?");
+        mSurveyStep1Panel.add(mSurveyNameLabel);
+
+        mSurveyName.setText("jTextField2");
+        mSurveyStep1Panel.add(mSurveyName);
+
+        mSurveyStep1.add(mSurveyStep1Panel, java.awt.BorderLayout.PAGE_START);
+
+        MonsterSurvey_MainPane.add(mSurveyStep1, "card2");
+
+        mSurveyStep2.setLayout(new java.awt.BorderLayout());
+
+        mSurveyStep2Panel.setLayout(new javax.swing.BoxLayout(mSurveyStep2Panel, javax.swing.BoxLayout.Y_AXIS));
+
+        mSurveyQuestLabel.setText("What is it known to do?");
+        mSurveyStep2Panel.add(mSurveyQuestLabel);
+
+        mSurveyQuest.setText("jTextField3");
+        mSurveyStep2Panel.add(mSurveyQuest);
+
+        mSurveyStep2.add(mSurveyStep2Panel, java.awt.BorderLayout.NORTH);
+
+        MonsterSurvey_MainPane.add(mSurveyStep2, "card3");
+
+        mSurveyStep3.setLayout(new java.awt.BorderLayout());
+
+        mSurveyStep3Panel.setLayout(new javax.swing.BoxLayout(mSurveyStep3Panel, javax.swing.BoxLayout.Y_AXIS));
+
+        mSurveyFavouriteColourLabel.setText("What does it want that causes problems for others?");
+        mSurveyStep3Panel.add(mSurveyFavouriteColourLabel);
+
+        mSurveyFavouriteColour.setText("jTextField4");
+        mSurveyStep3Panel.add(mSurveyFavouriteColour);
+
+        mSurveyStep3.add(mSurveyStep3Panel, java.awt.BorderLayout.PAGE_START);
+
+        MonsterSurvey_MainPane.add(mSurveyStep3, "card4");
+
+        mSurveyStep4.setLayout(new java.awt.BorderLayout());
+
+        mSurveyStep4Panel.setLayout(new javax.swing.BoxLayout(mSurveyStep4Panel, javax.swing.BoxLayout.Y_AXIS));
+
+        mSurveyHuntSizeLabel.setText("How does it usually hunt or fight?");
+        mSurveyStep4Panel.add(mSurveyHuntSizeLabel);
+
+        mSurveyGroupHuntSize.add(mSurveyHuntSizeLarge);
+        mSurveyHuntSizeLarge.setText("In large groups");
+        mSurveyHuntSizeLarge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyHuntSizeLargeActionPerformed(evt);
+            }
+        });
+        mSurveyStep4Panel.add(mSurveyHuntSizeLarge);
+
+        mSurveyGroupHuntSize.add(mSurveyHuntSizeSmall);
+        mSurveyHuntSizeSmall.setText("In small groups");
+        mSurveyStep4Panel.add(mSurveyHuntSizeSmall);
+
+        mSurveyGroupHuntSize.add(mSurveyHuntSizeLonesome);
+        mSurveyHuntSizeLonesome.setText("All by its lonesome");
+        mSurveyStep4Panel.add(mSurveyHuntSizeLonesome);
+
+        mSurveyStep4.add(mSurveyStep4Panel, java.awt.BorderLayout.PAGE_START);
+
+        MonsterSurvey_MainPane.add(mSurveyStep4, "card5");
+
+        mSurveyStep5.setLayout(new java.awt.BorderLayout());
+
+        mSurveyStep5Panel.setLayout(new javax.swing.BoxLayout(mSurveyStep5Panel, javax.swing.BoxLayout.Y_AXIS));
+
+        mSurveySizeLabel.setText("How big is it?");
+        mSurveyStep5Panel.add(mSurveySizeLabel);
+
+        mSurveySize.add(mSurveySizeMini);
+        mSurveySizeMini.setText("Smaller than a house cat");
+        mSurveySizeMini.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveySizeMiniActionPerformed(evt);
+            }
+        });
+        mSurveyStep5Panel.add(mSurveySizeMini);
+
+        mSurveySize.add(mSurveySizeSmall);
+        mSurveySizeSmall.setText("Hafling-esque");
+        mSurveyStep5Panel.add(mSurveySizeSmall);
+
+        mSurveySize.add(mSurveySizeTall);
+        mSurveySizeTall.setText("About human size");
+        mSurveyStep5Panel.add(mSurveySizeTall);
+
+        mSurveySize.add(mSurveySizeGrande);
+        mSurveySizeGrande.setText("As big as a cart");
+        mSurveyStep5Panel.add(mSurveySizeGrande);
+
+        mSurveySize.add(mSurveySizeVenti);
+        mSurveySizeVenti.setText("Much larger than a cart");
+        mSurveyStep5Panel.add(mSurveySizeVenti);
+
+        mSurveyStep5.add(mSurveyStep5Panel, java.awt.BorderLayout.NORTH);
+
+        MonsterSurvey_MainPane.add(mSurveyStep5, "card6");
+
+        mSurveyStep6.setLayout(new java.awt.BorderLayout());
+
+        mSurveyStep6Panel.setLayout(new javax.swing.BoxLayout(mSurveyStep6Panel, javax.swing.BoxLayout.Y_AXIS));
+
+        mSurveyDefenseLabel.setText("What is its most important defense?");
+        mSurveyStep6Panel.add(mSurveyDefenseLabel);
+
+        mSurveyDefense.add(mSurveyDefenseNone);
+        mSurveyDefenseNone.setText("Cloth or flesh");
+        mSurveyStep6Panel.add(mSurveyDefenseNone);
+
+        mSurveyDefense.add(mSurveyDefenseBuffaloBill);
+        mSurveyDefenseBuffaloBill.setText("Leathers or thick hide");
+        mSurveyStep6Panel.add(mSurveyDefenseBuffaloBill);
+
+        mSurveyDefense.add(mSurveyDefenseTisButAScratch);
+        mSurveyDefenseTisButAScratch.setText("Mail or scales");
+        mSurveyStep6Panel.add(mSurveyDefenseTisButAScratch);
+
+        mSurveyDefense.add(mSurveyDefenceCubone);
+        mSurveyDefenceCubone.setText("Plate or bone");
+        mSurveyStep6Panel.add(mSurveyDefenceCubone);
+
+        mSurveyDefense.add(mSurveyDefenceForceField);
+        mSurveyDefenceForceField.setText("Permanent magical protection");
+        mSurveyStep6Panel.add(mSurveyDefenceForceField);
+
+        mSurveyStep6.add(mSurveyStep6Panel, java.awt.BorderLayout.PAGE_START);
+
+        MonsterSurvey_MainPane.add(mSurveyStep6, "card7");
+
+        mSurveyStep7.setLayout(new java.awt.BorderLayout());
+
+        mSurveyStep7Panel.setLayout(new javax.swing.BoxLayout(mSurveyStep7Panel, javax.swing.BoxLayout.Y_AXIS));
+
+        mSurveyInfamousLabel.setText("What is it known for? (choose all that apply)");
+        mSurveyStep7Panel.add(mSurveyInfamousLabel);
+
+        mSurveyInfamousStrength.setText("Unrelenting strength");
+        mSurveyStep7Panel.add(mSurveyInfamousStrength);
+
+        mSurveyInfamousOffense.setText("Skill in offense");
+        mSurveyInfamousOffense.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyInfamousOffenseActionPerformed(evt);
+            }
+        });
+        mSurveyStep7Panel.add(mSurveyInfamousOffense);
+
+        mSurveyInfamousDefense.setText("Skill in defense");
+        mSurveyStep7Panel.add(mSurveyInfamousDefense);
+
+        mSurveyInfamousDeft.setText("Deft strikes");
+        mSurveyStep7Panel.add(mSurveyInfamousDeft);
+
+        mSurveyInfamouseEndurance.setText("Uncanny endurance");
+        mSurveyStep7Panel.add(mSurveyInfamouseEndurance);
+
+        mSurveyInfamousJoker.setText("Deceit and trickery");
+        mSurveyStep7Panel.add(mSurveyInfamousJoker);
+
+        mSurveyInfamousAdapt.setText("A useful adaptation");
+        mSurveyStep7Panel.add(mSurveyInfamousAdapt);
+
+        mSurveyInfamousGodsLoveMe.setText("The favour of the gods");
+        mSurveyStep7Panel.add(mSurveyInfamousGodsLoveMe);
+
+        mSurveyInfamousMagicMissile.setText("Spells and magic");
+        mSurveyStep7Panel.add(mSurveyInfamousMagicMissile);
+
+        mSurveyStep7.add(mSurveyStep7Panel, java.awt.BorderLayout.PAGE_START);
+
+        MonsterSurvey_MainPane.add(mSurveyStep7, "card8");
+
+        mSurveyStep8.setLayout(new java.awt.BorderLayout());
+
+        mSurveyStep8Panel.setLayout(new javax.swing.BoxLayout(mSurveyStep8Panel, javax.swing.BoxLayout.Y_AXIS));
+
+        mSurveyAttackLabel.setText("What is its most common form of attack?");
+        mSurveyStep8Panel.add(mSurveyAttackLabel);
+
+        mSurveyAttackName.setText("jTextField1");
+        mSurveyStep8Panel.add(mSurveyAttackName);
+
+        mSurveyAttackVicious.setText("Its armaments are vicious and obvious");
+        mSurveyStep8Panel.add(mSurveyAttackVicious);
+
+        mSurveyAttackBay.setText("It lets the monster keep others at bay");
+        mSurveyStep8Panel.add(mSurveyAttackBay);
+
+        mSurveyAttackWeak.setText("Its armaments are small and weak");
+        mSurveyStep8Panel.add(mSurveyAttackWeak);
+
+        mSurveyAttackMetal.setText("Its armaments can slice or pierce metal");
+        mSurveyStep8Panel.add(mSurveyAttackMetal);
+
+        mSurveyAttackWhereIsYourGodNow.setText("Armor doesn't help with the damage it deals");
+        mSurveyStep8Panel.add(mSurveyAttackWhereIsYourGodNow);
+
+        mSurveyAttackRanged.setText("It usually attacks at range");
+        mSurveyStep8Panel.add(mSurveyAttackRanged);
+
+        mSurveyStep8.add(mSurveyStep8Panel, java.awt.BorderLayout.PAGE_START);
+
+        MonsterSurvey_MainPane.add(mSurveyStep8, "card9");
+
+        mSurveyStep9.setLayout(new java.awt.BorderLayout());
+
+        mSurveyStep9Panel.setLayout(new javax.swing.BoxLayout(mSurveyStep9Panel, javax.swing.BoxLayout.Y_AXIS));
+
+        mSurveyDescLabel.setText("What of these describes it?");
+        mSurveyStep9Panel.add(mSurveyDescLabel);
+
+        mSurveyDescTricksyDamage.setText("It isn't dangerious because of the wounds it inflicts, but for other reasons");
+        mSurveyStep9Panel.add(mSurveyDescTricksyDamage);
+
+        mSurveyDescOrganised.setText("It organises into larger groups that it can call for support");
+        mSurveyStep9Panel.add(mSurveyDescOrganised);
+
+        mSurveyDescSmartass.setText("It's as smart as a human (or thereabouts)");
+        mSurveyStep9Panel.add(mSurveyDescSmartass);
+
+        mSurveyDescSheild.setText("It actively defends itself with a sheild or similar");
+        mSurveyStep9Panel.add(mSurveyDescSheild);
+
+        mSurveyDescTrinkets.setText("It collects trinkets that humans would consider valuable");
+        mSurveyStep9Panel.add(mSurveyDescTrinkets);
+
+        mSurveyDescBeyond.setText("It is from beyond this world");
+        mSurveyStep9Panel.add(mSurveyDescBeyond);
+
+        mSurveyDescProppedUp.setText("It's kept alive by something more than simple biology");
+        mSurveyStep9Panel.add(mSurveyDescProppedUp);
+
+        mSurveyDescMade.setText("It was made by someone");
+        mSurveyStep9Panel.add(mSurveyDescMade);
+
+        mSurveyDescLooksWickedAwful.setText("It's apperance is disturbing, terrible, or horrifying");
+        mSurveyStep9Panel.add(mSurveyDescLooksWickedAwful);
+
+        mSurveyDescProbablySlime.setText("It doesn't have organs or discernable anatomy");
+        mSurveyStep9Panel.add(mSurveyDescProbablySlime);
+
+        mSurveyDescGetOffMyLawn.setText("It, or its species, is ancient — older than man, dwarves, elves, etc.");
+        mSurveyStep9Panel.add(mSurveyDescGetOffMyLawn);
+
+        mSurveyDeskTreeHugger.setText("It abhors violence");
+        mSurveyStep9Panel.add(mSurveyDeskTreeHugger);
+
+        mSurveyStep9.add(mSurveyStep9Panel, java.awt.BorderLayout.PAGE_START);
+
+        MonsterSurvey_MainPane.add(mSurveyStep9, "card10");
+
         MonsterSurvey.getContentPane().add(MonsterSurvey_MainPane, java.awt.BorderLayout.CENTER);
 
         AddToCollectionsWindow.setAlwaysOnTop(true);
@@ -937,7 +1272,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         EditCollectionsWindow.setAlwaysOnTop(true);
         EditCollectionsWindow.setModal(true);
-        EditCollectionsWindow.setPreferredSize(new java.awt.Dimension(400, 300));
         EditCollectionsWindow.setResizable(false);
         EditCollectionsWindow.setSize(new java.awt.Dimension(400, 300));
 
@@ -996,7 +1330,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         NameCollectionWindow.setAlwaysOnTop(true);
         NameCollectionWindow.setModal(true);
-        NameCollectionWindow.setPreferredSize(new java.awt.Dimension(375, 150));
         NameCollectionWindow.setResizable(false);
         NameCollectionWindow.setSize(new java.awt.Dimension(375, 150));
 
@@ -1059,7 +1392,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         EditGMNoteWindow.setAlwaysOnTop(true);
         EditGMNoteWindow.setModal(true);
-        EditGMNoteWindow.setPreferredSize(new java.awt.Dimension(400, 300));
         EditGMNoteWindow.setSize(new java.awt.Dimension(400, 300));
 
         EditGMNoteWin_MainPanel.setLayout(new java.awt.BorderLayout());
@@ -2324,6 +2656,18 @@ public class BestiaryGUI extends javax.swing.JFrame {
         this.LoginWindow.setVisible(false);
     }//GEN-LAST:event_LoginWin_CancelButtonActionPerformed
 
+    private void mSurveyHuntSizeLargeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyHuntSizeLargeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mSurveyHuntSizeLargeActionPerformed
+
+    private void mSurveySizeMiniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveySizeMiniActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mSurveySizeMiniActionPerformed
+
+    private void mSurveyInfamousOffenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyInfamousOffenseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mSurveyInfamousOffenseActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -2969,5 +3313,79 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.Box.Filler UploadConWin_filler2;
     private javax.swing.Box.Filler UploadConWin_filler3;
     private javax.swing.JDialog UploadConfirmationWindow;
+    private javax.swing.JCheckBox mSurveyAttackBay;
+    private javax.swing.JLabel mSurveyAttackLabel;
+    private javax.swing.JCheckBox mSurveyAttackMetal;
+    private javax.swing.JTextField mSurveyAttackName;
+    private javax.swing.JCheckBox mSurveyAttackRanged;
+    private javax.swing.JCheckBox mSurveyAttackVicious;
+    private javax.swing.JCheckBox mSurveyAttackWeak;
+    private javax.swing.JCheckBox mSurveyAttackWhereIsYourGodNow;
+    private javax.swing.JRadioButton mSurveyDefenceCubone;
+    private javax.swing.JRadioButton mSurveyDefenceForceField;
+    private javax.swing.ButtonGroup mSurveyDefense;
+    private javax.swing.JRadioButton mSurveyDefenseBuffaloBill;
+    private javax.swing.JLabel mSurveyDefenseLabel;
+    private javax.swing.JRadioButton mSurveyDefenseNone;
+    private javax.swing.JRadioButton mSurveyDefenseTisButAScratch;
+    private javax.swing.JCheckBox mSurveyDescBeyond;
+    private javax.swing.JCheckBox mSurveyDescGetOffMyLawn;
+    private javax.swing.JLabel mSurveyDescLabel;
+    private javax.swing.JCheckBox mSurveyDescLooksWickedAwful;
+    private javax.swing.JCheckBox mSurveyDescMade;
+    private javax.swing.JCheckBox mSurveyDescOrganised;
+    private javax.swing.JCheckBox mSurveyDescProbablySlime;
+    private javax.swing.JCheckBox mSurveyDescProppedUp;
+    private javax.swing.JCheckBox mSurveyDescSheild;
+    private javax.swing.JCheckBox mSurveyDescSmartass;
+    private javax.swing.JCheckBox mSurveyDescTricksyDamage;
+    private javax.swing.JCheckBox mSurveyDescTrinkets;
+    private javax.swing.JCheckBox mSurveyDeskTreeHugger;
+    private javax.swing.JTextField mSurveyFavouriteColour;
+    private javax.swing.JLabel mSurveyFavouriteColourLabel;
+    private javax.swing.ButtonGroup mSurveyGroupHuntSize;
+    private javax.swing.JLabel mSurveyHuntSizeLabel;
+    private javax.swing.JRadioButton mSurveyHuntSizeLarge;
+    private javax.swing.JRadioButton mSurveyHuntSizeLonesome;
+    private javax.swing.JRadioButton mSurveyHuntSizeSmall;
+    private javax.swing.JCheckBox mSurveyInfamousAdapt;
+    private javax.swing.JCheckBox mSurveyInfamousDefense;
+    private javax.swing.JCheckBox mSurveyInfamousDeft;
+    private javax.swing.JCheckBox mSurveyInfamousGodsLoveMe;
+    private javax.swing.JCheckBox mSurveyInfamousJoker;
+    private javax.swing.JLabel mSurveyInfamousLabel;
+    private javax.swing.JCheckBox mSurveyInfamousMagicMissile;
+    private javax.swing.JCheckBox mSurveyInfamousOffense;
+    private javax.swing.JCheckBox mSurveyInfamousStrength;
+    private javax.swing.JCheckBox mSurveyInfamouseEndurance;
+    private javax.swing.JTextField mSurveyName;
+    private javax.swing.JLabel mSurveyNameLabel;
+    private javax.swing.JTextField mSurveyQuest;
+    private javax.swing.JLabel mSurveyQuestLabel;
+    private javax.swing.ButtonGroup mSurveySize;
+    private javax.swing.JRadioButton mSurveySizeGrande;
+    private javax.swing.JLabel mSurveySizeLabel;
+    private javax.swing.JRadioButton mSurveySizeMini;
+    private javax.swing.JRadioButton mSurveySizeSmall;
+    private javax.swing.JRadioButton mSurveySizeTall;
+    private javax.swing.JRadioButton mSurveySizeVenti;
+    private javax.swing.JPanel mSurveyStep1;
+    private javax.swing.JPanel mSurveyStep1Panel;
+    private javax.swing.JPanel mSurveyStep2;
+    private javax.swing.JPanel mSurveyStep2Panel;
+    private javax.swing.JPanel mSurveyStep3;
+    private javax.swing.JPanel mSurveyStep3Panel;
+    private javax.swing.JPanel mSurveyStep4;
+    private javax.swing.JPanel mSurveyStep4Panel;
+    private javax.swing.JPanel mSurveyStep5;
+    private javax.swing.JPanel mSurveyStep5Panel;
+    private javax.swing.JPanel mSurveyStep6;
+    private javax.swing.JPanel mSurveyStep6Panel;
+    private javax.swing.JPanel mSurveyStep7;
+    private javax.swing.JPanel mSurveyStep7Panel;
+    private javax.swing.JPanel mSurveyStep8;
+    private javax.swing.JPanel mSurveyStep8Panel;
+    private javax.swing.JPanel mSurveyStep9;
+    private javax.swing.JPanel mSurveyStep9Panel;
     // End of variables declaration//GEN-END:variables
 }
