@@ -2508,11 +2508,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         Integer mod = (Integer) this.MonsterEdit_AttackMod.getValue();
         
         if(mod < 0){
-            attackText = attackText + " " + mod + " damage)";
+            attackText = attackText + mod + " damage)";
         }else if (mod == 0){
             attackText = attackText + " damage)";
         }else{
-            attackText = attackText + " +" + mod + " damage)";
+            attackText = attackText + "+" + mod + " damage)";
         }
         return attackText;
     }
@@ -2536,28 +2536,154 @@ public class BestiaryGUI extends javax.swing.JFrame {
         String s = "";
         
         if(this.AttTagWin_AmmoCheck.isSelected()){
-                AttTagWin_AmmoSpin.getValue();
-        }else if(this.AttTagWin_CloseCheck.isSelected()){
-        }else if(AttTagWin_FarCheck.isSelected()){
-        }else if(AttTagWin_ForcefulCheck.isSelected()){
-        }else if(AttTagWin_HandCheck.isSelected()){
-        }else if(AttTagWin_IgnoresArmorCheck.isSelected()){
-        }else if(AttTagWin_MessyCheck.isSelected()){
-        }else if(AttTagWin_NearCheck.isSelected()){
-        }else if(AttTagWin_PiercingCheck.isSelected()){
-            AttTagWin_PiercingSpin.getValue();
-        }else if(AttTagWin_PreciseCheck.isSelected()){
-        }else if(AttTagWin_ReachChange.isSelected()){
-        }else if(AttTagWin_ReloadCheck.isSelected()){
-        }else if(AttTagWin_StunCheck.isSelected()){
-        }else if(AttTagWin_ThrownCheck.isSelected()){
+            Integer numAmmo = (Integer)AttTagWin_AmmoSpin.getValue();
+            s = appendTag(s, numAmmo.toString() + " Ammo");
+        }
+        
+        if(this.AttTagWin_CloseCheck.isSelected()){
+            s = appendTag(s, "Close");
+        }
+        
+        if(AttTagWin_FarCheck.isSelected()){
+            s = appendTag(s, "Far");
+        }
+        
+        if(AttTagWin_ForcefulCheck.isSelected()){
+            s = appendTag(s, "Forceful");
+        }
+        
+        if(AttTagWin_HandCheck.isSelected()){
+            s = appendTag(s, "Hand");
+        }
+        
+        if(AttTagWin_IgnoresArmorCheck.isSelected()){
+            s = appendTag(s, "Ignores Armor");
+        }
+        
+        if(AttTagWin_MessyCheck.isSelected()){
+            s = appendTag(s, "Messy");
+        }
+        
+        if(AttTagWin_NearCheck.isSelected()){
+            s = appendTag(s, "Near");
+        }
+        
+        if(AttTagWin_PiercingCheck.isSelected()){
+            Integer pirAmmo = (Integer) AttTagWin_PiercingSpin.getValue();
+            s = appendTag(s, pirAmmo.toString() + " Piercing");
+        }
+        
+        if(AttTagWin_PreciseCheck.isSelected()){
+            s = appendTag(s, "Percise");
+        }
+        
+        if(AttTagWin_ReachChange.isSelected()){
+            s = appendTag(s, "Reach");
+        }
+        
+        if(AttTagWin_ReloadCheck.isSelected()){
+            s = appendTag(s, "Reload");
+        }
+        
+        if(AttTagWin_StunCheck.isSelected()){
+            s = appendTag(s, "Stun");
+        }
+        
+        if(AttTagWin_ThrownCheck.isSelected()){
+            s = appendTag(s, "Thrown");
         }
         
         return s;
     }
     
     private String makeMonsterTagString(){
-        return "";
+        String s = "";
+        
+        if(this.MonTagWin_Amorphous.isSelected()){
+            s = appendTag(s, "Amorphous");
+        }
+        
+        if(this.MonTagWin_Cautious.isSelected()){
+            s = appendTag(s, "Cautious");
+        }
+        
+        if(this.MonTagWin_Construct.isSelected()){
+            s = appendTag(s, "Construct");
+        }
+        
+        if(this.MonTagWin_Devious.isSelected()){
+            s = appendTag(s, "Devious");
+        }
+        
+        if(this.MonTagWin_Group.isSelected()){
+            s = appendTag(s, "Group");
+        }
+        
+        if(this.MonTagWin_Hoarder.isSelected()){
+            s = appendTag(s, "Hoarder");
+        }
+        
+        if(this.MonTagWin_Horde.isSelected()){
+            s = appendTag(s, "Horde");
+        }
+        
+        if(this.MonTagWin_Huge.isSelected()){
+            s = appendTag(s, "Huge");
+        }
+        
+        if(this.MonTagWin_Intelligent.isSelected()){
+            s = appendTag(s, "Intelligent");
+        }
+        
+        if(this.MonTagWin_Large.isSelected()){
+            s = appendTag(s, "Large");
+        }
+        
+        if(this.MonTagWin_Magical.isSelected()){
+            s = appendTag(s, "Magical");
+        }
+        
+        if(this.MonTagWin_Normal.isSelected()){
+            //Normal is not actually a valid DW tag
+        }
+        
+        if(this.MonTagWin_Organized.isSelected()){
+            s = appendTag(s, "Organized");
+        }
+        
+        if(this.MonTagWin_Planar.isSelected()){
+            s = appendTag(s, "Planar");
+        }
+        
+        if(this.MonTagWin_Small.isSelected()){
+            s = appendTag(s, "Small");
+        }
+        
+        if(this.MonTagWin_Solitary.isSelected()){
+            s = appendTag(s, "Solitary");
+        }
+        
+        if(this.MonTagWin_Stealthy.isSelected()){
+            s = appendTag(s, "Stealthy");
+        }
+        
+        if(this.MonTagWin_Terrifying.isSelected()){
+            s = appendTag(s, "Terrifying");
+        }
+        
+        if(this.MonTagWin_Tiny.isSelected()){
+            s = appendTag(s, "Tiny");
+        }
+        return s;
+    }
+    
+    private String appendTag(String str, String tag){
+        if(str.equals("")){
+            str = tag;
+        }else{
+            str = str + ", " + tag;
+        }
+        return str;
     }
     
     private javax.swing.DefaultListModel MonsterEdit_ModelMoveList;
