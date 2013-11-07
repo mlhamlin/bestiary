@@ -2166,7 +2166,25 @@ public class BestiaryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_MonsterEdit_CancelButtonActionPerformed
 
     private void MonsterEdit_SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_SaveButtonActionPerformed
-        //Save!
+        
+        LargeMonsterCard card = this.MonsterFocus_MainMonster;
+        card.setdMonsterName(this.MonsterEdit_NameField.getText());
+        
+        
+        card.setdAttack(makeAttackString());
+        
+        card.setdAttackTags(makeAttackTagString());
+        card.setdHP(this.MonsterEdit_HPValue.getValue().toString());
+        card.setdInstinct(this.MonsterEdit_InstinctField.getText());
+        card.setdMonsterDescription(this.MonsterEdit_DescriptionField.getText());
+        card.setdArmor(this.MonsterEdit_ArmorValue.getValue().toString());
+        card.setdMonsterTags(makeMonsterTagString());
+        
+
+        card.setdMoveList(makeMoveString());
+        
+        card.setdQualities(this.MonsterEdit_SpecialQualitiesField.getText());
+        card.revalidate();
         this.MonsterEdit.setVisible(false);
     }//GEN-LAST:event_MonsterEdit_SaveButtonActionPerformed
 
@@ -2366,45 +2384,180 @@ public class BestiaryGUI extends javax.swing.JFrame {
         
     }
     
-    private void addBlackBeast(){
-        this.MonsterFocus_MainMonster.setdMonsterName("The Legendary Black Beast of Aaaaarrrrrrggghhh");
-        this.MonsterFocus_MainMonster.setdAttack("Bite (d12 +7 damage)");
-        this.MonsterFocus_MainMonster.setdAttackTags("Reach, Forceful, Ignores Armor");
-        this.MonsterFocus_MainMonster.setdHP("28");
-        this.MonsterFocus_MainMonster.setdInstinct("To devour");
-        this.MonsterFocus_MainMonster.setdMonsterDescription("It lives within its cave devouring any"
+    private void loadBlackBeastLarge(LargeMonsterCard card){
+        card.setdMonsterName("The Legendary Black Beast of Aaaaarrrrrrggghhh");
+        card.setdAttack("Bite (d12 +7 damage)");
+        card.setdAttackTags("Reach, Forceful, Ignores Armor");
+        card.setdHP("28");
+        card.setdInstinct("To devour");
+        card.setdMonsterDescription("It lives within its cave devouring any"
                 + " adventurer who has the misfortune of wandering through.");
-        this.MonsterFocus_MainMonster.setdArmor("2");
-        this.MonsterFocus_MainMonster.setdMonsterTags("Solitary, Huge, Construct, Terrifying");
-        this.MonsterFocus_MainMonster.setdMoveList("<html><body><ul><li>Frighten adventurers</li></ul></body> </html>");
-        this.MonsterFocus_MainMonster.setdQualities("Drawn into being by the animator, It has many eyes and fearsome horns");
-        
+        card.setdArmor("2");
+        card.setdMonsterTags("Solitary, Huge, Construct, Terrifying");
+        card.setdMoveList("<html><body><ul><li>Frighten adventurers</li></ul></body> </html>");
+        card.setdQualities("Drawn into being by the animator, It has many eyes and fearsome horns");
+        card.revalidate();
     }
     
-    private void addCroc(){
-        
+    private void loadBlackBeastSmall(MiniMonsterCard card){
+        card.setdMonsterName("The Legendary Black Beast of Aaaaarrrrrrggghhh");
+        card.setdAttack("Bite (d12 +7 damage)");
+        card.setdAttackTags("Reach, Forceful, Ignores Armor");
+        card.setdHP("28");
+        card.setdInstinct("To devour");
+        card.setdMonsterDescription("It lives within its cave devouring any"
+                + " adventurer who has the misfortune of wandering through.");
+        card.setdArmor("2");
+        card.setdMonsterTags("Solitary, Huge, Construct, Terrifying");
+        card.setdMoveList("<html><body><ul><li>Frighten adventurers</li></ul></body> </html>");
+        card.setdQualities("Drawn into being by the animator, It has many eyes and fearsome horns");
+        card.revalidate();
     }
     
-    private void addSkel(){
-        this.MonsterFocus_MainMonster.setdMonsterName("Skeleton in a Barrel");
-        this.MonsterFocus_MainMonster.setdAttack("Rusty Sword (d10 damage)");
-        this.MonsterFocus_MainMonster.setdAttackTags("Close, Near");
-        this.MonsterFocus_MainMonster.setdHP("4");
-        this.MonsterFocus_MainMonster.setdInstinct("To suprise the living");
-        this.MonsterFocus_MainMonster.setdMonsterDescription("Poor Skeletons. The ultimate patsy"
+    private void loadCrocLarge(LargeMonsterCard card){
+        card.setdMonsterName("Laser Crocodile");
+        card.setdAttack("Laser Blast (d10 +3)");
+        card.setdAttackTags("Reach, Range");
+        card.setdHP("10");
+        card.setdInstinct("To Eat");
+        card.setdMonsterDescription("It's a really big crocodile... with a laser mounted on its back.");
+        card.setdArmor("2");
+        card.setdMonsterTags("Group, Large");
+        card.setdMoveList("<html>   <body>     <ul>       <li>         "
+                + "Drag victim under water       </li>       <li>         "
+                + "Escape into water       </li>       <li>         "
+                + "Grasping bite      </li>     </ul>   </body> </html> ");
+        card.setdQualities("Amphibious, camouflage");
+        card.revalidate();
+    }
+    
+    private void loadCrocSmall(MiniMonsterCard card){
+        card.setdMonsterName("Laser Crocodile");
+        card.setdAttack("Laser Blast (d10 +3)");
+        card.setdAttackTags("Reach, Range");
+        card.setdHP("10");
+        card.setdInstinct("To Eat");
+        card.setdMonsterDescription("It's a really big crocodile... with a laser mounted on its back.");
+        card.setdArmor("2");
+        card.setdMonsterTags("Group, Large");
+        card.setdMoveList("<html>   <body>     <ul>       <li>         "
+                + "Drag victim under water       </li>       <li>         "
+                + "Escape into water       </li>       <li>         "
+                + "Grasping bite      </li>     </ul>   </body> </html> ");
+        card.setdQualities("Amphibious, camouflage");
+        card.revalidate();
+    }
+    
+    private void loadSkelLarge(LargeMonsterCard card){
+        card.setdMonsterName("Skeleton in a Barrel");
+        card.setdAttack("Rusty Sword (d10 damage)");
+        card.setdAttackTags("Close, Near");
+        card.setdHP("4");
+        card.setdInstinct("To suprise the living");
+        card.setdMonsterDescription("Poor Skeletons. The ultimate patsy"
                 + " of the undead, clattering along and knocked to pieces with the simplest blow."
                 + " However, they are probably the smartest of the undead footsoldiers avaliable "
                 + "- they have a strange and canny knack for ambush and tend to enjoy laying "
                 + "traps for people. Having said that, they're still not very bright. The most "
                 + "common form of ambush is to hide in a barrel and wait for years until an "
                 + "adventurer passes by. Poor Skeletons.");
-        this.MonsterFocus_MainMonster.setdArmor("1");
-        this.MonsterFocus_MainMonster.setdMonsterTags("Solitary, Stealthy");
-        this.MonsterFocus_MainMonster.setdMoveList("<html>   <body>     <ul>       <li>         "
+        card.setdArmor("1");
+        card.setdMonsterTags("Solitary, Stealthy");
+        card.setdMoveList("<html>   <body>     <ul>       <li>         "
                 + "Ambush unsuspecting adventurers       </li>       <li>         "
                 + "Hide in the surroundings       </li>     </ul>   </body> </html> ");
-        this.MonsterFocus_MainMonster.setdQualities("");
+        card.setdQualities("");
+        card.revalidate();
 
+    }
+    
+    private void loadSkelSmall(MiniMonsterCard card){
+        card.setdMonsterName("Skeleton in a Barrel");
+        card.setdAttack("Rusty Sword (d10 damage)");
+        card.setdAttackTags("Close, Near");
+        card.setdHP("4");
+        card.setdInstinct("To suprise the living");
+        card.setdMonsterDescription("Poor Skeletons. The ultimate patsy"
+                + " of the undead, clattering along and knocked to pieces with the simplest blow."
+                + " However, they are probably the smartest of the undead footsoldiers avaliable "
+                + "- they have a strange and canny knack for ambush and tend to enjoy laying "
+                + "traps for people. Having said that, they're still not very bright. The most "
+                + "common form of ambush is to hide in a barrel and wait for years until an "
+                + "adventurer passes by. Poor Skeletons.");
+        card.setdArmor("1");
+        card.setdMonsterTags("Solitary, Stealthy");
+        card.setdMoveList("<html>   <body>     <ul>       <li>         "
+                + "Ambush unsuspecting adventurers       </li>       <li>         "
+                + "Hide in the surroundings       </li>     </ul>   </body> </html> ");
+        card.setdQualities("");
+        card.revalidate();
+
+    }
+    
+    private String makeAttackString(){
+        String attackText = this.MonsterEdit_AttackNameField.getText();
+        
+        if(this.MonsterEdit_Rolls.getSelectedItem().equals("Normal")){
+            attackText = attackText + " (" + this.MonsterEdit_Dice.getSelectedItem();
+        }else if(this.MonsterEdit_Rolls.getSelectedItem().equals("Best of 2")){
+            attackText = attackText + " (b[" + this.MonsterEdit_Dice.getSelectedItem() + "]";
+        }else if(this.MonsterEdit_Rolls.getSelectedItem().equals("Worst of 2")){
+            attackText = attackText + " (w[" + this.MonsterEdit_Dice.getSelectedItem() + "]";
+        }
+        
+        Integer mod = (Integer) this.MonsterEdit_AttackMod.getValue();
+        
+        if(mod < 0){
+            attackText = attackText + " " + mod + " damage)";
+        }else if (mod == 0){
+            attackText = attackText + " damage)";
+        }else{
+            attackText = attackText + " +" + mod + " damage)";
+        }
+        return attackText;
+    }
+    
+    private String makeMoveString(){
+        
+        String moveText = "<html><body><ul>";
+        javax.swing.ListModel m = this.MonsterEdit_MovesList.getModel();
+        int len = m.getSize();
+        for(int i = 0; i < len; i++){
+            moveText = moveText + "<li>" + m.getElementAt(i) + "</li>";
+        }
+        moveText = moveText + "</ul></body> </html>"; 
+        
+        return moveText;
+        
+    }
+    
+    private String makeAttackTagString(){
+        
+        String s = "";
+        
+        if(this.AttTagWin_AmmoCheck.isSelected()){
+                AttTagWin_AmmoSpin.getValue();
+        }else if(this.AttTagWin_CloseCheck.isSelected()){
+        }else if(AttTagWin_FarCheck.isSelected()){
+        }else if(AttTagWin_ForcefulCheck.isSelected()){
+        }else if(AttTagWin_HandCheck.isSelected()){
+        }else if(AttTagWin_IgnoresArmorCheck.isSelected()){
+        }else if(AttTagWin_MessyCheck.isSelected()){
+        }else if(AttTagWin_NearCheck.isSelected()){
+        }else if(AttTagWin_PiercingCheck.isSelected()){
+            AttTagWin_PiercingSpin.getValue();
+        }else if(AttTagWin_PreciseCheck.isSelected()){
+        }else if(AttTagWin_ReachChange.isSelected()){
+        }else if(AttTagWin_ReloadCheck.isSelected()){
+        }else if(AttTagWin_StunCheck.isSelected()){
+        }else if(AttTagWin_ThrownCheck.isSelected()){
+        }
+        
+        return s;
+    }
+    
+    private String makeMonsterTagString(){
+        return "";
     }
     
     private javax.swing.DefaultListModel MonsterEdit_ModelMoveList;
