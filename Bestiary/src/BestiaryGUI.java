@@ -16,7 +16,12 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterEdit_ModelMoveList = new javax.swing.DefaultListModel();
         MonsterFocus_ModelCollectionList = new javax.swing.DefaultListModel();
         MonsterFocus_ModelCollectionList.addElement("Starred");
+        allCollections = new java.util.TreeSet<String>();
+        allCollections.add("Starred");
+        
         initComponents();
+        
+        updateCollections();
     }
 
     /**
@@ -29,6 +34,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         ModeToggle = new javax.swing.ButtonGroup();
+        BestiaryPage_OrgTags = new javax.swing.ButtonGroup();
+        BestiaryPage_SizeTags = new javax.swing.ButtonGroup();
         MonsterEdit = new javax.swing.JDialog();
         MonsterEdit_MainPane = new javax.swing.JPanel();
         MonsterEdit_TopPane = new javax.swing.JPanel();
@@ -78,15 +85,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterEdit_filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         MonsterEdit_filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         MonsterEdit_filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
-        MonsterSurvey = new javax.swing.JDialog();
-        MonsterSurvey_Controls = new javax.swing.JPanel();
-        MonsterSurvey_BackNextPane = new javax.swing.JPanel();
-        MonsterSurvey_Back = new javax.swing.JButton();
-        MonsterSurvey_Next = new javax.swing.JButton();
-        MonsterSurvey_jSeparator1 = new javax.swing.JSeparator();
-        MonsterSurvey_CancelPane = new javax.swing.JPanel();
-        MonsterSurvey_Cancel = new javax.swing.JButton();
-        MonsterSurvey_MainPane = new javax.swing.JPanel();
         MonsterTagsWindow = new javax.swing.JDialog();
         MonTagWin_MainPane = new javax.swing.JPanel();
         MonTagWin_GridPane = new javax.swing.JPanel();
@@ -121,6 +119,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonTagWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         MonTagWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         MonTagWin_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        MonTagsWin_OrgTagsGroup = new javax.swing.ButtonGroup();
+        MonTagsWin_SizeTagsGroup = new javax.swing.ButtonGroup();
         AttackTagsWindow = new javax.swing.JDialog();
         AttTagWin_MainPane = new javax.swing.JPanel();
         AttTagWin_MainLabel = new javax.swing.JLabel();
@@ -152,10 +152,15 @@ public class BestiaryGUI extends javax.swing.JFrame {
         AttTagWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         AttTagWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         AttTagWin_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        MonTagsWin_OrgTagsGroup = new javax.swing.ButtonGroup();
-        MonTagsWin_SizeTagsGroup = new javax.swing.ButtonGroup();
-        BestiaryPage_OrgTags = new javax.swing.ButtonGroup();
-        BestiaryPage_SizeTags = new javax.swing.ButtonGroup();
+        MonsterSurvey = new javax.swing.JDialog();
+        MonsterSurvey_Controls = new javax.swing.JPanel();
+        MonsterSurvey_BackNextPane = new javax.swing.JPanel();
+        MonsterSurvey_Back = new javax.swing.JButton();
+        MonsterSurvey_Next = new javax.swing.JButton();
+        MonsterSurvey_jSeparator1 = new javax.swing.JSeparator();
+        MonsterSurvey_CancelPane = new javax.swing.JPanel();
+        MonsterSurvey_Cancel = new javax.swing.JButton();
+        MonsterSurvey_MainPane = new javax.swing.JPanel();
         AddToCollectionsWindow = new javax.swing.JDialog();
         AddToColWin_ButtonPanel = new javax.swing.JPanel();
         AddToColWin_YesButton = new javax.swing.JButton();
@@ -553,37 +558,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterEdit.getContentPane().add(MonsterEdit_filler7, java.awt.BorderLayout.NORTH);
         MonsterEdit.getContentPane().add(MonsterEdit_filler8, java.awt.BorderLayout.SOUTH);
 
-        MonsterSurvey_Controls.setLayout(new java.awt.BorderLayout());
-
-        MonsterSurvey_Back.setText("Back");
-        MonsterSurvey_Back.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterSurvey_BackActionPerformed(evt);
-            }
-        });
-        MonsterSurvey_BackNextPane.add(MonsterSurvey_Back);
-
-        MonsterSurvey_Next.setText("Next");
-        MonsterSurvey_Next.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterSurvey_NextActionPerformed(evt);
-            }
-        });
-        MonsterSurvey_BackNextPane.add(MonsterSurvey_Next);
-
-        MonsterSurvey_Controls.add(MonsterSurvey_BackNextPane, java.awt.BorderLayout.EAST);
-        MonsterSurvey_Controls.add(MonsterSurvey_jSeparator1, java.awt.BorderLayout.NORTH);
-
-        MonsterSurvey_Cancel.setText("Cancel");
-        MonsterSurvey_CancelPane.add(MonsterSurvey_Cancel);
-
-        MonsterSurvey_Controls.add(MonsterSurvey_CancelPane, java.awt.BorderLayout.WEST);
-
-        MonsterSurvey.getContentPane().add(MonsterSurvey_Controls, java.awt.BorderLayout.PAGE_END);
-
-        MonsterSurvey_MainPane.setLayout(new java.awt.CardLayout());
-        MonsterSurvey.getContentPane().add(MonsterSurvey_MainPane, java.awt.BorderLayout.CENTER);
-
         MonsterTagsWindow.setAlwaysOnTop(true);
         MonsterTagsWindow.setMinimumSize(new java.awt.Dimension(300, 300));
         MonsterTagsWindow.setModal(true);
@@ -823,10 +797,56 @@ public class BestiaryGUI extends javax.swing.JFrame {
         AttackTagsWindow.getContentPane().add(AttTagWin_filler3, java.awt.BorderLayout.WEST);
         AttackTagsWindow.getContentPane().add(AttTagWin_filler4, java.awt.BorderLayout.EAST);
 
+        MonsterSurvey_Controls.setLayout(new java.awt.BorderLayout());
+
+        MonsterSurvey_Back.setText("Back");
+        MonsterSurvey_Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonsterSurvey_BackActionPerformed(evt);
+            }
+        });
+        MonsterSurvey_BackNextPane.add(MonsterSurvey_Back);
+
+        MonsterSurvey_Next.setText("Next");
+        MonsterSurvey_Next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonsterSurvey_NextActionPerformed(evt);
+            }
+        });
+        MonsterSurvey_BackNextPane.add(MonsterSurvey_Next);
+
+        MonsterSurvey_Controls.add(MonsterSurvey_BackNextPane, java.awt.BorderLayout.EAST);
+        MonsterSurvey_Controls.add(MonsterSurvey_jSeparator1, java.awt.BorderLayout.NORTH);
+
+        MonsterSurvey_Cancel.setText("Cancel");
+        MonsterSurvey_CancelPane.add(MonsterSurvey_Cancel);
+
+        MonsterSurvey_Controls.add(MonsterSurvey_CancelPane, java.awt.BorderLayout.WEST);
+
+        MonsterSurvey.getContentPane().add(MonsterSurvey_Controls, java.awt.BorderLayout.PAGE_END);
+
+        MonsterSurvey_MainPane.setLayout(new java.awt.CardLayout());
+        MonsterSurvey.getContentPane().add(MonsterSurvey_MainPane, java.awt.BorderLayout.CENTER);
+
+        AddToCollectionsWindow.setAlwaysOnTop(true);
+        AddToCollectionsWindow.setModal(true);
+        AddToCollectionsWindow.setResizable(false);
+        AddToCollectionsWindow.setSize(new java.awt.Dimension(336, 32));
+
         AddToColWin_YesButton.setText("Yes");
+        AddToColWin_YesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddToColWin_YesButtonActionPerformed(evt);
+            }
+        });
         AddToColWin_ButtonPanel.add(AddToColWin_YesButton);
 
         AddToColWin_NoButton.setText("No");
+        AddToColWin_NoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddToColWin_NoButtonActionPerformed(evt);
+            }
+        });
         AddToColWin_ButtonPanel.add(AddToColWin_NoButton);
 
         AddToCollectionsWindow.getContentPane().add(AddToColWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
@@ -838,13 +858,17 @@ public class BestiaryGUI extends javax.swing.JFrame {
         AddToCollectionsWindow.getContentPane().add(AddToColWin_filler2, java.awt.BorderLayout.EAST);
         AddToCollectionsWindow.getContentPane().add(AddToColWin_filler3, java.awt.BorderLayout.NORTH);
 
+        SetCollectionsWindow.setAlwaysOnTop(true);
+        SetCollectionsWindow.setModal(true);
         SetCollectionsWindow.setPreferredSize(new java.awt.Dimension(400, 300));
+        SetCollectionsWindow.setResizable(false);
+        SetCollectionsWindow.setSize(new java.awt.Dimension(400, 300));
 
         SetColWin_MainPane.setLayout(new java.awt.BorderLayout());
 
         SetColWin_ScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        SetColWin_GridPane.setLayout(new java.awt.GridLayout());
+        SetColWin_GridPane.setLayout(new java.awt.GridLayout(0, 1));
         SetColWin_ScrollPane.setViewportView(SetColWin_GridPane);
 
         SetColWin_MainPane.add(SetColWin_ScrollPane, java.awt.BorderLayout.CENTER);
@@ -856,6 +880,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         SetColWin_TopPane.add(SetColWin_Title, java.awt.BorderLayout.WEST);
 
         SetColWin_NewCollectionButton.setText("New Collection");
+        SetColWin_NewCollectionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SetColWin_NewCollectionButtonActionPerformed(evt);
+            }
+        });
         SetColWin_TopPane.add(SetColWin_NewCollectionButton, java.awt.BorderLayout.EAST);
         SetColWin_TopPane.add(SetColWin_filler1, java.awt.BorderLayout.SOUTH);
 
@@ -864,9 +893,19 @@ public class BestiaryGUI extends javax.swing.JFrame {
         SetColWin_BottomPane.setLayout(new java.awt.BorderLayout());
 
         SetColWin_CancelButton.setText("Cancel");
+        SetColWin_CancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SetColWin_CancelButtonActionPerformed(evt);
+            }
+        });
         SetColWin_BottomPane.add(SetColWin_CancelButton, java.awt.BorderLayout.WEST);
 
         SetColWin_SaveButton.setText("Save");
+        SetColWin_SaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SetColWin_SaveButtonActionPerformed(evt);
+            }
+        });
         SetColWin_BottomPane.add(SetColWin_SaveButton, java.awt.BorderLayout.EAST);
         SetColWin_BottomPane.add(SetColWin_filler7, java.awt.BorderLayout.NORTH);
 
@@ -877,6 +916,12 @@ public class BestiaryGUI extends javax.swing.JFrame {
         SetCollectionsWindow.getContentPane().add(SetColWin_filler4, java.awt.BorderLayout.EAST);
         SetCollectionsWindow.getContentPane().add(SetColWin_filler5, java.awt.BorderLayout.PAGE_START);
         SetCollectionsWindow.getContentPane().add(SetColWin_filler6, java.awt.BorderLayout.PAGE_END);
+
+        NameCollectionWindow.setAlwaysOnTop(true);
+        NameCollectionWindow.setModal(true);
+        NameCollectionWindow.setPreferredSize(new java.awt.Dimension(375, 150));
+        NameCollectionWindow.setResizable(false);
+        NameCollectionWindow.setSize(new java.awt.Dimension(375, 150));
 
         NameColWin_MainPanel.setLayout(new java.awt.GridLayout(3, 1, 0, 5));
 
@@ -889,9 +934,19 @@ public class BestiaryGUI extends javax.swing.JFrame {
         NameColWin_ButtonPanel.setLayout(new java.awt.BorderLayout());
 
         NameColWin_CancelButton.setText("Cancel");
+        NameColWin_CancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NameColWin_CancelButtonActionPerformed(evt);
+            }
+        });
         NameColWin_ButtonPanel.add(NameColWin_CancelButton, java.awt.BorderLayout.WEST);
 
         NameColWin_AddButton.setText("Add");
+        NameColWin_AddButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NameColWin_AddButtonActionPerformed(evt);
+            }
+        });
         NameColWin_ButtonPanel.add(NameColWin_AddButton, java.awt.BorderLayout.EAST);
 
         NameColWin_MainPanel.add(NameColWin_ButtonPanel);
@@ -1300,6 +1355,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterFocus_EditCollectionsButtonBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         MonsterFocus_EditCollectionsButton.setText("Edit Collections");
+        MonsterFocus_EditCollectionsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonsterFocus_EditCollectionsButtonActionPerformed(evt);
+            }
+        });
         MonsterFocus_EditCollectionsButtonBox.add(MonsterFocus_EditCollectionsButton);
 
         MonsterFocus_CurrentCollectionsPane.add(MonsterFocus_EditCollectionsButtonBox, java.awt.BorderLayout.PAGE_END);
@@ -1620,7 +1680,15 @@ public class BestiaryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_MonsterSurvey_NextActionPerformed
 
     private void BestiaryPage_CollectionsClearSelectionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_CollectionsClearSelectionsButtonActionPerformed
-        //Clear every Bestiary Page Collection check
+        int max = this.BestiaryPage_CollectionsGridPane.getComponentCount();
+        javax.swing.JCheckBox box;
+        
+        for(int i = 0; i < max; i++){
+            box = (javax.swing.JCheckBox) this.BestiaryPage_CollectionsGridPane.getComponent(i);
+            box.setSelected(false);
+        }
+        
+        
     }//GEN-LAST:event_BestiaryPage_CollectionsClearSelectionsButtonActionPerformed
 
     private void BestiaryPage_MonsterTypesClearSelectionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterTypesClearSelectionsButtonActionPerformed
@@ -1750,6 +1818,55 @@ public class BestiaryGUI extends javax.swing.JFrame {
         this.AttackTagsWindow.setVisible(false);
     }//GEN-LAST:event_AttTagWin_AttackButtonActionPerformed
 
+    private void MonsterFocus_EditCollectionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterFocus_EditCollectionsButtonActionPerformed
+        this.SetCollectionsWindow.setVisible(true);
+    }//GEN-LAST:event_MonsterFocus_EditCollectionsButtonActionPerformed
+
+    private void SetColWin_NewCollectionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetColWin_NewCollectionButtonActionPerformed
+        this.NameCollectionWindow.setVisible(true);
+    }//GEN-LAST:event_SetColWin_NewCollectionButtonActionPerformed
+
+    private void SetColWin_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetColWin_CancelButtonActionPerformed
+        this.SetCollectionsWindow.setVisible(false);
+    }//GEN-LAST:event_SetColWin_CancelButtonActionPerformed
+
+    private void SetColWin_SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetColWin_SaveButtonActionPerformed
+        int max = this.SetColWin_GridPane.getComponentCount();
+        javax.swing.JCheckBox box;
+        
+        MonsterFocus_ModelCollectionList.clear();
+        
+        for(int i = 0; i < max; i++){
+            box = (javax.swing.JCheckBox) this.SetColWin_GridPane.getComponent(i);
+            if(box.isSelected()){
+                MonsterFocus_ModelCollectionList.addElement(box.getText());
+            }
+        }
+        
+        this.SetCollectionsWindow.setVisible(false);
+        
+    }//GEN-LAST:event_SetColWin_SaveButtonActionPerformed
+
+    private void NameColWin_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameColWin_CancelButtonActionPerformed
+        this.NameCollectionWindow.setVisible(false);
+    }//GEN-LAST:event_NameColWin_CancelButtonActionPerformed
+
+    private void NameColWin_AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameColWin_AddButtonActionPerformed
+        allCollections.add(this.NameColWin_NameField.getText());
+        this.NameColWin_NameField.setText("");
+        updateCollections();
+        this.NameCollectionWindow.setVisible(false);
+    }//GEN-LAST:event_NameColWin_AddButtonActionPerformed
+
+    private void AddToColWin_NoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddToColWin_NoButtonActionPerformed
+        this.AddToCollectionsWindow.setVisible(false);
+    }//GEN-LAST:event_AddToColWin_NoButtonActionPerformed
+
+    private void AddToColWin_YesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddToColWin_YesButtonActionPerformed
+        this.AddToCollectionsWindow.setVisible(false);
+        this.SetCollectionsWindow.setVisible(true);
+    }//GEN-LAST:event_AddToColWin_YesButtonActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -1786,8 +1903,33 @@ public class BestiaryGUI extends javax.swing.JFrame {
         });
     }
     
+    private void updateCollections(){
+        
+        this.SetColWin_GridPane.removeAll();
+        this.BestiaryPage_CollectionsGridPane.removeAll();
+        
+        java.awt.Dimension setD = new java.awt.Dimension(300, 0);
+        int rowHeight = 30;
+
+        this.SetColWin_GridPane.setPreferredSize(null);
+        
+        for(String s : allCollections){
+            setD.setSize(setD.width, setD.height + rowHeight);
+            this.SetColWin_GridPane.add(new javax.swing.JCheckBox(s));
+            this.BestiaryPage_CollectionsGridPane.add(new javax.swing.JCheckBox(s));
+        }
+        
+        this.SetColWin_GridPane.setSize(setD);
+        this.BestiaryPage_CollectionsGridPane.setSize(setD);
+        
+        this.SetColWin_GridPane.validate();
+        this.BestiaryPage_CollectionsGridPane.validate();
+        
+    }
+    
     private javax.swing.DefaultListModel MonsterEdit_ModelMoveList;
     private javax.swing.DefaultListModel MonsterFocus_ModelCollectionList;
+    private java.util.TreeSet<String> allCollections;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddToColWin_ButtonPanel;
