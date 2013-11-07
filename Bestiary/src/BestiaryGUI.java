@@ -1120,6 +1120,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         DownConWin_ButtonPanel.add(DownConWin_YesButton);
 
         DownConWin_NoButton.setText("No");
+        DownConWin_NoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DownConWin_NoButtonActionPerformed(evt);
+            }
+        });
         DownConWin_ButtonPanel.add(DownConWin_NoButton);
 
         DownConWin_MainPanel.add(DownConWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
@@ -1182,6 +1187,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         UploadConWin_ButtonPanel.add(UploadConWin_YesButton);
 
         UploadConWin_NoButton.setText("No");
+        UploadConWin_NoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UploadConWin_NoButtonActionPerformed(evt);
+            }
+        });
         UploadConWin_ButtonPanel.add(UploadConWin_NoButton);
 
         UploadConWin_MainPanel.add(UploadConWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
@@ -1204,6 +1214,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         LoginWindow.setAlwaysOnTop(true);
         LoginWindow.setModal(true);
+        LoginWindow.setSize(new java.awt.Dimension(350, 200));
 
         LoginWin_MainPanel.setSize(new java.awt.Dimension(377, 156));
         LoginWin_MainPanel.setLayout(new java.awt.BorderLayout());
@@ -1253,6 +1264,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         LoginWin_ButtonPanel.add(LoginWin_OkayButton, java.awt.BorderLayout.EAST);
 
         LoginWin_CancelButton.setText("Cancel");
+        LoginWin_CancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginWin_CancelButtonActionPerformed(evt);
+            }
+        });
         LoginWin_ButtonPanel.add(LoginWin_CancelButton, java.awt.BorderLayout.WEST);
 
         LoginWin_MainPanel.add(LoginWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
@@ -1666,6 +1682,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterFocus_UploadButton.setText("Upload To Codex");
         MonsterFocus_UploadButton.setActionCommand("<html>Upload To <br> Codex</html>");
         MonsterFocus_UploadButton.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        MonsterFocus_UploadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonsterFocus_UploadButtonActionPerformed(evt);
+            }
+        });
         MonsterFocus_UploadButtonBox.add(MonsterFocus_UploadButton, java.awt.BorderLayout.CENTER);
         MonsterFocus_UploadButtonBox.add(MonsterFocus_filler1, java.awt.BorderLayout.PAGE_START);
         MonsterFocus_UploadButtonBox.add(MonsterFocus_filler2, java.awt.BorderLayout.PAGE_END);
@@ -2251,7 +2272,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_DownCompWin_OkayButtonActionPerformed
 
     private void UploadConWin_YesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UploadConWin_YesButtonActionPerformed
-        // TODO add your handling code here:
+        this.UploadConfirmationWindow.setVisible(false);
+        this.LoginWindow.setVisible(true);
     }//GEN-LAST:event_UploadConWin_YesButtonActionPerformed
 
     private void LoginWin_UsernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginWin_UsernameFieldActionPerformed
@@ -2259,12 +2281,30 @@ public class BestiaryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_LoginWin_UsernameFieldActionPerformed
 
     private void LoginWin_OkayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginWin_OkayButtonActionPerformed
-        // TODO add your handling code here:
+        this.LoginWindow.setVisible(false);
+        this.UploadCompleteWindow.setVisible(true);
     }//GEN-LAST:event_LoginWin_OkayButtonActionPerformed
 
     private void UploadCompWin_OkayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UploadCompWin_OkayButtonActionPerformed
-        // TODO add your handling code here:
+        this.UploadCompleteWindow.setVisible(false);
     }//GEN-LAST:event_UploadCompWin_OkayButtonActionPerformed
+
+    private void MonsterFocus_UploadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterFocus_UploadButtonActionPerformed
+        this.UploadConWin_MonsterName.setText(this.MonsterFocus_MainMonster.getdMonsterName());
+        this.UploadConfirmationWindow.setVisible(true);
+    }//GEN-LAST:event_MonsterFocus_UploadButtonActionPerformed
+
+    private void UploadConWin_NoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UploadConWin_NoButtonActionPerformed
+        this.UploadConfirmationWindow.setVisible(false);
+    }//GEN-LAST:event_UploadConWin_NoButtonActionPerformed
+
+    private void DownConWin_NoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownConWin_NoButtonActionPerformed
+        this.DownloadConfirmationWindow.setVisible(false);
+    }//GEN-LAST:event_DownConWin_NoButtonActionPerformed
+
+    private void LoginWin_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginWin_CancelButtonActionPerformed
+        this.LoginWindow.setVisible(false);
+    }//GEN-LAST:event_LoginWin_CancelButtonActionPerformed
 
 
     /**
@@ -2324,6 +2364,47 @@ public class BestiaryGUI extends javax.swing.JFrame {
         this.SetColWin_GridPane.validate();
         this.BestiaryPage_CollectionsGridPane.validate();
         
+    }
+    
+    private void addBlackBeast(){
+        this.MonsterFocus_MainMonster.setdMonsterName("The Legendary Black Beast of Aaaaarrrrrrggghhh");
+        this.MonsterFocus_MainMonster.setdAttack("Bite (d12 +7 damage)");
+        this.MonsterFocus_MainMonster.setdAttackTags("Reach, Forceful, Ignores Armor");
+        this.MonsterFocus_MainMonster.setdHP("28");
+        this.MonsterFocus_MainMonster.setdInstinct("To devour");
+        this.MonsterFocus_MainMonster.setdMonsterDescription("It lives within its cave devouring any"
+                + " adventurer who has the misfortune of wandering through.");
+        this.MonsterFocus_MainMonster.setdArmor("2");
+        this.MonsterFocus_MainMonster.setdMonsterTags("Solitary, Huge, Construct, Terrifying");
+        this.MonsterFocus_MainMonster.setdMoveList("<html><body><ul><li>Frighten adventurers</li></ul></body> </html>");
+        this.MonsterFocus_MainMonster.setdQualities("Drawn into being by the animator, It has many eyes and fearsome horns");
+        
+    }
+    
+    private void addCroc(){
+        
+    }
+    
+    private void addSkel(){
+        this.MonsterFocus_MainMonster.setdMonsterName("Skeleton in a Barrel");
+        this.MonsterFocus_MainMonster.setdAttack("Rusty Sword (d10 damage)");
+        this.MonsterFocus_MainMonster.setdAttackTags("Close, Near");
+        this.MonsterFocus_MainMonster.setdHP("4");
+        this.MonsterFocus_MainMonster.setdInstinct("To suprise the living");
+        this.MonsterFocus_MainMonster.setdMonsterDescription("Poor Skeletons. The ultimate patsy"
+                + " of the undead, clattering along and knocked to pieces with the simplest blow."
+                + " However, they are probably the smartest of the undead footsoldiers avaliable "
+                + "- they have a strange and canny knack for ambush and tend to enjoy laying "
+                + "traps for people. Having said that, they're still not very bright. The most "
+                + "common form of ambush is to hide in a barrel and wait for years until an "
+                + "adventurer passes by. Poor Skeletons.");
+        this.MonsterFocus_MainMonster.setdArmor("1");
+        this.MonsterFocus_MainMonster.setdMonsterTags("Solitary, Stealthy");
+        this.MonsterFocus_MainMonster.setdMoveList("<html>   <body>     <ul>       <li>         "
+                + "Ambush unsuspecting adventurers       </li>       <li>         "
+                + "Hide in the surroundings       </li>     </ul>   </body> </html> ");
+        this.MonsterFocus_MainMonster.setdQualities("");
+
     }
     
     private javax.swing.DefaultListModel MonsterEdit_ModelMoveList;
