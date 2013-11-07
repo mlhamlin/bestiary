@@ -19,6 +19,18 @@ public class BestiaryGUI extends javax.swing.JFrame {
         allCollections = new java.util.TreeSet<String>();
         allCollections.add("Starred");
         
+        skelAdded = false;
+        skelColList = new javax.swing.DefaultListModel();
+        skelNote = "";
+    
+        beastAdded = false;
+        beastColList = new javax.swing.DefaultListModel();
+        beastNote = "";
+    
+        crocAdded = false;
+        crocColList = new javax.swing.DefaultListModel();
+        crocNote = "";
+        
         initComponents();
         
         updateCollections();
@@ -2433,16 +2445,43 @@ public class BestiaryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_ControlBar_CodexButtonActionPerformed
 
     private void BestiaryPage_MonsterViewButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterViewButton1ActionPerformed
+        if(beastAdded){
+            loadBlackBeastLarge(this.MonsterFocus_MainMonster);
+            this.MonsterFocus_ModelCollectionList = beastColList;
+            this.MonsterFocus_GMNotesText.setText(beastNote);
+        }else{
+            loadBlankLarge(this.MonsterFocus_MainMonster);
+            this.MonsterFocus_ModelCollectionList = new javax.swing.DefaultListModel();
+            this.MonsterFocus_GMNotesText.setText("");
+        }
         java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
         cl.show(this.ModeScreens, "MonsterFocus");
     }//GEN-LAST:event_BestiaryPage_MonsterViewButton1ActionPerformed
 
     private void BestiaryPage_MonsterViewButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterViewButton6ActionPerformed
+        if(crocAdded){
+            loadCrocLarge(this.MonsterFocus_MainMonster);
+            this.MonsterFocus_ModelCollectionList = crocColList;
+            this.MonsterFocus_GMNotesText.setText(crocNote);
+        }else{
+            loadBlankLarge(this.MonsterFocus_MainMonster);
+            this.MonsterFocus_ModelCollectionList = new javax.swing.DefaultListModel();
+            this.MonsterFocus_GMNotesText.setText("");
+        }
         java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
         cl.show(this.ModeScreens, "MonsterFocus");
     }//GEN-LAST:event_BestiaryPage_MonsterViewButton6ActionPerformed
 
     private void BestiaryPage_MonsterViewButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterViewButton7ActionPerformed
+        if(skelAdded){
+            loadSkelLarge(this.MonsterFocus_MainMonster);
+            this.MonsterFocus_ModelCollectionList = skelColList;
+            this.MonsterFocus_GMNotesText.setText(skelNote);
+        }else{
+            loadBlankLarge(this.MonsterFocus_MainMonster);
+            this.MonsterFocus_ModelCollectionList = new javax.swing.DefaultListModel();
+            this.MonsterFocus_GMNotesText.setText("");
+        }
         java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
         cl.show(this.ModeScreens, "MonsterFocus");
     }//GEN-LAST:event_BestiaryPage_MonsterViewButton7ActionPerformed
@@ -2611,6 +2650,10 @@ public class BestiaryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_CodexPage_DownloadButton1ActionPerformed
 
     private void DownConWin_YesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownConWin_YesButtonActionPerformed
+        if(this.DownConWin_MonsterName.getText() == "Skeleton in a Barrel"){
+            loadSkelLarge(this.BestiaryPage_MonsterCard7);
+            skelAdded = true;
+        }
         this.DownloadConfirmationWindow.setVisible(false);
         this.DownloadCompleteWindow.setVisible(true);
     }//GEN-LAST:event_DownConWin_YesButtonActionPerformed
@@ -2758,6 +2801,35 @@ public class BestiaryGUI extends javax.swing.JFrame {
         card.revalidate();
     }
     
+    private void loadBlackBeastDirectEdit(){
+        this.MonsterEdit_NameField.setText("The Legendary Black Beast of Aaaaarrrrrrggghhh");
+        
+        
+        this.MonsterEdit_AttackNameField.setText("Bite");
+        this.MonsterEdit_AttackMod.setValue(7);
+        this.MonsterEdit_Dice.setSelectedItem("d12");
+        
+        this.AttTagWin_ReachChange.setSelected(true);
+        this.AttTagWin_ForcefulCheck.setSelected(true);
+        this.AttTagWin_IgnoresArmorCheck.setSelected(true);
+        
+        this.MonsterEdit_HPValue.setValue(28);
+        this.MonsterEdit_InstinctField.setText("To devour");
+        this.MonsterEdit_DescriptionField.setText("It lives within its cave devouring any"
+                + " adventurer who has the misfortune of wandering through.");
+        this.MonsterEdit_ArmorValue.setValue(2);
+        
+        this.MonTagWin_Solitary.setSelected(true);
+        this.MonTagWin_Huge.setSelected(true);
+        this.MonTagWin_Construct.setSelected(true);
+        this.MonTagWin_Terrifying.setSelected(true);
+
+        this.MonsterEdit_ModelMoveList.addElement("Frighten adventurers");
+        
+        this.MonsterEdit_SpecialQualitiesField.setText("Drawn into being by the "
+                + "animator, It has many eyes and fearsome horns");
+    }
+    
     private void loadCrocLarge(LargeMonsterCard card){
         card.setdMonsterName("Laser Crocodile");
         card.setdAttack("Laser Blast (d10 +3)");
@@ -2836,6 +2908,34 @@ public class BestiaryGUI extends javax.swing.JFrame {
         card.setdQualities("");
         card.revalidate();
 
+    }
+    
+   private void loadBlankLarge(LargeMonsterCard card){
+        card.setdMonsterName("Monster Name");
+        card.setdAttack("Attack Name (d4 damage)");
+        card.setdAttackTags("Attack, Tags");
+        card.setdHP("0");
+        card.setdInstinct("To do stuff");
+        card.setdMonsterDescription("blah blah blah.");
+        card.setdArmor("0");
+        card.setdMonsterTags("Monster, Tags");
+        card.setdMoveList("<html><body><ul><li>Do a thing</li></ul></body> </html>");
+        card.setdQualities("Its special");
+        card.revalidate();
+    }
+   
+    private void loadBlankSmall(MiniMonsterCard card){
+        card.setdMonsterName("Monster Name");
+        card.setdAttack("Attack Name (d4 damage)");
+        card.setdAttackTags("Attack, Tags");
+        card.setdHP("0");
+        card.setdInstinct("To do stuff");
+        card.setdMonsterDescription("blah blah blah.");
+        card.setdArmor("0");
+        card.setdMonsterTags("Monster, Tags");
+        card.setdMoveList("<html><body><ul><li>Do a thing</li></ul></body> </html>");
+        card.setdQualities("Its special");
+        card.revalidate();
     }
     
     private String makeAttackString(){
@@ -3033,6 +3133,18 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.DefaultListModel MonsterEdit_ModelMoveList;
     private javax.swing.DefaultListModel MonsterFocus_ModelCollectionList;
     private java.util.TreeSet<String> allCollections;
+    
+    private boolean skelAdded;
+    private javax.swing.DefaultListModel skelColList;
+    private String skelNote;
+    
+    private boolean beastAdded;
+    private javax.swing.DefaultListModel beastColList;
+    private String beastNote;
+    
+    private boolean crocAdded;
+    private javax.swing.DefaultListModel crocColList;
+    private String crocNote;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddGMNotesWin_ButtonPanel;
