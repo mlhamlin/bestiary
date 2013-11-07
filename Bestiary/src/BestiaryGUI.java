@@ -169,7 +169,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
         AddToColWin_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
         AddToColWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
         AddToColWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
-        SetCollectionsWindow = new javax.swing.JDialog();
+        EditCollectionsWindow = new javax.swing.JDialog();
         SetColWin_MainPane = new javax.swing.JPanel();
         SetColWin_ScrollPane = new javax.swing.JScrollPane();
         SetColWin_GridPane = new javax.swing.JPanel();
@@ -196,6 +196,26 @@ public class BestiaryGUI extends javax.swing.JFrame {
         NameColWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         NameColWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         NameColWin_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        AddGMNotesWindow = new javax.swing.JDialog();
+        AddGMNotesWin_MainPanel = new javax.swing.JPanel();
+        AddGMNotesWin_ButtonPanel = new javax.swing.JPanel();
+        AddGMNotesWin_YesButton = new javax.swing.JButton();
+        AddGMNotesWin_NoButton = new javax.swing.JButton();
+        AddGMNotesWin_Label = new javax.swing.JLabel();
+        AddGMNotesWin_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        AddGMNotesWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        AddGMNotesWin_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        EditGMNoteWindow = new javax.swing.JDialog();
+        EditGMNoteWin_MainPanel = new javax.swing.JPanel();
+        EditGMNoteWin_Label = new javax.swing.JLabel();
+        EditGMNoteWin_ScrollPane = new javax.swing.JScrollPane();
+        EditGMNoteWin_NoteText = new javax.swing.JTextArea();
+        EditGMNoteWin_ButtonPanel = new javax.swing.JPanel();
+        EditGMNoteWin_CancelButton = new javax.swing.JButton();
+        EditGMNoteWin_SaveButton = new javax.swing.JButton();
+        EditGMNoteWin_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        EditGMNoteWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        EditGMNoteWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         ControlBar = new javax.swing.JPanel();
         ControlBar_MainTitle = new javax.swing.JLabel();
         ControlBar_ModeButtonBox = new javax.swing.JPanel();
@@ -858,11 +878,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         AddToCollectionsWindow.getContentPane().add(AddToColWin_filler2, java.awt.BorderLayout.EAST);
         AddToCollectionsWindow.getContentPane().add(AddToColWin_filler3, java.awt.BorderLayout.NORTH);
 
-        SetCollectionsWindow.setAlwaysOnTop(true);
-        SetCollectionsWindow.setModal(true);
-        SetCollectionsWindow.setPreferredSize(new java.awt.Dimension(400, 300));
-        SetCollectionsWindow.setResizable(false);
-        SetCollectionsWindow.setSize(new java.awt.Dimension(400, 300));
+        EditCollectionsWindow.setAlwaysOnTop(true);
+        EditCollectionsWindow.setModal(true);
+        EditCollectionsWindow.setPreferredSize(new java.awt.Dimension(400, 300));
+        EditCollectionsWindow.setResizable(false);
+        EditCollectionsWindow.setSize(new java.awt.Dimension(400, 300));
 
         SetColWin_MainPane.setLayout(new java.awt.BorderLayout());
 
@@ -911,11 +931,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         SetColWin_MainPane.add(SetColWin_BottomPane, java.awt.BorderLayout.SOUTH);
 
-        SetCollectionsWindow.getContentPane().add(SetColWin_MainPane, java.awt.BorderLayout.CENTER);
-        SetCollectionsWindow.getContentPane().add(SetColWin_filler3, java.awt.BorderLayout.WEST);
-        SetCollectionsWindow.getContentPane().add(SetColWin_filler4, java.awt.BorderLayout.EAST);
-        SetCollectionsWindow.getContentPane().add(SetColWin_filler5, java.awt.BorderLayout.PAGE_START);
-        SetCollectionsWindow.getContentPane().add(SetColWin_filler6, java.awt.BorderLayout.PAGE_END);
+        EditCollectionsWindow.getContentPane().add(SetColWin_MainPane, java.awt.BorderLayout.CENTER);
+        EditCollectionsWindow.getContentPane().add(SetColWin_filler3, java.awt.BorderLayout.WEST);
+        EditCollectionsWindow.getContentPane().add(SetColWin_filler4, java.awt.BorderLayout.EAST);
+        EditCollectionsWindow.getContentPane().add(SetColWin_filler5, java.awt.BorderLayout.PAGE_START);
+        EditCollectionsWindow.getContentPane().add(SetColWin_filler6, java.awt.BorderLayout.PAGE_END);
 
         NameCollectionWindow.setAlwaysOnTop(true);
         NameCollectionWindow.setModal(true);
@@ -956,6 +976,61 @@ public class BestiaryGUI extends javax.swing.JFrame {
         NameCollectionWindow.getContentPane().add(NameColWin_filler2, java.awt.BorderLayout.SOUTH);
         NameCollectionWindow.getContentPane().add(NameColWin_filler3, java.awt.BorderLayout.WEST);
         NameCollectionWindow.getContentPane().add(NameColWin_filler4, java.awt.BorderLayout.EAST);
+
+        AddGMNotesWindow.setResizable(false);
+        AddGMNotesWindow.setSize(new java.awt.Dimension(250, 100));
+
+        AddGMNotesWin_MainPanel.setLayout(new java.awt.BorderLayout());
+
+        AddGMNotesWin_YesButton.setText("Yes");
+        AddGMNotesWin_ButtonPanel.add(AddGMNotesWin_YesButton);
+
+        AddGMNotesWin_NoButton.setText("No");
+        AddGMNotesWin_ButtonPanel.add(AddGMNotesWin_NoButton);
+
+        AddGMNotesWin_MainPanel.add(AddGMNotesWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
+
+        AddGMNotesWin_Label.setText("Would you like to add GM notes?");
+        AddGMNotesWin_MainPanel.add(AddGMNotesWin_Label, java.awt.BorderLayout.NORTH);
+
+        AddGMNotesWindow.getContentPane().add(AddGMNotesWin_MainPanel, java.awt.BorderLayout.CENTER);
+        AddGMNotesWindow.getContentPane().add(AddGMNotesWin_filler1, java.awt.BorderLayout.PAGE_START);
+        AddGMNotesWindow.getContentPane().add(AddGMNotesWin_filler3, java.awt.BorderLayout.LINE_END);
+        AddGMNotesWindow.getContentPane().add(AddGMNotesWin_filler4, java.awt.BorderLayout.LINE_START);
+
+        EditGMNoteWindow.setPreferredSize(new java.awt.Dimension(400, 300));
+
+        EditGMNoteWin_MainPanel.setLayout(new java.awt.BorderLayout());
+
+        EditGMNoteWin_Label.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        EditGMNoteWin_Label.setText("GM Notes:");
+        EditGMNoteWin_MainPanel.add(EditGMNoteWin_Label, java.awt.BorderLayout.NORTH);
+
+        EditGMNoteWin_ScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        EditGMNoteWin_ScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+        EditGMNoteWin_NoteText.setColumns(20);
+        EditGMNoteWin_NoteText.setLineWrap(true);
+        EditGMNoteWin_NoteText.setRows(5);
+        EditGMNoteWin_NoteText.setWrapStyleWord(true);
+        EditGMNoteWin_ScrollPane.setViewportView(EditGMNoteWin_NoteText);
+
+        EditGMNoteWin_MainPanel.add(EditGMNoteWin_ScrollPane, java.awt.BorderLayout.CENTER);
+
+        EditGMNoteWin_ButtonPanel.setLayout(new java.awt.BorderLayout());
+
+        EditGMNoteWin_CancelButton.setText("Cancel");
+        EditGMNoteWin_ButtonPanel.add(EditGMNoteWin_CancelButton, java.awt.BorderLayout.WEST);
+
+        EditGMNoteWin_SaveButton.setText("Save");
+        EditGMNoteWin_ButtonPanel.add(EditGMNoteWin_SaveButton, java.awt.BorderLayout.EAST);
+
+        EditGMNoteWin_MainPanel.add(EditGMNoteWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
+
+        EditGMNoteWindow.getContentPane().add(EditGMNoteWin_MainPanel, java.awt.BorderLayout.CENTER);
+        EditGMNoteWindow.getContentPane().add(EditGMNoteWin_filler1, java.awt.BorderLayout.WEST);
+        EditGMNoteWindow.getContentPane().add(EditGMNoteWin_filler2, java.awt.BorderLayout.EAST);
+        EditGMNoteWindow.getContentPane().add(EditGMNoteWin_filler3, java.awt.BorderLayout.PAGE_START);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -1819,7 +1894,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_AttTagWin_AttackButtonActionPerformed
 
     private void MonsterFocus_EditCollectionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterFocus_EditCollectionsButtonActionPerformed
-        this.SetCollectionsWindow.setVisible(true);
+        this.EditCollectionsWindow.setVisible(true);
     }//GEN-LAST:event_MonsterFocus_EditCollectionsButtonActionPerformed
 
     private void SetColWin_NewCollectionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetColWin_NewCollectionButtonActionPerformed
@@ -1827,7 +1902,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_SetColWin_NewCollectionButtonActionPerformed
 
     private void SetColWin_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetColWin_CancelButtonActionPerformed
-        this.SetCollectionsWindow.setVisible(false);
+        this.EditCollectionsWindow.setVisible(false);
     }//GEN-LAST:event_SetColWin_CancelButtonActionPerformed
 
     private void SetColWin_SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetColWin_SaveButtonActionPerformed
@@ -1843,7 +1918,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
             }
         }
         
-        this.SetCollectionsWindow.setVisible(false);
+        this.EditCollectionsWindow.setVisible(false);
         
     }//GEN-LAST:event_SetColWin_SaveButtonActionPerformed
 
@@ -1864,7 +1939,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
     private void AddToColWin_YesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddToColWin_YesButtonActionPerformed
         this.AddToCollectionsWindow.setVisible(false);
-        this.SetCollectionsWindow.setVisible(true);
+        this.EditCollectionsWindow.setVisible(true);
     }//GEN-LAST:event_AddToColWin_YesButtonActionPerformed
 
 
@@ -1932,6 +2007,15 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private java.util.TreeSet<String> allCollections;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel AddGMNotesWin_ButtonPanel;
+    private javax.swing.JLabel AddGMNotesWin_Label;
+    private javax.swing.JPanel AddGMNotesWin_MainPanel;
+    private javax.swing.JButton AddGMNotesWin_NoButton;
+    private javax.swing.JButton AddGMNotesWin_YesButton;
+    private javax.swing.Box.Filler AddGMNotesWin_filler1;
+    private javax.swing.Box.Filler AddGMNotesWin_filler3;
+    private javax.swing.Box.Filler AddGMNotesWin_filler4;
+    private javax.swing.JDialog AddGMNotesWindow;
     private javax.swing.JPanel AddToColWin_ButtonPanel;
     private javax.swing.JLabel AddToColWin_Label;
     private javax.swing.JButton AddToColWin_NoButton;
@@ -2105,6 +2189,18 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JButton ControlBar_MyBestiaryButton;
     private javax.swing.JButton ControlBar_NewMonsterButton;
     private javax.swing.Box.Filler ControlBar_filler1;
+    private javax.swing.JDialog EditCollectionsWindow;
+    private javax.swing.JPanel EditGMNoteWin_ButtonPanel;
+    private javax.swing.JButton EditGMNoteWin_CancelButton;
+    private javax.swing.JLabel EditGMNoteWin_Label;
+    private javax.swing.JPanel EditGMNoteWin_MainPanel;
+    private javax.swing.JTextArea EditGMNoteWin_NoteText;
+    private javax.swing.JButton EditGMNoteWin_SaveButton;
+    private javax.swing.JScrollPane EditGMNoteWin_ScrollPane;
+    private javax.swing.Box.Filler EditGMNoteWin_filler1;
+    private javax.swing.Box.Filler EditGMNoteWin_filler2;
+    private javax.swing.Box.Filler EditGMNoteWin_filler3;
+    private javax.swing.JDialog EditGMNoteWindow;
     private javax.swing.JPanel ModeScreens;
     private javax.swing.ButtonGroup ModeToggle;
     private javax.swing.JCheckBox MonTagWin_Amorphous;
@@ -2258,6 +2354,5 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.Box.Filler SetColWin_filler5;
     private javax.swing.Box.Filler SetColWin_filler6;
     private javax.swing.Box.Filler SetColWin_filler7;
-    private javax.swing.JDialog SetCollectionsWindow;
     // End of variables declaration//GEN-END:variables
 }
