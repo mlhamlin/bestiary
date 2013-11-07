@@ -13,6 +13,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
      * Creates new form BestiaryGUI
      */
     public BestiaryGUI() {
+        MonsterEditMoveList = new javax.swing.DefaultListModel();
         initComponents();
     }
 
@@ -60,10 +61,10 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterEdit_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 32767));
         MonsterEdit_BottomPane = new javax.swing.JPanel();
         MonsterEdit_MovesControlsPane = new javax.swing.JPanel();
-        NewMove = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        MovesLabel = new javax.swing.JLabel();
+        MonsterEdit_NewMove = new javax.swing.JTextField();
+        MonsterEdit_RemoveMoveButton = new javax.swing.JButton();
+        MonsterEdit_AddMoveButton = new javax.swing.JButton();
+        Monster_EditMovesLabel = new javax.swing.JLabel();
         MonsterEdit_MovesScroll = new javax.swing.JScrollPane();
         MonsterEdit_MovesList = new javax.swing.JList();
         MonsterEdit_EndPane = new javax.swing.JPanel();
@@ -80,7 +81,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterSurvey_BackNextPane = new javax.swing.JPanel();
         MonsterSurvey_Back = new javax.swing.JButton();
         MonsterSurvey_Next = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
+        MonsterSurvey_jSeparator1 = new javax.swing.JSeparator();
         MonsterSurvey_CancelPane = new javax.swing.JPanel();
         MonsterSurvey_Cancel = new javax.swing.JButton();
         MonsterSurvey_MainPane = new javax.swing.JPanel();
@@ -319,6 +320,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
         CodexPage_RecentMonstersTitle = new javax.swing.JLabel();
 
         MonsterEdit.setAlwaysOnTop(true);
+        MonsterEdit.setModal(true);
         MonsterEdit.setResizable(false);
         MonsterEdit.setSize(new java.awt.Dimension(700, 500));
 
@@ -343,6 +345,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterEdit_Row1.add(MonsterEdit_NamePane, java.awt.BorderLayout.WEST);
 
         MonsterEdit_MonsterTagsButton.setText("Monster Tags");
+        MonsterEdit_MonsterTagsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonsterEdit_MonsterTagsButtonActionPerformed(evt);
+            }
+        });
         MonsterEdit_Row1.add(MonsterEdit_MonsterTagsButton, java.awt.BorderLayout.EAST);
 
         MonsterEdit_TopPane.add(MonsterEdit_Row1);
@@ -388,6 +395,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterEdit_Row3.add(MonsterEdit_AttackMod);
 
         MonsterEdit_AttackTags.setText("Attack Tags");
+        MonsterEdit_AttackTags.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonsterEdit_AttackTagsActionPerformed(evt);
+            }
+        });
         MonsterEdit_Row3.add(MonsterEdit_AttackTags);
 
         MonsterEdit_TopPane.add(MonsterEdit_Row3);
@@ -438,33 +450,38 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         MonsterEdit_MovesControlsPane.setLayout(new java.awt.BorderLayout());
 
-        NewMove.setText("Move");
-        NewMove.addActionListener(new java.awt.event.ActionListener() {
+        MonsterEdit_NewMove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NewMoveActionPerformed(evt);
+                MonsterEdit_NewMoveActionPerformed(evt);
             }
         });
-        MonsterEdit_MovesControlsPane.add(NewMove, java.awt.BorderLayout.CENTER);
+        MonsterEdit_MovesControlsPane.add(MonsterEdit_NewMove, java.awt.BorderLayout.CENTER);
 
-        jButton1.setText("Remove");
-        MonsterEdit_MovesControlsPane.add(jButton1, java.awt.BorderLayout.LINE_START);
+        MonsterEdit_RemoveMoveButton.setText("Remove");
+        MonsterEdit_RemoveMoveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonsterEdit_RemoveMoveButtonActionPerformed(evt);
+            }
+        });
+        MonsterEdit_MovesControlsPane.add(MonsterEdit_RemoveMoveButton, java.awt.BorderLayout.LINE_START);
 
-        jButton2.setText("Add Move");
-        MonsterEdit_MovesControlsPane.add(jButton2, java.awt.BorderLayout.LINE_END);
+        MonsterEdit_AddMoveButton.setText("Add Move");
+        MonsterEdit_AddMoveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonsterEdit_AddMoveButtonActionPerformed(evt);
+            }
+        });
+        MonsterEdit_MovesControlsPane.add(MonsterEdit_AddMoveButton, java.awt.BorderLayout.LINE_END);
 
-        MovesLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        MovesLabel.setText(" Moves");
-        MonsterEdit_MovesControlsPane.add(MovesLabel, java.awt.BorderLayout.PAGE_START);
+        Monster_EditMovesLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        Monster_EditMovesLabel.setText(" Moves");
+        MonsterEdit_MovesControlsPane.add(Monster_EditMovesLabel, java.awt.BorderLayout.PAGE_START);
 
         MonsterEdit_BottomPane.add(MonsterEdit_MovesControlsPane, java.awt.BorderLayout.NORTH);
 
         MonsterEdit_MovesScroll.setPreferredSize(new java.awt.Dimension(100, 75));
 
-        MonsterEdit_MovesList.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
+        MonsterEdit_MovesList.setModel(MonsterEditMoveList);
         MonsterEdit_MovesScroll.setViewportView(MonsterEdit_MovesList);
 
         MonsterEdit_BottomPane.add(MonsterEdit_MovesScroll, java.awt.BorderLayout.CENTER);
@@ -472,9 +489,19 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterEdit_EndPane.setLayout(new java.awt.BorderLayout());
 
         MonsterEdit_SaveButton.setText("Save");
+        MonsterEdit_SaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonsterEdit_SaveButtonActionPerformed(evt);
+            }
+        });
         MonsterEdit_EndPane.add(MonsterEdit_SaveButton, java.awt.BorderLayout.EAST);
 
         MonsterEdit_CancelButton.setText("Cancel");
+        MonsterEdit_CancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonsterEdit_CancelButtonActionPerformed(evt);
+            }
+        });
         MonsterEdit_EndPane.add(MonsterEdit_CancelButton, java.awt.BorderLayout.WEST);
 
         MonsterEdit_BottomPane.add(MonsterEdit_EndPane, java.awt.BorderLayout.SOUTH);
@@ -508,7 +535,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterSurvey_BackNextPane.add(MonsterSurvey_Next);
 
         MonsterSurvey_Controls.add(MonsterSurvey_BackNextPane, java.awt.BorderLayout.EAST);
-        MonsterSurvey_Controls.add(jSeparator1, java.awt.BorderLayout.NORTH);
+        MonsterSurvey_Controls.add(MonsterSurvey_jSeparator1, java.awt.BorderLayout.NORTH);
 
         MonsterSurvey_Cancel.setText("Cancel");
         MonsterSurvey_CancelPane.add(MonsterSurvey_Cancel);
@@ -520,7 +547,9 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterSurvey_MainPane.setLayout(new java.awt.CardLayout());
         MonsterSurvey.getContentPane().add(MonsterSurvey_MainPane, java.awt.BorderLayout.CENTER);
 
+        MonsterTagsWindow.setAlwaysOnTop(true);
         MonsterTagsWindow.setMinimumSize(new java.awt.Dimension(300, 300));
+        MonsterTagsWindow.setModal(true);
         MonsterTagsWindow.setResizable(false);
 
         MonTagWin_MainPane.setLayout(new java.awt.BorderLayout());
@@ -631,6 +660,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
         MonsterTagsWindow.getContentPane().add(MonTagWin_filler3, java.awt.BorderLayout.NORTH);
         MonsterTagsWindow.getContentPane().add(MonTagWin_filler4, java.awt.BorderLayout.SOUTH);
 
+        AttackTagsWindow.setAlwaysOnTop(true);
+        AttackTagsWindow.setModal(true);
         AttackTagsWindow.setResizable(false);
         AttackTagsWindow.setSize(new java.awt.Dimension(300, 300));
 
@@ -1404,9 +1435,9 @@ public class BestiaryGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NewMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewMoveActionPerformed
+    private void MonsterEdit_NewMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_NewMoveActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NewMoveActionPerformed
+    }//GEN-LAST:event_MonsterEdit_NewMoveActionPerformed
 
     private void MonsterEdit_NameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_NameFieldActionPerformed
         // TODO add your handling code here:
@@ -1531,6 +1562,42 @@ public class BestiaryGUI extends javax.swing.JFrame {
         this.MonsterEdit.setVisible(true);
     }//GEN-LAST:event_MonsterFocus_EditMonsterButtonActionPerformed
 
+    private void MonsterEdit_MonsterTagsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_MonsterTagsButtonActionPerformed
+        this.MonsterTagsWindow.setVisible(true);
+    }//GEN-LAST:event_MonsterEdit_MonsterTagsButtonActionPerformed
+
+    private void MonsterEdit_AttackTagsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_AttackTagsActionPerformed
+        this.AttackTagsWindow.setVisible(true);
+    }//GEN-LAST:event_MonsterEdit_AttackTagsActionPerformed
+
+    private void MonsterEdit_RemoveMoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_RemoveMoveButtonActionPerformed
+        if(this.MonsterEdit_MovesList.getSelectedIndices().length > 0){
+            int[] tmp = this.MonsterEdit_MovesList.getSelectedIndices();
+            int[] selectedIndices = this.MonsterEdit_MovesList.getSelectedIndices();
+            
+            for(int i = tmp.length-1; i>=0; i--){
+                selectedIndices = this.MonsterEdit_MovesList.getSelectedIndices();
+                MonsterEditMoveList.removeElementAt(selectedIndices[i]);
+
+            }
+        }
+    }//GEN-LAST:event_MonsterEdit_RemoveMoveButtonActionPerformed
+
+    private void MonsterEdit_AddMoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_AddMoveButtonActionPerformed
+        MonsterEditMoveList.addElement(this.MonsterEdit_NewMove.getText());
+        this.MonsterEdit_NewMove.setText("");
+    }//GEN-LAST:event_MonsterEdit_AddMoveButtonActionPerformed
+
+    private void MonsterEdit_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_CancelButtonActionPerformed
+        //Don't Save
+        this.MonsterEdit.setVisible(false);
+    }//GEN-LAST:event_MonsterEdit_CancelButtonActionPerformed
+
+    private void MonsterEdit_SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_SaveButtonActionPerformed
+        //Save!
+        this.MonsterEdit.setVisible(false);
+    }//GEN-LAST:event_MonsterEdit_SaveButtonActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -1566,6 +1633,10 @@ public class BestiaryGUI extends javax.swing.JFrame {
             }
         });
     }
+    
+    private javax.swing.DefaultListModel MonsterEditMoveList;
+    //private javax.swing.
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AttTagWin_AmmoBox;
     private javax.swing.JCheckBox AttTagWin_AmmoCheck;
@@ -1770,6 +1841,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.ButtonGroup MonTagsWin_OrgTagsGroup;
     private javax.swing.ButtonGroup MonTagsWin_SizeTagsGroup;
     private javax.swing.JDialog MonsterEdit;
+    private javax.swing.JButton MonsterEdit_AddMoveButton;
     private javax.swing.JLabel MonsterEdit_ArmorLabel;
     private javax.swing.JSpinner MonsterEdit_ArmorValue;
     private javax.swing.JSpinner MonsterEdit_AttackMod;
@@ -1797,6 +1869,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JTextField MonsterEdit_NameField;
     private javax.swing.JLabel MonsterEdit_NameLabel;
     private javax.swing.JPanel MonsterEdit_NamePane;
+    private javax.swing.JTextField MonsterEdit_NewMove;
+    private javax.swing.JButton MonsterEdit_RemoveMoveButton;
     private javax.swing.JComboBox MonsterEdit_Rolls;
     private javax.swing.JPanel MonsterEdit_Row1;
     private javax.swing.JPanel MonsterEdit_Row2;
@@ -1853,11 +1927,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JPanel MonsterSurvey_Controls;
     private javax.swing.JPanel MonsterSurvey_MainPane;
     private javax.swing.JButton MonsterSurvey_Next;
+    private javax.swing.JSeparator MonsterSurvey_jSeparator1;
     private javax.swing.JDialog MonsterTagsWindow;
-    private javax.swing.JLabel MovesLabel;
-    private javax.swing.JTextField NewMove;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel Monster_EditMovesLabel;
     // End of variables declaration//GEN-END:variables
 }
