@@ -216,6 +216,26 @@ public class BestiaryGUI extends javax.swing.JFrame {
         EditGMNoteWin_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         EditGMNoteWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         EditGMNoteWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        DownloadConfirmationWindow = new javax.swing.JDialog();
+        DownConWin_MainPanel1 = new javax.swing.JPanel();
+        DownConWin_ButtonPanel1 = new javax.swing.JPanel();
+        DownConWin_YesButton1 = new javax.swing.JButton();
+        DownConWin_NoButton1 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        DownConWin_Label1 = new javax.swing.JLabel();
+        DownConWin_MonsterName = new javax.swing.JLabel();
+        DownConWin_Label2 = new javax.swing.JLabel();
+        DownConWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        DownConWin_filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        DownConWin_filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        DownloadCompleteWindow = new javax.swing.JDialog();
+        DownCompWin_MainPanel = new javax.swing.JPanel();
+        DownCompWin_ButtonPanel = new javax.swing.JPanel();
+        DownCompWin_OkayButton = new javax.swing.JButton();
+        DownCompWin__Label = new javax.swing.JLabel();
+        DownCompWin_filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        DownCompWin_filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        DownCompWin_filler9 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         ControlBar = new javax.swing.JPanel();
         ControlBar_MainTitle = new javax.swing.JLabel();
         ControlBar_ModeButtonBox = new javax.swing.JPanel();
@@ -1046,6 +1066,47 @@ public class BestiaryGUI extends javax.swing.JFrame {
         EditGMNoteWindow.getContentPane().add(EditGMNoteWin_filler1, java.awt.BorderLayout.WEST);
         EditGMNoteWindow.getContentPane().add(EditGMNoteWin_filler2, java.awt.BorderLayout.EAST);
         EditGMNoteWindow.getContentPane().add(EditGMNoteWin_filler3, java.awt.BorderLayout.PAGE_START);
+
+        DownConWin_MainPanel1.setLayout(new java.awt.BorderLayout());
+
+        DownConWin_YesButton1.setText("Yes");
+        DownConWin_ButtonPanel1.add(DownConWin_YesButton1);
+
+        DownConWin_NoButton1.setText("No");
+        DownConWin_ButtonPanel1.add(DownConWin_NoButton1);
+
+        DownConWin_MainPanel1.add(DownConWin_ButtonPanel1, java.awt.BorderLayout.SOUTH);
+
+        DownConWin_Label1.setText("Are you sure you want to download");
+        jPanel1.add(DownConWin_Label1);
+
+        DownConWin_MonsterName.setText("jLabel2");
+        jPanel1.add(DownConWin_MonsterName);
+
+        DownConWin_Label2.setText("?");
+        jPanel1.add(DownConWin_Label2);
+
+        DownConWin_MainPanel1.add(jPanel1, java.awt.BorderLayout.CENTER);
+
+        DownloadConfirmationWindow.getContentPane().add(DownConWin_MainPanel1, java.awt.BorderLayout.CENTER);
+        DownloadConfirmationWindow.getContentPane().add(DownConWin_filler2, java.awt.BorderLayout.PAGE_START);
+        DownloadConfirmationWindow.getContentPane().add(DownConWin_filler5, java.awt.BorderLayout.LINE_END);
+        DownloadConfirmationWindow.getContentPane().add(DownConWin_filler6, java.awt.BorderLayout.LINE_START);
+
+        DownCompWin_MainPanel.setLayout(new java.awt.BorderLayout());
+
+        DownCompWin_OkayButton.setText("Okay");
+        DownCompWin_ButtonPanel.add(DownCompWin_OkayButton);
+
+        DownCompWin_MainPanel.add(DownCompWin_ButtonPanel, java.awt.BorderLayout.SOUTH);
+
+        DownCompWin__Label.setText("Download Complete");
+        DownCompWin_MainPanel.add(DownCompWin__Label, java.awt.BorderLayout.NORTH);
+
+        DownloadCompleteWindow.getContentPane().add(DownCompWin_MainPanel, java.awt.BorderLayout.CENTER);
+        DownloadCompleteWindow.getContentPane().add(DownCompWin_filler7, java.awt.BorderLayout.PAGE_START);
+        DownloadCompleteWindow.getContentPane().add(DownCompWin_filler8, java.awt.BorderLayout.LINE_END);
+        DownloadCompleteWindow.getContentPane().add(DownCompWin_filler9, java.awt.BorderLayout.LINE_START);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -2225,6 +2286,25 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JButton ControlBar_MyBestiaryButton;
     private javax.swing.JButton ControlBar_NewMonsterButton;
     private javax.swing.Box.Filler ControlBar_filler1;
+    private javax.swing.JPanel DownCompWin_ButtonPanel;
+    private javax.swing.JPanel DownCompWin_MainPanel;
+    private javax.swing.JButton DownCompWin_OkayButton;
+    private javax.swing.JLabel DownCompWin__Label;
+    private javax.swing.Box.Filler DownCompWin_filler7;
+    private javax.swing.Box.Filler DownCompWin_filler8;
+    private javax.swing.Box.Filler DownCompWin_filler9;
+    private javax.swing.JPanel DownConWin_ButtonPanel1;
+    private javax.swing.JLabel DownConWin_Label1;
+    private javax.swing.JLabel DownConWin_Label2;
+    private javax.swing.JPanel DownConWin_MainPanel1;
+    private javax.swing.JLabel DownConWin_MonsterName;
+    private javax.swing.JButton DownConWin_NoButton1;
+    private javax.swing.JButton DownConWin_YesButton1;
+    private javax.swing.Box.Filler DownConWin_filler2;
+    private javax.swing.Box.Filler DownConWin_filler5;
+    private javax.swing.Box.Filler DownConWin_filler6;
+    private javax.swing.JDialog DownloadCompleteWindow;
+    private javax.swing.JDialog DownloadConfirmationWindow;
     private javax.swing.JDialog EditCollectionsWindow;
     private javax.swing.JPanel EditGMNoteWin_ButtonPanel;
     private javax.swing.JButton EditGMNoteWin_CancelButton;
@@ -2390,5 +2470,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.Box.Filler SetColWin_filler5;
     private javax.swing.Box.Filler SetColWin_filler6;
     private javax.swing.Box.Filler SetColWin_filler7;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
