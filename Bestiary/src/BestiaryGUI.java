@@ -13,6 +13,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
      * Creates new form BestiaryGUI
      */
     public BestiaryGUI() {
+        
         MonsterEdit_ModelMoveList = new javax.swing.DefaultListModel();
         MonsterFocus_ModelCollectionList = new javax.swing.DefaultListModel();
         MonsterFocus_ModelCollectionList.addElement("Starred");
@@ -30,6 +31,10 @@ public class BestiaryGUI extends javax.swing.JFrame {
         crocAdded = false;
         crocColList = new javax.swing.DefaultListModel();
         crocNote = "";
+        
+        openMonster = new Monster();
+        BestiaryMonsters = new MonsterList();
+        CodexMonsters = new MonsterList();
         
         initComponents();
         
@@ -2822,7 +2827,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_CodexPage_DownloadButton1ActionPerformed
 
     private void DownConWin_YesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownConWin_YesButtonActionPerformed
-        if(this.DownConWin_MonsterName.getText() == "Skeleton in a Barrel"){
+        if(this.DownConWin_MonsterName.getText().equals("Skeleton in a Barrel")){
             loadSkelLarge(this.BestiaryPage_MonsterCard3);
             skelAdded = true;
         }
@@ -3445,6 +3450,10 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.DefaultListModel crocColList;
     private String crocNote;
     
+    Monster openMonster;
+    MonsterList BestiaryMonsters;
+    MonsterList CodexMonsters;
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddGMNotesWin_ButtonPanel;
     private javax.swing.JLabel AddGMNotesWin_Label;

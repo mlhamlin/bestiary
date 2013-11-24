@@ -158,6 +158,52 @@ public class Monster {
     public void setDmgDice(Dice dmgDice) {
         this.dmgDice = dmgDice;
     }
+    
+    public void increaseDmgDice(){
+        switch (this.dmgDice){
+            case D_FOUR :
+                this.dmgDice = Dice.D_SIX;
+                break;
+            case D_SIX  :
+                this.dmgDice = Dice.D_EIGHT;
+                break;
+            case D_EIGHT    :
+                this.dmgDice = Dice.D_TEN;
+                break;
+            case D_TEN  :
+                this.dmgDice = Dice.D_TWELVE;
+                break;
+            case D_TWELVE   :
+                this.dmgDice = Dice.D_TWENTY;
+                break;
+            case D_TWENTY   :
+                this.dmgDice = Dice.D_TWENTY;
+                break;
+        }
+    }
+    
+    public void decreaseDmgDice(){
+        switch (this.dmgDice){
+            case D_FOUR :
+                this.dmgDice = Dice.D_FOUR;
+                break;
+            case D_SIX  :
+                this.dmgDice = Dice.D_FOUR;
+                break;
+            case D_EIGHT    :
+                this.dmgDice = Dice.D_SIX;
+                break;
+            case D_TEN  :
+                this.dmgDice = Dice.D_EIGHT;
+                break;
+            case D_TWELVE   :
+                this.dmgDice = Dice.D_TEN;
+                break;
+            case D_TWENTY   :
+                this.dmgDice = Dice.D_TWELVE;
+                break;
+        }
+    }
    
     public int getDmgMod() {
         return dmgMod;
@@ -262,6 +308,10 @@ public class Monster {
     public void setMoves(ArrayList<String> moves) {
         this.moves = moves;
     }
+    
+    public void addMove(String s){
+        this.moves.add(s);
+    }
        
     public String printMoves(){
         
@@ -283,6 +333,10 @@ public class Monster {
 
     public void setSpecialQualities(ArrayList<String> specialQualities) {
         this.specialQualities = specialQualities;
+    }
+    
+    public void addSpecialQuality(String s){
+        this.specialQualities.add(s);
     }
 
     public String printQualities(){
@@ -478,6 +532,68 @@ public class Monster {
         return s;
     }
     
+    public void loadToCard(LargeMonsterCard m){
+        m.setdArmor(this.printArmor());
+        m.setdAttack(this.printAttackString());
+        m.setdAttackTags(this.printAttackTags());
+        m.setdHP(this.printHP());
+        m.setdInstinct(this.printInstinct());
+        m.setdMonsterDescription(this.printDescription());
+        m.setdMonsterName(this.printName());
+        m.setdMonsterTags(this.printMonsterTags());
+        m.setdMoveList(this.printMoves());
+        m.setdQualities(this.printQualities());
+    }
+    
+    public void loadToCard(MiniMonsterCard m){
+        m.setdArmor(this.printArmor());
+        m.setdAttack(this.printAttackString());
+        m.setdAttackTags(this.printAttackTags());
+        m.setdHP(this.printHP());
+        m.setdInstinct(this.printInstinct());
+        m.setdMonsterDescription(this.printDescription());
+        m.setdMonsterName(this.printName());
+        m.setdMonsterTags(this.printMonsterTags());
+        m.setdMoveList(this.printMoves());
+        m.setdQualities(this.printQualities());
+    }
+    
+        
+    public LargeMonsterCard makeLargeCard(){
+       
+        LargeMonsterCard m = new LargeMonsterCard();
+        
+        m.setdArmor(this.printArmor());
+        m.setdAttack(this.printAttackString());
+        m.setdAttackTags(this.printAttackTags());
+        m.setdHP(this.printHP());
+        m.setdInstinct(this.printInstinct());
+        m.setdMonsterDescription(this.printDescription());
+        m.setdMonsterName(this.printName());
+        m.setdMonsterTags(this.printMonsterTags());
+        m.setdMoveList(this.printMoves());
+        m.setdQualities(this.printQualities());
+        
+        return m;
+    }
+    
+    public MiniMonsterCard makeMiniCard(){
+        
+        MiniMonsterCard m = new MiniMonsterCard();
+
+        m.setdArmor(this.printArmor());
+        m.setdAttack(this.printAttackString());
+        m.setdAttackTags(this.printAttackTags());
+        m.setdHP(this.printHP());
+        m.setdInstinct(this.printInstinct());
+        m.setdMonsterDescription(this.printDescription());
+        m.setdMonsterName(this.printName());
+        m.setdMonsterTags(this.printMonsterTags());
+        m.setdMoveList(this.printMoves());
+        m.setdQualities(this.printQualities());
+        
+        return m;
+    }
 }
     
 
