@@ -549,6 +549,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         MonsterEdit.setAlwaysOnTop(true);
         MonsterEdit.setModal(true);
+        MonsterEdit.setPreferredSize(new java.awt.Dimension(700, 500));
         MonsterEdit.setResizable(false);
         MonsterEdit.setSize(new java.awt.Dimension(700, 500));
 

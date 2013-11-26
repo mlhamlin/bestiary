@@ -312,6 +312,10 @@ public class Monster {
     public void addMove(String s){
         this.moves.add(s);
     }
+    
+    public void clearMoves(){
+        this.moves.clear();
+    }
        
     public String printMoves(){
         
@@ -530,6 +534,22 @@ public class Monster {
         }
         
         return s;
+    }
+    
+    public void setAmmo(int a){
+        ammo = a;
+    }
+    
+    public int getAmmo(){
+        return ammo;
+    }
+    
+    public void setPiercing(int p){
+        piercing = p;
+    }
+    
+    public int getPiercing(){
+        return piercing;
     }
     
     public void loadToCard(LargeMonsterCard m){
