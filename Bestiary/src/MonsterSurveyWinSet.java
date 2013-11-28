@@ -16,6 +16,8 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
      */
     public MonsterSurveyWinSet() {
         mon = new Monster();
+        working = false;
+        listy = new MonsterList();
         initComponents();
     }
     
@@ -31,7 +33,24 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         return mon;
     }
     
+    public void setList(MonsterList m){
+        listy = m;
+    }
+    
+    public MonsterList getList(){
+        return listy;
+    }
+    
+    public void setWorking(boolean b){
+        working = b;
+    }
+    
+    public boolean getWorking(){
+        return working;
+    }
+    
     public void completeMonsterSurvey(){
+        
         processPage1();
         processPage2();
         processPage3();
@@ -41,42 +60,237 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         processPage7();
         processPage8();
         processPage9();
+        
+        listy.addMonster(mon);
+        
+        working = false;
+    }
+    
+    public boolean validName(String s){
+        return (!s.equals("")) && (!listy.containsMonster(s));
     }
     
     public void processPage1(){
-        
+        mon.setName(this.mSurveyName.getText());
     }
     
     public void processPage2(){
-        
+        String move = this.mSurveyMove.getText();
+        if(!move.equals("")){
+            mon.addMove(move);
+        }
     }
     
     public void processPage3(){
-        
+        String inst = this.mSurveyInstinct.getText();
+        if(!inst.equals("")){
+            mon.setInstinct(inst);
+        }
     }
     
     public void processPage4(){
-        
+        if(this.mSurveyHorde.isSelected()){
+            mon.setMonsterTag(11, true);
+            mon.setDmgDice(Dice.D_SIX);
+            mon.setHp(3);
+        }else if(this.mSurveyGroup.isSelected()){
+            mon.setMonsterTag(12, true);
+            mon.setDmgDice(Dice.D_EIGHT);
+            mon.setHp(6);
+        }else if(this.mSurveySolitary.isSelected()){
+            mon.setMonsterTag(13, true);
+            mon.setDmgDice(Dice.D_TEN);
+            mon.setHp(12);        
+        }
     }
     
     public void processPage5(){
-        
+        if(this.mSurveyTiny.isSelected()){
+            mon.setMonsterTag(14, true);
+            mon.setAttackTag(9, true);
+            mon.changeDmgMod(-2);
+        }else if(this.mSurveySmall.isSelected()){
+            mon.setMonsterTag(15, true);
+            mon.setAttackTag(10, true);
+        }else if(this.mSurveyNormal.isSelected()){
+            mon.setMonsterTag(16, true);
+            mon.setAttackTag(10, true);
+        }else if(this.mSurveyLarge.isSelected()){
+            mon.setMonsterTag(17, true);
+            mon.setAttackTag(10, true);
+            mon.setAttackTag(11, true);
+            mon.changeHP(4);
+            mon.changeDmgMod(1);
+        }else if(this.mSurveyHuge.isSelected()){
+            mon.setMonsterTag(18, true);
+            mon.setAttackTag(11, true);
+            mon.changeHP(8);
+            mon.changeDmgMod(3);
+        }
     }
     
     public void processPage6(){
-        
+       if(this.mSurveyDefenseNone.isSelected()){
+           mon.setArmor(0);
+       }else if(this.mSurveyDefenseBuffaloBill.isSelected()){
+           mon.setArmor(1);
+       }else if(this.mSurveyDefenseTisButAScratch.isSelected()){
+           mon.setArmor(2);
+       }else if(this.mSurveyDefenseCubone.isSelected()){
+           mon.setArmor(3);
+       }else if(this.mSurveyDefenseForceField.isSelected()){
+           mon.setArmor(4);
+           mon.setMonsterTag(0, true);
+       }
     }
     
     public void processPage7(){
         
+        if(this.mSurveyInfamousStrength.isSelected()){
+            mon.changeDmgMod(2);
+            mon.setAttackTag(1, true);
+        }
+        
+        if(this.mSurveyInfamousOffense.isSelected()){
+            mon.betterDmgRoll();
+        }
+        
+        if(this.mSurveyInfamousDefense.isSelected()){
+            mon.changeArmor(1);
+        }
+        
+        if(this.mSurveyInfamousDeft.isSelected()){
+            mon.setAttackTag(4, true);
+            mon.changePiercing(1);
+        }
+        
+        if(this.mSurveyInfamousEndurance.isSelected()){
+            mon.changeHP(4);
+        }
+        
+        if(this.mSurveyInfamousJoker.isSelected()){
+            mon.setMonsterTag(6, true);
+            mon.addMove(this.DeceitAndTrickeryField.getText());
+        }
+        
+        if(this.mSurveyInfamousAdapt.isSelected()){
+            mon.addSpecialQuality(this.UsefulAdaptField.getText());
+        }
+        
+        if(this.mSurveyInfamousGodsLoveMe.isSelected()){
+            if(this.FavorOfGodsPlusDamage.isSelected()){
+                mon.changeDmgMod(2);
+            }
+            
+            if(this.FavorOfGodsPlusHP.isSelected()){
+                mon.changeHP(2);
+            }
+        }
+        
+        if(this.mSurveyInfamousMagicMissile.isSelected()){
+            mon.setMonsterTag(0, true);
+            mon.addMove(this.SpellsAndMagicField.getText());
+        }
+
     }
     
     public void processPage8(){
         
+        if(this.mSurveyAttackVicious.isSelected()){
+            mon.changeDmgMod(2);
+        }
+        
+        if(this.mSurveyAttackBay.isSelected()){
+            mon.setAttackTag(11, true);
+        }
+        
+        if(this.mSurveyAttackWeak.isSelected()){
+            mon.decreaseDmgDice();
+        }
+        
+        if(this.mSurveyAttackMetal.isSelected()){
+            mon.setAttackTag(3, true);
+            
+            if(this.SliceOrPiercePlusOne.isSelected()){
+               mon.changePiercing(1);
+            }else{
+               mon.changePiercing(3);
+            }
+        }
+        
+        if(this.mSurveyAttackWhereIsYourGodNow.isSelected()){
+            mon.setAttackTag(2, true);
+        }
+        
+        if(this.mSurveyAttackRanged.isSelected()){
+            if(this.AttacksAtRangeNear.isSelected()){
+                mon.setAttackTag(12, true);
+            }
+            
+            if(this.AttacksAtRangeFar.isSelected()){
+                mon.setAttackTag(13, true);
+            }
+        }
+        
     }
     
     public void processPage9(){
+        if(this.mSurveyDescTricksyDamage.isSelected()){
+            mon.setMonsterTag(1, true);
+            mon.decreaseDmgDice();
+            mon.addMove(this.DeceitAndTrickeryField.getText());
+        }
         
+        if(this.mSurveyDescOrganized.isSelected()){
+            mon.setMonsterTag(3, true);
+            mon.addMove(this.OrganizeGroupsField.getText());
+        }
+        
+        if(this.mSurveyDescSmartass.isSelected()){
+            mon.setMonsterTag(4, true);
+        }
+        
+        if(this.mSurveyDescShield.isSelected()){
+            mon.setMonsterTag(8, true);
+            mon.changeArmor(1);
+        }
+        
+        if(this.mSurveyDescTrinkets.isSelected()){
+            mon.setMonsterTag(5, true);
+        }
+        
+        if(this.mSurveyDescBeyond.isSelected()){
+            mon.setMonsterTag(10, true);
+            mon.addSpecialQuality(this.OtherWorldField.getText());
+        }
+        
+        if(this.mSurveyDescProppedUp.isSelected()){
+            mon.changeHP(4);
+        }
+        
+        if(this.mSurveyDescMade.isSelected()){
+            mon.setMonsterTag(9, true);
+            mon.addSpecialQuality(this.MadeField.getText());
+        }
+        
+        if(this.mSurveyDescLooksWickedAwful.isSelected()){
+            mon.setMonsterTag(7, true);
+            mon.addSpecialQuality(this.AppearanceField.getText());
+        }
+        
+        if(this.mSurveyDescProbablySlime.isSelected()){
+            mon.setMonsterTag(2, true);
+            mon.changeArmor(1);
+            mon.changeHP(3);
+        }
+        
+        if(this.mSurveyDescGetOffMyLawn.isSelected()){
+            mon.increaseDmgDice();
+        }
+        
+        if(this.mSurveyDescTreeHugger.isSelected()){
+            mon.worseDmgRoll();
+        }
     }
     
     /**
@@ -223,8 +437,8 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyDefenseNone = new javax.swing.JRadioButton();
         mSurveyDefenseBuffaloBill = new javax.swing.JRadioButton();
         mSurveyDefenseTisButAScratch = new javax.swing.JRadioButton();
-        mSurveyDefenceCubone = new javax.swing.JRadioButton();
-        mSurveyDefenceForceField = new javax.swing.JRadioButton();
+        mSurveyDefenseCubone = new javax.swing.JRadioButton();
+        mSurveyDefenseForceField = new javax.swing.JRadioButton();
         mSurveyStep7 = new javax.swing.JPanel();
         mSurveyStep7Panel = new javax.swing.JPanel();
         mSurveyInfamousLabel = new javax.swing.JLabel();
@@ -251,9 +465,9 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyStep9Panel = new javax.swing.JPanel();
         mSurveyDescLabel = new javax.swing.JLabel();
         mSurveyDescTricksyDamage = new javax.swing.JCheckBox();
-        mSurveyDescOrganised = new javax.swing.JCheckBox();
+        mSurveyDescOrganized = new javax.swing.JCheckBox();
         mSurveyDescSmartass = new javax.swing.JCheckBox();
-        mSurveyDescSheild = new javax.swing.JCheckBox();
+        mSurveyDescShield = new javax.swing.JCheckBox();
         mSurveyDescTrinkets = new javax.swing.JCheckBox();
         mSurveyDescBeyond = new javax.swing.JCheckBox();
         mSurveyDescProppedUp = new javax.swing.JCheckBox();
@@ -261,7 +475,7 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyDescLooksWickedAwful = new javax.swing.JCheckBox();
         mSurveyDescProbablySlime = new javax.swing.JCheckBox();
         mSurveyDescGetOffMyLawn = new javax.swing.JCheckBox();
-        mSurveyDeskTreeHugger = new javax.swing.JCheckBox();
+        mSurveyDescTreeHugger = new javax.swing.JCheckBox();
         MonsterSurvey_Controls = new javax.swing.JPanel();
         MonsterSurvey_BackNextPane = new javax.swing.JPanel();
         MonsterSurvey_Back = new javax.swing.JButton();
@@ -683,13 +897,13 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyDefenseTisButAScratch.setText("Mail or scales");
         mSurveyStep6Panel.add(mSurveyDefenseTisButAScratch);
 
-        mSurveyDefense.add(mSurveyDefenceCubone);
-        mSurveyDefenceCubone.setText("Plate or bone");
-        mSurveyStep6Panel.add(mSurveyDefenceCubone);
+        mSurveyDefense.add(mSurveyDefenseCubone);
+        mSurveyDefenseCubone.setText("Plate or bone");
+        mSurveyStep6Panel.add(mSurveyDefenseCubone);
 
-        mSurveyDefense.add(mSurveyDefenceForceField);
-        mSurveyDefenceForceField.setText("Permanent magical protection");
-        mSurveyStep6Panel.add(mSurveyDefenceForceField);
+        mSurveyDefense.add(mSurveyDefenseForceField);
+        mSurveyDefenseForceField.setText("Permanent magical protection");
+        mSurveyStep6Panel.add(mSurveyDefenseForceField);
 
         mSurveyStep6.add(mSurveyStep6Panel, java.awt.BorderLayout.PAGE_START);
 
@@ -778,14 +992,19 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyDescTricksyDamage.setText("It isn't dangerious because of the wounds it inflicts, but for other reasons");
         mSurveyStep9Panel.add(mSurveyDescTricksyDamage);
 
-        mSurveyDescOrganised.setText("It organises into larger groups that it can call for support");
-        mSurveyStep9Panel.add(mSurveyDescOrganised);
+        mSurveyDescOrganized.setText("It organises into larger groups that it can call for support");
+        mSurveyStep9Panel.add(mSurveyDescOrganized);
 
         mSurveyDescSmartass.setText("It's as smart as a human (or thereabouts)");
         mSurveyStep9Panel.add(mSurveyDescSmartass);
 
-        mSurveyDescSheild.setText("It actively defends itself with a sheild or similar");
-        mSurveyStep9Panel.add(mSurveyDescSheild);
+        mSurveyDescShield.setText("It actively defends itself with a shield or similar");
+        mSurveyDescShield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyDescShieldActionPerformed(evt);
+            }
+        });
+        mSurveyStep9Panel.add(mSurveyDescShield);
 
         mSurveyDescTrinkets.setText("It collects trinkets that humans would consider valuable");
         mSurveyStep9Panel.add(mSurveyDescTrinkets);
@@ -808,8 +1027,8 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyDescGetOffMyLawn.setText("It, or its species, is ancient — older than man, dwarves, elves, etc.");
         mSurveyStep9Panel.add(mSurveyDescGetOffMyLawn);
 
-        mSurveyDeskTreeHugger.setText("It abhors violence");
-        mSurveyStep9Panel.add(mSurveyDeskTreeHugger);
+        mSurveyDescTreeHugger.setText("It abhors violence");
+        mSurveyStep9Panel.add(mSurveyDescTreeHugger);
 
         mSurveyStep9.add(mSurveyStep9Panel, java.awt.BorderLayout.PAGE_START);
 
@@ -870,7 +1089,14 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 "Are you sure you want to continue?", "",
                 javax.swing.JOptionPane.YES_NO_OPTION);
             if(n == javax.swing.JOptionPane.YES_OPTION){
-                
+                this.completeMonsterSurvey();
+            }
+        }else if(this.MonsterSurvey_MainPane.getComponent(0).isVisible()){
+            if(!this.validName(this.mSurveyName.getText())){
+                javax.swing.JOptionPane.showMessageDialog(this,
+                    "The name of this monster must be unique and nonempty.");
+            }else{
+                cl.next(this.MonsterSurvey_MainPane);
             }
         }else{
             cl.next(this.MonsterSurvey_MainPane);
@@ -953,7 +1179,13 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         this.MadeWindow.setVisible(false);
     }//GEN-LAST:event_MadeOkayActionPerformed
 
+    private void mSurveyDescShieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyDescShieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mSurveyDescShieldActionPerformed
+
     Monster mon;
+    MonsterList listy;
+    boolean working;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AppearanceField;
@@ -1072,10 +1304,10 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
     private javax.swing.JCheckBox mSurveyAttackVicious;
     private javax.swing.JCheckBox mSurveyAttackWeak;
     private javax.swing.JCheckBox mSurveyAttackWhereIsYourGodNow;
-    private javax.swing.JRadioButton mSurveyDefenceCubone;
-    private javax.swing.JRadioButton mSurveyDefenceForceField;
     private javax.swing.ButtonGroup mSurveyDefense;
     private javax.swing.JRadioButton mSurveyDefenseBuffaloBill;
+    private javax.swing.JRadioButton mSurveyDefenseCubone;
+    private javax.swing.JRadioButton mSurveyDefenseForceField;
     private javax.swing.JLabel mSurveyDefenseLabel;
     private javax.swing.JRadioButton mSurveyDefenseNone;
     private javax.swing.JRadioButton mSurveyDefenseTisButAScratch;
@@ -1084,14 +1316,14 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
     private javax.swing.JLabel mSurveyDescLabel;
     private javax.swing.JCheckBox mSurveyDescLooksWickedAwful;
     private javax.swing.JCheckBox mSurveyDescMade;
-    private javax.swing.JCheckBox mSurveyDescOrganised;
+    private javax.swing.JCheckBox mSurveyDescOrganized;
     private javax.swing.JCheckBox mSurveyDescProbablySlime;
     private javax.swing.JCheckBox mSurveyDescProppedUp;
-    private javax.swing.JCheckBox mSurveyDescSheild;
+    private javax.swing.JCheckBox mSurveyDescShield;
     private javax.swing.JCheckBox mSurveyDescSmartass;
+    private javax.swing.JCheckBox mSurveyDescTreeHugger;
     private javax.swing.JCheckBox mSurveyDescTricksyDamage;
     private javax.swing.JCheckBox mSurveyDescTrinkets;
-    private javax.swing.JCheckBox mSurveyDeskTreeHugger;
     private javax.swing.Box.Filler mSurveyFill1;
     private javax.swing.Box.Filler mSurveyFill2;
     private javax.swing.Box.Filler mSurveyFill3;

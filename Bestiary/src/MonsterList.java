@@ -42,6 +42,16 @@ public class MonsterList implements Iterable<Monster>{
         return found;
     }
     
+    public boolean containsMonster(String m){        
+        for(Monster mon : internalList){
+            if(mon.getName().equals(m)){
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
     public Monster getMonster(String m){
         
         for(Monster mon : internalList){

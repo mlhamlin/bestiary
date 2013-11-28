@@ -127,6 +127,10 @@ public class Monster {
         this.hp = hp;
     }
     
+    public void changeHP(int hpMod){
+        this.hp = Math.max(this.hp + hpMod, 0);
+    }
+    
     public String printHP(){
         return Integer.toString(hp);
     }
@@ -137,6 +141,10 @@ public class Monster {
 
     public void setArmor(int armor) {
         this.armor = armor;
+    }
+    
+    public void changeArmor(int armMod){
+        this.armor = Math.max(this.armor + armMod, 0);
     }
     
     public String printArmor(){
@@ -212,6 +220,10 @@ public class Monster {
     public void setDmgMod(int dmgMod) {
         this.dmgMod = dmgMod;
     }
+    
+    public void changeDmgMod(int dmgModChange){
+        this.dmgMod = this.dmgMod + dmgModChange;
+    }
 
     public RollType getDmgRoll() {
         return dmgRoll;
@@ -219,6 +231,22 @@ public class Monster {
 
     public void setDmgRoll(RollType dmgRoll) {
         this.dmgRoll = dmgRoll;
+    }
+    
+    public void betterDmgRoll(){
+        if(this.dmgRoll == RollType.WORSTOF){
+            this.dmgRoll = RollType.NORMAL;
+        }else{
+            this.dmgRoll = RollType.BESTOF;
+        }
+    }
+    
+    public void worseDmgRoll(){
+        if(this.dmgRoll == RollType.BESTOF){
+            this.dmgRoll = RollType.NORMAL;
+        }else{
+            this.dmgRoll = RollType.WORSTOF;
+        }
     }
     
     public String printDamageCore(){
@@ -310,7 +338,9 @@ public class Monster {
     }
     
     public void addMove(String s){
-        this.moves.add(s);
+        if(!s.equals("")){
+            this.moves.add(s);
+        }
     }
     
     public void clearMoves(){
@@ -340,7 +370,9 @@ public class Monster {
     }
     
     public void addSpecialQuality(String s){
-        this.specialQualities.add(s);
+        if(!s.equals("")){
+            this.specialQualities.add(s);
+        }
     }
 
     public String printQualities(){
@@ -550,6 +582,10 @@ public class Monster {
     
     public int getPiercing(){
         return piercing;
+    }
+    
+    public void changePiercing(int pMod){
+        this.piercing += pMod;
     }
     
     public void loadToCard(LargeMonsterCard m){

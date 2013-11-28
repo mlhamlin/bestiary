@@ -1567,7 +1567,7 @@
                     <Property name="text" type="java.lang.String" value="Mail or scales"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="mSurveyDefenceCubone">
+                <Component class="javax.swing.JRadioButton" name="mSurveyDefenseCubone">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="mSurveyDefense"/>
@@ -1575,7 +1575,7 @@
                     <Property name="text" type="java.lang.String" value="Plate or bone"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="mSurveyDefenceForceField">
+                <Component class="javax.swing.JRadioButton" name="mSurveyDefenseForceField">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="mSurveyDefense"/>
@@ -1758,7 +1758,7 @@
                     <Property name="text" type="java.lang.String" value="It isn&apos;t dangerious because of the wounds it inflicts, but for other reasons"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="mSurveyDescOrganised">
+                <Component class="javax.swing.JCheckBox" name="mSurveyDescOrganized">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="It organises into larger groups that it can call for support"/>
                   </Properties>
@@ -1768,10 +1768,13 @@
                     <Property name="text" type="java.lang.String" value="It&apos;s as smart as a human (or thereabouts)"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="mSurveyDescSheild">
+                <Component class="javax.swing.JCheckBox" name="mSurveyDescShield">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="It actively defends itself with a sheild or similar"/>
+                    <Property name="text" type="java.lang.String" value="It actively defends itself with a shield or similar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyDescShieldActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="mSurveyDescTrinkets">
                   <Properties>
@@ -1808,7 +1811,7 @@
                     <Property name="text" type="java.lang.String" value="It, or its species, is ancient &#x2014; older than man, dwarves, elves, etc."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="mSurveyDeskTreeHugger">
+                <Component class="javax.swing.JCheckBox" name="mSurveyDescTreeHugger">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="It abhors violence"/>
                   </Properties>
