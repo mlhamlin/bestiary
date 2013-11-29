@@ -85,6 +85,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
         EditCollectionsWindow = new javax.swing.JDialog();
         SetColWin_MainPane = new javax.swing.JPanel();
         SetColWin_ScrollPane = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
         SetColWin_GridPane = new javax.swing.JPanel();
         SetColWin_TopPane = new javax.swing.JPanel();
         SetColWin_Title = new javax.swing.JLabel();
@@ -384,8 +385,12 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         SetColWin_ScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
         SetColWin_GridPane.setLayout(new java.awt.GridLayout(0, 1));
-        SetColWin_ScrollPane.setViewportView(SetColWin_GridPane);
+        jPanel1.add(SetColWin_GridPane, java.awt.BorderLayout.NORTH);
+
+        SetColWin_ScrollPane.setViewportView(jPanel1);
 
         SetColWin_MainPane.add(SetColWin_ScrollPane, java.awt.BorderLayout.CENTER);
 
@@ -900,7 +905,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         BestiaryPage_CollectionsTopPane.setLayout(new java.awt.BorderLayout());
 
-        BestiaryPage_CollectionsGridPane.setLayout(new java.awt.GridLayout(10, 0));
+        BestiaryPage_CollectionsGridPane.setLayout(new java.awt.GridLayout(0, 1));
 
         BestiaryPage_DummyCheck.setText("Starred");
         BestiaryPage_DummyCheck.addActionListener(new java.awt.event.ActionListener() {
@@ -913,7 +918,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
         BestiaryPage_DummyCheck2.setText("Cats");
         BestiaryPage_CollectionsGridPane.add(BestiaryPage_DummyCheck2);
 
-        BestiaryPage_CollectionsTopPane.add(BestiaryPage_CollectionsGridPane, java.awt.BorderLayout.CENTER);
+        BestiaryPage_CollectionsTopPane.add(BestiaryPage_CollectionsGridPane, java.awt.BorderLayout.NORTH);
         BestiaryPage_CollectionsTopPane.add(BestiaryPage_filler3, java.awt.BorderLayout.WEST);
 
         BestiaryPage_CollectionsScrollPane.setViewportView(BestiaryPage_CollectionsTopPane);
@@ -1720,9 +1725,16 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private void MonsterFocus_DeleteMonsterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterFocus_DeleteMonsterButtonActionPerformed
         // TODO add your handling code here:
         int n = javax.swing.JOptionPane.showConfirmDialog(this,
-            "Are you sure you want to delete this monster?",
+            "Are you sure you want to delete " + this.openMonster.getName() + "?",
             "Confirm Delete",
             javax.swing.JOptionPane.YES_NO_OPTION);
+        if(n == javax.swing.JOptionPane.YES_OPTION){
+            this.BestiaryMonsters.removeMonster(this.openMonster);
+            this.updateBestiaryMonsters();
+            this.validate();
+            java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
+            cl.show(this.ModeScreens, "BestiaryPage");
+        }   
     }//GEN-LAST:event_MonsterFocus_DeleteMonsterButtonActionPerformed
 
     private void BestiaryPage_FilterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_FilterButtonActionPerformed
@@ -2070,6 +2082,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.Box.Filler UploadConWin_filler2;
     private javax.swing.Box.Filler UploadConWin_filler3;
     private javax.swing.JDialog UploadConfirmationWindow;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.ButtonGroup mSurveyDefense;
     private javax.swing.ButtonGroup mSurveyGroupHuntSize;
     private javax.swing.ButtonGroup mSurveySize;

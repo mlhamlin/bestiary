@@ -76,9 +76,17 @@ public class CardWithButtons extends javax.swing.JPanel implements java.beans.Cu
     }// </editor-fold>//GEN-END:initComponents
 
     private void DeleteMonsterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteMonsterButtonActionPerformed
-        mainWin.BestiaryMonsters.removeMonster(mon);
-        mainWin.updateBestiaryMonsters();
-        mainWin.validate();
+        
+        int n = javax.swing.JOptionPane.showConfirmDialog(this,
+            "Are you sure you want to delete " + mon.getName() + "?",
+            "Confirm Delete",
+            javax.swing.JOptionPane.YES_NO_OPTION);
+        if(n == javax.swing.JOptionPane.YES_OPTION){
+            mainWin.BestiaryMonsters.removeMonster(mon);
+            mainWin.updateBestiaryMonsters();
+            mainWin.validate();
+        }
+ 
     }//GEN-LAST:event_DeleteMonsterButtonActionPerformed
 
     private void OpenMonsterDetailsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpenMonsterDetailsButtonActionPerformed
