@@ -7,6 +7,9 @@
  *
  * @author marthahamlin
  */
+import java.util.ArrayList;
+
+
 public class BestiaryGUI extends javax.swing.JFrame {
 
     /**
@@ -14,23 +17,10 @@ public class BestiaryGUI extends javax.swing.JFrame {
      */
     public BestiaryGUI() {
         
-        MonsterEdit_ModelMoveList = new javax.swing.DefaultListModel();
         MonsterFocus_ModelCollectionList = new javax.swing.DefaultListModel();
         MonsterFocus_ModelCollectionList.addElement("Starred");
         allCollections = new java.util.TreeSet<String>();
         allCollections.add("Starred");
-        
-        skelAdded = false;
-        skelColList = new javax.swing.DefaultListModel();
-        skelNote = "";
-    
-        beastAdded = false;
-        beastColList = new javax.swing.DefaultListModel();
-        beastNote = "";
-    
-        crocAdded = false;
-        crocColList = new javax.swing.DefaultListModel();
-        crocNote = "";
         
         openMonster = new Monster();
         BestiaryMonsters = new MonsterList();
@@ -39,6 +29,35 @@ public class BestiaryGUI extends javax.swing.JFrame {
         initComponents();
         
         updateCollections();
+    }
+    
+    public void setMainMonster(Monster m){
+        m.loadToCard(MonsterFocus_MainMonster);
+        this.MonsterFocus_GMNotesText.setText(m.getGMNote());
+        
+        this.MonsterFocus_ModelCollectionList.clear();
+        ArrayList<String> inCol = m.getInCollections();
+        for(String s : inCol){
+            MonsterFocus_ModelCollectionList.addElement(s);
+        }
+        
+        java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
+        cl.show(this.ModeScreens, "MonsterFocus");
+        
+        this.openMonster = m;
+        
+        updateBestiaryMonsters();
+    }
+    
+    public void updateBestiaryMonsters(){
+        this.BestiaryPage_CardPane.removeAll();
+        
+        for(Monster m : this.BestiaryMonsters){
+            CardWithButtons monCard = new CardWithButtons(this, m);
+            this.BestiaryPage_CardPane.add(monCard);
+        }
+        
+        BestiaryPage_CardPane.validate();
     }
 
     /**
@@ -53,205 +72,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
         ModeToggle = new javax.swing.ButtonGroup();
         BestiaryPage_OrgTags = new javax.swing.ButtonGroup();
         BestiaryPage_SizeTags = new javax.swing.ButtonGroup();
-        MonsterEdit = new javax.swing.JDialog();
-        MonsterEdit_MainPane = new javax.swing.JPanel();
-        MonsterEdit_TopPane = new javax.swing.JPanel();
-        MonsterEdit_Row1 = new javax.swing.JPanel();
-        MonsterEdit_NamePane = new javax.swing.JPanel();
-        MonsterEdit_NameLabel = new javax.swing.JLabel();
-        MonsterEdit_NameField = new javax.swing.JTextField();
-        MonsterEdit_MonsterTagsButton = new javax.swing.JButton();
-        MonsterEdit_Row2 = new javax.swing.JPanel();
-        MonsterEdit_HPValue = new javax.swing.JSpinner();
-        MonsterEdit_HPLabel = new javax.swing.JLabel();
-        MonsterEdit_ArmorValue = new javax.swing.JSpinner();
-        MonsterEdit_ArmorLabel = new javax.swing.JLabel();
-        MonsterEdit_Row3 = new javax.swing.JPanel();
-        MonsterEdit_AttackNameLabel = new javax.swing.JLabel();
-        MonsterEdit_AttackNameField = new javax.swing.JTextField();
-        MonsterEdit_Rolls = new javax.swing.JComboBox();
-        MonsterEdit_Dice = new javax.swing.JComboBox();
-        MonsterEdit_AttackMod = new javax.swing.JSpinner();
-        MonsterEdit_AttackTags = new javax.swing.JButton();
-        MonsterEdit_Row4 = new javax.swing.JPanel();
-        MonsterEdit_SpecialQualitiesLabel = new javax.swing.JLabel();
-        MonsterEdit_SpecialQualitiesField = new javax.swing.JTextField();
-        MonsterEdit_MiddlePane = new javax.swing.JPanel();
-        MonsterEdit_DescriptionLabel = new javax.swing.JLabel();
-        MonsterEdit_DescriptionScrollPane = new javax.swing.JScrollPane();
-        MonsterEdit_DescriptionField = new javax.swing.JTextArea();
-        MonsterEdit_InstinctPane = new javax.swing.JPanel();
-        MonsterEdit_InstinctLabel = new javax.swing.JLabel();
-        MonsterEdit_InstinctField = new javax.swing.JTextField();
-        MonsterEdit_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 32767));
-        MonsterEdit_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 32767));
-        MonsterEdit_BottomPane = new javax.swing.JPanel();
-        MonsterEdit_MovesControlsPane = new javax.swing.JPanel();
-        MonsterEdit_NewMove = new javax.swing.JTextField();
-        MonsterEdit_RemoveMoveButton = new javax.swing.JButton();
-        MonsterEdit_AddMoveButton = new javax.swing.JButton();
-        Monster_EditMovesLabel = new javax.swing.JLabel();
-        MonsterEdit_MovesScroll = new javax.swing.JScrollPane();
-        MonsterEdit_MovesList = new javax.swing.JList();
-        MonsterEdit_EndPane = new javax.swing.JPanel();
-        MonsterEdit_SaveButton = new javax.swing.JButton();
-        MonsterEdit_CancelButton = new javax.swing.JButton();
-        MonsterEdit_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 32767));
-        MonsterEdit_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 0), new java.awt.Dimension(5, 32767));
-        MonsterEdit_filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        MonsterEdit_filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        MonsterEdit_filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
-        MonsterEdit_filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
-        MonsterTagsWindow = new javax.swing.JDialog();
-        MonTagWin_MainPane = new javax.swing.JPanel();
-        MonTagWin_GridPane = new javax.swing.JPanel();
-        MonTagWin_MonsterTagsLabel = new javax.swing.JLabel();
-        MonTagWin_OrgTagsLabel = new javax.swing.JLabel();
-        MonTagWin_Magical = new javax.swing.JCheckBox();
-        MonTagWin_Horde = new javax.swing.JRadioButton();
-        MonTagWin_Devious = new javax.swing.JCheckBox();
-        MonTagWin_Group = new javax.swing.JRadioButton();
-        MonTagWin_Amorphous = new javax.swing.JCheckBox();
-        MonTagWin_Solitary = new javax.swing.JRadioButton();
-        MonTagWin_Organized = new javax.swing.JCheckBox();
-        MonTagWin_filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
-        MonTagWin_Intelligent = new javax.swing.JCheckBox();
-        MonTagWin_SizeTagsLabel = new javax.swing.JLabel();
-        MonTagWin_Hoarder = new javax.swing.JCheckBox();
-        MonTagWin_Tiny = new javax.swing.JRadioButton();
-        MonTagWin_Stealthy = new javax.swing.JCheckBox();
-        MonTagWin_Small = new javax.swing.JRadioButton();
-        MonTagWin_Terrifying = new javax.swing.JCheckBox();
-        MonTagWin_Normal = new javax.swing.JRadioButton();
-        MonTagWin_Cautious = new javax.swing.JCheckBox();
-        MonTagWin_Large = new javax.swing.JRadioButton();
-        MonTagWin_Construct = new javax.swing.JCheckBox();
-        MonTagWin_Huge = new javax.swing.JRadioButton();
-        MonTagWin_Planar = new javax.swing.JCheckBox();
-        MonTagWin_ButtonPane = new javax.swing.JPanel();
-        MonTagWin_CancelButton = new javax.swing.JButton();
-        MonTagWin_SaveButton = new javax.swing.JButton();
-        MonTagWin_filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
-        MonTagWin_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        MonTagWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        MonTagWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
-        MonTagWin_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         MonTagsWin_OrgTagsGroup = new javax.swing.ButtonGroup();
         MonTagsWin_SizeTagsGroup = new javax.swing.ButtonGroup();
-        AttackTagsWindow = new javax.swing.JDialog();
-        AttTagWin_MainPane = new javax.swing.JPanel();
-        AttTagWin_MainLabel = new javax.swing.JLabel();
-        AttTagWin_GridPane = new javax.swing.JPanel();
-        AttTagWin_AmmoBox = new javax.swing.JPanel();
-        AttTagWin_AmmoCheck = new javax.swing.JCheckBox();
-        AttTagWin_AmmoSpin = new javax.swing.JSpinner();
-        AttTagWin_AmmoLabel = new javax.swing.JLabel();
-        AttTagWin_StunCheck = new javax.swing.JCheckBox();
-        AttTagWin_ForcefulCheck = new javax.swing.JCheckBox();
-        AttTagWin_ThrownCheck = new javax.swing.JCheckBox();
-        AttTagWin_IgnoresArmorCheck = new javax.swing.JCheckBox();
-        AttTagWin_HandCheck = new javax.swing.JCheckBox();
-        AttTagWin_MessyCheck = new javax.swing.JCheckBox();
-        AttTagWin_CloseCheck = new javax.swing.JCheckBox();
-        AttTagWin_PiercingBox = new javax.swing.JPanel();
-        AttTagWin_PiercingCheck = new javax.swing.JCheckBox();
-        AttTagWin_PiercingSpin = new javax.swing.JSpinner();
-        AttTagWin_PiercingLabel = new javax.swing.JLabel();
-        AttTagWin_ReachChange = new javax.swing.JCheckBox();
-        AttTagWin_PreciseCheck = new javax.swing.JCheckBox();
-        AttTagWin_NearCheck = new javax.swing.JCheckBox();
-        AttTagWin_ReloadCheck = new javax.swing.JCheckBox();
-        AttTagWin_FarCheck = new javax.swing.JCheckBox();
-        AttTagWin_ButtonBox = new javax.swing.JPanel();
-        AttTagWin_CancelButton = new javax.swing.JButton();
-        AttTagWin_AttackButton = new javax.swing.JButton();
-        AttTagWin_filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
-        AttTagWin_filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
-        AttTagWin_filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        AttTagWin_filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        MonsterSurvey = new javax.swing.JDialog();
-        MonsterSurvey_Controls = new javax.swing.JPanel();
-        MonsterSurvey_BackNextPane = new javax.swing.JPanel();
-        MonsterSurvey_Back = new javax.swing.JButton();
-        MonsterSurvey_Next = new javax.swing.JButton();
-        MonsterSurvey_jSeparator1 = new javax.swing.JSeparator();
-        MonsterSurvey_CancelPane = new javax.swing.JPanel();
-        MonsterSurvey_Cancel = new javax.swing.JButton();
-        MonsterSurvey_MainPane = new javax.swing.JPanel();
-        mSurveyStep1 = new javax.swing.JPanel();
-        mSurveyStep1Panel = new javax.swing.JPanel();
-        mSurveyNameLabel = new javax.swing.JLabel();
-        mSurveyName = new javax.swing.JTextField();
-        mSurveyStep2 = new javax.swing.JPanel();
-        mSurveyStep2Panel = new javax.swing.JPanel();
-        mSurveyMoveLabel = new javax.swing.JLabel();
-        mSurveyMove = new javax.swing.JTextField();
-        mSurveyStep3 = new javax.swing.JPanel();
-        mSurveyStep3Panel = new javax.swing.JPanel();
-        mSurveyInstinctLabel = new javax.swing.JLabel();
-        mSurveyInstinct = new javax.swing.JTextField();
-        mSurveyStep4 = new javax.swing.JPanel();
-        mSurveyStep4Panel = new javax.swing.JPanel();
-        mSurveyHuntSizeLabel = new javax.swing.JLabel();
-        mSurveyHorde = new javax.swing.JRadioButton();
-        mSurveyGroup = new javax.swing.JRadioButton();
-        mSurveySolitary = new javax.swing.JRadioButton();
-        mSurveyStep5 = new javax.swing.JPanel();
-        mSurveyStep5Panel = new javax.swing.JPanel();
-        mSurveySizeLabel = new javax.swing.JLabel();
-        mSurveyTiny = new javax.swing.JRadioButton();
-        mSurveySmall = new javax.swing.JRadioButton();
-        mSurveyNormal = new javax.swing.JRadioButton();
-        mSurveyLarge = new javax.swing.JRadioButton();
-        mSurveyHuge = new javax.swing.JRadioButton();
-        mSurveyStep6 = new javax.swing.JPanel();
-        mSurveyStep6Panel = new javax.swing.JPanel();
-        mSurveyDefenseLabel = new javax.swing.JLabel();
-        mSurveyDefenseNone = new javax.swing.JRadioButton();
-        mSurveyDefenseBuffaloBill = new javax.swing.JRadioButton();
-        mSurveyDefenseTisButAScratch = new javax.swing.JRadioButton();
-        mSurveyDefenceCubone = new javax.swing.JRadioButton();
-        mSurveyDefenceForceField = new javax.swing.JRadioButton();
-        mSurveyStep7 = new javax.swing.JPanel();
-        mSurveyStep7Panel = new javax.swing.JPanel();
-        mSurveyInfamousLabel = new javax.swing.JLabel();
-        mSurveyInfamousStrength = new javax.swing.JCheckBox();
-        mSurveyInfamousOffense = new javax.swing.JCheckBox();
-        mSurveyInfamousDefense = new javax.swing.JCheckBox();
-        mSurveyInfamousDeft = new javax.swing.JCheckBox();
-        mSurveyInfamousEndurance = new javax.swing.JCheckBox();
-        mSurveyInfamousJoker = new javax.swing.JCheckBox();
-        mSurveyInfamousAdapt = new javax.swing.JCheckBox();
-        mSurveyInfamousGodsLoveMe = new javax.swing.JCheckBox();
-        mSurveyInfamousMagicMissile = new javax.swing.JCheckBox();
-        mSurveyStep8 = new javax.swing.JPanel();
-        mSurveyStep8Panel = new javax.swing.JPanel();
-        mSurveyAttackLabel = new javax.swing.JLabel();
-        mSurveyAttackName = new javax.swing.JTextField();
-        mSurveyAttackVicious = new javax.swing.JCheckBox();
-        mSurveyAttackBay = new javax.swing.JCheckBox();
-        mSurveyAttackWeak = new javax.swing.JCheckBox();
-        mSurveyAttackMetal = new javax.swing.JCheckBox();
-        mSurveyAttackWhereIsYourGodNow = new javax.swing.JCheckBox();
-        mSurveyAttackRanged = new javax.swing.JCheckBox();
-        mSurveyStep9 = new javax.swing.JPanel();
-        mSurveyStep9Panel = new javax.swing.JPanel();
-        mSurveyDescLabel = new javax.swing.JLabel();
-        mSurveyDescTricksyDamage = new javax.swing.JCheckBox();
-        mSurveyDescOrganised = new javax.swing.JCheckBox();
-        mSurveyDescSmartass = new javax.swing.JCheckBox();
-        mSurveyDescSheild = new javax.swing.JCheckBox();
-        mSurveyDescTrinkets = new javax.swing.JCheckBox();
-        mSurveyDescBeyond = new javax.swing.JCheckBox();
-        mSurveyDescProppedUp = new javax.swing.JCheckBox();
-        mSurveyDescMade = new javax.swing.JCheckBox();
-        mSurveyDescLooksWickedAwful = new javax.swing.JCheckBox();
-        mSurveyDescProbablySlime = new javax.swing.JCheckBox();
-        mSurveyDescGetOffMyLawn = new javax.swing.JCheckBox();
-        mSurveyDeskTreeHugger = new javax.swing.JCheckBox();
-        mSurveyFill1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
-        mSurveyFill2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
-        mSurveyFill3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         AddToCollectionsWindow = new javax.swing.JDialog();
         AddToColWin_ButtonPanel = new javax.swing.JPanel();
         AddToColWin_YesButton = new javax.swing.JButton();
@@ -386,32 +208,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
         BestiaryPage = new javax.swing.JPanel();
         BestiaryPage_LeftSide = new javax.swing.JPanel();
         BestiaryPage_MonsterScrollPane = new javax.swing.JScrollPane();
+        BestiaryPage_FormattingPane = new javax.swing.JPanel();
         BestiaryPage_CardPane = new javax.swing.JPanel();
-        BestiaryPage_MonsterPane1 = new javax.swing.JPanel();
-        BestiaryPage_MonsterCard1 = new LargeMonsterCard();
-        BestiaryPage_MonsterButtonBox1 = new javax.swing.JPanel();
-        BestiaryPage_MonsterViewButton1 = new javax.swing.JButton();
-        BestiaryPage_MonsterDeleteButton1 = new javax.swing.JButton();
-        BestiaryPage_MonsterPane2 = new javax.swing.JPanel();
-        BestiaryPage_MonsterCard2 = new LargeMonsterCard();
-        BestiaryPage_MonsterButtonBox2 = new javax.swing.JPanel();
-        BestiaryPage_MonsterViewButton2 = new javax.swing.JButton();
-        BestiaryPage_MonsterDeleteButton2 = new javax.swing.JButton();
-        BestiaryPage_MonsterPane3 = new javax.swing.JPanel();
-        BestiaryPage_MonsterCard3 = new LargeMonsterCard();
-        BestiaryPage_MonsterButtonBox3 = new javax.swing.JPanel();
-        BestiaryPage_MonsterViewButton3 = new javax.swing.JButton();
-        BestiaryPage_MonsterDeleteButton3 = new javax.swing.JButton();
-        BestiaryPage_MonsterPane4 = new javax.swing.JPanel();
-        BestiaryPage_MonsterCard4 = new LargeMonsterCard();
-        BestiaryPage_MonsterButtonBox4 = new javax.swing.JPanel();
-        BestiaryPage_MonsterViewButton4 = new javax.swing.JButton();
-        BestiaryPage_MonsterDeleteButton4 = new javax.swing.JButton();
-        BestiaryPage_MonsterPane5 = new javax.swing.JPanel();
-        BestiaryPage_MonsterCard5 = new LargeMonsterCard();
-        BestiaryPage_MonsterButtonBox5 = new javax.swing.JPanel();
-        BestiaryPage_MonsterViewButton5 = new javax.swing.JButton();
-        BestiaryPage_MonsterDeleteButton5 = new javax.swing.JButton();
         BestiaryPage_RightSide = new javax.swing.JPanel();
         BestiaryPage_FilterButtonBox = new javax.swing.JPanel();
         BestiaryPage_FilterButton = new javax.swing.JButton();
@@ -546,746 +344,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
         CodexPage_DownloadButton10 = new javax.swing.JButton();
         CodexPage_RecentMonstersTitle = new javax.swing.JLabel();
         CodexPage_Title = new javax.swing.JLabel();
-
-        MonsterEdit.setAlwaysOnTop(true);
-        MonsterEdit.setModal(true);
-        MonsterEdit.setPreferredSize(new java.awt.Dimension(700, 500));
-        MonsterEdit.setResizable(false);
-        MonsterEdit.setSize(new java.awt.Dimension(700, 500));
-
-        MonsterEdit_MainPane.setLayout(new java.awt.BorderLayout());
-
-        MonsterEdit_TopPane.setLayout(new java.awt.GridLayout(4, 0));
-
-        MonsterEdit_Row1.setLayout(new java.awt.BorderLayout());
-
-        MonsterEdit_NameLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        MonsterEdit_NameLabel.setText("Name:");
-        MonsterEdit_NamePane.add(MonsterEdit_NameLabel);
-
-        MonsterEdit_NameField.setPreferredSize(new java.awt.Dimension(300, 28));
-        MonsterEdit_NameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterEdit_NameFieldActionPerformed(evt);
-            }
-        });
-        MonsterEdit_NamePane.add(MonsterEdit_NameField);
-
-        MonsterEdit_Row1.add(MonsterEdit_NamePane, java.awt.BorderLayout.WEST);
-
-        MonsterEdit_MonsterTagsButton.setText("Monster Tags");
-        MonsterEdit_MonsterTagsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterEdit_MonsterTagsButtonActionPerformed(evt);
-            }
-        });
-        MonsterEdit_Row1.add(MonsterEdit_MonsterTagsButton, java.awt.BorderLayout.EAST);
-
-        MonsterEdit_TopPane.add(MonsterEdit_Row1);
-
-        MonsterEdit_Row2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-
-        MonsterEdit_HPValue.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
-        MonsterEdit_Row2.add(MonsterEdit_HPValue);
-
-        MonsterEdit_HPLabel.setText("HP      ");
-        MonsterEdit_Row2.add(MonsterEdit_HPLabel);
-
-        MonsterEdit_ArmorValue.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
-        MonsterEdit_Row2.add(MonsterEdit_ArmorValue);
-
-        MonsterEdit_ArmorLabel.setText("Armor");
-        MonsterEdit_Row2.add(MonsterEdit_ArmorLabel);
-
-        MonsterEdit_TopPane.add(MonsterEdit_Row2);
-
-        MonsterEdit_Row3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-        MonsterEdit_AttackNameLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        MonsterEdit_AttackNameLabel.setText("Attack Name:");
-        MonsterEdit_Row3.add(MonsterEdit_AttackNameLabel);
-
-        MonsterEdit_AttackNameField.setPreferredSize(new java.awt.Dimension(175, 28));
-        MonsterEdit_AttackNameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterEdit_AttackNameFieldActionPerformed(evt);
-            }
-        });
-        MonsterEdit_Row3.add(MonsterEdit_AttackNameField);
-
-        MonsterEdit_Rolls.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Normal", "Best of 2", "Worst of 2" }));
-        MonsterEdit_Row3.add(MonsterEdit_Rolls);
-
-        MonsterEdit_Dice.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "d4", "d6", "d8", "d10", "d12", "d20" }));
-        MonsterEdit_Row3.add(MonsterEdit_Dice);
-
-        MonsterEdit_AttackMod.setModel(new javax.swing.SpinnerNumberModel(0, -20, 20, 1));
-        MonsterEdit_AttackMod.setVerifyInputWhenFocusTarget(false);
-        MonsterEdit_Row3.add(MonsterEdit_AttackMod);
-
-        MonsterEdit_AttackTags.setText("Attack Tags");
-        MonsterEdit_AttackTags.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterEdit_AttackTagsActionPerformed(evt);
-            }
-        });
-        MonsterEdit_Row3.add(MonsterEdit_AttackTags);
-
-        MonsterEdit_TopPane.add(MonsterEdit_Row3);
-
-        MonsterEdit_Row4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-        MonsterEdit_SpecialQualitiesLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        MonsterEdit_SpecialQualitiesLabel.setText("Special Qualities:");
-        MonsterEdit_Row4.add(MonsterEdit_SpecialQualitiesLabel);
-
-        MonsterEdit_SpecialQualitiesField.setPreferredSize(new java.awt.Dimension(400, 28));
-        MonsterEdit_Row4.add(MonsterEdit_SpecialQualitiesField);
-
-        MonsterEdit_TopPane.add(MonsterEdit_Row4);
-
-        MonsterEdit_MainPane.add(MonsterEdit_TopPane, java.awt.BorderLayout.NORTH);
-
-        MonsterEdit_MiddlePane.setLayout(new java.awt.BorderLayout());
-
-        MonsterEdit_DescriptionLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        MonsterEdit_DescriptionLabel.setText(" Description:");
-        MonsterEdit_MiddlePane.add(MonsterEdit_DescriptionLabel, java.awt.BorderLayout.PAGE_START);
-
-        MonsterEdit_DescriptionField.setColumns(20);
-        MonsterEdit_DescriptionField.setLineWrap(true);
-        MonsterEdit_DescriptionField.setRows(5);
-        MonsterEdit_DescriptionScrollPane.setViewportView(MonsterEdit_DescriptionField);
-
-        MonsterEdit_MiddlePane.add(MonsterEdit_DescriptionScrollPane, java.awt.BorderLayout.CENTER);
-
-        MonsterEdit_InstinctPane.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-        MonsterEdit_InstinctLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        MonsterEdit_InstinctLabel.setText("Instinct:");
-        MonsterEdit_InstinctPane.add(MonsterEdit_InstinctLabel);
-
-        MonsterEdit_InstinctField.setPreferredSize(new java.awt.Dimension(300, 28));
-        MonsterEdit_InstinctField.setSize(new java.awt.Dimension(200, 28));
-        MonsterEdit_InstinctPane.add(MonsterEdit_InstinctField);
-
-        MonsterEdit_MiddlePane.add(MonsterEdit_InstinctPane, java.awt.BorderLayout.SOUTH);
-        MonsterEdit_MiddlePane.add(MonsterEdit_filler1, java.awt.BorderLayout.WEST);
-        MonsterEdit_MiddlePane.add(MonsterEdit_filler2, java.awt.BorderLayout.EAST);
-
-        MonsterEdit_MainPane.add(MonsterEdit_MiddlePane, java.awt.BorderLayout.CENTER);
-
-        MonsterEdit_BottomPane.setLayout(new java.awt.BorderLayout());
-
-        MonsterEdit_MovesControlsPane.setLayout(new java.awt.BorderLayout());
-
-        MonsterEdit_NewMove.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterEdit_NewMoveActionPerformed(evt);
-            }
-        });
-        MonsterEdit_MovesControlsPane.add(MonsterEdit_NewMove, java.awt.BorderLayout.CENTER);
-
-        MonsterEdit_RemoveMoveButton.setText("Remove");
-        MonsterEdit_RemoveMoveButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterEdit_RemoveMoveButtonActionPerformed(evt);
-            }
-        });
-        MonsterEdit_MovesControlsPane.add(MonsterEdit_RemoveMoveButton, java.awt.BorderLayout.LINE_START);
-
-        MonsterEdit_AddMoveButton.setText("Add Move");
-        MonsterEdit_AddMoveButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterEdit_AddMoveButtonActionPerformed(evt);
-            }
-        });
-        MonsterEdit_MovesControlsPane.add(MonsterEdit_AddMoveButton, java.awt.BorderLayout.LINE_END);
-
-        Monster_EditMovesLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        Monster_EditMovesLabel.setText(" Moves");
-        MonsterEdit_MovesControlsPane.add(Monster_EditMovesLabel, java.awt.BorderLayout.PAGE_START);
-
-        MonsterEdit_BottomPane.add(MonsterEdit_MovesControlsPane, java.awt.BorderLayout.NORTH);
-
-        MonsterEdit_MovesScroll.setPreferredSize(new java.awt.Dimension(100, 75));
-
-        MonsterEdit_MovesList.setModel(MonsterEdit_ModelMoveList);
-        MonsterEdit_MovesScroll.setViewportView(MonsterEdit_MovesList);
-
-        MonsterEdit_BottomPane.add(MonsterEdit_MovesScroll, java.awt.BorderLayout.CENTER);
-
-        MonsterEdit_EndPane.setLayout(new java.awt.BorderLayout());
-
-        MonsterEdit_SaveButton.setText("Save");
-        MonsterEdit_SaveButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterEdit_SaveButtonActionPerformed(evt);
-            }
-        });
-        MonsterEdit_EndPane.add(MonsterEdit_SaveButton, java.awt.BorderLayout.EAST);
-
-        MonsterEdit_CancelButton.setText("Cancel");
-        MonsterEdit_CancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterEdit_CancelButtonActionPerformed(evt);
-            }
-        });
-        MonsterEdit_EndPane.add(MonsterEdit_CancelButton, java.awt.BorderLayout.WEST);
-
-        MonsterEdit_BottomPane.add(MonsterEdit_EndPane, java.awt.BorderLayout.SOUTH);
-        MonsterEdit_BottomPane.add(MonsterEdit_filler3, java.awt.BorderLayout.WEST);
-        MonsterEdit_BottomPane.add(MonsterEdit_filler4, java.awt.BorderLayout.EAST);
-
-        MonsterEdit_MainPane.add(MonsterEdit_BottomPane, java.awt.BorderLayout.SOUTH);
-
-        MonsterEdit.getContentPane().add(MonsterEdit_MainPane, java.awt.BorderLayout.CENTER);
-        MonsterEdit.getContentPane().add(MonsterEdit_filler5, java.awt.BorderLayout.WEST);
-        MonsterEdit.getContentPane().add(MonsterEdit_filler6, java.awt.BorderLayout.EAST);
-        MonsterEdit.getContentPane().add(MonsterEdit_filler7, java.awt.BorderLayout.NORTH);
-        MonsterEdit.getContentPane().add(MonsterEdit_filler8, java.awt.BorderLayout.SOUTH);
-
-        MonsterTagsWindow.setAlwaysOnTop(true);
-        MonsterTagsWindow.setMinimumSize(new java.awt.Dimension(300, 300));
-        MonsterTagsWindow.setModal(true);
-        MonsterTagsWindow.setResizable(false);
-
-        MonTagWin_MainPane.setLayout(new java.awt.BorderLayout());
-
-        MonTagWin_GridPane.setLayout(new java.awt.GridLayout(12, 2));
-
-        MonTagWin_MonsterTagsLabel.setText("Monster Tags:");
-        MonTagWin_GridPane.add(MonTagWin_MonsterTagsLabel);
-
-        MonTagWin_OrgTagsLabel.setText("Organization Tags:");
-        MonTagWin_GridPane.add(MonTagWin_OrgTagsLabel);
-
-        MonTagWin_Magical.setText("Magical");
-        MonTagWin_Magical.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonTagWin_MagicalActionPerformed(evt);
-            }
-        });
-        MonTagWin_GridPane.add(MonTagWin_Magical);
-
-        MonTagsWin_OrgTagsGroup.add(MonTagWin_Horde);
-        MonTagWin_Horde.setText("Horde");
-        MonTagWin_GridPane.add(MonTagWin_Horde);
-
-        MonTagWin_Devious.setText("Devious");
-        MonTagWin_GridPane.add(MonTagWin_Devious);
-
-        MonTagsWin_OrgTagsGroup.add(MonTagWin_Group);
-        MonTagWin_Group.setText("Group");
-        MonTagWin_Group.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonTagWin_GroupActionPerformed(evt);
-            }
-        });
-        MonTagWin_GridPane.add(MonTagWin_Group);
-
-        MonTagWin_Amorphous.setText("Amorphous");
-        MonTagWin_GridPane.add(MonTagWin_Amorphous);
-
-        MonTagsWin_OrgTagsGroup.add(MonTagWin_Solitary);
-        MonTagWin_Solitary.setText("Solitary");
-        MonTagWin_GridPane.add(MonTagWin_Solitary);
-
-        MonTagWin_Organized.setText("Organized");
-        MonTagWin_GridPane.add(MonTagWin_Organized);
-        MonTagWin_GridPane.add(MonTagWin_filler6);
-
-        MonTagWin_Intelligent.setText("Intelligent");
-        MonTagWin_GridPane.add(MonTagWin_Intelligent);
-
-        MonTagWin_SizeTagsLabel.setText("Size Tags:");
-        MonTagWin_GridPane.add(MonTagWin_SizeTagsLabel);
-
-        MonTagWin_Hoarder.setText("Hoarder");
-        MonTagWin_GridPane.add(MonTagWin_Hoarder);
-
-        MonTagsWin_SizeTagsGroup.add(MonTagWin_Tiny);
-        MonTagWin_Tiny.setText("Tiny");
-        MonTagWin_GridPane.add(MonTagWin_Tiny);
-
-        MonTagWin_Stealthy.setText("Stealthy");
-        MonTagWin_GridPane.add(MonTagWin_Stealthy);
-
-        MonTagsWin_SizeTagsGroup.add(MonTagWin_Small);
-        MonTagWin_Small.setText("Small");
-        MonTagWin_GridPane.add(MonTagWin_Small);
-
-        MonTagWin_Terrifying.setText("Terrifying");
-        MonTagWin_GridPane.add(MonTagWin_Terrifying);
-
-        MonTagsWin_SizeTagsGroup.add(MonTagWin_Normal);
-        MonTagWin_Normal.setText("Normal");
-        MonTagWin_GridPane.add(MonTagWin_Normal);
-
-        MonTagWin_Cautious.setText("Cautious");
-        MonTagWin_GridPane.add(MonTagWin_Cautious);
-
-        MonTagsWin_SizeTagsGroup.add(MonTagWin_Large);
-        MonTagWin_Large.setText("Large");
-        MonTagWin_GridPane.add(MonTagWin_Large);
-
-        MonTagWin_Construct.setText("Construct");
-        MonTagWin_GridPane.add(MonTagWin_Construct);
-
-        MonTagsWin_SizeTagsGroup.add(MonTagWin_Huge);
-        MonTagWin_Huge.setText("Huge");
-        MonTagWin_GridPane.add(MonTagWin_Huge);
-
-        MonTagWin_Planar.setText("Planar");
-        MonTagWin_GridPane.add(MonTagWin_Planar);
-
-        MonTagWin_MainPane.add(MonTagWin_GridPane, java.awt.BorderLayout.CENTER);
-
-        MonTagWin_ButtonPane.setLayout(new java.awt.BorderLayout());
-
-        MonTagWin_CancelButton.setText("Cancel");
-        MonTagWin_CancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonTagWin_CancelButtonActionPerformed(evt);
-            }
-        });
-        MonTagWin_ButtonPane.add(MonTagWin_CancelButton, java.awt.BorderLayout.WEST);
-
-        MonTagWin_SaveButton.setText("Save");
-        MonTagWin_SaveButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonTagWin_SaveButtonActionPerformed(evt);
-            }
-        });
-        MonTagWin_ButtonPane.add(MonTagWin_SaveButton, java.awt.BorderLayout.EAST);
-        MonTagWin_ButtonPane.add(MonTagWin_filler5, java.awt.BorderLayout.NORTH);
-
-        MonTagWin_MainPane.add(MonTagWin_ButtonPane, java.awt.BorderLayout.SOUTH);
-
-        MonsterTagsWindow.getContentPane().add(MonTagWin_MainPane, java.awt.BorderLayout.CENTER);
-        MonsterTagsWindow.getContentPane().add(MonTagWin_filler1, java.awt.BorderLayout.WEST);
-        MonsterTagsWindow.getContentPane().add(MonTagWin_filler2, java.awt.BorderLayout.EAST);
-        MonsterTagsWindow.getContentPane().add(MonTagWin_filler3, java.awt.BorderLayout.NORTH);
-        MonsterTagsWindow.getContentPane().add(MonTagWin_filler4, java.awt.BorderLayout.SOUTH);
-
-        AttackTagsWindow.setAlwaysOnTop(true);
-        AttackTagsWindow.setModal(true);
-        AttackTagsWindow.setResizable(false);
-        AttackTagsWindow.setSize(new java.awt.Dimension(300, 300));
-
-        AttTagWin_MainPane.setLayout(new java.awt.BorderLayout());
-
-        AttTagWin_MainLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        AttTagWin_MainLabel.setText(" Attack Tags:");
-        AttTagWin_MainLabel.setPreferredSize(new java.awt.Dimension(88, 25));
-        AttTagWin_MainPane.add(AttTagWin_MainLabel, java.awt.BorderLayout.NORTH);
-
-        AttTagWin_GridPane.setLayout(new java.awt.GridLayout(7, 2));
-
-        AttTagWin_AmmoBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
-        AttTagWin_AmmoBox.add(AttTagWin_AmmoCheck);
-
-        AttTagWin_AmmoSpin.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
-        AttTagWin_AmmoSpin.setPreferredSize(new java.awt.Dimension(55, 28));
-        AttTagWin_AmmoBox.add(AttTagWin_AmmoSpin);
-
-        AttTagWin_AmmoLabel.setText(" Ammo");
-        AttTagWin_AmmoBox.add(AttTagWin_AmmoLabel);
-
-        AttTagWin_GridPane.add(AttTagWin_AmmoBox);
-
-        AttTagWin_StunCheck.setText("Stun");
-        AttTagWin_GridPane.add(AttTagWin_StunCheck);
-
-        AttTagWin_ForcefulCheck.setText("Forceful");
-        AttTagWin_ForcefulCheck.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AttTagWin_ForcefulCheckActionPerformed(evt);
-            }
-        });
-        AttTagWin_GridPane.add(AttTagWin_ForcefulCheck);
-
-        AttTagWin_ThrownCheck.setText("Thrown");
-        AttTagWin_ThrownCheck.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AttTagWin_ThrownCheckActionPerformed(evt);
-            }
-        });
-        AttTagWin_GridPane.add(AttTagWin_ThrownCheck);
-
-        AttTagWin_IgnoresArmorCheck.setText("Ignores Armor");
-        AttTagWin_GridPane.add(AttTagWin_IgnoresArmorCheck);
-
-        AttTagWin_HandCheck.setText("Hand");
-        AttTagWin_GridPane.add(AttTagWin_HandCheck);
-
-        AttTagWin_MessyCheck.setText("Messy");
-        AttTagWin_GridPane.add(AttTagWin_MessyCheck);
-
-        AttTagWin_CloseCheck.setText("Close");
-        AttTagWin_GridPane.add(AttTagWin_CloseCheck);
-
-        AttTagWin_PiercingBox.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 2));
-        AttTagWin_PiercingBox.add(AttTagWin_PiercingCheck);
-
-        AttTagWin_PiercingSpin.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
-        AttTagWin_PiercingBox.add(AttTagWin_PiercingSpin);
-
-        AttTagWin_PiercingLabel.setText(" Piercing");
-        AttTagWin_PiercingBox.add(AttTagWin_PiercingLabel);
-
-        AttTagWin_GridPane.add(AttTagWin_PiercingBox);
-
-        AttTagWin_ReachChange.setText("Reach");
-        AttTagWin_GridPane.add(AttTagWin_ReachChange);
-
-        AttTagWin_PreciseCheck.setText("Precise");
-        AttTagWin_PreciseCheck.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AttTagWin_PreciseCheckActionPerformed(evt);
-            }
-        });
-        AttTagWin_GridPane.add(AttTagWin_PreciseCheck);
-
-        AttTagWin_NearCheck.setText("Near");
-        AttTagWin_GridPane.add(AttTagWin_NearCheck);
-
-        AttTagWin_ReloadCheck.setText("Reload");
-        AttTagWin_GridPane.add(AttTagWin_ReloadCheck);
-
-        AttTagWin_FarCheck.setText("Far");
-        AttTagWin_GridPane.add(AttTagWin_FarCheck);
-
-        AttTagWin_MainPane.add(AttTagWin_GridPane, java.awt.BorderLayout.CENTER);
-
-        AttTagWin_ButtonBox.setLayout(new java.awt.BorderLayout());
-
-        AttTagWin_CancelButton.setText("Cancel");
-        AttTagWin_CancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AttTagWin_CancelButtonActionPerformed(evt);
-            }
-        });
-        AttTagWin_ButtonBox.add(AttTagWin_CancelButton, java.awt.BorderLayout.WEST);
-
-        AttTagWin_AttackButton.setText("Save");
-        AttTagWin_AttackButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AttTagWin_AttackButtonActionPerformed(evt);
-            }
-        });
-        AttTagWin_ButtonBox.add(AttTagWin_AttackButton, java.awt.BorderLayout.EAST);
-
-        AttTagWin_MainPane.add(AttTagWin_ButtonBox, java.awt.BorderLayout.PAGE_END);
-
-        AttackTagsWindow.getContentPane().add(AttTagWin_MainPane, java.awt.BorderLayout.CENTER);
-        AttackTagsWindow.getContentPane().add(AttTagWin_filler1, java.awt.BorderLayout.NORTH);
-        AttackTagsWindow.getContentPane().add(AttTagWin_filler2, java.awt.BorderLayout.SOUTH);
-        AttackTagsWindow.getContentPane().add(AttTagWin_filler3, java.awt.BorderLayout.WEST);
-        AttackTagsWindow.getContentPane().add(AttTagWin_filler4, java.awt.BorderLayout.EAST);
-
-        MonsterSurvey.setAlwaysOnTop(true);
-        MonsterSurvey.setModal(true);
-        MonsterSurvey.setResizable(false);
-        MonsterSurvey.setSize(new java.awt.Dimension(550, 400));
-
-        MonsterSurvey_Controls.setLayout(new java.awt.BorderLayout());
-
-        MonsterSurvey_Back.setText("Back");
-        MonsterSurvey_Back.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterSurvey_BackActionPerformed(evt);
-            }
-        });
-        MonsterSurvey_BackNextPane.add(MonsterSurvey_Back);
-
-        MonsterSurvey_Next.setText("Next");
-        MonsterSurvey_Next.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterSurvey_NextActionPerformed(evt);
-            }
-        });
-        MonsterSurvey_BackNextPane.add(MonsterSurvey_Next);
-
-        MonsterSurvey_Controls.add(MonsterSurvey_BackNextPane, java.awt.BorderLayout.EAST);
-        MonsterSurvey_Controls.add(MonsterSurvey_jSeparator1, java.awt.BorderLayout.NORTH);
-
-        MonsterSurvey_Cancel.setText("Cancel");
-        MonsterSurvey_Cancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MonsterSurvey_CancelActionPerformed(evt);
-            }
-        });
-        MonsterSurvey_CancelPane.add(MonsterSurvey_Cancel);
-
-        MonsterSurvey_Controls.add(MonsterSurvey_CancelPane, java.awt.BorderLayout.WEST);
-
-        MonsterSurvey.getContentPane().add(MonsterSurvey_Controls, java.awt.BorderLayout.SOUTH);
-
-        MonsterSurvey_MainPane.setLayout(new java.awt.CardLayout());
-
-        mSurveyStep1.setLayout(new java.awt.BorderLayout());
-
-        mSurveyStep1Panel.setLayout(new java.awt.GridLayout(2, 0));
-
-        mSurveyNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        mSurveyNameLabel.setText("What is your monster's name?");
-        mSurveyStep1Panel.add(mSurveyNameLabel);
-
-        mSurveyName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mSurveyNameActionPerformed(evt);
-            }
-        });
-        mSurveyStep1Panel.add(mSurveyName);
-
-        mSurveyStep1.add(mSurveyStep1Panel, java.awt.BorderLayout.PAGE_START);
-
-        MonsterSurvey_MainPane.add(mSurveyStep1, "card1");
-
-        mSurveyStep2.setLayout(new java.awt.BorderLayout());
-
-        mSurveyStep2Panel.setLayout(new java.awt.GridLayout(2, 0));
-
-        mSurveyMoveLabel.setText("What is it known to do?");
-        mSurveyStep2Panel.add(mSurveyMoveLabel);
-        mSurveyStep2Panel.add(mSurveyMove);
-
-        mSurveyStep2.add(mSurveyStep2Panel, java.awt.BorderLayout.NORTH);
-
-        MonsterSurvey_MainPane.add(mSurveyStep2, "card2");
-
-        mSurveyStep3.setLayout(new java.awt.BorderLayout());
-
-        mSurveyStep3Panel.setLayout(new java.awt.GridLayout(2, 0));
-
-        mSurveyInstinctLabel.setText("What does it want that causes problems for others?");
-        mSurveyStep3Panel.add(mSurveyInstinctLabel);
-        mSurveyStep3Panel.add(mSurveyInstinct);
-
-        mSurveyStep3.add(mSurveyStep3Panel, java.awt.BorderLayout.PAGE_START);
-
-        MonsterSurvey_MainPane.add(mSurveyStep3, "card3");
-
-        mSurveyStep4.setLayout(new java.awt.BorderLayout());
-
-        mSurveyStep4Panel.setLayout(new java.awt.GridLayout(4, 0));
-
-        mSurveyHuntSizeLabel.setText("How does it usually hunt or fight?");
-        mSurveyStep4Panel.add(mSurveyHuntSizeLabel);
-
-        mSurveyGroupHuntSize.add(mSurveyHorde);
-        mSurveyHorde.setText("In large groups");
-        mSurveyHorde.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mSurveyHordeActionPerformed(evt);
-            }
-        });
-        mSurveyStep4Panel.add(mSurveyHorde);
-
-        mSurveyGroupHuntSize.add(mSurveyGroup);
-        mSurveyGroup.setText("In small groups");
-        mSurveyStep4Panel.add(mSurveyGroup);
-
-        mSurveyGroupHuntSize.add(mSurveySolitary);
-        mSurveySolitary.setText("All by its lonesome");
-        mSurveyStep4Panel.add(mSurveySolitary);
-
-        mSurveyStep4.add(mSurveyStep4Panel, java.awt.BorderLayout.PAGE_START);
-
-        MonsterSurvey_MainPane.add(mSurveyStep4, "card4");
-
-        mSurveyStep5.setLayout(new java.awt.BorderLayout());
-
-        mSurveyStep5Panel.setLayout(new java.awt.GridLayout(6, 0));
-
-        mSurveySizeLabel.setText("How big is it?");
-        mSurveyStep5Panel.add(mSurveySizeLabel);
-
-        mSurveySize.add(mSurveyTiny);
-        mSurveyTiny.setText("Smaller than a house cat");
-        mSurveyTiny.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mSurveyTinyActionPerformed(evt);
-            }
-        });
-        mSurveyStep5Panel.add(mSurveyTiny);
-
-        mSurveySize.add(mSurveySmall);
-        mSurveySmall.setText("Hafling-esque");
-        mSurveyStep5Panel.add(mSurveySmall);
-
-        mSurveySize.add(mSurveyNormal);
-        mSurveyNormal.setText("About human size");
-        mSurveyStep5Panel.add(mSurveyNormal);
-
-        mSurveySize.add(mSurveyLarge);
-        mSurveyLarge.setText("As big as a cart");
-        mSurveyStep5Panel.add(mSurveyLarge);
-
-        mSurveySize.add(mSurveyHuge);
-        mSurveyHuge.setText("Much larger than a cart");
-        mSurveyStep5Panel.add(mSurveyHuge);
-
-        mSurveyStep5.add(mSurveyStep5Panel, java.awt.BorderLayout.NORTH);
-
-        MonsterSurvey_MainPane.add(mSurveyStep5, "card5");
-
-        mSurveyStep6.setLayout(new java.awt.BorderLayout());
-
-        mSurveyStep6Panel.setLayout(new java.awt.GridLayout(6, 0));
-
-        mSurveyDefenseLabel.setText("What is its most important defense?");
-        mSurveyStep6Panel.add(mSurveyDefenseLabel);
-
-        mSurveyDefense.add(mSurveyDefenseNone);
-        mSurveyDefenseNone.setText("Cloth or flesh");
-        mSurveyStep6Panel.add(mSurveyDefenseNone);
-
-        mSurveyDefense.add(mSurveyDefenseBuffaloBill);
-        mSurveyDefenseBuffaloBill.setText("Leathers or thick hide");
-        mSurveyStep6Panel.add(mSurveyDefenseBuffaloBill);
-
-        mSurveyDefense.add(mSurveyDefenseTisButAScratch);
-        mSurveyDefenseTisButAScratch.setText("Mail or scales");
-        mSurveyStep6Panel.add(mSurveyDefenseTisButAScratch);
-
-        mSurveyDefense.add(mSurveyDefenceCubone);
-        mSurveyDefenceCubone.setText("Plate or bone");
-        mSurveyStep6Panel.add(mSurveyDefenceCubone);
-
-        mSurveyDefense.add(mSurveyDefenceForceField);
-        mSurveyDefenceForceField.setText("Permanent magical protection");
-        mSurveyStep6Panel.add(mSurveyDefenceForceField);
-
-        mSurveyStep6.add(mSurveyStep6Panel, java.awt.BorderLayout.PAGE_START);
-
-        MonsterSurvey_MainPane.add(mSurveyStep6, "card6");
-
-        mSurveyStep7.setLayout(new java.awt.BorderLayout());
-
-        mSurveyStep7Panel.setLayout(new java.awt.GridLayout(10, 0));
-
-        mSurveyInfamousLabel.setText("What is it known for? (choose all that apply)");
-        mSurveyStep7Panel.add(mSurveyInfamousLabel);
-
-        mSurveyInfamousStrength.setText("Unrelenting strength");
-        mSurveyStep7Panel.add(mSurveyInfamousStrength);
-
-        mSurveyInfamousOffense.setText("Skill in offense");
-        mSurveyInfamousOffense.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mSurveyInfamousOffenseActionPerformed(evt);
-            }
-        });
-        mSurveyStep7Panel.add(mSurveyInfamousOffense);
-
-        mSurveyInfamousDefense.setText("Skill in defense");
-        mSurveyStep7Panel.add(mSurveyInfamousDefense);
-
-        mSurveyInfamousDeft.setText("Deft strikes");
-        mSurveyStep7Panel.add(mSurveyInfamousDeft);
-
-        mSurveyInfamousEndurance.setText("Uncanny endurance");
-        mSurveyStep7Panel.add(mSurveyInfamousEndurance);
-
-        mSurveyInfamousJoker.setText("Deceit and trickery");
-        mSurveyStep7Panel.add(mSurveyInfamousJoker);
-
-        mSurveyInfamousAdapt.setText("A useful adaptation");
-        mSurveyStep7Panel.add(mSurveyInfamousAdapt);
-
-        mSurveyInfamousGodsLoveMe.setText("The favour of the gods");
-        mSurveyStep7Panel.add(mSurveyInfamousGodsLoveMe);
-
-        mSurveyInfamousMagicMissile.setText("Spells and magic");
-        mSurveyStep7Panel.add(mSurveyInfamousMagicMissile);
-
-        mSurveyStep7.add(mSurveyStep7Panel, java.awt.BorderLayout.PAGE_START);
-
-        MonsterSurvey_MainPane.add(mSurveyStep7, "card7");
-
-        mSurveyStep8.setLayout(new java.awt.BorderLayout());
-
-        mSurveyStep8Panel.setLayout(new java.awt.GridLayout(8, 0));
-
-        mSurveyAttackLabel.setText("What is its most common form of attack?");
-        mSurveyStep8Panel.add(mSurveyAttackLabel);
-        mSurveyStep8Panel.add(mSurveyAttackName);
-
-        mSurveyAttackVicious.setText("Its armaments are vicious and obvious");
-        mSurveyStep8Panel.add(mSurveyAttackVicious);
-
-        mSurveyAttackBay.setText("It lets the monster keep others at bay");
-        mSurveyStep8Panel.add(mSurveyAttackBay);
-
-        mSurveyAttackWeak.setText("Its armaments are small and weak");
-        mSurveyStep8Panel.add(mSurveyAttackWeak);
-
-        mSurveyAttackMetal.setText("Its armaments can slice or pierce metal");
-        mSurveyStep8Panel.add(mSurveyAttackMetal);
-
-        mSurveyAttackWhereIsYourGodNow.setText("Armor doesn't help with the damage it deals");
-        mSurveyStep8Panel.add(mSurveyAttackWhereIsYourGodNow);
-
-        mSurveyAttackRanged.setText("It usually attacks at range");
-        mSurveyStep8Panel.add(mSurveyAttackRanged);
-
-        mSurveyStep8.add(mSurveyStep8Panel, java.awt.BorderLayout.PAGE_START);
-
-        MonsterSurvey_MainPane.add(mSurveyStep8, "card8");
-
-        mSurveyStep9.setLayout(new java.awt.BorderLayout());
-
-        mSurveyStep9Panel.setLayout(new java.awt.GridLayout(13, 0));
-
-        mSurveyDescLabel.setText("What of these describes it?");
-        mSurveyStep9Panel.add(mSurveyDescLabel);
-
-        mSurveyDescTricksyDamage.setText("It isn't dangerious because of the wounds it inflicts, but for other reasons");
-        mSurveyStep9Panel.add(mSurveyDescTricksyDamage);
-
-        mSurveyDescOrganised.setText("It organises into larger groups that it can call for support");
-        mSurveyStep9Panel.add(mSurveyDescOrganised);
-
-        mSurveyDescSmartass.setText("It's as smart as a human (or thereabouts)");
-        mSurveyStep9Panel.add(mSurveyDescSmartass);
-
-        mSurveyDescSheild.setText("It actively defends itself with a sheild or similar");
-        mSurveyStep9Panel.add(mSurveyDescSheild);
-
-        mSurveyDescTrinkets.setText("It collects trinkets that humans would consider valuable");
-        mSurveyStep9Panel.add(mSurveyDescTrinkets);
-
-        mSurveyDescBeyond.setText("It is from beyond this world");
-        mSurveyStep9Panel.add(mSurveyDescBeyond);
-
-        mSurveyDescProppedUp.setText("It's kept alive by something more than simple biology");
-        mSurveyStep9Panel.add(mSurveyDescProppedUp);
-
-        mSurveyDescMade.setText("It was made by someone");
-        mSurveyStep9Panel.add(mSurveyDescMade);
-
-        mSurveyDescLooksWickedAwful.setText("It's apperance is disturbing, terrible, or horrifying");
-        mSurveyStep9Panel.add(mSurveyDescLooksWickedAwful);
-
-        mSurveyDescProbablySlime.setText("It doesn't have organs or discernable anatomy");
-        mSurveyStep9Panel.add(mSurveyDescProbablySlime);
-
-        mSurveyDescGetOffMyLawn.setText("It, or its species, is ancient — older than man, dwarves, elves, etc.");
-        mSurveyStep9Panel.add(mSurveyDescGetOffMyLawn);
-
-        mSurveyDeskTreeHugger.setText("It abhors violence");
-        mSurveyStep9Panel.add(mSurveyDeskTreeHugger);
-
-        mSurveyStep9.add(mSurveyStep9Panel, java.awt.BorderLayout.PAGE_START);
-
-        MonsterSurvey_MainPane.add(mSurveyStep9, "card9");
-
-        MonsterSurvey.getContentPane().add(MonsterSurvey_MainPane, java.awt.BorderLayout.CENTER);
-        MonsterSurvey.getContentPane().add(mSurveyFill1, java.awt.BorderLayout.PAGE_START);
-        MonsterSurvey.getContentPane().add(mSurveyFill2, java.awt.BorderLayout.EAST);
-        MonsterSurvey.getContentPane().add(mSurveyFill3, java.awt.BorderLayout.WEST);
 
         AddToCollectionsWindow.setAlwaysOnTop(true);
         AddToCollectionsWindow.setModal(true);
@@ -1796,150 +854,19 @@ public class BestiaryGUI extends javax.swing.JFrame {
         BestiaryPage_MonsterScrollPane.setMinimumSize(new java.awt.Dimension(760, 23));
         BestiaryPage_MonsterScrollPane.setPreferredSize(new java.awt.Dimension(700, 100));
 
-        BestiaryPage_CardPane.setSize(new java.awt.Dimension(760, 0));
-        BestiaryPage_CardPane.setLayout(new java.awt.GridLayout(5, 0, 0, 20));
+        BestiaryPage_FormattingPane.setSize(new java.awt.Dimension(760, 0));
+        for(Monster m : this.BestiaryMonsters){
+            CardWithButtons b = new CardWithButtons(this, m);
+            b.setSize(700, 320);
+            this.BestiaryPage_CardPane.add(b);
+        }
+        BestiaryPage_FormattingPane.setLayout(new java.awt.BorderLayout());
 
-        BestiaryPage_MonsterPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        BestiaryPage_MonsterPane1.setLayout(new java.awt.BorderLayout());
+        BestiaryPage_CardPane.setLayout(new java.awt.GridLayout(0, 1, 0, 20));
+        BestiaryPage_FormattingPane.add(BestiaryPage_CardPane, java.awt.BorderLayout.NORTH);
+        this.updateBestiaryMonsters();
 
-        BestiaryPage_MonsterCard1.setBorder(null);
-        BestiaryPage_MonsterPane1.add(BestiaryPage_MonsterCard1, java.awt.BorderLayout.CENTER);
-
-        BestiaryPage_MonsterButtonBox1.setLayout(new java.awt.BorderLayout());
-
-        BestiaryPage_MonsterViewButton1.setText("View Monster Details");
-        BestiaryPage_MonsterViewButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BestiaryPage_MonsterViewButton1ActionPerformed(evt);
-            }
-        });
-        BestiaryPage_MonsterButtonBox1.add(BestiaryPage_MonsterViewButton1, java.awt.BorderLayout.EAST);
-
-        BestiaryPage_MonsterDeleteButton1.setText("Delete Monster");
-        BestiaryPage_MonsterDeleteButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BestiaryPage_MonsterDeleteButton1ActionPerformed(evt);
-            }
-        });
-        BestiaryPage_MonsterButtonBox1.add(BestiaryPage_MonsterDeleteButton1, java.awt.BorderLayout.WEST);
-
-        BestiaryPage_MonsterPane1.add(BestiaryPage_MonsterButtonBox1, java.awt.BorderLayout.SOUTH);
-
-        BestiaryPage_CardPane.add(BestiaryPage_MonsterPane1);
-
-        BestiaryPage_MonsterPane2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        BestiaryPage_MonsterPane2.setLayout(new java.awt.BorderLayout());
-
-        BestiaryPage_MonsterCard2.setBorder(null);
-        BestiaryPage_MonsterPane2.add(BestiaryPage_MonsterCard2, java.awt.BorderLayout.CENTER);
-
-        BestiaryPage_MonsterButtonBox2.setLayout(new java.awt.BorderLayout());
-
-        BestiaryPage_MonsterViewButton2.setText("View Monster Details");
-        BestiaryPage_MonsterViewButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BestiaryPage_MonsterViewButton2ActionPerformed(evt);
-            }
-        });
-        BestiaryPage_MonsterButtonBox2.add(BestiaryPage_MonsterViewButton2, java.awt.BorderLayout.EAST);
-
-        BestiaryPage_MonsterDeleteButton2.setText("Delete Monster");
-        BestiaryPage_MonsterDeleteButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BestiaryPage_MonsterDeleteButton2ActionPerformed(evt);
-            }
-        });
-        BestiaryPage_MonsterButtonBox2.add(BestiaryPage_MonsterDeleteButton2, java.awt.BorderLayout.WEST);
-
-        BestiaryPage_MonsterPane2.add(BestiaryPage_MonsterButtonBox2, java.awt.BorderLayout.SOUTH);
-
-        BestiaryPage_CardPane.add(BestiaryPage_MonsterPane2);
-
-        BestiaryPage_MonsterPane3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        BestiaryPage_MonsterPane3.setLayout(new java.awt.BorderLayout());
-
-        BestiaryPage_MonsterCard3.setBorder(null);
-        BestiaryPage_MonsterPane3.add(BestiaryPage_MonsterCard3, java.awt.BorderLayout.CENTER);
-
-        BestiaryPage_MonsterButtonBox3.setLayout(new java.awt.BorderLayout());
-
-        BestiaryPage_MonsterViewButton3.setText("View Monster Details");
-        BestiaryPage_MonsterViewButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BestiaryPage_MonsterViewButton3ActionPerformed(evt);
-            }
-        });
-        BestiaryPage_MonsterButtonBox3.add(BestiaryPage_MonsterViewButton3, java.awt.BorderLayout.EAST);
-
-        BestiaryPage_MonsterDeleteButton3.setText("Delete Monster");
-        BestiaryPage_MonsterDeleteButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BestiaryPage_MonsterDeleteButton3ActionPerformed(evt);
-            }
-        });
-        BestiaryPage_MonsterButtonBox3.add(BestiaryPage_MonsterDeleteButton3, java.awt.BorderLayout.WEST);
-
-        BestiaryPage_MonsterPane3.add(BestiaryPage_MonsterButtonBox3, java.awt.BorderLayout.SOUTH);
-
-        BestiaryPage_CardPane.add(BestiaryPage_MonsterPane3);
-
-        BestiaryPage_MonsterPane4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        BestiaryPage_MonsterPane4.setLayout(new java.awt.BorderLayout());
-
-        BestiaryPage_MonsterCard4.setBorder(null);
-        BestiaryPage_MonsterPane4.add(BestiaryPage_MonsterCard4, java.awt.BorderLayout.CENTER);
-
-        BestiaryPage_MonsterButtonBox4.setLayout(new java.awt.BorderLayout());
-
-        BestiaryPage_MonsterViewButton4.setText("View Monster Details");
-        BestiaryPage_MonsterViewButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BestiaryPage_MonsterViewButton4ActionPerformed(evt);
-            }
-        });
-        BestiaryPage_MonsterButtonBox4.add(BestiaryPage_MonsterViewButton4, java.awt.BorderLayout.EAST);
-
-        BestiaryPage_MonsterDeleteButton4.setText("Delete Monster");
-        BestiaryPage_MonsterDeleteButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BestiaryPage_MonsterDeleteButton4ActionPerformed(evt);
-            }
-        });
-        BestiaryPage_MonsterButtonBox4.add(BestiaryPage_MonsterDeleteButton4, java.awt.BorderLayout.WEST);
-
-        BestiaryPage_MonsterPane4.add(BestiaryPage_MonsterButtonBox4, java.awt.BorderLayout.SOUTH);
-
-        BestiaryPage_CardPane.add(BestiaryPage_MonsterPane4);
-
-        BestiaryPage_MonsterPane5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        BestiaryPage_MonsterPane5.setLayout(new java.awt.BorderLayout());
-
-        BestiaryPage_MonsterCard5.setBorder(null);
-        BestiaryPage_MonsterPane5.add(BestiaryPage_MonsterCard5, java.awt.BorderLayout.CENTER);
-
-        BestiaryPage_MonsterButtonBox5.setLayout(new java.awt.BorderLayout());
-
-        BestiaryPage_MonsterViewButton5.setText("View Monster Details");
-        BestiaryPage_MonsterViewButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BestiaryPage_MonsterViewButton5ActionPerformed(evt);
-            }
-        });
-        BestiaryPage_MonsterButtonBox5.add(BestiaryPage_MonsterViewButton5, java.awt.BorderLayout.EAST);
-
-        BestiaryPage_MonsterDeleteButton5.setText("Delete Monster");
-        BestiaryPage_MonsterDeleteButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BestiaryPage_MonsterDeleteButton5ActionPerformed(evt);
-            }
-        });
-        BestiaryPage_MonsterButtonBox5.add(BestiaryPage_MonsterDeleteButton5, java.awt.BorderLayout.CENTER);
-
-        BestiaryPage_MonsterPane5.add(BestiaryPage_MonsterButtonBox5, java.awt.BorderLayout.SOUTH);
-
-        BestiaryPage_CardPane.add(BestiaryPage_MonsterPane5);
-
-        BestiaryPage_MonsterScrollPane.setViewportView(BestiaryPage_CardPane);
+        BestiaryPage_MonsterScrollPane.setViewportView(BestiaryPage_FormattingPane);
 
         BestiaryPage_LeftSide.add(BestiaryPage_MonsterScrollPane, java.awt.BorderLayout.LINE_END);
 
@@ -1949,7 +876,11 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
         BestiaryPage_FilterButton.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         BestiaryPage_FilterButton.setText("Filter");
-        BestiaryPage_FilterButton.setEnabled(false);
+        BestiaryPage_FilterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BestiaryPage_FilterButtonActionPerformed(evt);
+            }
+        });
         BestiaryPage_FilterButtonBox.add(BestiaryPage_FilterButton);
 
         BestiaryPage_RightSide.add(BestiaryPage_FilterButtonBox, java.awt.BorderLayout.NORTH);
@@ -2283,7 +1214,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
         CodexPage_PopularMonstersPane.add(CodexPage_filler1, java.awt.BorderLayout.EAST);
         CodexPage_PopularMonstersPane.add(CodexPage_filler2, java.awt.BorderLayout.WEST);
 
-        CodexPage_PopularMonstersInternalPane.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
+        CodexPage_PopularMonstersInternalPane.setLayout(new java.awt.GridLayout(0, 1, 0, 10));
 
         CodexPage_MonsterPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         CodexPage_MonsterPane1.setLayout(new java.awt.BorderLayout());
@@ -2379,7 +1310,7 @@ public class BestiaryGUI extends javax.swing.JFrame {
         CodexPage_RecentMonstersPane.add(CodexPage_filler3, java.awt.BorderLayout.WEST);
         CodexPage_RecentMonstersPane.add(CodexPage_filler4, java.awt.BorderLayout.EAST);
 
-        CodexPage_RecentMonstersInternalPane.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
+        CodexPage_RecentMonstersInternalPane.setLayout(new java.awt.GridLayout(0, 1, 0, 10));
 
         CodexPage_MonsterPane6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         CodexPage_MonsterPane6.setLayout(new java.awt.BorderLayout());
@@ -2472,38 +1403,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MonsterEdit_NewMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_NewMoveActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MonsterEdit_NewMoveActionPerformed
-
-    private void MonsterEdit_NameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_NameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MonsterEdit_NameFieldActionPerformed
-
-    private void MonsterEdit_AttackNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_AttackNameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MonsterEdit_AttackNameFieldActionPerformed
-
-    private void AttTagWin_ThrownCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AttTagWin_ThrownCheckActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AttTagWin_ThrownCheckActionPerformed
-
-    private void AttTagWin_ForcefulCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AttTagWin_ForcefulCheckActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AttTagWin_ForcefulCheckActionPerformed
-
-    private void AttTagWin_PreciseCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AttTagWin_PreciseCheckActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AttTagWin_PreciseCheckActionPerformed
-
-    private void MonTagWin_MagicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonTagWin_MagicalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MonTagWin_MagicalActionPerformed
-
-    private void MonTagWin_GroupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonTagWin_GroupActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MonTagWin_GroupActionPerformed
-
     private void BestiaryPage_Tag_MagicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_Tag_MagicalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BestiaryPage_Tag_MagicalActionPerformed
@@ -2515,37 +1414,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private void BestiaryPage_DummyCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_DummyCheckActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BestiaryPage_DummyCheckActionPerformed
-
-    private void MonsterSurvey_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterSurvey_BackActionPerformed
-        java.awt.CardLayout cl = (java.awt.CardLayout)(this.MonsterSurvey_MainPane.getLayout());
-        if (this.MonsterSurvey_MainPane.getComponent(0).isVisible()){  
-            // the current card is the first card  
-        }else{
-            cl.previous(this.MonsterSurvey_MainPane);
-        }
-    }//GEN-LAST:event_MonsterSurvey_BackActionPerformed
-
-    private void MonsterSurvey_NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterSurvey_NextActionPerformed
-        java.awt.CardLayout cl = (java.awt.CardLayout)(this.MonsterSurvey_MainPane.getLayout());
-        if (this.MonsterSurvey_MainPane.getComponent(this.MonsterSurvey_MainPane.getComponentCount() - 1).isVisible()){  
-            int n = javax.swing.JOptionPane.showConfirmDialog(this.MonsterSurvey,
-                "Are you sure you want to continue?", "",
-                javax.swing.JOptionPane.YES_NO_OPTION);
-            if(n == javax.swing.JOptionPane.YES_OPTION){
-                beastAdded = true;
-                loadBlackBeastLarge(this.MonsterFocus_MainMonster);
-                loadBlackBeastLarge(this.BestiaryPage_MonsterCard1);
-                this.MonsterFocus_ModelCollectionList = beastColList;
-                this.MonsterFocus_GMNotesText.setText(beastNote);
-                java.awt.CardLayout c2 = (java.awt.CardLayout)(this.ModeScreens.getLayout());
-                c2.show(this.ModeScreens, "MonsterFocus");
-                this.MonsterSurvey.setVisible(false);
-                
-            }
-        }else{
-            cl.next(this.MonsterSurvey_MainPane);
-        }
-    }//GEN-LAST:event_MonsterSurvey_NextActionPerformed
 
     private void BestiaryPage_CollectionsClearSelectionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_CollectionsClearSelectionsButtonActionPerformed
         int max = this.BestiaryPage_CollectionsGridPane.getComponentCount();
@@ -2595,134 +1463,25 @@ public class BestiaryGUI extends javax.swing.JFrame {
         cl.show(this.ModeScreens, "CodexPage");
     }//GEN-LAST:event_ControlBar_CodexButtonActionPerformed
 
-    private void BestiaryPage_MonsterViewButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterViewButton1ActionPerformed
-        if(beastAdded){
-            loadBlackBeastLarge(this.MonsterFocus_MainMonster);
-            this.MonsterFocus_CurrentCollectionsList.setModel(beastColList);
-            this.MonsterFocus_GMNotesText.setText(beastNote);
-        }else{
-            loadBlankLarge(this.MonsterFocus_MainMonster);
-            this.MonsterFocus_CurrentCollectionsList.setModel(new javax.swing.DefaultListModel());
-            this.MonsterFocus_GMNotesText.setText("");
-        }
-        java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
-        cl.show(this.ModeScreens, "MonsterFocus");
-    }//GEN-LAST:event_BestiaryPage_MonsterViewButton1ActionPerformed
-
-    private void BestiaryPage_MonsterViewButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterViewButton3ActionPerformed
-        if(skelAdded){
-            loadSkelLarge(this.MonsterFocus_MainMonster);
-            this.MonsterFocus_CurrentCollectionsList.setModel(skelColList);
-            this.MonsterFocus_GMNotesText.setText(skelNote);
-        }else{
-            loadBlankLarge(this.MonsterFocus_MainMonster);
-            this.MonsterFocus_CurrentCollectionsList.setModel(new javax.swing.DefaultListModel());
-            this.MonsterFocus_GMNotesText.setText("");
-        }
-        java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
-        cl.show(this.ModeScreens, "MonsterFocus");
-    }//GEN-LAST:event_BestiaryPage_MonsterViewButton3ActionPerformed
-
-    private void BestiaryPage_MonsterViewButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterViewButton4ActionPerformed
-        java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
-        cl.show(this.ModeScreens, "MonsterFocus");
-    }//GEN-LAST:event_BestiaryPage_MonsterViewButton4ActionPerformed
-
-    private void BestiaryPage_MonsterViewButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterViewButton5ActionPerformed
-        java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
-        cl.show(this.ModeScreens, "MonsterFocus");
-    }//GEN-LAST:event_BestiaryPage_MonsterViewButton5ActionPerformed
-
     private void MonsterFocus_BackToBestiaryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterFocus_BackToBestiaryButtonActionPerformed
         java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
         cl.show(this.ModeScreens, "BestiaryPage");
     }//GEN-LAST:event_MonsterFocus_BackToBestiaryButtonActionPerformed
 
     private void MonsterFocus_EditMonsterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterFocus_EditMonsterButtonActionPerformed
-        this.MonsterEdit.setVisible(true);
+                
+        javax.swing.JDialog win = new javax.swing.JDialog(this, true);
+        win.setSize(700, 600);
+        
+        MonsterEditWinSet edit = new MonsterEditWinSet(win, this, BestiaryMonsters);
+        edit.setMonster(this.openMonster);
+        edit.loadMonster();
+        edit.setSize(700, 600);
+
+        win.add(edit);
+        win.setVisible(true);
+        
     }//GEN-LAST:event_MonsterFocus_EditMonsterButtonActionPerformed
-
-    private void MonsterEdit_MonsterTagsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_MonsterTagsButtonActionPerformed
-        this.MonsterTagsWindow.setVisible(true);
-    }//GEN-LAST:event_MonsterEdit_MonsterTagsButtonActionPerformed
-
-    private void MonsterEdit_AttackTagsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_AttackTagsActionPerformed
-        this.AttackTagsWindow.setVisible(true);
-    }//GEN-LAST:event_MonsterEdit_AttackTagsActionPerformed
-
-    private void MonsterEdit_RemoveMoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_RemoveMoveButtonActionPerformed
-        if(this.MonsterEdit_MovesList.getSelectedIndices().length > 0){
-            int[] tmp = this.MonsterEdit_MovesList.getSelectedIndices();
-            int[] selectedIndices = this.MonsterEdit_MovesList.getSelectedIndices();
-            
-            for(int i = tmp.length-1; i>=0; i--){
-                selectedIndices = this.MonsterEdit_MovesList.getSelectedIndices();
-                MonsterEdit_ModelMoveList.removeElementAt(selectedIndices[i]);
-
-            }
-        }
-    }//GEN-LAST:event_MonsterEdit_RemoveMoveButtonActionPerformed
-
-    private void MonsterEdit_AddMoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_AddMoveButtonActionPerformed
-        MonsterEdit_ModelMoveList.addElement(this.MonsterEdit_NewMove.getText());
-        this.MonsterEdit_NewMove.setText("");
-    }//GEN-LAST:event_MonsterEdit_AddMoveButtonActionPerformed
-
-    private void MonsterEdit_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_CancelButtonActionPerformed
-        //Reset Window and don't save
-        this.MonsterEdit.setVisible(false);
-    }//GEN-LAST:event_MonsterEdit_CancelButtonActionPerformed
-
-    private void MonsterEdit_SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_SaveButtonActionPerformed
-        
-        crocAdded = true;
-        loadCrocLarge(this.BestiaryPage_MonsterCard2);
-        this.MonsterFocus_ModelCollectionList = crocColList;
-        this.MonsterFocus_GMNotesText.setText(crocNote);
-        
-        LargeMonsterCard card = this.MonsterFocus_MainMonster;
-        card.setdMonsterName(this.MonsterEdit_NameField.getText());
-        
-        
-        card.setdAttack(makeAttackString());
-        
-        card.setdAttackTags(makeAttackTagString());
-        card.setdHP(this.MonsterEdit_HPValue.getValue().toString());
-        card.setdInstinct(this.MonsterEdit_InstinctField.getText());
-        card.setdMonsterDescription(this.MonsterEdit_DescriptionField.getText());
-        card.setdArmor(this.MonsterEdit_ArmorValue.getValue().toString());
-        card.setdMonsterTags(makeMonsterTagString());
-        
-
-        card.setdMoveList(makeMoveString());
-        
-        card.setdQualities(this.MonsterEdit_SpecialQualitiesField.getText());
-        card.revalidate();
-        this.MonsterEdit.setVisible(false);
-        
-        java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
-        cl.show(this.ModeScreens, "MonsterFocus");
-    }//GEN-LAST:event_MonsterEdit_SaveButtonActionPerformed
-
-    private void MonTagWin_SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonTagWin_SaveButtonActionPerformed
-        //Save!
-        this.MonsterTagsWindow.setVisible(false); 
-    }//GEN-LAST:event_MonTagWin_SaveButtonActionPerformed
-
-    private void MonTagWin_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonTagWin_CancelButtonActionPerformed
-        //Reset Window and don't save
-        this.MonsterTagsWindow.setVisible(false); 
-    }//GEN-LAST:event_MonTagWin_CancelButtonActionPerformed
-
-    private void AttTagWin_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AttTagWin_CancelButtonActionPerformed
-        //Reset Window and don't save
-        this.AttackTagsWindow.setVisible(false);
-    }//GEN-LAST:event_AttTagWin_CancelButtonActionPerformed
-
-    private void AttTagWin_AttackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AttTagWin_AttackButtonActionPerformed
-        //Save!
-        this.AttackTagsWindow.setVisible(false);
-    }//GEN-LAST:event_AttTagWin_AttackButtonActionPerformed
 
     private void MonsterFocus_EditCollectionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterFocus_EditCollectionsButtonActionPerformed
         this.EditCollectionsWindow.setVisible(true);
@@ -2739,38 +1498,22 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private void SetColWin_SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetColWin_SaveButtonActionPerformed
         int max = this.SetColWin_GridPane.getComponentCount();
         javax.swing.JCheckBox box;
+        ArrayList<String> monCol = this.openMonster.getInCollections();
         
-        String s = this.MonsterFocus_MainMonster.getdMonsterName();
- 
-        if(s.equals("The Legendary Black Beast of Aaaaarrrrrrggghhh")){
-             beastColList.clear();
-        }else if(s.equals("Laser Crocodile")){
-             crocColList.clear();
-        }else if(s.equals("Skeleton in a Barrel")){
-             skelColList.clear();
-        }
+        monCol.clear();
         
         for(int i = 0; i < max; i++){
             box = (javax.swing.JCheckBox) this.SetColWin_GridPane.getComponent(i);
             if(box.isSelected()){
-
-                if(s.equals("The Legendary Black Beast of Aaaaarrrrrrggghhh")){
-                    beastColList.addElement(box.getText());
-                }else if(s.equals("Laser Crocodile")){
-                    crocColList.addElement(box.getText());
-                }else if(s.equals("Skeleton in a Barrel")){
-                    skelColList.addElement(box.getText());
-                }
+                monCol.add(box.getText());
             }
         }
         
-       if(s.equals("The Legendary Black Beast of Aaaaarrrrrrggghhh")){
-             this.MonsterFocus_CurrentCollectionsList.setModel(beastColList);
-       }else if(s.equals("Laser Crocodile")){
-             this.MonsterFocus_CurrentCollectionsList.setModel(crocColList);
-       }else if(s.equals("Skeleton in a Barrel")){
-             this.MonsterFocus_CurrentCollectionsList.setModel(skelColList);
-       }
+        this.MonsterFocus_ModelCollectionList.clear();
+        
+        for(String s : monCol){
+            this.MonsterFocus_ModelCollectionList.addElement(s);
+        }
         
         this.EditCollectionsWindow.setVisible(false);
         
@@ -2803,14 +1546,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
     private void EditGMNoteWin_SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditGMNoteWin_SaveButtonActionPerformed
         String s = this.MonsterFocus_MainMonster.getdMonsterName();
- 
-        if(s.equals("The Legendary Black Beast of Aaaaarrrrrrggghhh")){
-             beastNote = this.EditGMNoteWin_NoteText.getText();
-        }else if(s.equals("Laser Crocodile")){
-             crocNote = this.EditGMNoteWin_NoteText.getText();
-        }else if(s.equals("Skeleton in a Barrel")){
-             skelNote = this.EditGMNoteWin_NoteText.getText();
-        }
+        
+        this.openMonster.setGMNote(this.EditGMNoteWin_NoteText.getText());
         
         this.MonsterFocus_GMNotesText.setText(this.EditGMNoteWin_NoteText.getText());
         this.EditGMNoteWin_NoteText.setText("");
@@ -2829,16 +1566,39 @@ public class BestiaryGUI extends javax.swing.JFrame {
 
     private void DownConWin_YesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownConWin_YesButtonActionPerformed
         if(this.DownConWin_MonsterName.getText().equals("Skeleton in a Barrel")){
-            loadSkelLarge(this.BestiaryPage_MonsterCard3);
-            skelAdded = true;
+            Monster skel = new Monster();
+            skel.setName("Skeleton in a Barrel");
+            skel.setAttackName("Rusty Sword");
+            skel.setDmgDice(Dice.D_TEN);
+            skel.setCanFight(true);
+            skel.setAttackTag(10, true);
+            skel.setAttackTag(12, true);
+            skel.setHp(4);
+            skel.setInstinct("To suprise the living");
+            skel.setDescription("Poor Skeletons. The ultimate patsy"
+                + " of the undead, clattering along and knocked to pieces with the simplest blow."
+                + " However, they are probably the smartest of the undead footsoldiers avaliable "
+                + "- they have a strange and canny knack for ambush and tend to enjoy laying "
+                + "traps for people. Having said that, they're still not very bright. The most "
+                + "common form of ambush is to hide in a barrel and wait for years until an "
+                + "adventurer passes by. Poor Skeletons.");
+            skel.setArmor(1);
+            skel.setMonsterTag(6, true);
+            skel.setMonsterTag(13, true);
+            skel.setMonsterTag(16, true);
+            skel.addMove("Ambush unsuspecting adventurers");
+            skel.addMove("Hide in the surroundings");
+            
+            this.BestiaryMonsters.addMonster(skel);
+            this.updateBestiaryMonsters();
         }
+        
         this.DownloadConfirmationWindow.setVisible(false);
         this.DownloadCompleteWindow.setVisible(true);
     }//GEN-LAST:event_DownConWin_YesButtonActionPerformed
 
     private void DownCompWin_OkayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownCompWin_OkayButtonActionPerformed
-        java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
-        cl.show(this.ModeScreens, "MonsterFocus");
+
         this.DownloadCompleteWindow.setVisible(false);
     }//GEN-LAST:event_DownCompWin_OkayButtonActionPerformed
 
@@ -2859,8 +1619,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private void UploadCompWin_OkayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UploadCompWin_OkayButtonActionPerformed
         this.UploadCompleteWindow.setVisible(false);
         
-        skelAdded = true;
-        loadSkelLarge(this.BestiaryPage_MonsterCard3);
+        //skelAdded = true;
+        //loadSkelLarge(this.BestiaryPage_MonsterCard3);
     }//GEN-LAST:event_UploadCompWin_OkayButtonActionPerformed
 
     private void MonsterFocus_UploadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterFocus_UploadButtonActionPerformed
@@ -2880,25 +1640,20 @@ public class BestiaryGUI extends javax.swing.JFrame {
         this.LoginWindow.setVisible(false);
     }//GEN-LAST:event_LoginWin_CancelButtonActionPerformed
 
-    private void mSurveyHordeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyHordeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mSurveyHordeActionPerformed
-
-    private void mSurveyTinyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyTinyActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mSurveyTinyActionPerformed
-
-    private void mSurveyInfamousOffenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyInfamousOffenseActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mSurveyInfamousOffenseActionPerformed
-
-    private void mSurveyNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mSurveyNameActionPerformed
-
     private void SorFEWin_SurveyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SorFEWin_SurveyButtonActionPerformed
         this.SurveyOrFreeEditWindow.setVisible(false);
+        //this.MonsterEdit.setVisible(true);
+                
+        javax.swing.JDialog win = new javax.swing.JDialog(this, true);
+        win.setSize(550, 400);
         
+        MonsterSurveyWinSet edit = new MonsterSurveyWinSet(win, this, BestiaryMonsters);
+        edit.setSize(550, 400);
+
+        win.add(edit);
+        win.setVisible(true);
+        
+        /*
         this.mSurveyName.setText("");
         this.mSurveyMove.setText("");
         this.mSurveyInstinct.setText("");
@@ -2942,31 +1697,25 @@ public class BestiaryGUI extends javax.swing.JFrame {
         cl.first(this.MonsterSurvey_MainPane);
         
         this.MonsterSurvey.setVisible(true);
+        */
+        
+        
     }//GEN-LAST:event_SorFEWin_SurveyButtonActionPerformed
 
     private void SorFEWin_FreeEditButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SorFEWin_FreeEditButtonActionPerformed
 
         this.SurveyOrFreeEditWindow.setVisible(false);
-        this.MonsterEdit.setVisible(true);
+        //this.MonsterEdit.setVisible(true);
+                
+        javax.swing.JDialog win = new javax.swing.JDialog(this, true);
+        win.setSize(700, 600);
+        
+        MonsterEditWinSet edit = new MonsterEditWinSet(win, this, BestiaryMonsters);
+        edit.setSize(700, 600);
+
+        win.add(edit);
+        win.setVisible(true);
     }//GEN-LAST:event_SorFEWin_FreeEditButtonActionPerformed
-
-    private void MonsterSurvey_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterSurvey_CancelActionPerformed
-        this.MonsterSurvey.setVisible(false);
-    }//GEN-LAST:event_MonsterSurvey_CancelActionPerformed
-
-    private void BestiaryPage_MonsterViewButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterViewButton2ActionPerformed
-        if(crocAdded){
-            loadCrocLarge(this.MonsterFocus_MainMonster);
-            this.MonsterFocus_CurrentCollectionsList.setModel(crocColList);
-            this.MonsterFocus_GMNotesText.setText(crocNote);
-        }else{
-            loadBlankLarge(this.MonsterFocus_MainMonster);
-            this.MonsterFocus_CurrentCollectionsList.setModel(new javax.swing.DefaultListModel());
-            this.MonsterFocus_GMNotesText.setText("");
-        }
-        java.awt.CardLayout cl = (java.awt.CardLayout)(this.ModeScreens.getLayout());
-        cl.show(this.ModeScreens, "MonsterFocus");
-    }//GEN-LAST:event_BestiaryPage_MonsterViewButton2ActionPerformed
 
     private void MonsterFocus_DeleteMonsterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterFocus_DeleteMonsterButtonActionPerformed
         // TODO add your handling code here:
@@ -2976,45 +1725,10 @@ public class BestiaryGUI extends javax.swing.JFrame {
             javax.swing.JOptionPane.YES_NO_OPTION);
     }//GEN-LAST:event_MonsterFocus_DeleteMonsterButtonActionPerformed
 
-    private void BestiaryPage_MonsterDeleteButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterDeleteButton1ActionPerformed
-        // TODO add your handling code here:
-        int n = javax.swing.JOptionPane.showConfirmDialog(this,
-            "Are you sure you want to delete this monster?",
-            "Confirm Delete",
-            javax.swing.JOptionPane.YES_NO_OPTION);
-    }//GEN-LAST:event_BestiaryPage_MonsterDeleteButton1ActionPerformed
-
-    private void BestiaryPage_MonsterDeleteButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterDeleteButton2ActionPerformed
-        // TODO add your handling code here:
-        int n = javax.swing.JOptionPane.showConfirmDialog(this,
-            "Are you sure you want to delete this monster?",
-            "Confirm Delete",
-            javax.swing.JOptionPane.YES_NO_OPTION);
-    }//GEN-LAST:event_BestiaryPage_MonsterDeleteButton2ActionPerformed
-
-    private void BestiaryPage_MonsterDeleteButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterDeleteButton3ActionPerformed
-        // TODO add your handling code here:
-        int n = javax.swing.JOptionPane.showConfirmDialog(this,
-            "Are you sure you want to delete this monster?",
-            "Confirm Delete",
-            javax.swing.JOptionPane.YES_NO_OPTION);
-    }//GEN-LAST:event_BestiaryPage_MonsterDeleteButton3ActionPerformed
-
-    private void BestiaryPage_MonsterDeleteButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterDeleteButton4ActionPerformed
-        // TODO add your handling code here:
-        int n = javax.swing.JOptionPane.showConfirmDialog(this,
-            "Are you sure you want to delete this monster?",
-            "Confirm Delete",
-            javax.swing.JOptionPane.YES_NO_OPTION);
-    }//GEN-LAST:event_BestiaryPage_MonsterDeleteButton4ActionPerformed
-
-    private void BestiaryPage_MonsterDeleteButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_MonsterDeleteButton5ActionPerformed
-        // TODO add your handling code here:
-        int n = javax.swing.JOptionPane.showConfirmDialog(this,
-            "Are you sure you want to delete this monster?",
-            "Confirm Delete",
-            javax.swing.JOptionPane.YES_NO_OPTION);
-    }//GEN-LAST:event_BestiaryPage_MonsterDeleteButton5ActionPerformed
+    private void BestiaryPage_FilterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BestiaryPage_FilterButtonActionPerformed
+        javax.swing.JOptionPane.showMessageDialog(this,
+                    "Sorry! Filtering is not currently supported.");
+    }//GEN-LAST:event_BestiaryPage_FilterButtonActionPerformed
 
 
     /**
@@ -3076,380 +1790,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
         
     }
     
-    private void loadBlackBeastLarge(LargeMonsterCard card){
-        card.setdMonsterName("The Legendary Black Beast of Aaaaarrrrrrggghhh");
-        card.setdAttack("Bite (d12 +7 damage)");
-        card.setdAttackTags("Reach, Forceful, Ignores Armor");
-        card.setdHP("28");
-        card.setdInstinct("To devour");
-        card.setdMonsterDescription("It lives within its cave devouring any"
-                + " adventurer who has the misfortune of wandering through.");
-        card.setdArmor("2");
-        card.setdMonsterTags("Solitary, Huge, Construct, Terrifying");
-        card.setdMoveList("<html><body><ul><li>Frighten adventurers</li></ul></body> </html>");
-        card.setdQualities("Drawn into being by the animator, It has many eyes and fearsome horns");
-        card.revalidate();
-    }
-    
-    private void loadBlackBeastSmall(MiniMonsterCard card){
-        card.setdMonsterName("The Legendary Black Beast of Aaaaarrrrrrggghhh");
-        card.setdAttack("Bite (d12 +7 damage)");
-        card.setdAttackTags("Reach, Forceful, Ignores Armor");
-        card.setdHP("28");
-        card.setdInstinct("To devour");
-        card.setdMonsterDescription("It lives within its cave devouring any"
-                + " adventurer who has the misfortune of wandering through.");
-        card.setdArmor("2");
-        card.setdMonsterTags("Solitary, Huge, Construct, Terrifying");
-        card.setdMoveList("<html><body><ul><li>Frighten adventurers</li></ul></body> </html>");
-        card.setdQualities("Drawn into being by the animator, It has many eyes and fearsome horns");
-        card.revalidate();
-    }
-    
-    private void loadBlackBeastDirectEdit(){
-        this.MonsterEdit_NameField.setText("The Legendary Black Beast of Aaaaarrrrrrggghhh");
-        
-        
-        this.MonsterEdit_AttackNameField.setText("Bite");
-        this.MonsterEdit_AttackMod.setValue(7);
-        this.MonsterEdit_Dice.setSelectedItem("d12");
-        
-        this.AttTagWin_ReachChange.setSelected(true);
-        this.AttTagWin_ForcefulCheck.setSelected(true);
-        this.AttTagWin_IgnoresArmorCheck.setSelected(true);
-        
-        this.MonsterEdit_HPValue.setValue(28);
-        this.MonsterEdit_InstinctField.setText("To devour");
-        this.MonsterEdit_DescriptionField.setText("It lives within its cave devouring any"
-                + " adventurer who has the misfortune of wandering through.");
-        this.MonsterEdit_ArmorValue.setValue(2);
-        
-        this.MonTagWin_Solitary.setSelected(true);
-        this.MonTagWin_Huge.setSelected(true);
-        this.MonTagWin_Construct.setSelected(true);
-        this.MonTagWin_Terrifying.setSelected(true);
-
-        this.MonsterEdit_ModelMoveList.addElement("Frighten adventurers");
-        
-        this.MonsterEdit_SpecialQualitiesField.setText("Drawn into being by the "
-                + "animator, It has many eyes and fearsome horns");
-    }
-    
-    private void loadCrocLarge(LargeMonsterCard card){
-        card.setdMonsterName("Laser Crocodile");
-        card.setdAttack("Laser Blast (d10 +3)");
-        card.setdAttackTags("Reach, Range");
-        card.setdHP("10");
-        card.setdInstinct("To Eat");
-        card.setdMonsterDescription("It's a really big crocodile... with a laser mounted on its back.");
-        card.setdArmor("2");
-        card.setdMonsterTags("Group, Large");
-        card.setdMoveList("<html> <body bgcolor=\"#EEEEEE\"> <ul>    <li>     "
-                + "Drag victim under water       </li>       <li>         "
-                + "Escape into water       </li>       <li>         "
-                + "Grasping bite      </li>     </ul>   </body> </html> ");
-        card.setdQualities("Amphibious, camouflage");
-        card.revalidate();
-    }
-    
-    private void loadCrocSmall(MiniMonsterCard card){
-        card.setdMonsterName("Laser Crocodile");
-        card.setdAttack("Laser Blast (d10 +3)");
-        card.setdAttackTags("Reach, Range");
-        card.setdHP("10");
-        card.setdInstinct("To Eat");
-        card.setdMonsterDescription("It's a really big crocodile... with a laser mounted on its back.");
-        card.setdArmor("2");
-        card.setdMonsterTags("Group, Large");
-        card.setdMoveList("<html>  <body bgcolor=\"#EEEEEE\">    <ul>     <li>    "
-                + "Drag victim under water       </li>       <li>         "
-                + "Escape into water       </li>       <li>         "
-                + "Grasping bite      </li>     </ul>   </body> </html> ");
-        card.setdQualities("Amphibious, camouflage");
-        card.revalidate();
-    }
-    
-    private void loadSkelLarge(LargeMonsterCard card){
-        card.setdMonsterName("Skeleton in a Barrel");
-        card.setdAttack("Rusty Sword (d10 damage)");
-        card.setdAttackTags("Close, Near");
-        card.setdHP("4");
-        card.setdInstinct("To suprise the living");
-        card.setdMonsterDescription("Poor Skeletons. The ultimate patsy"
-                + " of the undead, clattering along and knocked to pieces with the simplest blow."
-                + " However, they are probably the smartest of the undead footsoldiers avaliable "
-                + "- they have a strange and canny knack for ambush and tend to enjoy laying "
-                + "traps for people. Having said that, they're still not very bright. The most "
-                + "common form of ambush is to hide in a barrel and wait for years until an "
-                + "adventurer passes by. Poor Skeletons.");
-        card.setdArmor("1");
-        card.setdMonsterTags("Solitary, Stealthy");
-        card.setdMoveList("<html> <body bgcolor=\"#EEEEEE\">    <ul>   <li>     "
-                + "Ambush unsuspecting adventurers       </li>       <li>         "
-                + "Hide in the surroundings       </li>     </ul>   </body> </html> ");
-        card.setdQualities("");
-        card.revalidate();
-
-    }
-    
-    private void loadSkelSmall(MiniMonsterCard card){
-        card.setdMonsterName("Skeleton in a Barrel");
-        card.setdAttack("Rusty Sword (d10 damage)");
-        card.setdAttackTags("Close, Near");
-        card.setdHP("4");
-        card.setdInstinct("To suprise the living");
-        card.setdMonsterDescription("Poor Skeletons. The ultimate patsy"
-                + " of the undead, clattering along and knocked to pieces with the simplest blow."
-                + " However, they are probably the smartest of the undead footsoldiers avaliable "
-                + "- they have a strange and canny knack for ambush and tend to enjoy laying "
-                + "traps for people. Having said that, they're still not very bright. The most "
-                + "common form of ambush is to hide in a barrel and wait for years until an "
-                + "adventurer passes by. Poor Skeletons.");
-        card.setdArmor("1");
-        card.setdMonsterTags("Solitary, Stealthy");
-        card.setdMoveList("<html>  <body bgcolor=\"#EEEEEE\"> <ul>    <li>     "
-                + "Ambush unsuspecting adventurers       </li>       <li>         "
-                + "Hide in the surroundings       </li>     </ul>   </body> </html> ");
-        card.setdQualities("");
-        card.revalidate();
-
-    }
-    
-   private void loadBlankLarge(LargeMonsterCard card){
-        card.setdMonsterName("Monster Name");
-        card.setdAttack("Attack Name (d4 damage)");
-        card.setdAttackTags("Attack, Tags");
-        card.setdHP("0");
-        card.setdInstinct("To do stuff");
-        card.setdMonsterDescription("blah blah blah.");
-        card.setdArmor("0");
-        card.setdMonsterTags("Monster, Tags");
-        card.setdMoveList("<html><body bgcolor=\"#EEEEEE\"><ul><li>Do a thing</li></ul></body> </html>");
-        card.setdQualities("Its special");
-        card.revalidate();
-    }
-   
-    private void loadBlankSmall(MiniMonsterCard card){
-        card.setdMonsterName("Monster Name");
-        card.setdAttack("Attack Name (d4 damage)");
-        card.setdAttackTags("Attack, Tags");
-        card.setdHP("0");
-        card.setdInstinct("To do stuff");
-        card.setdMonsterDescription("blah blah blah.");
-        card.setdArmor("0");
-        card.setdMonsterTags("Monster, Tags");
-        card.setdMoveList("<html><body bgcolor=\"#EEEEEE\"><ul><li>Do a thing</li></ul></body> </html>");
-        card.setdQualities("Its special");
-        card.revalidate();
-    }
-    
-    private String makeAttackString(){
-        String attackText = this.MonsterEdit_AttackNameField.getText();
-        
-        if(this.MonsterEdit_Rolls.getSelectedItem().equals("Normal")){
-            attackText = attackText + " (" + this.MonsterEdit_Dice.getSelectedItem();
-        }else if(this.MonsterEdit_Rolls.getSelectedItem().equals("Best of 2")){
-            attackText = attackText + " (b[" + this.MonsterEdit_Dice.getSelectedItem() + "]";
-        }else if(this.MonsterEdit_Rolls.getSelectedItem().equals("Worst of 2")){
-            attackText = attackText + " (w[" + this.MonsterEdit_Dice.getSelectedItem() + "]";
-        }
-        
-        Integer mod = (Integer) this.MonsterEdit_AttackMod.getValue();
-        
-        if(mod < 0){
-            attackText = attackText + mod + " damage)";
-        }else if (mod == 0){
-            attackText = attackText + " damage)";
-        }else{
-            attackText = attackText + "+" + mod + " damage)";
-        }
-        return attackText;
-    }
-    
-    private String makeMoveString(){
-        
-        String moveText = "<html><body bgcolor=\"#EEEEEE\"><ul>";
-        javax.swing.ListModel m = this.MonsterEdit_MovesList.getModel();
-        int len = m.getSize();
-        for(int i = 0; i < len; i++){
-            moveText = moveText + "<li>" + m.getElementAt(i) + "</li>";
-        }
-        moveText = moveText + "</ul></body> </html>"; 
-        
-        return moveText;
-        
-    }
-    
-    private String makeAttackTagString(){
-        
-        String s = "";
-        
-        if(this.AttTagWin_AmmoCheck.isSelected()){
-            Integer numAmmo = (Integer)AttTagWin_AmmoSpin.getValue();
-            s = appendTag(s, numAmmo.toString() + " Ammo");
-        }
-        
-        if(this.AttTagWin_CloseCheck.isSelected()){
-            s = appendTag(s, "Close");
-        }
-        
-        if(AttTagWin_FarCheck.isSelected()){
-            s = appendTag(s, "Far");
-        }
-        
-        if(AttTagWin_ForcefulCheck.isSelected()){
-            s = appendTag(s, "Forceful");
-        }
-        
-        if(AttTagWin_HandCheck.isSelected()){
-            s = appendTag(s, "Hand");
-        }
-        
-        if(AttTagWin_IgnoresArmorCheck.isSelected()){
-            s = appendTag(s, "Ignores Armor");
-        }
-        
-        if(AttTagWin_MessyCheck.isSelected()){
-            s = appendTag(s, "Messy");
-        }
-        
-        if(AttTagWin_NearCheck.isSelected()){
-            s = appendTag(s, "Near");
-        }
-        
-        if(AttTagWin_PiercingCheck.isSelected()){
-            Integer pirAmmo = (Integer) AttTagWin_PiercingSpin.getValue();
-            s = appendTag(s, pirAmmo.toString() + " Piercing");
-        }
-        
-        if(AttTagWin_PreciseCheck.isSelected()){
-            s = appendTag(s, "Percise");
-        }
-        
-        if(AttTagWin_ReachChange.isSelected()){
-            s = appendTag(s, "Reach");
-        }
-        
-        if(AttTagWin_ReloadCheck.isSelected()){
-            s = appendTag(s, "Reload");
-        }
-        
-        if(AttTagWin_StunCheck.isSelected()){
-            s = appendTag(s, "Stun");
-        }
-        
-        if(AttTagWin_ThrownCheck.isSelected()){
-            s = appendTag(s, "Thrown");
-        }
-        
-        return s;
-    }
-    
-    private String makeMonsterTagString(){
-        String s = "";
-        
-        if(this.MonTagWin_Amorphous.isSelected()){
-            s = appendTag(s, "Amorphous");
-        }
-        
-        if(this.MonTagWin_Cautious.isSelected()){
-            s = appendTag(s, "Cautious");
-        }
-        
-        if(this.MonTagWin_Construct.isSelected()){
-            s = appendTag(s, "Construct");
-        }
-        
-        if(this.MonTagWin_Devious.isSelected()){
-            s = appendTag(s, "Devious");
-        }
-        
-        if(this.MonTagWin_Group.isSelected()){
-            s = appendTag(s, "Group");
-        }
-        
-        if(this.MonTagWin_Hoarder.isSelected()){
-            s = appendTag(s, "Hoarder");
-        }
-        
-        if(this.MonTagWin_Horde.isSelected()){
-            s = appendTag(s, "Horde");
-        }
-        
-        if(this.MonTagWin_Huge.isSelected()){
-            s = appendTag(s, "Huge");
-        }
-        
-        if(this.MonTagWin_Intelligent.isSelected()){
-            s = appendTag(s, "Intelligent");
-        }
-        
-        if(this.MonTagWin_Large.isSelected()){
-            s = appendTag(s, "Large");
-        }
-        
-        if(this.MonTagWin_Magical.isSelected()){
-            s = appendTag(s, "Magical");
-        }
-        
-        if(this.MonTagWin_Normal.isSelected()){
-            //Normal is not actually a valid DW tag
-        }
-        
-        if(this.MonTagWin_Organized.isSelected()){
-            s = appendTag(s, "Organized");
-        }
-        
-        if(this.MonTagWin_Planar.isSelected()){
-            s = appendTag(s, "Planar");
-        }
-        
-        if(this.MonTagWin_Small.isSelected()){
-            s = appendTag(s, "Small");
-        }
-        
-        if(this.MonTagWin_Solitary.isSelected()){
-            s = appendTag(s, "Solitary");
-        }
-        
-        if(this.MonTagWin_Stealthy.isSelected()){
-            s = appendTag(s, "Stealthy");
-        }
-        
-        if(this.MonTagWin_Terrifying.isSelected()){
-            s = appendTag(s, "Terrifying");
-        }
-        
-        if(this.MonTagWin_Tiny.isSelected()){
-            s = appendTag(s, "Tiny");
-        }
-        return s;
-    }
-    
-    private String appendTag(String str, String tag){
-        if(str.equals("")){
-            str = tag;
-        }else{
-            str = str + ", " + tag;
-        }
-        return str;
-    }
-    
-    private javax.swing.DefaultListModel MonsterEdit_ModelMoveList;
     private javax.swing.DefaultListModel MonsterFocus_ModelCollectionList;
     private java.util.TreeSet<String> allCollections;
-    
-    private boolean skelAdded;
-    private javax.swing.DefaultListModel skelColList;
-    private String skelNote;
-    
-    private boolean beastAdded;
-    private javax.swing.DefaultListModel beastColList;
-    private String beastNote;
-    
-    private boolean crocAdded;
-    private javax.swing.DefaultListModel crocColList;
-    private String crocNote;
     
     Monster openMonster;
     MonsterList BestiaryMonsters;
@@ -3473,37 +1815,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.Box.Filler AddToColWin_filler2;
     private javax.swing.Box.Filler AddToColWin_filler3;
     private javax.swing.JDialog AddToCollectionsWindow;
-    private javax.swing.JPanel AttTagWin_AmmoBox;
-    private javax.swing.JCheckBox AttTagWin_AmmoCheck;
-    private javax.swing.JLabel AttTagWin_AmmoLabel;
-    private javax.swing.JSpinner AttTagWin_AmmoSpin;
-    private javax.swing.JButton AttTagWin_AttackButton;
-    private javax.swing.JPanel AttTagWin_ButtonBox;
-    private javax.swing.JButton AttTagWin_CancelButton;
-    private javax.swing.JCheckBox AttTagWin_CloseCheck;
-    private javax.swing.JCheckBox AttTagWin_FarCheck;
-    private javax.swing.JCheckBox AttTagWin_ForcefulCheck;
-    private javax.swing.JPanel AttTagWin_GridPane;
-    private javax.swing.JCheckBox AttTagWin_HandCheck;
-    private javax.swing.JCheckBox AttTagWin_IgnoresArmorCheck;
-    private javax.swing.JLabel AttTagWin_MainLabel;
-    private javax.swing.JPanel AttTagWin_MainPane;
-    private javax.swing.JCheckBox AttTagWin_MessyCheck;
-    private javax.swing.JCheckBox AttTagWin_NearCheck;
-    private javax.swing.JPanel AttTagWin_PiercingBox;
-    private javax.swing.JCheckBox AttTagWin_PiercingCheck;
-    private javax.swing.JLabel AttTagWin_PiercingLabel;
-    private javax.swing.JSpinner AttTagWin_PiercingSpin;
-    private javax.swing.JCheckBox AttTagWin_PreciseCheck;
-    private javax.swing.JCheckBox AttTagWin_ReachChange;
-    private javax.swing.JCheckBox AttTagWin_ReloadCheck;
-    private javax.swing.JCheckBox AttTagWin_StunCheck;
-    private javax.swing.JCheckBox AttTagWin_ThrownCheck;
-    private javax.swing.Box.Filler AttTagWin_filler1;
-    private javax.swing.Box.Filler AttTagWin_filler2;
-    private javax.swing.Box.Filler AttTagWin_filler3;
-    private javax.swing.Box.Filler AttTagWin_filler4;
-    private javax.swing.JDialog AttackTagsWindow;
     private javax.swing.JPanel BestiaryPage;
     private javax.swing.JPanel BestiaryPage_CardPane;
     private javax.swing.JPanel BestiaryPage_CollectionsClearSelButtonBox;
@@ -3517,41 +1828,17 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox BestiaryPage_DummyCheck2;
     private javax.swing.JButton BestiaryPage_FilterButton;
     private javax.swing.JPanel BestiaryPage_FilterButtonBox;
+    private javax.swing.JPanel BestiaryPage_FormattingPane;
     private javax.swing.JPanel BestiaryPage_LeftSide;
     private javax.swing.JPanel BestiaryPage_MonTypeGridBox;
     private javax.swing.JScrollPane BestiaryPage_MonTypeScrollPane;
     private javax.swing.JPanel BestiaryPage_MonTypeTopPane;
-    private javax.swing.JPanel BestiaryPage_MonsterButtonBox1;
-    private javax.swing.JPanel BestiaryPage_MonsterButtonBox2;
-    private javax.swing.JPanel BestiaryPage_MonsterButtonBox3;
-    private javax.swing.JPanel BestiaryPage_MonsterButtonBox4;
-    private javax.swing.JPanel BestiaryPage_MonsterButtonBox5;
-    private LargeMonsterCard BestiaryPage_MonsterCard1;
-    private LargeMonsterCard BestiaryPage_MonsterCard2;
-    private LargeMonsterCard BestiaryPage_MonsterCard3;
-    private LargeMonsterCard BestiaryPage_MonsterCard4;
-    private LargeMonsterCard BestiaryPage_MonsterCard5;
-    private javax.swing.JButton BestiaryPage_MonsterDeleteButton1;
-    private javax.swing.JButton BestiaryPage_MonsterDeleteButton2;
-    private javax.swing.JButton BestiaryPage_MonsterDeleteButton3;
-    private javax.swing.JButton BestiaryPage_MonsterDeleteButton4;
-    private javax.swing.JButton BestiaryPage_MonsterDeleteButton5;
-    private javax.swing.JPanel BestiaryPage_MonsterPane1;
-    private javax.swing.JPanel BestiaryPage_MonsterPane2;
-    private javax.swing.JPanel BestiaryPage_MonsterPane3;
-    private javax.swing.JPanel BestiaryPage_MonsterPane4;
-    private javax.swing.JPanel BestiaryPage_MonsterPane5;
     private javax.swing.JScrollPane BestiaryPage_MonsterScrollPane;
     private javax.swing.JLabel BestiaryPage_MonsterTagTitle;
     private javax.swing.JPanel BestiaryPage_MonsterTagsButtonBox;
     private javax.swing.JLabel BestiaryPage_MonsterTagsTitle;
     private javax.swing.JButton BestiaryPage_MonsterTypesClearSelectionsButton;
     private javax.swing.JPanel BestiaryPage_MonsterTypesPane;
-    private javax.swing.JButton BestiaryPage_MonsterViewButton1;
-    private javax.swing.JButton BestiaryPage_MonsterViewButton2;
-    private javax.swing.JButton BestiaryPage_MonsterViewButton3;
-    private javax.swing.JButton BestiaryPage_MonsterViewButton4;
-    private javax.swing.JButton BestiaryPage_MonsterViewButton5;
     private javax.swing.ButtonGroup BestiaryPage_OrgTags;
     private javax.swing.JLabel BestiaryPage_OrganizationLabel;
     private javax.swing.JPanel BestiaryPage_RightSide;
@@ -3694,89 +1981,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.JDialog LoginWindow;
     private javax.swing.JPanel ModeScreens;
     private javax.swing.ButtonGroup ModeToggle;
-    private javax.swing.JCheckBox MonTagWin_Amorphous;
-    private javax.swing.JPanel MonTagWin_ButtonPane;
-    private javax.swing.JButton MonTagWin_CancelButton;
-    private javax.swing.JCheckBox MonTagWin_Cautious;
-    private javax.swing.JCheckBox MonTagWin_Construct;
-    private javax.swing.JCheckBox MonTagWin_Devious;
-    private javax.swing.JPanel MonTagWin_GridPane;
-    private javax.swing.JRadioButton MonTagWin_Group;
-    private javax.swing.JCheckBox MonTagWin_Hoarder;
-    private javax.swing.JRadioButton MonTagWin_Horde;
-    private javax.swing.JRadioButton MonTagWin_Huge;
-    private javax.swing.JCheckBox MonTagWin_Intelligent;
-    private javax.swing.JRadioButton MonTagWin_Large;
-    private javax.swing.JCheckBox MonTagWin_Magical;
-    private javax.swing.JPanel MonTagWin_MainPane;
-    private javax.swing.JLabel MonTagWin_MonsterTagsLabel;
-    private javax.swing.JRadioButton MonTagWin_Normal;
-    private javax.swing.JLabel MonTagWin_OrgTagsLabel;
-    private javax.swing.JCheckBox MonTagWin_Organized;
-    private javax.swing.JCheckBox MonTagWin_Planar;
-    private javax.swing.JButton MonTagWin_SaveButton;
-    private javax.swing.JLabel MonTagWin_SizeTagsLabel;
-    private javax.swing.JRadioButton MonTagWin_Small;
-    private javax.swing.JRadioButton MonTagWin_Solitary;
-    private javax.swing.JCheckBox MonTagWin_Stealthy;
-    private javax.swing.JCheckBox MonTagWin_Terrifying;
-    private javax.swing.JRadioButton MonTagWin_Tiny;
-    private javax.swing.Box.Filler MonTagWin_filler1;
-    private javax.swing.Box.Filler MonTagWin_filler2;
-    private javax.swing.Box.Filler MonTagWin_filler3;
-    private javax.swing.Box.Filler MonTagWin_filler4;
-    private javax.swing.Box.Filler MonTagWin_filler5;
-    private javax.swing.Box.Filler MonTagWin_filler6;
     private javax.swing.ButtonGroup MonTagsWin_OrgTagsGroup;
     private javax.swing.ButtonGroup MonTagsWin_SizeTagsGroup;
-    private javax.swing.JDialog MonsterEdit;
-    private javax.swing.JButton MonsterEdit_AddMoveButton;
-    private javax.swing.JLabel MonsterEdit_ArmorLabel;
-    private javax.swing.JSpinner MonsterEdit_ArmorValue;
-    private javax.swing.JSpinner MonsterEdit_AttackMod;
-    private javax.swing.JTextField MonsterEdit_AttackNameField;
-    private javax.swing.JLabel MonsterEdit_AttackNameLabel;
-    private javax.swing.JButton MonsterEdit_AttackTags;
-    private javax.swing.JPanel MonsterEdit_BottomPane;
-    private javax.swing.JButton MonsterEdit_CancelButton;
-    private javax.swing.JTextArea MonsterEdit_DescriptionField;
-    private javax.swing.JLabel MonsterEdit_DescriptionLabel;
-    private javax.swing.JScrollPane MonsterEdit_DescriptionScrollPane;
-    private javax.swing.JComboBox MonsterEdit_Dice;
-    private javax.swing.JPanel MonsterEdit_EndPane;
-    private javax.swing.JLabel MonsterEdit_HPLabel;
-    private javax.swing.JSpinner MonsterEdit_HPValue;
-    private javax.swing.JTextField MonsterEdit_InstinctField;
-    private javax.swing.JLabel MonsterEdit_InstinctLabel;
-    private javax.swing.JPanel MonsterEdit_InstinctPane;
-    private javax.swing.JPanel MonsterEdit_MainPane;
-    private javax.swing.JPanel MonsterEdit_MiddlePane;
-    private javax.swing.JButton MonsterEdit_MonsterTagsButton;
-    private javax.swing.JPanel MonsterEdit_MovesControlsPane;
-    private javax.swing.JList MonsterEdit_MovesList;
-    private javax.swing.JScrollPane MonsterEdit_MovesScroll;
-    private javax.swing.JTextField MonsterEdit_NameField;
-    private javax.swing.JLabel MonsterEdit_NameLabel;
-    private javax.swing.JPanel MonsterEdit_NamePane;
-    private javax.swing.JTextField MonsterEdit_NewMove;
-    private javax.swing.JButton MonsterEdit_RemoveMoveButton;
-    private javax.swing.JComboBox MonsterEdit_Rolls;
-    private javax.swing.JPanel MonsterEdit_Row1;
-    private javax.swing.JPanel MonsterEdit_Row2;
-    private javax.swing.JPanel MonsterEdit_Row3;
-    private javax.swing.JPanel MonsterEdit_Row4;
-    private javax.swing.JButton MonsterEdit_SaveButton;
-    private javax.swing.JTextField MonsterEdit_SpecialQualitiesField;
-    private javax.swing.JLabel MonsterEdit_SpecialQualitiesLabel;
-    private javax.swing.JPanel MonsterEdit_TopPane;
-    private javax.swing.Box.Filler MonsterEdit_filler1;
-    private javax.swing.Box.Filler MonsterEdit_filler2;
-    private javax.swing.Box.Filler MonsterEdit_filler3;
-    private javax.swing.Box.Filler MonsterEdit_filler4;
-    private javax.swing.Box.Filler MonsterEdit_filler5;
-    private javax.swing.Box.Filler MonsterEdit_filler6;
-    private javax.swing.Box.Filler MonsterEdit_filler7;
-    private javax.swing.Box.Filler MonsterEdit_filler8;
     private javax.swing.JPanel MonsterFocus;
     private javax.swing.JPanel MonsterFocus_BackButtonBox;
     private javax.swing.JButton MonsterFocus_BackToBestiaryButton;
@@ -3809,17 +2015,6 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.Box.Filler MonsterFocus_filler6;
     private javax.swing.Box.Filler MonsterFocus_filler7;
     private javax.swing.Box.Filler MonsterFocus_filler8;
-    private javax.swing.JDialog MonsterSurvey;
-    private javax.swing.JButton MonsterSurvey_Back;
-    private javax.swing.JPanel MonsterSurvey_BackNextPane;
-    private javax.swing.JButton MonsterSurvey_Cancel;
-    private javax.swing.JPanel MonsterSurvey_CancelPane;
-    private javax.swing.JPanel MonsterSurvey_Controls;
-    private javax.swing.JPanel MonsterSurvey_MainPane;
-    private javax.swing.JButton MonsterSurvey_Next;
-    private javax.swing.JSeparator MonsterSurvey_jSeparator1;
-    private javax.swing.JDialog MonsterTagsWindow;
-    private javax.swing.JLabel Monster_EditMovesLabel;
     private javax.swing.JButton NameColWin_AddButton;
     private javax.swing.JPanel NameColWin_ButtonPanel;
     private javax.swing.JButton NameColWin_CancelButton;
@@ -3875,82 +2070,8 @@ public class BestiaryGUI extends javax.swing.JFrame {
     private javax.swing.Box.Filler UploadConWin_filler2;
     private javax.swing.Box.Filler UploadConWin_filler3;
     private javax.swing.JDialog UploadConfirmationWindow;
-    private javax.swing.JCheckBox mSurveyAttackBay;
-    private javax.swing.JLabel mSurveyAttackLabel;
-    private javax.swing.JCheckBox mSurveyAttackMetal;
-    private javax.swing.JTextField mSurveyAttackName;
-    private javax.swing.JCheckBox mSurveyAttackRanged;
-    private javax.swing.JCheckBox mSurveyAttackVicious;
-    private javax.swing.JCheckBox mSurveyAttackWeak;
-    private javax.swing.JCheckBox mSurveyAttackWhereIsYourGodNow;
-    private javax.swing.JRadioButton mSurveyDefenceCubone;
-    private javax.swing.JRadioButton mSurveyDefenceForceField;
     private javax.swing.ButtonGroup mSurveyDefense;
-    private javax.swing.JRadioButton mSurveyDefenseBuffaloBill;
-    private javax.swing.JLabel mSurveyDefenseLabel;
-    private javax.swing.JRadioButton mSurveyDefenseNone;
-    private javax.swing.JRadioButton mSurveyDefenseTisButAScratch;
-    private javax.swing.JCheckBox mSurveyDescBeyond;
-    private javax.swing.JCheckBox mSurveyDescGetOffMyLawn;
-    private javax.swing.JLabel mSurveyDescLabel;
-    private javax.swing.JCheckBox mSurveyDescLooksWickedAwful;
-    private javax.swing.JCheckBox mSurveyDescMade;
-    private javax.swing.JCheckBox mSurveyDescOrganised;
-    private javax.swing.JCheckBox mSurveyDescProbablySlime;
-    private javax.swing.JCheckBox mSurveyDescProppedUp;
-    private javax.swing.JCheckBox mSurveyDescSheild;
-    private javax.swing.JCheckBox mSurveyDescSmartass;
-    private javax.swing.JCheckBox mSurveyDescTricksyDamage;
-    private javax.swing.JCheckBox mSurveyDescTrinkets;
-    private javax.swing.JCheckBox mSurveyDeskTreeHugger;
-    private javax.swing.Box.Filler mSurveyFill1;
-    private javax.swing.Box.Filler mSurveyFill2;
-    private javax.swing.Box.Filler mSurveyFill3;
-    private javax.swing.JRadioButton mSurveyGroup;
     private javax.swing.ButtonGroup mSurveyGroupHuntSize;
-    private javax.swing.JRadioButton mSurveyHorde;
-    private javax.swing.JRadioButton mSurveyHuge;
-    private javax.swing.JLabel mSurveyHuntSizeLabel;
-    private javax.swing.JCheckBox mSurveyInfamousAdapt;
-    private javax.swing.JCheckBox mSurveyInfamousDefense;
-    private javax.swing.JCheckBox mSurveyInfamousDeft;
-    private javax.swing.JCheckBox mSurveyInfamousEndurance;
-    private javax.swing.JCheckBox mSurveyInfamousGodsLoveMe;
-    private javax.swing.JCheckBox mSurveyInfamousJoker;
-    private javax.swing.JLabel mSurveyInfamousLabel;
-    private javax.swing.JCheckBox mSurveyInfamousMagicMissile;
-    private javax.swing.JCheckBox mSurveyInfamousOffense;
-    private javax.swing.JCheckBox mSurveyInfamousStrength;
-    private javax.swing.JTextField mSurveyInstinct;
-    private javax.swing.JLabel mSurveyInstinctLabel;
-    private javax.swing.JRadioButton mSurveyLarge;
-    private javax.swing.JTextField mSurveyMove;
-    private javax.swing.JLabel mSurveyMoveLabel;
-    private javax.swing.JTextField mSurveyName;
-    private javax.swing.JLabel mSurveyNameLabel;
-    private javax.swing.JRadioButton mSurveyNormal;
     private javax.swing.ButtonGroup mSurveySize;
-    private javax.swing.JLabel mSurveySizeLabel;
-    private javax.swing.JRadioButton mSurveySmall;
-    private javax.swing.JRadioButton mSurveySolitary;
-    private javax.swing.JPanel mSurveyStep1;
-    private javax.swing.JPanel mSurveyStep1Panel;
-    private javax.swing.JPanel mSurveyStep2;
-    private javax.swing.JPanel mSurveyStep2Panel;
-    private javax.swing.JPanel mSurveyStep3;
-    private javax.swing.JPanel mSurveyStep3Panel;
-    private javax.swing.JPanel mSurveyStep4;
-    private javax.swing.JPanel mSurveyStep4Panel;
-    private javax.swing.JPanel mSurveyStep5;
-    private javax.swing.JPanel mSurveyStep5Panel;
-    private javax.swing.JPanel mSurveyStep6;
-    private javax.swing.JPanel mSurveyStep6Panel;
-    private javax.swing.JPanel mSurveyStep7;
-    private javax.swing.JPanel mSurveyStep7Panel;
-    private javax.swing.JPanel mSurveyStep8;
-    private javax.swing.JPanel mSurveyStep8Panel;
-    private javax.swing.JPanel mSurveyStep9;
-    private javax.swing.JPanel mSurveyStep9Panel;
-    private javax.swing.JRadioButton mSurveyTiny;
     // End of variables declaration//GEN-END:variables
 }

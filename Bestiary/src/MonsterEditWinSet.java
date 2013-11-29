@@ -17,7 +17,11 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
     /**
      * Creates new customizer MonsterEditWinSet
      */
-    public MonsterEditWinSet() {
+    public MonsterEditWinSet(javax.swing.JDialog ownr, BestiaryGUI win, MonsterList ls) {
+        
+        owner = ownr;
+        
+        listy = ls;
         
         MonsterEdit_ModelMoveList = new javax.swing.DefaultListModel();
         MonsterEdit_ModelQualityList = new javax.swing.DefaultListModel();
@@ -25,6 +29,8 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
         initComponents();
 
         mon = new Monster();
+        mainWin = win;
+        
         loadMonster();
         
     }
@@ -41,9 +47,7 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
     
     public Monster getMonster(){
         return mon;
-    }
-    
-    Monster mon;
+    }    
     
     public void loadMonster(){
         this.MonsterEdit_ArmorValue.setValue(mon.getArmor());
@@ -188,6 +192,13 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
         saveSpecialQualities();
         saveMoves();
         
+        if(!listy.constainsMonster(mon)){
+            listy.addMonster(mon);
+        }
+        
+        mainWin.validate();
+        mainWin.repaint();
+        mainWin.setMainMonster(mon);
     }
     
     public void saveMonsterTags(){
@@ -950,13 +961,12 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
     private void MonsterEdit_SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_SaveButtonActionPerformed
 
         saveMonster();
+        owner.dispose();
         
     }//GEN-LAST:event_MonsterEdit_SaveButtonActionPerformed
 
     private void MonsterEdit_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_CancelButtonActionPerformed
-        //Reset Window and don't save
-        //CLOSE
-        
+        owner.dispose();
     }//GEN-LAST:event_MonsterEdit_CancelButtonActionPerformed
 
     private void MonTagWin_MagicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonTagWin_MagicalActionPerformed
@@ -1023,6 +1033,10 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
 
     private javax.swing.DefaultListModel MonsterEdit_ModelMoveList;
     private javax.swing.DefaultListModel MonsterEdit_ModelQualityList;
+    private javax.swing.JDialog owner;
+    private Monster mon;
+    private MonsterList listy;
+    private BestiaryGUI mainWin;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AttTagWin_AmmoBox;

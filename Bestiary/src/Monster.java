@@ -55,24 +55,27 @@ import java.util.Arrays;
 
 public class Monster {
     
-    String name;
+    private String name;
         
-    boolean canFight;
-    int hp;
-    int armor;
-    String attackName;
-    Dice dmgDice;
-    int dmgMod;
-    RollType dmgRoll;
+    private boolean canFight;
+    private int hp;
+    private int armor;
+    private String attackName;
+    private Dice dmgDice;
+    private int dmgMod;
+    private RollType dmgRoll;
     
-    String instinct;
-    String description;
-    boolean[] tags;
-    ArrayList<String> specialQualities;
-    boolean[] attackTags;
-    ArrayList<String> moves;
-    int ammo;
-    int piercing;
+    private String instinct;
+    private String description;
+    private boolean[] tags;
+    private ArrayList<String> specialQualities;
+    private boolean[] attackTags;
+    private ArrayList<String> moves;
+    private int ammo;
+    private int piercing;
+    
+    private ArrayList<String> inCollections;
+    private String GMNote;
     
     public Monster(){
         name = "";
@@ -97,6 +100,9 @@ public class Monster {
         specialQualities = new ArrayList<String>();
         
         moves = new ArrayList<String>();
+        
+        inCollections = new ArrayList<String>();
+        GMNote = "";
     }
     
     public void setName(String s){
@@ -491,13 +497,13 @@ public class Monster {
     
     public void setAttackTag(int i, boolean b){
         if((i >= 0) && (i <= 13)){
-            this.tags[i] = b;
+            this.attackTags[i] = b;
         }
     }
     
     public boolean getAttackTag(int i){
         if((i >= 0) && (i <= 13)){
-            return this.tags[i];
+            return this.attackTags[i];
         }else{
             return false;
         }
@@ -507,57 +513,57 @@ public class Monster {
         
         String s = "";
         
-        if(this.tags[0]){
+        if(this.attackTags[0]){
             s += ", " + this.ammo + " Ammo";
         }
         
-        if(this.tags[1]){
+        if(this.attackTags[1]){
             s += ", Forceful";
         }
         
-        if(this.tags[2]){
+        if(this.attackTags[2]){
             s += ", Ignores Armor";
         }
         
-        if(this.tags[3]){
+        if(this.attackTags[3]){
             s += ", Messy";
         }
         
         //Piercing skipped on purpose
         
-        if(this.tags[5]){
+        if(this.attackTags[5]){
             s += ", Precise";
         }
         
-        if(this.tags[6]){
+        if(this.attackTags[6]){
             s += ", Reload";
         }
         
-        if(this.tags[7]){
+        if(this.attackTags[7]){
             s += ", Stun";
         }
         
-        if(this.tags[8]){
+        if(this.attackTags[8]){
             s += ", Thrown";
         }
         
-        if(this.tags[9]){
+        if(this.attackTags[9]){
             s += ", Hand";
         }
         
-        if(this.tags[10]){
+        if(this.attackTags[10]){
             s += ", Close";
         }
         
-        if(this.tags[11]){
+        if(this.attackTags[11]){
             s += ", Reach";
         }
         
-        if(this.tags[12]){
+        if(this.attackTags[12]){
             s += ", Near";
         }
         
-        if(this.tags[13]){
+        if(this.attackTags[13]){
             s += ", Far";
         }
         
@@ -587,6 +593,36 @@ public class Monster {
     public void changePiercing(int pMod){
         this.piercing += pMod;
     }
+
+    public ArrayList<String> getInCollections() {
+        return inCollections;
+    }
+    
+    public void addToCollection(String c){
+        inCollections.add(c);
+    }
+    
+    public void clearCollections(){
+        inCollections.clear();
+    }
+    
+    public void removeFromCollection(String c){
+        inCollections.remove(c);
+    }
+
+    public void setInCollections(ArrayList<String> inCollections) {
+        this.inCollections = inCollections;
+    }
+
+    public String getGMNote() {
+        return GMNote;
+    }
+
+    public void setGMNote(String GMNote) {
+        this.GMNote = GMNote;
+    }
+    
+    
     
     public void loadToCard(LargeMonsterCard m){
         m.setdArmor(this.printArmor());

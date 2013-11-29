@@ -9,6 +9,13 @@
     <Component class="javax.swing.ButtonGroup" name="mSurveyDefense">
     </Component>
     <Container class="javax.swing.JDialog" name="DeceitAndTrickeryWindow">
+      <Properties>
+        <Property name="alwaysOnTop" type="boolean" value="true"/>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[250, 120]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
@@ -120,6 +127,12 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="UsefulAdaptWindow">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[320, 120]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
@@ -231,6 +244,12 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="FavorOfGodsWindow">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[150, 120]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
@@ -345,6 +364,12 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="SpellsAndMagicWindow">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[230, 120]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
@@ -458,6 +483,12 @@
     <Component class="javax.swing.ButtonGroup" name="SliceOrPierceGroup">
     </Component>
     <Container class="javax.swing.JDialog" name="SliceOrPierceWindow">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[330, 120]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
@@ -499,6 +530,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="SliceOrPierceGroup"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="+1 Piercing"/>
               </Properties>
             </Component>
@@ -581,6 +613,12 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="AttacksAtRangeWindow">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[110, 120]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
@@ -695,6 +733,12 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="DangerousReasonsWindow">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[290, 120]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
@@ -809,6 +853,12 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="OrganizeGroupsWindow">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[290, 120]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
@@ -920,6 +970,12 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="OtherWorldWindow">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[450, 120]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
@@ -1031,6 +1087,12 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="MadeWindow">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[410, 120]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
@@ -1142,6 +1204,12 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="AppearanceWindow">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[380, 120]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
@@ -1437,6 +1505,7 @@
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="mSurveyGroupHuntSize"/>
                     </Property>
+                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="All by its lonesome"/>
                   </Properties>
                 </Component>
@@ -1494,6 +1563,7 @@
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="mSurveySize"/>
                     </Property>
+                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="About human size"/>
                   </Properties>
                 </Component>
@@ -1548,6 +1618,7 @@
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="mSurveyDefense"/>
                     </Property>
+                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="Cloth or flesh"/>
                   </Properties>
                 </Component>
@@ -1645,21 +1716,33 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Deceit and trickery"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyInfamousJokerActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="mSurveyInfamousAdapt">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="A useful adaptation"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyInfamousAdaptActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="mSurveyInfamousGodsLoveMe">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="The favour of the gods"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyInfamousGodsLoveMeActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="mSurveyInfamousMagicMissile">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Spells and magic"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyInfamousMagicMissileActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1712,6 +1795,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Its armaments can slice or pierce metal"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyAttackMetalActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="mSurveyAttackWhereIsYourGodNow">
                   <Properties>
@@ -1722,6 +1808,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="It usually attacks at range"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyAttackRangedActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1757,11 +1846,17 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="It isn&apos;t dangerious because of the wounds it inflicts, but for other reasons"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyDescTricksyDamageActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="mSurveyDescOrganized">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="It organises into larger groups that it can call for support"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyDescOrganizedActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="mSurveyDescSmartass">
                   <Properties>
@@ -1785,6 +1880,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="It is from beyond this world"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyDescBeyondActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="mSurveyDescProppedUp">
                   <Properties>
@@ -1795,11 +1893,17 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="It was made by someone"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyDescMadeActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="mSurveyDescLooksWickedAwful">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="It&apos;s apperance is disturbing, terrible, or horrifying"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyDescLooksWickedAwfulActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="mSurveyDescProbablySlime">
                   <Properties>

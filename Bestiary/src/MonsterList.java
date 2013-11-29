@@ -25,6 +25,10 @@ public class MonsterList implements Iterable<Monster>{
         internalList = new TreeSet<Monster>(NameOrder);
     }
     
+    public int getSize(){
+        return internalList.size();
+    }
+    
     public void addMonster(Monster m){
         internalList.add(m);
     }
@@ -42,9 +46,31 @@ public class MonsterList implements Iterable<Monster>{
         return found;
     }
     
+    public boolean removeMonster(Monster m){
+        boolean found = false;
+        for(Monster mon : internalList){
+            if(mon == m){
+                internalList.remove(mon);
+                found = true;
+            }
+        }
+        
+        return found;
+    }
+    
     public boolean containsMonster(String m){        
         for(Monster mon : internalList){
             if(mon.getName().equals(m)){
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    public boolean constainsMonster(Monster m){
+        for(Monster mon : internalList){
+            if(mon == m){
                 return true;
             }
         }

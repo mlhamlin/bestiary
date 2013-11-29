@@ -14,10 +14,12 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
     /**
      * Creates new customizer MonsterSurveyWinSet
      */
-    public MonsterSurveyWinSet() {
+    public MonsterSurveyWinSet(javax.swing.JDialog ownr, BestiaryGUI win, MonsterList ls) {
+        owner = ownr;
         mon = new Monster();
         working = false;
-        listy = new MonsterList();
+        listy = ls;
+        this.mainWin = win;
         initComponents();
     }
     
@@ -64,6 +66,11 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         listy.addMonster(mon);
         
         working = false;
+        
+        mainWin.validate();
+        mainWin.repaint();
+        mainWin.setMainMonster(mon);
+        owner.dispose();
     }
     
     public boolean validName(String s){
@@ -487,6 +494,10 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyFill2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         mSurveyFill3 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
 
+        DeceitAndTrickeryWindow.setAlwaysOnTop(true);
+        DeceitAndTrickeryWindow.setModal(true);
+        DeceitAndTrickeryWindow.setSize(new java.awt.Dimension(250, 120));
+
         jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         DeceitAndTrickeryOkay.setText("Okay");
@@ -510,6 +521,9 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         DeceitAndTrickeryWindow.getContentPane().add(filler2, java.awt.BorderLayout.LINE_END);
         DeceitAndTrickeryWindow.getContentPane().add(filler3, java.awt.BorderLayout.LINE_START);
 
+        UsefulAdaptWindow.setModal(true);
+        UsefulAdaptWindow.setSize(new java.awt.Dimension(320, 120));
+
         jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         UsefulAdaptOkay.setText("Okay");
@@ -532,6 +546,9 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         UsefulAdaptWindow.getContentPane().add(filler4, java.awt.BorderLayout.PAGE_START);
         UsefulAdaptWindow.getContentPane().add(filler5, java.awt.BorderLayout.LINE_END);
         UsefulAdaptWindow.getContentPane().add(filler6, java.awt.BorderLayout.LINE_START);
+
+        FavorOfGodsWindow.setModal(true);
+        FavorOfGodsWindow.setSize(new java.awt.Dimension(150, 120));
 
         jPanel5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
@@ -558,6 +575,9 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         FavorOfGodsWindow.getContentPane().add(filler8, java.awt.BorderLayout.LINE_END);
         FavorOfGodsWindow.getContentPane().add(filler9, java.awt.BorderLayout.LINE_START);
 
+        SpellsAndMagicWindow.setModal(true);
+        SpellsAndMagicWindow.setSize(new java.awt.Dimension(230, 120));
+
         jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         SpellsAndMagicOkay.setText("Okay");
@@ -581,6 +601,9 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         SpellsAndMagicWindow.getContentPane().add(filler11, java.awt.BorderLayout.LINE_END);
         SpellsAndMagicWindow.getContentPane().add(filler12, java.awt.BorderLayout.LINE_START);
 
+        SliceOrPierceWindow.setModal(true);
+        SliceOrPierceWindow.setSize(new java.awt.Dimension(330, 120));
+
         jPanel9.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         SliceOrPierceOkay.setText("Okay");
@@ -596,6 +619,7 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         jPanel10.setLayout(new java.awt.GridLayout(0, 1));
 
         SliceOrPierceGroup.add(SliceOrPiercePlusOne);
+        SliceOrPiercePlusOne.setSelected(true);
         SliceOrPiercePlusOne.setText("+1 Piercing");
         jPanel10.add(SliceOrPiercePlusOne);
 
@@ -612,6 +636,9 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         SliceOrPierceWindow.getContentPane().add(filler13, java.awt.BorderLayout.PAGE_START);
         SliceOrPierceWindow.getContentPane().add(filler14, java.awt.BorderLayout.LINE_END);
         SliceOrPierceWindow.getContentPane().add(filler15, java.awt.BorderLayout.LINE_START);
+
+        AttacksAtRangeWindow.setModal(true);
+        AttacksAtRangeWindow.setSize(new java.awt.Dimension(110, 120));
 
         jPanel11.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
@@ -637,6 +664,9 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         AttacksAtRangeWindow.getContentPane().add(filler16, java.awt.BorderLayout.PAGE_START);
         AttacksAtRangeWindow.getContentPane().add(filler17, java.awt.BorderLayout.LINE_END);
         AttacksAtRangeWindow.getContentPane().add(filler18, java.awt.BorderLayout.LINE_START);
+
+        DangerousReasonsWindow.setModal(true);
+        DangerousReasonsWindow.setSize(new java.awt.Dimension(290, 120));
 
         jPanel13.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
@@ -667,6 +697,9 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         DangerousReasonsWindow.getContentPane().add(filler20, java.awt.BorderLayout.LINE_END);
         DangerousReasonsWindow.getContentPane().add(filler21, java.awt.BorderLayout.LINE_START);
 
+        OrganizeGroupsWindow.setModal(true);
+        OrganizeGroupsWindow.setSize(new java.awt.Dimension(290, 120));
+
         jPanel15.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         OrganizeGroupsOkay.setText("Okay");
@@ -689,6 +722,9 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         OrganizeGroupsWindow.getContentPane().add(filler22, java.awt.BorderLayout.PAGE_START);
         OrganizeGroupsWindow.getContentPane().add(filler23, java.awt.BorderLayout.LINE_END);
         OrganizeGroupsWindow.getContentPane().add(filler24, java.awt.BorderLayout.LINE_START);
+
+        OtherWorldWindow.setModal(true);
+        OtherWorldWindow.setSize(new java.awt.Dimension(450, 120));
 
         jPanel17.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
@@ -713,6 +749,9 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         OtherWorldWindow.getContentPane().add(filler26, java.awt.BorderLayout.LINE_END);
         OtherWorldWindow.getContentPane().add(filler27, java.awt.BorderLayout.LINE_START);
 
+        MadeWindow.setModal(true);
+        MadeWindow.setSize(new java.awt.Dimension(410, 120));
+
         jPanel19.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         MadeOkay.setText("Okay");
@@ -735,6 +774,9 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         MadeWindow.getContentPane().add(filler28, java.awt.BorderLayout.PAGE_START);
         MadeWindow.getContentPane().add(filler29, java.awt.BorderLayout.LINE_END);
         MadeWindow.getContentPane().add(filler30, java.awt.BorderLayout.LINE_START);
+
+        AppearanceWindow.setModal(true);
+        AppearanceWindow.setSize(new java.awt.Dimension(380, 120));
 
         jPanel21.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
@@ -835,6 +877,7 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyStep4Panel.add(mSurveyGroup);
 
         mSurveyGroupHuntSize.add(mSurveySolitary);
+        mSurveySolitary.setSelected(true);
         mSurveySolitary.setText("All by its lonesome");
         mSurveyStep4Panel.add(mSurveySolitary);
 
@@ -863,6 +906,7 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyStep5Panel.add(mSurveySmall);
 
         mSurveySize.add(mSurveyNormal);
+        mSurveyNormal.setSelected(true);
         mSurveyNormal.setText("About human size");
         mSurveyStep5Panel.add(mSurveyNormal);
 
@@ -886,6 +930,7 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyStep6Panel.add(mSurveyDefenseLabel);
 
         mSurveyDefense.add(mSurveyDefenseNone);
+        mSurveyDefenseNone.setSelected(true);
         mSurveyDefenseNone.setText("Cloth or flesh");
         mSurveyStep6Panel.add(mSurveyDefenseNone);
 
@@ -937,15 +982,35 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyStep7Panel.add(mSurveyInfamousEndurance);
 
         mSurveyInfamousJoker.setText("Deceit and trickery");
+        mSurveyInfamousJoker.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyInfamousJokerActionPerformed(evt);
+            }
+        });
         mSurveyStep7Panel.add(mSurveyInfamousJoker);
 
         mSurveyInfamousAdapt.setText("A useful adaptation");
+        mSurveyInfamousAdapt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyInfamousAdaptActionPerformed(evt);
+            }
+        });
         mSurveyStep7Panel.add(mSurveyInfamousAdapt);
 
         mSurveyInfamousGodsLoveMe.setText("The favour of the gods");
+        mSurveyInfamousGodsLoveMe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyInfamousGodsLoveMeActionPerformed(evt);
+            }
+        });
         mSurveyStep7Panel.add(mSurveyInfamousGodsLoveMe);
 
         mSurveyInfamousMagicMissile.setText("Spells and magic");
+        mSurveyInfamousMagicMissile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyInfamousMagicMissileActionPerformed(evt);
+            }
+        });
         mSurveyStep7Panel.add(mSurveyInfamousMagicMissile);
 
         mSurveyStep7.add(mSurveyStep7Panel, java.awt.BorderLayout.PAGE_START);
@@ -970,12 +1035,22 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyStep8Panel.add(mSurveyAttackWeak);
 
         mSurveyAttackMetal.setText("Its armaments can slice or pierce metal");
+        mSurveyAttackMetal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyAttackMetalActionPerformed(evt);
+            }
+        });
         mSurveyStep8Panel.add(mSurveyAttackMetal);
 
         mSurveyAttackWhereIsYourGodNow.setText("Armor doesn't help with the damage it deals");
         mSurveyStep8Panel.add(mSurveyAttackWhereIsYourGodNow);
 
         mSurveyAttackRanged.setText("It usually attacks at range");
+        mSurveyAttackRanged.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyAttackRangedActionPerformed(evt);
+            }
+        });
         mSurveyStep8Panel.add(mSurveyAttackRanged);
 
         mSurveyStep8.add(mSurveyStep8Panel, java.awt.BorderLayout.PAGE_START);
@@ -990,9 +1065,19 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyStep9Panel.add(mSurveyDescLabel);
 
         mSurveyDescTricksyDamage.setText("It isn't dangerious because of the wounds it inflicts, but for other reasons");
+        mSurveyDescTricksyDamage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyDescTricksyDamageActionPerformed(evt);
+            }
+        });
         mSurveyStep9Panel.add(mSurveyDescTricksyDamage);
 
         mSurveyDescOrganized.setText("It organises into larger groups that it can call for support");
+        mSurveyDescOrganized.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyDescOrganizedActionPerformed(evt);
+            }
+        });
         mSurveyStep9Panel.add(mSurveyDescOrganized);
 
         mSurveyDescSmartass.setText("It's as smart as a human (or thereabouts)");
@@ -1010,15 +1095,30 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyStep9Panel.add(mSurveyDescTrinkets);
 
         mSurveyDescBeyond.setText("It is from beyond this world");
+        mSurveyDescBeyond.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyDescBeyondActionPerformed(evt);
+            }
+        });
         mSurveyStep9Panel.add(mSurveyDescBeyond);
 
         mSurveyDescProppedUp.setText("It's kept alive by something more than simple biology");
         mSurveyStep9Panel.add(mSurveyDescProppedUp);
 
         mSurveyDescMade.setText("It was made by someone");
+        mSurveyDescMade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyDescMadeActionPerformed(evt);
+            }
+        });
         mSurveyStep9Panel.add(mSurveyDescMade);
 
         mSurveyDescLooksWickedAwful.setText("It's apperance is disturbing, terrible, or horrifying");
+        mSurveyDescLooksWickedAwful.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyDescLooksWickedAwfulActionPerformed(evt);
+            }
+        });
         mSurveyStep9Panel.add(mSurveyDescLooksWickedAwful);
 
         mSurveyDescProbablySlime.setText("It doesn't have organs or discernable anatomy");
@@ -1104,7 +1204,7 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
     }//GEN-LAST:event_MonsterSurvey_NextActionPerformed
 
     private void MonsterSurvey_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterSurvey_CancelActionPerformed
-        
+        owner.dispose();
     }//GEN-LAST:event_MonsterSurvey_CancelActionPerformed
 
     private void mSurveyNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyNameActionPerformed
@@ -1183,9 +1283,55 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         // TODO add your handling code here:
     }//GEN-LAST:event_mSurveyDescShieldActionPerformed
 
-    Monster mon;
-    MonsterList listy;
-    boolean working;
+    private void mSurveyInfamousJokerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyInfamousJokerActionPerformed
+        this.DeceitAndTrickeryWindow.setVisible(true);
+    }//GEN-LAST:event_mSurveyInfamousJokerActionPerformed
+
+    private void mSurveyInfamousAdaptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyInfamousAdaptActionPerformed
+        this.UsefulAdaptWindow.setVisible(true);
+    }//GEN-LAST:event_mSurveyInfamousAdaptActionPerformed
+
+    private void mSurveyInfamousGodsLoveMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyInfamousGodsLoveMeActionPerformed
+        this.FavorOfGodsWindow.setVisible(true);
+    }//GEN-LAST:event_mSurveyInfamousGodsLoveMeActionPerformed
+
+    private void mSurveyInfamousMagicMissileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyInfamousMagicMissileActionPerformed
+        this.SpellsAndMagicWindow.setVisible(true);
+    }//GEN-LAST:event_mSurveyInfamousMagicMissileActionPerformed
+
+    private void mSurveyAttackMetalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyAttackMetalActionPerformed
+        this.SliceOrPierceWindow.setVisible(true);
+    }//GEN-LAST:event_mSurveyAttackMetalActionPerformed
+
+    private void mSurveyAttackRangedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyAttackRangedActionPerformed
+        this.AttacksAtRangeWindow.setVisible(true);
+    }//GEN-LAST:event_mSurveyAttackRangedActionPerformed
+
+    private void mSurveyDescTricksyDamageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyDescTricksyDamageActionPerformed
+        this.DangerousReasonsWindow.setVisible(true);
+    }//GEN-LAST:event_mSurveyDescTricksyDamageActionPerformed
+
+    private void mSurveyDescOrganizedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyDescOrganizedActionPerformed
+        this.OrganizeGroupsWindow.setVisible(true);
+    }//GEN-LAST:event_mSurveyDescOrganizedActionPerformed
+
+    private void mSurveyDescBeyondActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyDescBeyondActionPerformed
+        this.OtherWorldWindow.setVisible(true);
+    }//GEN-LAST:event_mSurveyDescBeyondActionPerformed
+
+    private void mSurveyDescMadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyDescMadeActionPerformed
+        this.MadeWindow.setVisible(true);
+    }//GEN-LAST:event_mSurveyDescMadeActionPerformed
+
+    private void mSurveyDescLooksWickedAwfulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyDescLooksWickedAwfulActionPerformed
+        this.AppearanceWindow.setVisible(true);
+    }//GEN-LAST:event_mSurveyDescLooksWickedAwfulActionPerformed
+
+    private Monster mon;
+    private MonsterList listy;
+    private boolean working;
+    private javax.swing.JDialog owner;
+    BestiaryGUI mainWin;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AppearanceField;
