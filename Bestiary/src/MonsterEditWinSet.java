@@ -305,6 +305,15 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
         }
         mon.setMoves(list);
     }
+    
+    public boolean validName(String s){
+        if(s.equals("")){
+            return false; //invalid name
+        }else if(!(s.equals(mon.getName())) && listy.containsMonster(s)){
+            return false; //name collision
+        }
+        return true;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -960,8 +969,13 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
 
     private void MonsterEdit_SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonsterEdit_SaveButtonActionPerformed
 
-        saveMonster();
-        owner.dispose();
+        if(!this.validName(this.MonsterEdit_NameField.getText())){
+            javax.swing.JOptionPane.showMessageDialog(this,
+                "The name of this monster must be unique and nonempty.");
+        }else{
+            saveMonster();
+            owner.dispose();
+        }
         
     }//GEN-LAST:event_MonsterEdit_SaveButtonActionPerformed
 

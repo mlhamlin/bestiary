@@ -24,6 +24,7 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
     
     public void setdMonsterName(String name){
         cMonsterName.setText(name);
+        cMonsterName.setToolTipText(name);
         resizeFont(cInstinct, 18);
     }
     
@@ -33,6 +34,7 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
     
     public void setdMonsterTags(String txt){
         cMonsterTags.setText(txt);
+        cMonsterTags.setToolTipText(txt);
         resizeFont(cInstinct, 14);
     }
     
@@ -69,6 +71,7 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
     
     public void setdAttackTags(String txt){
         cAttackTags.setText(txt);
+        cAttackTags.setToolTipText(txt);
         resizeFont(cInstinct, 14);
     }
     
@@ -78,6 +81,7 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
     
     public void setdQualities(String txt){
         cQualities.setText(txt);
+        cQualities.setToolTipText(txt);
         resizeFont(cInstinct, 12);
     }
     
@@ -87,6 +91,7 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
 
     public void setdInstinct(String txt){
         cInstinct.setText(txt);
+        cInstinct.setToolTipText(txt);
         resizeFont(cInstinct, 13);
     }
     
@@ -201,13 +206,13 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
         cMonsterName.setText("Name");
         cMonsterName.setPreferredSize(new java.awt.Dimension(250, 22));
         cMonsterName.setSize(new java.awt.Dimension(250, 22));
-        jPanel4.add(cMonsterName, java.awt.BorderLayout.LINE_START);
+        jPanel4.add(cMonsterName, java.awt.BorderLayout.WEST);
 
         cMonsterTags.setFont(new java.awt.Font("Lucida Grande", 2, 14)); // NOI18N
         cMonsterTags.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         cMonsterTags.setText("Monster, Tags");
         cMonsterTags.setPreferredSize(new java.awt.Dimension(200, 17));
-        jPanel4.add(cMonsterTags, java.awt.BorderLayout.LINE_END);
+        jPanel4.add(cMonsterTags, java.awt.BorderLayout.CENTER);
 
         jPanel1.add(jPanel4);
 
@@ -217,7 +222,7 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
         cAttack.setText("Attack");
         cAttack.setPreferredSize(new java.awt.Dimension(300, 17));
         cAttack.setSize(new java.awt.Dimension(300, 17));
-        jPanel5.add(cAttack, java.awt.BorderLayout.LINE_START);
+        jPanel5.add(cAttack, java.awt.BorderLayout.CENTER);
 
         jPanel8.setLayout(new java.awt.GridLayout(1, 2));
 
@@ -262,23 +267,22 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
         cAttackTags.setText("Attack, Tags");
         cAttackTags.setPreferredSize(new java.awt.Dimension(400, 17));
         cAttackTags.setSize(new java.awt.Dimension(400, 17));
-        jPanel6.add(cAttackTags, java.awt.BorderLayout.WEST);
+        jPanel6.add(cAttackTags, java.awt.BorderLayout.CENTER);
 
         jPanel1.add(jPanel6);
 
-        jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 5));
+        jPanel7.setLayout(new java.awt.BorderLayout());
 
         jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel9.setText("Special Qualities: ");
-        jLabel9.setSize(new java.awt.Dimension(118, 16));
-        jPanel7.add(jLabel9);
+        jPanel7.add(jLabel9, java.awt.BorderLayout.WEST);
 
         cQualities.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         cQualities.setText("Stuff and Things");
-        cQualities.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        cQualities.setMaximumSize(null);
+        cQualities.setMinimumSize(new java.awt.Dimension(20, 15));
         cQualities.setPreferredSize(new java.awt.Dimension(300, 15));
-        cQualities.setSize(new java.awt.Dimension(300, 15));
-        jPanel7.add(cQualities);
+        jPanel7.add(cQualities, java.awt.BorderLayout.CENTER);
 
         jPanel1.add(jPanel7);
 
@@ -313,16 +317,15 @@ public class MiniMonsterCard extends javax.swing.JPanel implements java.beans.Cu
 
         jPanel3.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
-        jPanel13.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        jPanel13.setLayout(new java.awt.BorderLayout());
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 2, 13)); // NOI18N
-        jLabel1.setText("Instinct:");
-        jPanel13.add(jLabel1);
+        jLabel1.setText("Instinct: ");
+        jPanel13.add(jLabel1, java.awt.BorderLayout.WEST);
 
         cInstinct.setText("to do things");
         cInstinct.setPreferredSize(new java.awt.Dimension(350, 16));
-        cInstinct.setSize(new java.awt.Dimension(350, 16));
-        jPanel13.add(cInstinct);
+        jPanel13.add(cInstinct, java.awt.BorderLayout.CENTER);
 
         jPanel3.add(jPanel13, java.awt.BorderLayout.NORTH);
 

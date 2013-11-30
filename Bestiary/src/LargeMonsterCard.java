@@ -26,6 +26,7 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
     
     public void setdMonsterName(String name){
         cMonsterName.setText(name);
+        cMonsterName.setToolTipText(name);
         resizeFont(cMonsterName, 24);
     }
     
@@ -35,6 +36,7 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
     
     public void setdMonsterTags(String txt){
         cMonsterTags.setText(txt);
+        cMonsterTags.setToolTipText(txt);
         resizeFont(cMonsterTags, 14);
     }
     
@@ -44,6 +46,7 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
     
     public void setdAttack(String txt){
         cAttack.setText(txt);
+        cAttack.setToolTipText(txt);
         resizeFont(cAttack, 14);
     }
     
@@ -71,6 +74,7 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
     
     public void setdAttackTags(String txt){
         cAttackTags.setText(txt);
+        cAttackTags.setToolTipText(txt);
         resizeFont(cAttackTags, 14);
     }
     
@@ -80,6 +84,7 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
     
     public void setdQualities(String txt){
         cQualities.setText(txt);
+        cQualities.setToolTipText(txt);
         resizeFont(cQualities, 14);
     }
     
@@ -89,6 +94,7 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
 
     public void setdInstinct(String txt){
         cInstinct.setText(txt);
+        cInstinct.setToolTipText(txt);
         resizeFont(cInstinct, 14);
     }
     
@@ -158,10 +164,9 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
         jPanel12 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        cMonsterName = new javax.swing.JLabel();
         cMonsterTags = new javax.swing.JLabel();
+        cMonsterName = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        cAttack = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         cHP = new javax.swing.JLabel();
@@ -169,6 +174,7 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
         jPanel10 = new javax.swing.JPanel();
         cArmor = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        cAttack = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         cAttackTags = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
@@ -200,28 +206,21 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
 
         jPanel4.setLayout(new java.awt.BorderLayout());
 
-        cMonsterName.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        cMonsterName.setText("Name");
-        cMonsterName.setPreferredSize(new java.awt.Dimension(400, 30));
-        cMonsterName.setSize(new java.awt.Dimension(400, 30));
-        jPanel4.add(cMonsterName, java.awt.BorderLayout.LINE_START);
-
         cMonsterTags.setFont(new java.awt.Font("Lucida Grande", 2, 14)); // NOI18N
         cMonsterTags.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         cMonsterTags.setText("Monster, Tags");
+        cMonsterTags.setToolTipText("Monster, Tags");
         cMonsterTags.setPreferredSize(new java.awt.Dimension(300, 17));
-        cMonsterTags.setSize(new java.awt.Dimension(300, 17));
-        jPanel4.add(cMonsterTags, java.awt.BorderLayout.LINE_END);
+        jPanel4.add(cMonsterTags, java.awt.BorderLayout.CENTER);
+
+        cMonsterName.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        cMonsterName.setText("Name");
+        cMonsterName.setPreferredSize(new java.awt.Dimension(400, 30));
+        jPanel4.add(cMonsterName, java.awt.BorderLayout.WEST);
 
         jPanel1.add(jPanel4);
 
         jPanel5.setLayout(new java.awt.BorderLayout());
-
-        cAttack.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        cAttack.setText("Attack");
-        cAttack.setPreferredSize(new java.awt.Dimension(500, 17));
-        cAttack.setSize(new java.awt.Dimension(500, 17));
-        jPanel5.add(cAttack, java.awt.BorderLayout.LINE_START);
 
         jPanel8.setLayout(new java.awt.GridLayout(1, 2));
 
@@ -255,7 +254,12 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
 
         jPanel8.add(jPanel10);
 
-        jPanel5.add(jPanel8, java.awt.BorderLayout.LINE_END);
+        jPanel5.add(jPanel8, java.awt.BorderLayout.EAST);
+
+        cAttack.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        cAttack.setText("Attack");
+        cAttack.setPreferredSize(new java.awt.Dimension(500, 17));
+        jPanel5.add(cAttack, java.awt.BorderLayout.CENTER);
 
         jPanel1.add(jPanel5);
 
@@ -263,9 +267,9 @@ public class LargeMonsterCard extends javax.swing.JPanel implements java.beans.C
 
         cAttackTags.setFont(new java.awt.Font("Lucida Grande", 2, 14)); // NOI18N
         cAttackTags.setText("Attack, Tags");
-        cAttackTags.setPreferredSize(new java.awt.Dimension(700, 17));
-        cAttackTags.setSize(new java.awt.Dimension(700, 17));
-        jPanel6.add(cAttackTags, java.awt.BorderLayout.WEST);
+        cAttackTags.setPreferredSize(new java.awt.Dimension(550, 17));
+        cAttackTags.setSize(new java.awt.Dimension(550, 17));
+        jPanel6.add(cAttackTags, java.awt.BorderLayout.CENTER);
 
         jPanel1.add(jPanel6);
 

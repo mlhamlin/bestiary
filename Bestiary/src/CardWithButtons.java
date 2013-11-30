@@ -40,8 +40,10 @@ public class CardWithButtons extends javax.swing.JPanel implements java.beans.Cu
 
         largeMonsterCard1 = new LargeMonsterCard();
         ButtonPane = new javax.swing.JPanel();
-        DeleteMonsterButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        PopUpMonsterButton = new javax.swing.JButton();
         OpenMonsterDetailsButton = new javax.swing.JButton();
+        DeleteMonsterButton = new javax.swing.JButton();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setMaximumSize(new java.awt.Dimension(800, 400));
@@ -56,13 +58,15 @@ public class CardWithButtons extends javax.swing.JPanel implements java.beans.Cu
         ButtonPane.setSize(new java.awt.Dimension(681, 381));
         ButtonPane.setLayout(new java.awt.BorderLayout());
 
-        DeleteMonsterButton.setText("Delete Monster");
-        DeleteMonsterButton.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
+
+        PopUpMonsterButton.setText("Pop Up Monster");
+        PopUpMonsterButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DeleteMonsterButtonActionPerformed(evt);
+                PopUpMonsterButtonActionPerformed(evt);
             }
         });
-        ButtonPane.add(DeleteMonsterButton, java.awt.BorderLayout.WEST);
+        jPanel1.add(PopUpMonsterButton);
 
         OpenMonsterDetailsButton.setText("Open Monster Details");
         OpenMonsterDetailsButton.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +74,17 @@ public class CardWithButtons extends javax.swing.JPanel implements java.beans.Cu
                 OpenMonsterDetailsButtonActionPerformed(evt);
             }
         });
-        ButtonPane.add(OpenMonsterDetailsButton, java.awt.BorderLayout.EAST);
+        jPanel1.add(OpenMonsterDetailsButton);
+
+        ButtonPane.add(jPanel1, java.awt.BorderLayout.EAST);
+
+        DeleteMonsterButton.setText("Delete Monster");
+        DeleteMonsterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteMonsterButtonActionPerformed(evt);
+            }
+        });
+        ButtonPane.add(DeleteMonsterButton, java.awt.BorderLayout.WEST);
 
         add(ButtonPane, java.awt.BorderLayout.SOUTH);
     }// </editor-fold>//GEN-END:initComponents
@@ -94,10 +108,23 @@ public class CardWithButtons extends javax.swing.JPanel implements java.beans.Cu
         mainWin.openMonster = mon;
     }//GEN-LAST:event_OpenMonsterDetailsButtonActionPerformed
 
+    private void PopUpMonsterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PopUpMonsterButtonActionPerformed
+        javax.swing.JDialog win = new javax.swing.JDialog(mainWin, false);
+        win.setSize(400, 300);
+        
+        MonsterPop pop = new MonsterPop(mon, mainWin, win);
+        pop.setSize(400, 300);
+
+        win.add(pop);
+        win.setVisible(true);
+    }//GEN-LAST:event_PopUpMonsterButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonPane;
     private javax.swing.JButton DeleteMonsterButton;
     private javax.swing.JButton OpenMonsterDetailsButton;
+    private javax.swing.JButton PopUpMonsterButton;
+    private javax.swing.JPanel jPanel1;
     private LargeMonsterCard largeMonsterCard1;
     // End of variables declaration//GEN-END:variables
 }
