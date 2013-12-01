@@ -424,30 +424,30 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyStep3Panel = new javax.swing.JPanel();
         mSurveyInstinctLabel = new javax.swing.JLabel();
         mSurveyInstinct = new javax.swing.JTextField();
-        mSurveyStep4 = new javax.swing.JPanel();
-        mSurveyStep4Panel = new javax.swing.JPanel();
+        mSurveyStep5 = new javax.swing.JPanel();
+        mSurveyStep5Panel = new javax.swing.JPanel();
         mSurveyHuntSizeLabel = new javax.swing.JLabel();
         mSurveyHorde = new javax.swing.JRadioButton();
         mSurveyGroup = new javax.swing.JRadioButton();
         mSurveySolitary = new javax.swing.JRadioButton();
-        mSurveyStep5 = new javax.swing.JPanel();
-        mSurveyStep5Panel = new javax.swing.JPanel();
+        mSurveyStep6 = new javax.swing.JPanel();
+        mSurveyStep6Panel = new javax.swing.JPanel();
         mSurveySizeLabel = new javax.swing.JLabel();
         mSurveyTiny = new javax.swing.JRadioButton();
         mSurveySmall = new javax.swing.JRadioButton();
         mSurveyNormal = new javax.swing.JRadioButton();
         mSurveyLarge = new javax.swing.JRadioButton();
         mSurveyHuge = new javax.swing.JRadioButton();
-        mSurveyStep6 = new javax.swing.JPanel();
-        mSurveyStep6Panel = new javax.swing.JPanel();
+        mSurveyStep7 = new javax.swing.JPanel();
+        mSurveyStep7Panel = new javax.swing.JPanel();
         mSurveyDefenseLabel = new javax.swing.JLabel();
         mSurveyDefenseNone = new javax.swing.JRadioButton();
         mSurveyDefenseBuffaloBill = new javax.swing.JRadioButton();
         mSurveyDefenseTisButAScratch = new javax.swing.JRadioButton();
         mSurveyDefenseCubone = new javax.swing.JRadioButton();
         mSurveyDefenseForceField = new javax.swing.JRadioButton();
-        mSurveyStep7 = new javax.swing.JPanel();
-        mSurveyStep7Panel = new javax.swing.JPanel();
+        mSurveyStep8 = new javax.swing.JPanel();
+        mSurveyStep8Panel = new javax.swing.JPanel();
         mSurveyInfamousLabel = new javax.swing.JLabel();
         mSurveyInfamousStrength = new javax.swing.JCheckBox();
         mSurveyInfamousOffense = new javax.swing.JCheckBox();
@@ -458,8 +458,8 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyInfamousAdapt = new javax.swing.JCheckBox();
         mSurveyInfamousGodsLoveMe = new javax.swing.JCheckBox();
         mSurveyInfamousMagicMissile = new javax.swing.JCheckBox();
-        mSurveyStep8 = new javax.swing.JPanel();
-        mSurveyStep8Panel = new javax.swing.JPanel();
+        mSurveyStep9 = new javax.swing.JPanel();
+        mSurveyStep9Panel = new javax.swing.JPanel();
         mSurveyAttackLabel = new javax.swing.JLabel();
         mSurveyAttackName = new javax.swing.JTextField();
         mSurveyAttackVicious = new javax.swing.JCheckBox();
@@ -468,8 +468,8 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyAttackMetal = new javax.swing.JCheckBox();
         mSurveyAttackWhereIsYourGodNow = new javax.swing.JCheckBox();
         mSurveyAttackRanged = new javax.swing.JCheckBox();
-        mSurveyStep9 = new javax.swing.JPanel();
-        mSurveyStep9Panel = new javax.swing.JPanel();
+        mSurveyStep10 = new javax.swing.JPanel();
+        mSurveyStep10Panel = new javax.swing.JPanel();
         mSurveyDescLabel = new javax.swing.JLabel();
         mSurveyDescTricksyDamage = new javax.swing.JCheckBox();
         mSurveyDescOrganized = new javax.swing.JCheckBox();
@@ -846,7 +846,7 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         mSurveyStep3.setLayout(new java.awt.BorderLayout());
 
-        mSurveyStep3Panel.setLayout(new java.awt.GridLayout(2, 0));
+        mSurveyStep3Panel.setLayout(new java.awt.GridLayout(0, 1));
 
         mSurveyInstinctLabel.setText("What does it want that causes problems for others?");
         mSurveyStep3Panel.add(mSurveyInstinctLabel);
@@ -856,12 +856,12 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         MonsterSurvey_MainPane.add(mSurveyStep3, "card3");
 
-        mSurveyStep4.setLayout(new java.awt.BorderLayout());
+        mSurveyStep5.setLayout(new java.awt.BorderLayout());
 
-        mSurveyStep4Panel.setLayout(new java.awt.GridLayout(4, 0));
+        mSurveyStep5Panel.setLayout(new java.awt.GridLayout(4, 0));
 
         mSurveyHuntSizeLabel.setText("How does it usually hunt or fight?");
-        mSurveyStep4Panel.add(mSurveyHuntSizeLabel);
+        mSurveyStep5Panel.add(mSurveyHuntSizeLabel);
 
         mSurveyGroupHuntSize.add(mSurveyHorde);
         mSurveyHorde.setText("In large groups");
@@ -870,27 +870,27 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 mSurveyHordeActionPerformed(evt);
             }
         });
-        mSurveyStep4Panel.add(mSurveyHorde);
+        mSurveyStep5Panel.add(mSurveyHorde);
 
         mSurveyGroupHuntSize.add(mSurveyGroup);
         mSurveyGroup.setText("In small groups");
-        mSurveyStep4Panel.add(mSurveyGroup);
+        mSurveyStep5Panel.add(mSurveyGroup);
 
         mSurveyGroupHuntSize.add(mSurveySolitary);
         mSurveySolitary.setSelected(true);
         mSurveySolitary.setText("All by its lonesome");
-        mSurveyStep4Panel.add(mSurveySolitary);
+        mSurveyStep5Panel.add(mSurveySolitary);
 
-        mSurveyStep4.add(mSurveyStep4Panel, java.awt.BorderLayout.PAGE_START);
+        mSurveyStep5.add(mSurveyStep5Panel, java.awt.BorderLayout.PAGE_START);
 
-        MonsterSurvey_MainPane.add(mSurveyStep4, "card4");
+        MonsterSurvey_MainPane.add(mSurveyStep5, "card5");
 
-        mSurveyStep5.setLayout(new java.awt.BorderLayout());
+        mSurveyStep6.setLayout(new java.awt.BorderLayout());
 
-        mSurveyStep5Panel.setLayout(new java.awt.GridLayout(6, 0));
+        mSurveyStep6Panel.setLayout(new java.awt.GridLayout(6, 0));
 
         mSurveySizeLabel.setText("How big is it?");
-        mSurveyStep5Panel.add(mSurveySizeLabel);
+        mSurveyStep6Panel.add(mSurveySizeLabel);
 
         mSurveySize.add(mSurveyTiny);
         mSurveyTiny.setText("Smaller than a house cat");
@@ -899,119 +899,56 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 mSurveyTinyActionPerformed(evt);
             }
         });
-        mSurveyStep5Panel.add(mSurveyTiny);
+        mSurveyStep6Panel.add(mSurveyTiny);
 
         mSurveySize.add(mSurveySmall);
         mSurveySmall.setText("Hafling-esque");
-        mSurveyStep5Panel.add(mSurveySmall);
+        mSurveyStep6Panel.add(mSurveySmall);
 
         mSurveySize.add(mSurveyNormal);
         mSurveyNormal.setSelected(true);
         mSurveyNormal.setText("About human size");
-        mSurveyStep5Panel.add(mSurveyNormal);
+        mSurveyStep6Panel.add(mSurveyNormal);
 
         mSurveySize.add(mSurveyLarge);
         mSurveyLarge.setText("As big as a cart");
-        mSurveyStep5Panel.add(mSurveyLarge);
+        mSurveyStep6Panel.add(mSurveyLarge);
 
         mSurveySize.add(mSurveyHuge);
         mSurveyHuge.setText("Much larger than a cart");
-        mSurveyStep5Panel.add(mSurveyHuge);
+        mSurveyStep6Panel.add(mSurveyHuge);
 
-        mSurveyStep5.add(mSurveyStep5Panel, java.awt.BorderLayout.NORTH);
-
-        MonsterSurvey_MainPane.add(mSurveyStep5, "card5");
-
-        mSurveyStep6.setLayout(new java.awt.BorderLayout());
-
-        mSurveyStep6Panel.setLayout(new java.awt.GridLayout(6, 0));
-
-        mSurveyDefenseLabel.setText("What is its most important defense?");
-        mSurveyStep6Panel.add(mSurveyDefenseLabel);
-
-        mSurveyDefense.add(mSurveyDefenseNone);
-        mSurveyDefenseNone.setSelected(true);
-        mSurveyDefenseNone.setText("Cloth or flesh");
-        mSurveyStep6Panel.add(mSurveyDefenseNone);
-
-        mSurveyDefense.add(mSurveyDefenseBuffaloBill);
-        mSurveyDefenseBuffaloBill.setText("Leathers or thick hide");
-        mSurveyStep6Panel.add(mSurveyDefenseBuffaloBill);
-
-        mSurveyDefense.add(mSurveyDefenseTisButAScratch);
-        mSurveyDefenseTisButAScratch.setText("Mail or scales");
-        mSurveyStep6Panel.add(mSurveyDefenseTisButAScratch);
-
-        mSurveyDefense.add(mSurveyDefenseCubone);
-        mSurveyDefenseCubone.setText("Plate or bone");
-        mSurveyStep6Panel.add(mSurveyDefenseCubone);
-
-        mSurveyDefense.add(mSurveyDefenseForceField);
-        mSurveyDefenseForceField.setText("Permanent magical protection");
-        mSurveyStep6Panel.add(mSurveyDefenseForceField);
-
-        mSurveyStep6.add(mSurveyStep6Panel, java.awt.BorderLayout.PAGE_START);
+        mSurveyStep6.add(mSurveyStep6Panel, java.awt.BorderLayout.NORTH);
 
         MonsterSurvey_MainPane.add(mSurveyStep6, "card6");
 
         mSurveyStep7.setLayout(new java.awt.BorderLayout());
 
-        mSurveyStep7Panel.setLayout(new java.awt.GridLayout(10, 0));
+        mSurveyStep7Panel.setLayout(new java.awt.GridLayout(6, 0));
 
-        mSurveyInfamousLabel.setText("What is it known for? (choose all that apply)");
-        mSurveyStep7Panel.add(mSurveyInfamousLabel);
+        mSurveyDefenseLabel.setText("What is its most important defense?");
+        mSurveyStep7Panel.add(mSurveyDefenseLabel);
 
-        mSurveyInfamousStrength.setText("Unrelenting strength");
-        mSurveyStep7Panel.add(mSurveyInfamousStrength);
+        mSurveyDefense.add(mSurveyDefenseNone);
+        mSurveyDefenseNone.setSelected(true);
+        mSurveyDefenseNone.setText("Cloth or flesh");
+        mSurveyStep7Panel.add(mSurveyDefenseNone);
 
-        mSurveyInfamousOffense.setText("Skill in offense");
-        mSurveyInfamousOffense.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mSurveyInfamousOffenseActionPerformed(evt);
-            }
-        });
-        mSurveyStep7Panel.add(mSurveyInfamousOffense);
+        mSurveyDefense.add(mSurveyDefenseBuffaloBill);
+        mSurveyDefenseBuffaloBill.setText("Leathers or thick hide");
+        mSurveyStep7Panel.add(mSurveyDefenseBuffaloBill);
 
-        mSurveyInfamousDefense.setText("Skill in defense");
-        mSurveyStep7Panel.add(mSurveyInfamousDefense);
+        mSurveyDefense.add(mSurveyDefenseTisButAScratch);
+        mSurveyDefenseTisButAScratch.setText("Mail or scales");
+        mSurveyStep7Panel.add(mSurveyDefenseTisButAScratch);
 
-        mSurveyInfamousDeft.setText("Deft strikes");
-        mSurveyStep7Panel.add(mSurveyInfamousDeft);
+        mSurveyDefense.add(mSurveyDefenseCubone);
+        mSurveyDefenseCubone.setText("Plate or bone");
+        mSurveyStep7Panel.add(mSurveyDefenseCubone);
 
-        mSurveyInfamousEndurance.setText("Uncanny endurance");
-        mSurveyStep7Panel.add(mSurveyInfamousEndurance);
-
-        mSurveyInfamousJoker.setText("Deceit and trickery");
-        mSurveyInfamousJoker.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mSurveyInfamousJokerActionPerformed(evt);
-            }
-        });
-        mSurveyStep7Panel.add(mSurveyInfamousJoker);
-
-        mSurveyInfamousAdapt.setText("A useful adaptation");
-        mSurveyInfamousAdapt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mSurveyInfamousAdaptActionPerformed(evt);
-            }
-        });
-        mSurveyStep7Panel.add(mSurveyInfamousAdapt);
-
-        mSurveyInfamousGodsLoveMe.setText("The favour of the gods");
-        mSurveyInfamousGodsLoveMe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mSurveyInfamousGodsLoveMeActionPerformed(evt);
-            }
-        });
-        mSurveyStep7Panel.add(mSurveyInfamousGodsLoveMe);
-
-        mSurveyInfamousMagicMissile.setText("Spells and magic");
-        mSurveyInfamousMagicMissile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mSurveyInfamousMagicMissileActionPerformed(evt);
-            }
-        });
-        mSurveyStep7Panel.add(mSurveyInfamousMagicMissile);
+        mSurveyDefense.add(mSurveyDefenseForceField);
+        mSurveyDefenseForceField.setText("Permanent magical protection");
+        mSurveyStep7Panel.add(mSurveyDefenseForceField);
 
         mSurveyStep7.add(mSurveyStep7Panel, java.awt.BorderLayout.PAGE_START);
 
@@ -1019,39 +956,62 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         mSurveyStep8.setLayout(new java.awt.BorderLayout());
 
-        mSurveyStep8Panel.setLayout(new java.awt.GridLayout(8, 0));
+        mSurveyStep8Panel.setLayout(new java.awt.GridLayout(10, 0));
 
-        mSurveyAttackLabel.setText("What is its most common form of attack?");
-        mSurveyStep8Panel.add(mSurveyAttackLabel);
-        mSurveyStep8Panel.add(mSurveyAttackName);
+        mSurveyInfamousLabel.setText("What is it known for? (choose all that apply)");
+        mSurveyStep8Panel.add(mSurveyInfamousLabel);
 
-        mSurveyAttackVicious.setText("Its armaments are vicious and obvious");
-        mSurveyStep8Panel.add(mSurveyAttackVicious);
+        mSurveyInfamousStrength.setText("Unrelenting strength");
+        mSurveyStep8Panel.add(mSurveyInfamousStrength);
 
-        mSurveyAttackBay.setText("It lets the monster keep others at bay");
-        mSurveyStep8Panel.add(mSurveyAttackBay);
-
-        mSurveyAttackWeak.setText("Its armaments are small and weak");
-        mSurveyStep8Panel.add(mSurveyAttackWeak);
-
-        mSurveyAttackMetal.setText("Its armaments can slice or pierce metal");
-        mSurveyAttackMetal.addActionListener(new java.awt.event.ActionListener() {
+        mSurveyInfamousOffense.setText("Skill in offense");
+        mSurveyInfamousOffense.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mSurveyAttackMetalActionPerformed(evt);
+                mSurveyInfamousOffenseActionPerformed(evt);
             }
         });
-        mSurveyStep8Panel.add(mSurveyAttackMetal);
+        mSurveyStep8Panel.add(mSurveyInfamousOffense);
 
-        mSurveyAttackWhereIsYourGodNow.setText("Armor doesn't help with the damage it deals");
-        mSurveyStep8Panel.add(mSurveyAttackWhereIsYourGodNow);
+        mSurveyInfamousDefense.setText("Skill in defense");
+        mSurveyStep8Panel.add(mSurveyInfamousDefense);
 
-        mSurveyAttackRanged.setText("It usually attacks at range");
-        mSurveyAttackRanged.addActionListener(new java.awt.event.ActionListener() {
+        mSurveyInfamousDeft.setText("Deft strikes");
+        mSurveyStep8Panel.add(mSurveyInfamousDeft);
+
+        mSurveyInfamousEndurance.setText("Uncanny endurance");
+        mSurveyStep8Panel.add(mSurveyInfamousEndurance);
+
+        mSurveyInfamousJoker.setText("Deceit and trickery");
+        mSurveyInfamousJoker.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mSurveyAttackRangedActionPerformed(evt);
+                mSurveyInfamousJokerActionPerformed(evt);
             }
         });
-        mSurveyStep8Panel.add(mSurveyAttackRanged);
+        mSurveyStep8Panel.add(mSurveyInfamousJoker);
+
+        mSurveyInfamousAdapt.setText("A useful adaptation");
+        mSurveyInfamousAdapt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyInfamousAdaptActionPerformed(evt);
+            }
+        });
+        mSurveyStep8Panel.add(mSurveyInfamousAdapt);
+
+        mSurveyInfamousGodsLoveMe.setText("The favour of the gods");
+        mSurveyInfamousGodsLoveMe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyInfamousGodsLoveMeActionPerformed(evt);
+            }
+        });
+        mSurveyStep8Panel.add(mSurveyInfamousGodsLoveMe);
+
+        mSurveyInfamousMagicMissile.setText("Spells and magic");
+        mSurveyInfamousMagicMissile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyInfamousMagicMissileActionPerformed(evt);
+            }
+        });
+        mSurveyStep8Panel.add(mSurveyInfamousMagicMissile);
 
         mSurveyStep8.add(mSurveyStep8Panel, java.awt.BorderLayout.PAGE_START);
 
@@ -1059,10 +1019,50 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         mSurveyStep9.setLayout(new java.awt.BorderLayout());
 
-        mSurveyStep9Panel.setLayout(new java.awt.GridLayout(13, 0));
+        mSurveyStep9Panel.setLayout(new java.awt.GridLayout(8, 0));
+
+        mSurveyAttackLabel.setText("What is its most common form of attack?");
+        mSurveyStep9Panel.add(mSurveyAttackLabel);
+        mSurveyStep9Panel.add(mSurveyAttackName);
+
+        mSurveyAttackVicious.setText("Its armaments are vicious and obvious");
+        mSurveyStep9Panel.add(mSurveyAttackVicious);
+
+        mSurveyAttackBay.setText("It lets the monster keep others at bay");
+        mSurveyStep9Panel.add(mSurveyAttackBay);
+
+        mSurveyAttackWeak.setText("Its armaments are small and weak");
+        mSurveyStep9Panel.add(mSurveyAttackWeak);
+
+        mSurveyAttackMetal.setText("Its armaments can slice or pierce metal");
+        mSurveyAttackMetal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyAttackMetalActionPerformed(evt);
+            }
+        });
+        mSurveyStep9Panel.add(mSurveyAttackMetal);
+
+        mSurveyAttackWhereIsYourGodNow.setText("Armor doesn't help with the damage it deals");
+        mSurveyStep9Panel.add(mSurveyAttackWhereIsYourGodNow);
+
+        mSurveyAttackRanged.setText("It usually attacks at range");
+        mSurveyAttackRanged.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyAttackRangedActionPerformed(evt);
+            }
+        });
+        mSurveyStep9Panel.add(mSurveyAttackRanged);
+
+        mSurveyStep9.add(mSurveyStep9Panel, java.awt.BorderLayout.PAGE_START);
+
+        MonsterSurvey_MainPane.add(mSurveyStep9, "card9");
+
+        mSurveyStep10.setLayout(new java.awt.BorderLayout());
+
+        mSurveyStep10Panel.setLayout(new java.awt.GridLayout(13, 0));
 
         mSurveyDescLabel.setText("What of these describes it?");
-        mSurveyStep9Panel.add(mSurveyDescLabel);
+        mSurveyStep10Panel.add(mSurveyDescLabel);
 
         mSurveyDescTricksyDamage.setText("It isn't dangerious because of the wounds it inflicts, but for other reasons");
         mSurveyDescTricksyDamage.addActionListener(new java.awt.event.ActionListener() {
@@ -1070,7 +1070,7 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 mSurveyDescTricksyDamageActionPerformed(evt);
             }
         });
-        mSurveyStep9Panel.add(mSurveyDescTricksyDamage);
+        mSurveyStep10Panel.add(mSurveyDescTricksyDamage);
 
         mSurveyDescOrganized.setText("It organises into larger groups that it can call for support");
         mSurveyDescOrganized.addActionListener(new java.awt.event.ActionListener() {
@@ -1078,10 +1078,10 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 mSurveyDescOrganizedActionPerformed(evt);
             }
         });
-        mSurveyStep9Panel.add(mSurveyDescOrganized);
+        mSurveyStep10Panel.add(mSurveyDescOrganized);
 
         mSurveyDescSmartass.setText("It's as smart as a human (or thereabouts)");
-        mSurveyStep9Panel.add(mSurveyDescSmartass);
+        mSurveyStep10Panel.add(mSurveyDescSmartass);
 
         mSurveyDescShield.setText("It actively defends itself with a shield or similar");
         mSurveyDescShield.addActionListener(new java.awt.event.ActionListener() {
@@ -1089,10 +1089,10 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 mSurveyDescShieldActionPerformed(evt);
             }
         });
-        mSurveyStep9Panel.add(mSurveyDescShield);
+        mSurveyStep10Panel.add(mSurveyDescShield);
 
         mSurveyDescTrinkets.setText("It collects trinkets that humans would consider valuable");
-        mSurveyStep9Panel.add(mSurveyDescTrinkets);
+        mSurveyStep10Panel.add(mSurveyDescTrinkets);
 
         mSurveyDescBeyond.setText("It is from beyond this world");
         mSurveyDescBeyond.addActionListener(new java.awt.event.ActionListener() {
@@ -1100,10 +1100,10 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 mSurveyDescBeyondActionPerformed(evt);
             }
         });
-        mSurveyStep9Panel.add(mSurveyDescBeyond);
+        mSurveyStep10Panel.add(mSurveyDescBeyond);
 
         mSurveyDescProppedUp.setText("It's kept alive by something more than simple biology");
-        mSurveyStep9Panel.add(mSurveyDescProppedUp);
+        mSurveyStep10Panel.add(mSurveyDescProppedUp);
 
         mSurveyDescMade.setText("It was made by someone");
         mSurveyDescMade.addActionListener(new java.awt.event.ActionListener() {
@@ -1111,7 +1111,7 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 mSurveyDescMadeActionPerformed(evt);
             }
         });
-        mSurveyStep9Panel.add(mSurveyDescMade);
+        mSurveyStep10Panel.add(mSurveyDescMade);
 
         mSurveyDescLooksWickedAwful.setText("It's apperance is disturbing, terrible, or horrifying");
         mSurveyDescLooksWickedAwful.addActionListener(new java.awt.event.ActionListener() {
@@ -1119,20 +1119,20 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 mSurveyDescLooksWickedAwfulActionPerformed(evt);
             }
         });
-        mSurveyStep9Panel.add(mSurveyDescLooksWickedAwful);
+        mSurveyStep10Panel.add(mSurveyDescLooksWickedAwful);
 
         mSurveyDescProbablySlime.setText("It doesn't have organs or discernable anatomy");
-        mSurveyStep9Panel.add(mSurveyDescProbablySlime);
+        mSurveyStep10Panel.add(mSurveyDescProbablySlime);
 
         mSurveyDescGetOffMyLawn.setText("It, or its species, is ancient — older than man, dwarves, elves, etc.");
-        mSurveyStep9Panel.add(mSurveyDescGetOffMyLawn);
+        mSurveyStep10Panel.add(mSurveyDescGetOffMyLawn);
 
         mSurveyDescTreeHugger.setText("It abhors violence");
-        mSurveyStep9Panel.add(mSurveyDescTreeHugger);
+        mSurveyStep10Panel.add(mSurveyDescTreeHugger);
 
-        mSurveyStep9.add(mSurveyStep9Panel, java.awt.BorderLayout.PAGE_START);
+        mSurveyStep10.add(mSurveyStep10Panel, java.awt.BorderLayout.PAGE_START);
 
-        MonsterSurvey_MainPane.add(mSurveyStep9, "card9");
+        MonsterSurvey_MainPane.add(mSurveyStep10, "card10");
 
         add(MonsterSurvey_MainPane, java.awt.BorderLayout.CENTER);
 
@@ -1186,7 +1186,7 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         java.awt.CardLayout cl = (java.awt.CardLayout)(this.MonsterSurvey_MainPane.getLayout());
         if (this.MonsterSurvey_MainPane.getComponent(this.MonsterSurvey_MainPane.getComponentCount() - 1).isVisible()){
             int n = javax.swing.JOptionPane.showConfirmDialog(this,
-                "Are you sure you want to continue?", "",
+                "Are you sure you are done?", "",
                 javax.swing.JOptionPane.YES_NO_OPTION);
             if(n == javax.swing.JOptionPane.YES_OPTION){
                 this.completeMonsterSurvey();
@@ -1501,13 +1501,13 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
     private javax.swing.JRadioButton mSurveySmall;
     private javax.swing.JRadioButton mSurveySolitary;
     private javax.swing.JPanel mSurveyStep1;
+    private javax.swing.JPanel mSurveyStep10;
+    private javax.swing.JPanel mSurveyStep10Panel;
     private javax.swing.JPanel mSurveyStep1Panel;
     private javax.swing.JPanel mSurveyStep2;
     private javax.swing.JPanel mSurveyStep2Panel;
     private javax.swing.JPanel mSurveyStep3;
     private javax.swing.JPanel mSurveyStep3Panel;
-    private javax.swing.JPanel mSurveyStep4;
-    private javax.swing.JPanel mSurveyStep4Panel;
     private javax.swing.JPanel mSurveyStep5;
     private javax.swing.JPanel mSurveyStep5Panel;
     private javax.swing.JPanel mSurveyStep6;
