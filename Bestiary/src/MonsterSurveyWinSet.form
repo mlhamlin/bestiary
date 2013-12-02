@@ -1408,6 +1408,7 @@
                 <Component class="javax.swing.JTextField" name="mSurveyName">
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyNameActionPerformed"/>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="mSurveyNameKeyReleased"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -1443,6 +1444,7 @@
                 <Component class="javax.swing.JTextField" name="mSurveyMove">
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyMoveActionPerformed"/>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="mSurveyMoveKeyReleased"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="this.mSurveyMove.requestFocusInWindow();"/>
@@ -1479,6 +1481,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="mSurveyInstinct">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="mSurveyInstinctKeyReleased"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

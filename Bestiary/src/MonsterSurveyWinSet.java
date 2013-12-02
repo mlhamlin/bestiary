@@ -880,6 +880,11 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 mSurveyNameActionPerformed(evt);
             }
         });
+        mSurveyName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                mSurveyNameKeyReleased(evt);
+            }
+        });
         mSurveyStep1Panel.add(mSurveyName);
 
         mSurveyStep1.add(mSurveyStep1Panel, java.awt.BorderLayout.PAGE_START);
@@ -898,6 +903,11 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 mSurveyMoveActionPerformed(evt);
             }
         });
+        mSurveyMove.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                mSurveyMoveKeyReleased(evt);
+            }
+        });
         mSurveyStep2Panel.add(mSurveyMove);
         this.mSurveyMove.requestFocusInWindow();
 
@@ -911,6 +921,12 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         mSurveyInstinctLabel.setText("What does it want that causes problems for others?");
         mSurveyStep3Panel.add(mSurveyInstinctLabel);
+
+        mSurveyInstinct.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                mSurveyInstinctKeyReleased(evt);
+            }
+        });
         mSurveyStep3Panel.add(mSurveyInstinct);
 
         mSurveyStep3.add(mSurveyStep3Panel, java.awt.BorderLayout.PAGE_START);
@@ -1528,6 +1544,24 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
             this.DeceitAndTrickeryWindow.setVisible(false);
         }
     }//GEN-LAST:event_DeceitAndTrickeryFieldKeyReleased
+
+    private void mSurveyNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_mSurveyNameKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            this.MonsterSurvey_NextActionPerformed(null);
+        }
+    }//GEN-LAST:event_mSurveyNameKeyReleased
+
+    private void mSurveyMoveKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_mSurveyMoveKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            this.MonsterSurvey_NextActionPerformed(null);
+        }
+    }//GEN-LAST:event_mSurveyMoveKeyReleased
+
+    private void mSurveyInstinctKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_mSurveyInstinctKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            this.MonsterSurvey_NextActionPerformed(null);
+        }
+    }//GEN-LAST:event_mSurveyInstinctKeyReleased
 
     private Monster mon;
     private MonsterList listy;

@@ -20,6 +20,7 @@ public class MonsterPop extends javax.swing.JPanel implements java.beans.Customi
         owner = ownr;
         initComponents();
         mon.loadToCard(this.miniMonsterCard1);
+        this.MonsterFocus_GMNotesText.setText(mon.getGMNote());
     }
     
     public void setObject(Object bean) {
@@ -32,6 +33,7 @@ public class MonsterPop extends javax.swing.JPanel implements java.beans.Customi
 
     public void updateView(){
         mon.loadToCard(this.miniMonsterCard1);
+        this.MonsterFocus_GMNotesText.setText(mon.getGMNote());
     }
     
     /**
