@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.2" maxVersion="1.2" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="mSurveyGroupHuntSize">
     </Component>
@@ -58,6 +58,12 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="DeceitAndTrickeryField">
+              <Events>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="DeceitAndTrickeryFieldKeyReleased"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="this.DeceitAndTrickeryField.requestFocusInWindow();"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -175,6 +181,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="UsefulAdaptField">
+              <Events>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="UsefulAdaptFieldKeyReleased"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -412,6 +421,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="SpellsAndMagicField">
+              <Events>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="SpellsAndMagicFieldKeyReleased"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -783,6 +795,7 @@
             <Component class="javax.swing.JTextField" name="DangerousReasonsField">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DangerousReasonsFieldActionPerformed"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="DangerousReasonsFieldKeyReleased"/>
               </Events>
             </Component>
           </SubComponents>
@@ -901,6 +914,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="OrganizeGroupsField">
+              <Events>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="OrganizeGroupsFieldKeyReleased"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1018,6 +1034,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="OtherWorldField">
+              <Events>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="OtherWorldFieldKeyReleased"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1135,6 +1154,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="MadeField">
+              <Events>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MadeFieldKeyReleased"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1254,6 +1276,7 @@
             <Component class="javax.swing.JTextField" name="AppearanceField">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AppearanceFieldActionPerformed"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="AppearanceFieldKeyReleased"/>
               </Events>
             </Component>
           </SubComponents>
@@ -1418,6 +1441,12 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="mSurveyMove">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyMoveActionPerformed"/>
+                  </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="this.mSurveyMove.requestFocusInWindow();"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
@@ -1688,6 +1717,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Unrelenting strength"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mSurveyInfamousStrengthActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="mSurveyInfamousOffense">
                   <Properties>

@@ -289,24 +289,27 @@ public class Monster {
         
     public String printAttackString(){
         String s = "";
-        s += this.attackName + " (";
-        switch (this.dmgRoll) {
-            case NORMAL :
-                s += printDamageCore() + " damage";
-                break;
-            case BESTOF :
-                s += "b[2" + printDamageCore() + "] damage";
-                break;
-            case WORSTOF :
-                s += "w[2" + printDamageCore() + "] damage";
-                break;
+
+        if(!this.attackName.equals("")){
+            s += this.attackName + " (";
+            switch (this.dmgRoll) {
+                case NORMAL :
+                    s += printDamageCore() + " damage";
+                    break;
+                case BESTOF :
+                    s += "b[2" + printDamageCore() + "] damage";
+                    break;
+                case WORSTOF :
+                    s += "w[2" + printDamageCore() + "] damage";
+                    break;
+            }
+
+            if(attackTags[4]){
+                s += " " + piercing + " piercing";
+            }
+
+            s += ")";
         }
-        
-        if(attackTags[4]){
-            s += " " + piercing + " piercing";
-        }
-        
-        s += ")";
         
         return s;
     }
@@ -512,6 +515,10 @@ public class Monster {
     public String printAttackTags(){
         
         String s = "";
+        
+        if(this.attackName.equals("")){
+            return "";
+        }
         
         if(this.attackTags[0]){
             s += ", " + this.ammo + " Ammo";

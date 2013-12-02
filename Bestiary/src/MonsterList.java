@@ -29,6 +29,12 @@ public class MonsterList implements Iterable<Monster>{
         return internalList.size();
     }
     
+    public void deleteCollection(String s){
+        for(Monster mon : internalList){
+            mon.removeFromCollection(s);
+        }
+    }
+    
     public void addMonster(Monster m){
         internalList.add(m);
     }
@@ -48,15 +54,10 @@ public class MonsterList implements Iterable<Monster>{
     
     public boolean removeMonster(Monster m){
         boolean found = false;
-        for(Monster mon : internalList){
-            if(mon == m){
-                internalList.remove(mon);
-                found = true;
-            }
-        }
-        
+        internalList.remove(m);
         return found;
     }
+    
     
     public boolean containsMonster(String m){        
         for(Monster mon : internalList){

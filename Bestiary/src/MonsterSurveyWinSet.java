@@ -203,6 +203,13 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
     
     public void processPage8(){
         
+        if(this.mSurveyAttackName.getText().equals("")){
+            mon.setCanFight(false);
+        }else{
+            mon.setCanFight(true);
+            mon.setAttackName(this.mSurveyAttackName.getText());
+        }
+        
         if(this.mSurveyAttackVicious.isSelected()){
             mon.changeDmgMod(2);
         }
@@ -514,7 +521,14 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         jLabel1.setText("Write a move about its dirty tricks:");
         jPanel2.add(jLabel1);
+
+        DeceitAndTrickeryField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                DeceitAndTrickeryFieldKeyReleased(evt);
+            }
+        });
         jPanel2.add(DeceitAndTrickeryField);
+        this.DeceitAndTrickeryField.requestFocusInWindow();
 
         DeceitAndTrickeryWindow.getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
         DeceitAndTrickeryWindow.getContentPane().add(filler1, java.awt.BorderLayout.PAGE_START);
@@ -540,6 +554,12 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         jLabel2.setText("Write a special quality about its adaptation:");
         jPanel4.add(jLabel2);
+
+        UsefulAdaptField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                UsefulAdaptFieldKeyReleased(evt);
+            }
+        });
         jPanel4.add(UsefulAdaptField);
 
         UsefulAdaptWindow.getContentPane().add(jPanel4, java.awt.BorderLayout.CENTER);
@@ -594,6 +614,12 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         jLabel3.setText("Write a move about its spells:");
         jPanel8.add(jLabel3);
+
+        SpellsAndMagicField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                SpellsAndMagicFieldKeyReleased(evt);
+            }
+        });
         jPanel8.add(SpellsAndMagicField);
 
         SpellsAndMagicWindow.getContentPane().add(jPanel8, java.awt.BorderLayout.CENTER);
@@ -690,6 +716,11 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                 DangerousReasonsFieldActionPerformed(evt);
             }
         });
+        DangerousReasonsField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                DangerousReasonsFieldKeyReleased(evt);
+            }
+        });
         jPanel14.add(DangerousReasonsField);
 
         DangerousReasonsWindow.getContentPane().add(jPanel14, java.awt.BorderLayout.CENTER);
@@ -716,6 +747,12 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         jLabel5.setText("Write a move about it calling for help:");
         jPanel16.add(jLabel5);
+
+        OrganizeGroupsField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                OrganizeGroupsFieldKeyReleased(evt);
+            }
+        });
         jPanel16.add(OrganizeGroupsField);
 
         OrganizeGroupsWindow.getContentPane().add(jPanel16, java.awt.BorderLayout.CENTER);
@@ -742,6 +779,12 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         jLabel6.setText("Write a move about using its otherwordly knowledge and power:");
         jPanel18.add(jLabel6);
+
+        OtherWorldField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                OtherWorldFieldKeyReleased(evt);
+            }
+        });
         jPanel18.add(OtherWorldField);
 
         OtherWorldWindow.getContentPane().add(jPanel18, java.awt.BorderLayout.CENTER);
@@ -768,6 +811,12 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         jLabel7.setText("Give it a special quality about its construction or purpose:");
         jPanel20.add(jLabel7);
+
+        MadeField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MadeFieldKeyReleased(evt);
+            }
+        });
         jPanel20.add(MadeField);
 
         MadeWindow.getContentPane().add(jPanel20, java.awt.BorderLayout.CENTER);
@@ -798,6 +847,11 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         AppearanceField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AppearanceFieldActionPerformed(evt);
+            }
+        });
+        AppearanceField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                AppearanceFieldKeyReleased(evt);
             }
         });
         jPanel22.add(AppearanceField);
@@ -838,7 +892,14 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
 
         mSurveyMoveLabel.setText("What is it known to do?");
         mSurveyStep2Panel.add(mSurveyMoveLabel);
+
+        mSurveyMove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyMoveActionPerformed(evt);
+            }
+        });
         mSurveyStep2Panel.add(mSurveyMove);
+        this.mSurveyMove.requestFocusInWindow();
 
         mSurveyStep2.add(mSurveyStep2Panel, java.awt.BorderLayout.NORTH);
 
@@ -962,6 +1023,11 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         mSurveyStep8Panel.add(mSurveyInfamousLabel);
 
         mSurveyInfamousStrength.setText("Unrelenting strength");
+        mSurveyInfamousStrength.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mSurveyInfamousStrengthActionPerformed(evt);
+            }
+        });
         mSurveyStep8Panel.add(mSurveyInfamousStrength);
 
         mSurveyInfamousOffense.setText("Skill in offense");
@@ -1177,6 +1243,30 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
         java.awt.CardLayout cl = (java.awt.CardLayout)(this.MonsterSurvey_MainPane.getLayout());
         if (this.MonsterSurvey_MainPane.getComponent(0).isVisible()){
             // the current card is the first card
+        }else if(this.MonsterSurvey_MainPane.getComponent(1).isVisible()){
+            cl.previous(this.MonsterSurvey_MainPane);
+            this.mSurveyName.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(2).isVisible()){
+            cl.previous(this.MonsterSurvey_MainPane);
+            this.mSurveyMove.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(3).isVisible()){
+            cl.previous(this.MonsterSurvey_MainPane);
+            this.mSurveyInstinct.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(4).isVisible()){
+            cl.previous(this.MonsterSurvey_MainPane);
+            this.mSurveyHorde.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(5).isVisible()){
+            cl.previous(this.MonsterSurvey_MainPane);
+            this.mSurveyTiny.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(6).isVisible()){
+            cl.previous(this.MonsterSurvey_MainPane);
+            this.mSurveyDefenseNone.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(7).isVisible()){
+            cl.previous(this.MonsterSurvey_MainPane);
+            this.mSurveyInfamousStrength.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(8).isVisible()){
+            cl.previous(this.MonsterSurvey_MainPane);
+            this.mSurveyAttackName.requestFocusInWindow();
         }else{
             cl.previous(this.MonsterSurvey_MainPane);
         }
@@ -1197,7 +1287,29 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
                     "The name of this monster must be unique and nonempty.");
             }else{
                 cl.next(this.MonsterSurvey_MainPane);
+                this.mSurveyMove.requestFocusInWindow();
             }
+        }else if(this.MonsterSurvey_MainPane.getComponent(1).isVisible()){
+            cl.next(this.MonsterSurvey_MainPane);
+            this.mSurveyInstinct.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(2).isVisible()){
+            cl.next(this.MonsterSurvey_MainPane);
+            this.mSurveyHorde.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(3).isVisible()){
+            cl.next(this.MonsterSurvey_MainPane);
+            this.mSurveyTiny.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(4).isVisible()){
+            cl.next(this.MonsterSurvey_MainPane);
+            this.mSurveyDefenseNone.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(5).isVisible()){
+            cl.next(this.MonsterSurvey_MainPane);
+            this.mSurveyInfamousStrength.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(6).isVisible()){
+            cl.next(this.MonsterSurvey_MainPane);
+            this.mSurveyAttackName.requestFocusInWindow();
+        }else if(this.MonsterSurvey_MainPane.getComponent(7).isVisible()){
+            cl.next(this.MonsterSurvey_MainPane);
+            this.mSurveyDescTricksyDamage.requestFocusInWindow();
         }else{
             cl.next(this.MonsterSurvey_MainPane);
         }
@@ -1284,48 +1396,138 @@ public class MonsterSurveyWinSet extends javax.swing.JPanel implements java.bean
     }//GEN-LAST:event_mSurveyDescShieldActionPerformed
 
     private void mSurveyInfamousJokerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyInfamousJokerActionPerformed
-        this.DeceitAndTrickeryWindow.setVisible(true);
+
+        if(this.mSurveyInfamousJoker.isSelected()){
+            this.DeceitAndTrickeryWindow.setVisible(true);
+            this.DeceitAndTrickeryField.requestFocusInWindow();
+        }
     }//GEN-LAST:event_mSurveyInfamousJokerActionPerformed
 
     private void mSurveyInfamousAdaptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyInfamousAdaptActionPerformed
-        this.UsefulAdaptWindow.setVisible(true);
+        if(this.mSurveyInfamousAdapt.isSelected()){
+            this.UsefulAdaptWindow.setVisible(true);
+            this.UsefulAdaptField.requestFocusInWindow();
+        }
     }//GEN-LAST:event_mSurveyInfamousAdaptActionPerformed
 
     private void mSurveyInfamousGodsLoveMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyInfamousGodsLoveMeActionPerformed
-        this.FavorOfGodsWindow.setVisible(true);
+        if(this.mSurveyInfamousGodsLoveMe.isSelected()){
+            this.FavorOfGodsWindow.setVisible(true);
+            this.FavorOfGodsPlusDamage.requestFocusInWindow();
+        }
     }//GEN-LAST:event_mSurveyInfamousGodsLoveMeActionPerformed
 
     private void mSurveyInfamousMagicMissileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyInfamousMagicMissileActionPerformed
-        this.SpellsAndMagicWindow.setVisible(true);
+        if(this.mSurveyInfamousMagicMissile.isSelected()){
+            this.SpellsAndMagicWindow.setVisible(true);
+            this.SpellsAndMagicField.requestFocusInWindow();
+        }
     }//GEN-LAST:event_mSurveyInfamousMagicMissileActionPerformed
 
     private void mSurveyAttackMetalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyAttackMetalActionPerformed
-        this.SliceOrPierceWindow.setVisible(true);
+        if(this.mSurveyAttackMetal.isSelected()){
+            this.SliceOrPierceWindow.setVisible(true);
+            this.SliceOrPiercePlusOne.requestFocusInWindow();
+        }
     }//GEN-LAST:event_mSurveyAttackMetalActionPerformed
 
     private void mSurveyAttackRangedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyAttackRangedActionPerformed
-        this.AttacksAtRangeWindow.setVisible(true);
+        if(this.mSurveyAttackRanged.isSelected()){
+            this.AttacksAtRangeWindow.setVisible(true);
+            this.AttacksAtRangeNear.requestFocusInWindow();
+        }
     }//GEN-LAST:event_mSurveyAttackRangedActionPerformed
 
     private void mSurveyDescTricksyDamageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyDescTricksyDamageActionPerformed
-        this.DangerousReasonsWindow.setVisible(true);
+        if(this.mSurveyDescTricksyDamage.isSelected()){
+            this.DangerousReasonsWindow.setVisible(true);
+            this.DangerousReasonsField.requestFocusInWindow();
+        }
     }//GEN-LAST:event_mSurveyDescTricksyDamageActionPerformed
 
     private void mSurveyDescOrganizedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyDescOrganizedActionPerformed
-        this.OrganizeGroupsWindow.setVisible(true);
+        if(this.mSurveyDescOrganized.isSelected()){
+            this.OrganizeGroupsWindow.setVisible(true);
+            this.OrganizeGroupsField.requestFocusInWindow();
+        }
     }//GEN-LAST:event_mSurveyDescOrganizedActionPerformed
 
     private void mSurveyDescBeyondActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyDescBeyondActionPerformed
-        this.OtherWorldWindow.setVisible(true);
+        if(this.mSurveyDescBeyond.isSelected()){
+            this.OtherWorldWindow.setVisible(true);
+            this.OtherWorldField.requestFocusInWindow();
+        }
     }//GEN-LAST:event_mSurveyDescBeyondActionPerformed
 
     private void mSurveyDescMadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyDescMadeActionPerformed
-        this.MadeWindow.setVisible(true);
+        if(this.mSurveyDescMade.isSelected()){
+            this.MadeWindow.setVisible(true);
+            this.MadeField.requestFocusInWindow();
+        }
     }//GEN-LAST:event_mSurveyDescMadeActionPerformed
 
     private void mSurveyDescLooksWickedAwfulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyDescLooksWickedAwfulActionPerformed
-        this.AppearanceWindow.setVisible(true);
+        if(this.mSurveyDescLooksWickedAwful.isSelected()){
+            this.AppearanceWindow.setVisible(true);
+            this.AppearanceField.requestFocusInWindow();
+        }
     }//GEN-LAST:event_mSurveyDescLooksWickedAwfulActionPerformed
+
+    private void mSurveyMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyMoveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mSurveyMoveActionPerformed
+
+    private void mSurveyInfamousStrengthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mSurveyInfamousStrengthActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mSurveyInfamousStrengthActionPerformed
+
+    private void UsefulAdaptFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UsefulAdaptFieldKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            this.UsefulAdaptWindow.setVisible(false);
+        }
+    }//GEN-LAST:event_UsefulAdaptFieldKeyReleased
+
+    private void SpellsAndMagicFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SpellsAndMagicFieldKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            this.SpellsAndMagicWindow.setVisible(false);
+        }
+    }//GEN-LAST:event_SpellsAndMagicFieldKeyReleased
+
+    private void DangerousReasonsFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DangerousReasonsFieldKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            this.DangerousReasonsWindow.setVisible(false);
+        }
+    }//GEN-LAST:event_DangerousReasonsFieldKeyReleased
+
+    private void OrganizeGroupsFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_OrganizeGroupsFieldKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            this.OrganizeGroupsWindow.setVisible(false);
+        }
+    }//GEN-LAST:event_OrganizeGroupsFieldKeyReleased
+
+    private void OtherWorldFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_OtherWorldFieldKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            this.OtherWorldWindow.setVisible(false);
+        }
+    }//GEN-LAST:event_OtherWorldFieldKeyReleased
+
+    private void MadeFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MadeFieldKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            this.MadeWindow.setVisible(false);
+        }
+    }//GEN-LAST:event_MadeFieldKeyReleased
+
+    private void AppearanceFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AppearanceFieldKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            this.AppearanceWindow.setVisible(false);
+        }
+    }//GEN-LAST:event_AppearanceFieldKeyReleased
+
+    private void DeceitAndTrickeryFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DeceitAndTrickeryFieldKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            this.DeceitAndTrickeryWindow.setVisible(false);
+        }
+    }//GEN-LAST:event_DeceitAndTrickeryFieldKeyReleased
 
     private Monster mon;
     private MonsterList listy;

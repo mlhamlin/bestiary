@@ -92,20 +92,20 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
     
     public void loadAttackTags(){
         
-        this.AttTagWin_AmmoCheck.setSelected(mon.getMonsterTag(0));
-        this.AttTagWin_ForcefulCheck.setSelected(mon.getMonsterTag(1));
-        this.AttTagWin_IgnoresArmorCheck.setSelected(mon.getMonsterTag(2));
-        this.AttTagWin_MessyCheck.setSelected(mon.getMonsterTag(3));
-        this.AttTagWin_PiercingCheck.setSelected(mon.getMonsterTag(4));
-        this.AttTagWin_PreciseCheck.setSelected(mon.getMonsterTag(5));
-        this.AttTagWin_ReloadCheck.setSelected(mon.getMonsterTag(6));
-        this.AttTagWin_StunCheck.setSelected(mon.getMonsterTag(7));
-        this.AttTagWin_ThrownCheck.setSelected(mon.getMonsterTag(8));
-        this.AttTagWin_HandCheck.setSelected(mon.getMonsterTag(9));
-        this.AttTagWin_CloseCheck.setSelected(mon.getMonsterTag(10));
-        this.AttTagWin_ReachChange.setSelected(mon.getMonsterTag(11));
-        this.AttTagWin_NearCheck.setSelected(mon.getMonsterTag(12));
-        this.AttTagWin_FarCheck.setSelected(mon.getMonsterTag(13));
+        this.AttTagWin_AmmoCheck.setSelected(mon.getAttackTag(0));
+        this.AttTagWin_ForcefulCheck.setSelected(mon.getAttackTag(1));
+        this.AttTagWin_IgnoresArmorCheck.setSelected(mon.getAttackTag(2));
+        this.AttTagWin_MessyCheck.setSelected(mon.getAttackTag(3));
+        this.AttTagWin_PiercingCheck.setSelected(mon.getAttackTag(4));
+        this.AttTagWin_PreciseCheck.setSelected(mon.getAttackTag(5));
+        this.AttTagWin_ReloadCheck.setSelected(mon.getAttackTag(6));
+        this.AttTagWin_StunCheck.setSelected(mon.getAttackTag(7));
+        this.AttTagWin_ThrownCheck.setSelected(mon.getAttackTag(8));
+        this.AttTagWin_HandCheck.setSelected(mon.getAttackTag(9));
+        this.AttTagWin_CloseCheck.setSelected(mon.getAttackTag(10));
+        this.AttTagWin_ReachChange.setSelected(mon.getAttackTag(11));
+        this.AttTagWin_NearCheck.setSelected(mon.getAttackTag(12));
+        this.AttTagWin_FarCheck.setSelected(mon.getAttackTag(13));
         
         this.AttTagWin_AmmoSpin.setValue(mon.getAmmo());
         this.AttTagWin_PiercingSpin.setValue(mon.getPiercing());
@@ -726,12 +726,14 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
         MonsterEdit_Row2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         MonsterEdit_HPValue.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        MonsterEdit_HPValue.setPreferredSize(new java.awt.Dimension(60, 28));
         MonsterEdit_Row2.add(MonsterEdit_HPValue);
 
         MonsterEdit_HPLabel.setText("HP      ");
         MonsterEdit_Row2.add(MonsterEdit_HPLabel);
 
         MonsterEdit_ArmorValue.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        MonsterEdit_ArmorValue.setPreferredSize(new java.awt.Dimension(60, 28));
         MonsterEdit_Row2.add(MonsterEdit_ArmorValue);
 
         MonsterEdit_ArmorLabel.setText("Armor");
@@ -784,6 +786,11 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
         MonsterEdit_NewSpecialQualities.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MonsterEdit_NewSpecialQualitiesActionPerformed(evt);
+            }
+        });
+        MonsterEdit_NewSpecialQualities.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MonsterEdit_NewSpecialQualitiesKeyReleased(evt);
             }
         });
         MonsterEdit_SpecialQualitiesControlsPane.add(MonsterEdit_NewSpecialQualities, java.awt.BorderLayout.CENTER);
@@ -865,6 +872,11 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
         MonsterEdit_NewMove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MonsterEdit_NewMoveActionPerformed(evt);
+            }
+        });
+        MonsterEdit_NewMove.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MonsterEdit_NewMoveKeyReleased(evt);
             }
         });
         MonsterEdit_MovesControlsPane.add(MonsterEdit_NewMove, java.awt.BorderLayout.CENTER);
@@ -1044,6 +1056,20 @@ public class MonsterEditWinSet extends javax.swing.JPanel implements java.beans.
         MonsterEdit_ModelQualityList.addElement(this.MonsterEdit_NewSpecialQualities.getText());
         this.MonsterEdit_NewSpecialQualities.setText("");
     }//GEN-LAST:event_MonsterEdit_AddSpecialQualitiesButtonActionPerformed
+
+    private void MonsterEdit_NewSpecialQualitiesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MonsterEdit_NewSpecialQualitiesKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            MonsterEdit_ModelQualityList.addElement(this.MonsterEdit_NewSpecialQualities.getText());
+            this.MonsterEdit_NewSpecialQualities.setText("");
+       }
+    }//GEN-LAST:event_MonsterEdit_NewSpecialQualitiesKeyReleased
+
+    private void MonsterEdit_NewMoveKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MonsterEdit_NewMoveKeyReleased
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            MonsterEdit_ModelMoveList.addElement(this.MonsterEdit_NewMove.getText());
+            this.MonsterEdit_NewMove.setText("");
+        }
+    }//GEN-LAST:event_MonsterEdit_NewMoveKeyReleased
 
     private javax.swing.DefaultListModel MonsterEdit_ModelMoveList;
     private javax.swing.DefaultListModel MonsterEdit_ModelQualityList;
