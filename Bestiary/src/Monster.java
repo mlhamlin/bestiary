@@ -281,7 +281,7 @@ public class Monster {
         if(this.dmgMod > 0){
             s += "+" + this.dmgMod;
         }else if(this.dmgMod < 0){
-            s += "-" + this.dmgMod;
+            s += this.dmgMod;
         }
         
         return s;
